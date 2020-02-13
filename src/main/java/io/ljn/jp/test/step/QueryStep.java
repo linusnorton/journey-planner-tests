@@ -1,8 +1,8 @@
 package io.ljn.jp.test.step;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import io.ljn.jp.test.api.JourneyPlannerApi;
 
 public class QueryStep {
@@ -18,7 +18,7 @@ public class QueryStep {
     }
 
     @Then("I should see a service {string} that stops at")
-    public void i_should_see_a_service_that_stops_at(String string, io.cucumber.datatable.DataTable dataTable) {
+    public void i_should_see_a_service_that_stops_at(String string, DataTable dataTable) {
         // Write code here that turns the phrase above into concrete actions
         // For automatic transformation, change DataTable to one of
         // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
