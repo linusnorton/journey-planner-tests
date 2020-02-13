@@ -1,11 +1,10 @@
 package io.ljn.jp.test.journey;
 
+import lombok.Data;
+
 import java.util.List;
 
+@Data
 public class Journey {
-    public final List<Leg> legs;
-
-    public Journey(List<Leg> legs) {
-        this.legs = legs;
-    }
+    private final List<Leg> legs;
 }

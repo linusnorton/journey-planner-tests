@@ -1,11 +1,10 @@
 package io.ljn.jp.test.journey;
 
+import lombok.Data;
+
 import java.util.List;
 
+@Data
 public class TimetableLeg implements Leg {
-    public final List<StopTime> stopTimes;
-
-    public TimetableLeg(List<StopTime> stopTimes) {
-        this.stopTimes = stopTimes;
-    }
+    private final List<StopTime> stopTimes;
 }
