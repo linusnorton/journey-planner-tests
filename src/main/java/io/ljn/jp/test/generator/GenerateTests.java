@@ -1,16 +1,17 @@
 
 package io.ljn.jp.test.generator;
 
+import com.github.mustachejava.DefaultMustacheFactory;
+import com.github.mustachejava.MustacheFactory;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import io.ljn.jp.test.generator.timetable.OverlayGenerator;
+import io.ljn.jp.test.generator.timetable.repository.ScheduleRepository;
+import io.ljn.jp.test.generator.timetable.repository.StopTimeRepository;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.Properties;
 
 public class GenerateTests {
@@ -22,17 +23,15 @@ public class GenerateTests {
 
         HikariConfig config = new HikariConfig(properties);
         HikariDataSource ds = new HikariDataSource(config);
+        MustacheFactory mustacheFactory = new DefaultMustacheFactory();
 
-        try (Connection con = ds.getConnection();
-             PreparedStatement pst = con.prepareStatement("SELECT * FROM schedule LIMIT 10");
-             ResultSet rs = pst.executeQuery();
-        ) {
-            while (rs.next()) {
-                System.out.println(rs.getInt("id"));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        OverlayGenerator overlayGenerator = new OverlayGenerator(
+            new ScheduleRepository(ds),
+            new StopTimeRepository(ds),
+            mustacheFactory.compile("template/timetable/overlay.mustache")
+        );
+
+        overlayGenerator.run();
     }
 
 }

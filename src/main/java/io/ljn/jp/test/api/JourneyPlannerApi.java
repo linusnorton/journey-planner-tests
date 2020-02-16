@@ -29,8 +29,7 @@ public class JourneyPlannerApi {
             ApiResponse<List<Journey>> json = jsonAdapter.fromJson(response.body().source());
 
             return json.data;
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             throw new JourneyPlannerException("Unable to plan journey", e);
         }
     }
