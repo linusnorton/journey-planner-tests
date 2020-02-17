@@ -9,8 +9,8 @@ import io.ljn.jp.test.generator.timetable.repository.StopTimeRow;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.StringWriter;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.List;
@@ -37,10 +37,9 @@ public class OverlayGenerator {
         context.put("scenarios", scenarios);
 
         try {
-            StringWriter writer = new StringWriter();
+            FileWriter writer = new FileWriter("src/main/resources/feature/timetable/overlay.feature");
             template.execute(writer, context).flush();
-            String feature = writer.toString();
-            System.out.println(feature);
+            writer.flush();
         } catch (IOException e) {
             throw new GeneratorException("Could not create feature file", e);
         }
@@ -56,6 +55,7 @@ public class OverlayGenerator {
             schedule.tuid,
             origin,
             destination,
+            originalStops.get(0).departureTime,
             schedule.originalRunsFrom.format(dateFormat),
             schedule.overlayRunsFrom.format(dateFormat),
             originalStops,
@@ -63,12 +63,12 @@ public class OverlayGenerator {
         );
     }
 
-
     @Data
     private class OverlayScenario {
         public final String tuid;
         public final String origin;
         public final String destination;
+        public final String departureTime;
         public final String originalDate;
         public final String overlayDate;
         public final List<StopTimeRow> originalStops;

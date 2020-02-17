@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 public class StopTimeRow {
     public final String stop;
-    public final Integer arrivalTime;
-    public final Integer departureTime;
+    public final String arrivalTime;
+    public final String departureTime;
 }

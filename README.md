@@ -27,3 +27,10 @@ These tests aim to cover the application of:
 ./gradlew cucumber
 ```
 
+# Generate
+
+Due the nature of the timetable data the tests need to be regenerated periodically.
+
+```
+./gradlew run
+```

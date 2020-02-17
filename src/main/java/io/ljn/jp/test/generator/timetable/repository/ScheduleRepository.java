@@ -31,8 +31,10 @@ public class ScheduleRepository {
                 "OR (s.saturday = 1 AND c.saturday = 1) " +
                 "OR (s.sunday = 1 AND c.sunday = 1) " +
             ") " +
+        "JOIN stop_time st ON s.id = st.schedule " +
         "WHERE CURDATE() BETWEEN s.runs_from AND s.runs_to " +
         "AND c.runs_from > CURDATE() + INTERVAL 1 MONTH " +
+        "AND st.public_departure_time > '4:00' " +
         "ORDER BY RAND()" +
         "LIMIT 5";
 

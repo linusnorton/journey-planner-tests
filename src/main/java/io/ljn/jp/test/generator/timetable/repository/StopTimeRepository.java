@@ -4,20 +4,20 @@ import io.ljn.jp.test.generator.GeneratorException;
 import lombok.AllArgsConstructor;
 
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor
 public class StopTimeRepository {
+    private final DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("HH:mm");
     private final DataSource db;
     private final String sql = "" +
         "SELECT * FROM stop_time " +
         "JOIN physical_station ON location = tiploc_code " +
-        "WHERE schedule = ?";
+        "WHERE schedule = ? " +
+        "ORDER BY stop_time.id";
 
     public List<StopTimeRow> getStopTimes(int scheduleId) {
         List<StopTimeRow> rows = new ArrayList<>();
@@ -28,7 +28,9 @@ public class StopTimeRepository {
             ResultSet rs = pst.executeQuery();
 
             while (rs.next()) {
-                rows.add(getRow(rs));
+                if (rs.getTime("public_arrival_time") != null || rs.getTime("public_departure_time") != null) {
+                    rows.add(getRow(rs));
+                }
             }
         } catch (SQLException e) {
             throw new GeneratorException("SQL error: " + sql, e);
@@ -41,8 +43,13 @@ public class StopTimeRepository {
     private StopTimeRow getRow(ResultSet rs) throws SQLException {
         return new StopTimeRow(
             rs.getString("crs_code"),
-            rs.getInt("public_arrival_time") > 0 ? rs.getInt("public_arrival_time") : null,
-            rs.getInt("public_departure_time") > 0 ? rs.getInt("public_departure_time") : null
+            getTime(rs.getTime("public_arrival_time")),
+            getTime(rs.getTime("public_departure_time"))
         );
     }
+
+    private String getTime(Time time) {
+        return time == null ? "--:--" : time.toLocalTime().format(timeFormat);
+    }
+
 }
