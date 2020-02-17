@@ -1,60 +1,33 @@
 package io.ljn.jp.test.generator.timetable;
 
-import com.github.mustachejava.Mustache;
-import io.ljn.jp.test.generator.GeneratorException;
-import io.ljn.jp.test.generator.timetable.repository.ScheduleRepository;
+import io.ljn.jp.test.generator.ScenarioFactory;
 import io.ljn.jp.test.generator.timetable.repository.ScheduleRow;
 import io.ljn.jp.test.generator.timetable.repository.StopTimeRepository;
 import io.ljn.jp.test.generator.timetable.repository.StopTimeRow;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import java.io.FileWriter;
-import java.io.IOException;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
  * Generates overlay scenarios from a mustache template
  */
 @AllArgsConstructor
-public class OverlayGenerator {
-    private final ScheduleRepository scheduleRepository;
+public class OverlayScenarioFactory implements ScenarioFactory<ScheduleRow> {
     private final StopTimeRepository stopTimeRepository;
-    private final Mustache template;
     private final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
-    public void run() {
-        List<OverlayScenario> scenarios = scheduleRepository.getOverlayedSchedules()
-            .parallelStream()
-            .map(this::getScenario)
-            .collect(Collectors.toList());
-
-        Map<String, Object> context = new HashMap<>();
-        context.put("scenarios", scenarios);
-
-        try {
-            FileWriter writer = new FileWriter("src/main/resources/feature/timetable/overlay.feature");
-            template.execute(writer, context).flush();
-            writer.flush();
-        } catch (IOException e) {
-            throw new GeneratorException("Could not create feature file", e);
-        }
-    }
-
-    private OverlayScenario getScenario(ScheduleRow schedule) {
+    public OverlayScenario getScenario(ScheduleRow schedule) {
         final List<StopTimeRow> originalStops = stopTimeRepository.getStopTimes(schedule.originalId);
         final List<StopTimeRow> newStops = stopTimeRepository.getStopTimes(schedule.overlayId);
-        final String origin = originalStops.get(0).stop;
-        final String destination = originalStops.get(originalStops.size() - 1).stop;
 
         return new OverlayScenario(
             schedule.tuid,
-            origin,
-            destination,
+            originalStops.get(0).stop,
+            originalStops.get(originalStops.size() - 1).stop,
+            newStops.get(0).stop,
+            newStops.get(newStops.size() - 1).stop,
             originalStops.get(0).departureTime,
             schedule.originalRunsFrom.format(dateFormat),
             schedule.overlayRunsFrom.format(dateFormat),
@@ -66,8 +39,10 @@ public class OverlayGenerator {
     @Data
     private class OverlayScenario {
         public final String tuid;
-        public final String origin;
-        public final String destination;
+        public final String originalOrigin;
+        public final String originalDestination;
+        public final String newOrigin;
+        public final String newDestination;
         public final String departureTime;
         public final String originalDate;
         public final String overlayDate;

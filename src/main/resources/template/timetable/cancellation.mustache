@@ -1,0 +1,15 @@
+Feature: Schedule cancellations
+  A schedule might be cancelled for a subset of dates using an overlay record
+
+  {{#scenarios}}
+  Scenario: Service is cancelled on a particular day
+    Given a query between "{{origin}}" and "{{destination}}" on "{{originalDate}}" at "{{departureTime}}"
+    Then I should see a service "{{tuid}}" that stops at
+      | stop | arrival | departure |
+      {{#originalStops}}
+      | {{stop}}  | {{arrivalTime}}   | {{departureTime}}     |
+      {{/originalStops}}
+    When I query between "{{origin}}" and "{{destination}}" on "{{cancellationDate}}" at "{{departureTime}}"
+    Then I should not see a service "{{tuid}}" in the results
+
+  {{/scenarios}}

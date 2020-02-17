@@ -29,7 +29,7 @@ These tests aim to cover the application of:
 
 # Generate
 
-Due the nature of the timetable data the tests need to be regenerated periodically.
+Due the nature of the timetable data the tests need to be regenerated periodically. This requires a mysql database with the lastest DTD timetable loaded.
 
 ```
 ./gradlew run

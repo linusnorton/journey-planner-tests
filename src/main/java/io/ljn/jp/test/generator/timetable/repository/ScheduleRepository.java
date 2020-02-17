@@ -15,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public class ScheduleRepository {
     private final DataSource db;
-    private static final String sql = "" +
+    private static final String overlaySql = "" +
         "SELECT s.id AS original_id, c.* " +
         "FROM schedule s " +
         "JOIN schedule c ON s.train_uid = c.train_uid " +
@@ -37,8 +37,30 @@ public class ScheduleRepository {
         "AND st.public_departure_time > '4:00' " +
         "ORDER BY RAND()" +
         "LIMIT 5";
+    private static final String cancellationSql = "" +
+        "SELECT s.id AS original_id, c.* " +
+        "FROM schedule s " +
+        "JOIN schedule c " +
+            "ON s.train_uid = c.train_uid  " +
+            "AND s.stp_indicator = 'P'  " +
+            "AND c.stp_indicator = 'C' " +
+            "AND  " +
+                "CONCAT (s.monday, s.tuesday, s.wednesday, s.thursday, s.friday, s.saturday, s.sunday) != " +
+                "CONCAT (c.monday, c.tuesday, c.wednesday, c.thursday, c.friday, c.saturday, c.sunday) " +
+        "WHERE s.runs_to > CURDATE() " +
+        "AND c.runs_from > CURDATE() + INTERVAL 1 MONTH " +
+        "ORDER BY RAND() " +
+        "LIMIT 5 ";
 
-    public List<ScheduleRow> getOverlayedSchedules() {
+    public List<ScheduleRow> getOverlaySchedules() {
+        return getSchedules(overlaySql);
+    }
+
+    public List<ScheduleRow> getCancelledSchedules() {
+        return getSchedules(cancellationSql);
+    }
+
+    private List<ScheduleRow> getSchedules(String sql) {
         List<ScheduleRow> rows = new ArrayList<>();
 
         try (Connection con = db.getConnection();
