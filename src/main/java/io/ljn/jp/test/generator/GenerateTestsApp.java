@@ -5,6 +5,8 @@ import com.github.mustachejava.DefaultMustacheFactory;
 import com.github.mustachejava.MustacheFactory;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import io.ljn.jp.test.generator.fares.NonDerivableScenarioFactory;
+import io.ljn.jp.test.generator.fares.repository.FareRepository;
 import io.ljn.jp.test.generator.timetable.CancellationScenarioFactory;
 import io.ljn.jp.test.generator.timetable.OverlayScenarioFactory;
 import io.ljn.jp.test.generator.timetable.repository.ScheduleRepository;
@@ -23,8 +25,8 @@ public class GenerateTestsApp {
         getFeatureGenerators().parallelStream().forEach(Runnable::run);
     }
 
-    private static HikariDataSource getDataSource() throws IOException {
-        File file = new File(GenerateTestsApp.class.getClassLoader().getResource("datasource.properties").getFile());
+    private static HikariDataSource getDataSource(String configFileName) throws IOException {
+        File file = new File(GenerateTestsApp.class.getClassLoader().getResource(configFileName).getFile());
         Properties properties = new Properties();
         properties.load(new FileInputStream(file));
 
@@ -33,10 +35,12 @@ public class GenerateTestsApp {
     }
 
     private static List<Runnable> getFeatureGenerators() throws IOException {
-        HikariDataSource ds = getDataSource();
+        HikariDataSource timetableDatabase = getDataSource("timetable-database.properties");
+        HikariDataSource faresDatabase = getDataSource("fares-database.properties");
         MustacheFactory mustacheFactory = new DefaultMustacheFactory();
-        ScheduleRepository scheduleRepository = new ScheduleRepository(ds);
-        StopTimeRepository stopTimeRepository = new StopTimeRepository(ds);
+        FareRepository fareRepository = new FareRepository(faresDatabase);
+        ScheduleRepository scheduleRepository = new ScheduleRepository(timetableDatabase);
+        StopTimeRepository stopTimeRepository = new StopTimeRepository(timetableDatabase);
         FeatureGenerator generator = new FeatureGenerator();
 
         return Arrays.asList(
@@ -51,6 +55,12 @@ public class GenerateTestsApp {
                 new CancellationScenarioFactory(stopTimeRepository),
                 "src/main/resources/feature/timetable/cancellation.feature",
                 mustacheFactory.compile("template/timetable/cancellation.mustache")
+            ),
+            () -> generator.run(
+                fareRepository::getNonDerivableFaresThatOverrideFlowFares,
+                new NonDerivableScenarioFactory(),
+                "src/main/resources/feature/fares/non-derivable-fares.feature",
+                mustacheFactory.compile("template/fares/non-derivable-fares.mustache")
             )
         );
     }
