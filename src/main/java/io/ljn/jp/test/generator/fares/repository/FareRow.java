@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-public class NonDerivableRow {
+public class FareRow {
     public final String origin;
     public final String destination;
     public final String ticketCode;

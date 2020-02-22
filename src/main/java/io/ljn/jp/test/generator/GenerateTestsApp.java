@@ -5,7 +5,7 @@ import com.github.mustachejava.DefaultMustacheFactory;
 import com.github.mustachejava.MustacheFactory;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import io.ljn.jp.test.generator.fares.NonDerivableScenarioFactory;
+import io.ljn.jp.test.generator.fares.FareScenarioFactory;
 import io.ljn.jp.test.generator.fares.repository.FareRepository;
 import io.ljn.jp.test.generator.timetable.CancellationScenarioFactory;
 import io.ljn.jp.test.generator.timetable.OverlayScenarioFactory;
@@ -58,9 +58,15 @@ public class GenerateTestsApp {
             ),
             () -> generator.run(
                 fareRepository::getNonDerivableFaresThatOverrideFlowFares,
-                new NonDerivableScenarioFactory(),
+                new FareScenarioFactory(),
                 "src/main/resources/feature/fares/non-derivable-fares.feature",
                 mustacheFactory.compile("template/fares/non-derivable-fares.mustache")
+            ),
+            () -> generator.run(
+                fareRepository::getClusterFaresOverridenByNlc,
+                new FareScenarioFactory(),
+                "src/main/resources/feature/fares/cluster-fares.feature",
+                mustacheFactory.compile("template/fares/cluster-fares.mustache")
             )
         );
     }
