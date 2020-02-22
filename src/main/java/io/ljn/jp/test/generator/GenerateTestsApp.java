@@ -9,6 +9,7 @@ import io.ljn.jp.test.generator.fares.FareScenarioFactory;
 import io.ljn.jp.test.generator.fares.repository.FareRepository;
 import io.ljn.jp.test.generator.timetable.CancellationScenarioFactory;
 import io.ljn.jp.test.generator.timetable.OverlayScenarioFactory;
+import io.ljn.jp.test.generator.timetable.PublicTimeScenarioFactory;
 import io.ljn.jp.test.generator.timetable.repository.ScheduleRepository;
 import io.ljn.jp.test.generator.timetable.repository.StopTimeRepository;
 
@@ -55,6 +56,12 @@ public class GenerateTestsApp {
                 new CancellationScenarioFactory(stopTimeRepository),
                 "src/main/resources/feature/timetable/cancellation.feature",
                 mustacheFactory.compile("template/timetable/cancellation.mustache")
+            ),
+            () -> generator.run(
+                scheduleRepository::getPublicTimeDifferentToScheduleTimeSchedules,
+                new PublicTimeScenarioFactory(stopTimeRepository),
+                "src/main/resources/feature/timetable/public-time.feature",
+                mustacheFactory.compile("template/timetable/public-time.mustache")
             ),
             () -> generator.run(
                 fareRepository::getNonDerivableFaresThatOverrideFlowFares,

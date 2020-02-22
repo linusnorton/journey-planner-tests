@@ -52,12 +52,24 @@ public class ScheduleRepository {
         "ORDER BY RAND() " +
         "LIMIT 5 ";
 
+    private static final String publicTimeSql = "" +
+        "SELECT *, schedule.id AS original_id FROM stop_time " +
+        "JOIN physical_station ON location = tiploc_code " +
+        "JOIN schedule ON schedule.id = stop_time.schedule " +
+        "WHERE ABS(public_departure_time - scheduled_departure_time) > 4170 " +
+        "AND scheduled_departure_time > '10:00:00' " +
+        "LIMIT 5";
+
     public List<ScheduleRow> getOverlaySchedules() {
         return getSchedules(overlaySql);
     }
 
     public List<ScheduleRow> getCancelledSchedules() {
         return getSchedules(cancellationSql);
+    }
+
+    public List<ScheduleRow> getPublicTimeDifferentToScheduleTimeSchedules() {
+        return getSchedules(publicTimeSql);
     }
 
     private List<ScheduleRow> getSchedules(String sql) {

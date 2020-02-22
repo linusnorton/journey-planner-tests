@@ -2,22 +2,22 @@ Feature: Clustered fares
   A clustered fare should be overridden by a fare to an NLC
 
   Scenario: Clustered fare overridden by an NLC flow
-    Given a query between "HNT" and "EDA" on "2020-03-22" at "10:00"
-    Then I should see a fare "SDS" on "01003" that is "4590" pence
+    Given a query between "DEN" and "BPO" on "2020-03-22" at "10:00"
+    Then I should see a fare "SDS" on "00000" that is "3550" pence
 
   Scenario: Clustered fare overridden by an NLC flow
-    Given a query between "ANL" and "LCB" on "2020-03-22" at "10:00"
-    Then I should see a fare "SDS" on "00000" that is "4195" pence
+    Given a query between "CRR" and "ARA" on "2020-03-22" at "10:00"
+    Then I should see a fare "SDS" on "01000" that is "2750" pence
 
   Scenario: Clustered fare overridden by an NLC flow
-    Given a query between "NUM" and "PBR" on "2020-03-22" at "10:00"
-    Then I should see a fare "SDR" on "00000" that is "2070" pence
+    Given a query between "MYT" and "QMA" on "2020-03-22" at "10:00"
+    Then I should see a fare "SDS" on "00106" that is "1200" pence
 
   Scenario: Clustered fare overridden by an NLC flow
-    Given a query between "ABD" and "EDA" on "2020-03-22" at "10:00"
-    Then I should see a fare "SVR" on "01003" that is "5830" pence
+    Given a query between "EVE" and "LMN" on "2020-03-22" at "10:00"
+    Then I should see a fare "SDS" on "01000" that is "750" pence
 
   Scenario: Clustered fare overridden by an NLC flow
-    Given a query between "DMY" and "CTB" on "2020-03-22" at "10:00"
-    Then I should see a fare "SOR" on "00000" that is "7010" pence
+    Given a query between "AND" and "ARA" on "2020-03-22" at "10:00"
+    Then I should see a fare "SDS" on "00000" that is "3830" pence
 
