@@ -7,6 +7,7 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import io.ljn.jp.test.generator.fares.FareScenarioFactory;
 import io.ljn.jp.test.generator.fares.repository.FareRepository;
+import io.ljn.jp.test.generator.timetable.AssociationScenarioFactory;
 import io.ljn.jp.test.generator.timetable.CancellationScenarioFactory;
 import io.ljn.jp.test.generator.timetable.OverlayScenarioFactory;
 import io.ljn.jp.test.generator.timetable.PublicTimeScenarioFactory;
@@ -62,6 +63,12 @@ public class GenerateTestsApp {
                 new PublicTimeScenarioFactory(stopTimeRepository),
                 "src/main/resources/feature/timetable/public-time.feature",
                 mustacheFactory.compile("template/timetable/public-time.mustache")
+            ),
+            () -> generator.run(
+                scheduleRepository::getSplits,
+                new AssociationScenarioFactory(stopTimeRepository),
+                "src/main/resources/feature/timetable/splits.feature",
+                mustacheFactory.compile("template/timetable/splits.mustache")
             ),
             () -> generator.run(
                 fareRepository::getNonDerivableFaresThatOverrideFlowFares,

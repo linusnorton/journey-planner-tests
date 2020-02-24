@@ -2,165 +2,177 @@ Feature: Schedule overlays
   A schedule might be changed for a subset of dates using an overlay record
 
   Scenario: Changing calling point stopping times
-    Given a query between "WAT" and "WNR" on "2020-04-05" at "13:44"
-    Then I should see a service "W14524" that stops at
+    Given a query between "SRA" and "CLJ" on "2020-04-25" at "18:23"
+    Then I should see a service "L44557" that stops at
       | stop | arrival | departure |
-      | WAT  | --:--   | 13:44     |
-      | VXH  | 13:48   | 13:48     |
-      | QRB  | 13:51   | 13:51     |
-      | CLJ  | 13:54   | 13:54     |
-      | WNT  | 13:57   | 13:57     |
-      | PUT  | 13:59   | 14:00     |
-      | BNS  | 14:03   | 14:03     |
-      | MTL  | 14:05   | 14:05     |
-      | NSH  | 14:07   | 14:07     |
-      | RMD  | 14:09   | 14:10     |
-      | SMG  | 14:12   | 14:12     |
-      | TWI  | 14:14   | 14:15     |
-      | WTN  | 14:18   | 14:18     |
-      | FEL  | 14:22   | 14:22     |
-      | AFS  | 14:26   | 14:26     |
-      | SNS  | 14:30   | 14:30     |
-      | WRY  | 14:34   | 14:34     |
-      | SNY  | 14:37   | 14:37     |
-      | DAT  | 14:40   | 14:40     |
-      | WNR  | 14:44   | --:--     |
-    When I query between "WAT" and "HOU" on "2020-04-12" at "13:44"
-    Then I should see a service "W14524" that stops at
+      | SRA  | --:--   | 18:23     |
+      | HKW  | 18:26   | 18:26     |
+      | HMN  | 18:29   | 18:29     |
+      | HKC  | 18:31   | 18:31     |
+      | DLK  | 18:33   | 18:33     |
+      | CNN  | 18:35   | 18:35     |
+      | HHY  | 18:37   | 18:37     |
+      | CIR  | 18:39   | 18:39     |
+      | CMD  | 18:42   | 18:42     |
+      | KTW  | 18:45   | 18:45     |
+      | GPO  | 18:49   | 18:49     |
+      | HDH  | 18:51   | 18:51     |
+      | FNY  | 18:53   | 18:53     |
+      | WHD  | 18:55   | 18:55     |
+      | BSY  | 18:56   | 18:56     |
+      | BSP  | 18:58   | 18:58     |
+      | KNR  | 19:00   | 19:00     |
+      | WIJ  | 19:04   | 19:05     |
+      | SPB  | 19:11   | 19:11     |
+      | KPA  | 19:13   | 19:13     |
+      | WBP  | 19:16   | 19:16     |
+      | IMW  | 19:19   | 19:19     |
+      | CLJ  | 19:25   | --:--     |
+    When I query between "SRA" and "CLJ" on "2020-05-02" at "18:23"
+    Then I should see a service "L44557" that stops at
       | stop | arrival | departure |
-      | WAT  | --:--   | 13:44     |
-      | VXH  | 13:48   | 13:48     |
-      | QRB  | 13:51   | 13:51     |
-      | CLJ  | 13:54   | 13:54     |
-      | WNT  | 13:57   | 13:57     |
-      | PUT  | 13:59   | 14:00     |
-      | BNS  | 14:03   | 14:03     |
-      | MTL  | 14:05   | 14:05     |
-      | NSH  | 14:07   | 14:07     |
-      | RMD  | 14:09   | 14:10     |
-      | SMG  | 14:13   | 14:13     |
-      | TWI  | 14:15   | 14:15     |
-      | WTN  | 14:18   | 14:19     |
-      | HOU  | 14:23   | --:--     |
+      | SRA  | --:--   | 18:23     |
+      | HKW  | 18:26   | 18:26     |
+      | HMN  | 18:29   | 18:29     |
+      | HKC  | 18:31   | 18:31     |
+      | DLK  | 18:33   | 18:33     |
+      | CNN  | 18:35   | 18:35     |
+      | HHY  | 18:37   | 18:37     |
+      | CIR  | 18:39   | 18:39     |
+      | CMD  | 18:42   | 18:42     |
+      | KTW  | 18:45   | 18:45     |
+      | GPO  | 18:49   | 18:49     |
+      | HDH  | 18:51   | 18:51     |
+      | FNY  | 18:53   | 18:53     |
+      | WHD  | 18:55   | 18:55     |
+      | BSY  | 18:56   | 18:56     |
+      | BSP  | 18:58   | 18:58     |
+      | KNR  | 19:00   | 19:00     |
+      | WIJ  | 19:04   | 19:05     |
+      | SPB  | 19:11   | 19:11     |
+      | KPA  | 19:13   | 19:13     |
+      | WBP  | 19:16   | 19:16     |
+      | IMW  | 19:19   | 19:19     |
+      | CLJ  | 19:25   | --:--     |
 
   Scenario: Changing calling point stopping times
-    Given a query between "BDM" and "SUO" on "2020-03-21" at "06:02"
-    Then I should see a service "W41023" that stops at
+    Given a query between "SRA" and "CLJ" on "2020-03-21" at "06:23"
+    Then I should see a service "L44570" that stops at
       | stop | arrival | departure |
-      | BDM  | --:--   | 06:02     |
-      | LUT  | 06:19   | 06:22     |
-      | LTN  | 06:24   | 06:25     |
-      | HPD  | 06:30   | 06:30     |
-      | SAC  | 06:35   | 06:37     |
-      | RDT  | 06:42   | 06:42     |
-      | ELS  | 06:46   | 06:46     |
-      | MIL  | 06:49   | 06:50     |
-      | HEN  | 06:53   | 06:53     |
-      | CRI  | 06:57   | 06:58     |
-      | WHP  | 07:00   | 07:01     |
-      | KTN  | 07:06   | 07:06     |
-      | STP  | 07:12   | 07:12     |
-      | ZFD  | 07:16   | 07:17     |
-      | BFR  | 07:21   | 07:21     |
-      | EPH  | 07:25   | 07:25     |
-      | LGJ  | 07:30   | 07:30     |
-      | HNH  | 07:34   | 07:35     |
-      | TUH  | 07:39   | 07:40     |
-      | STE  | 07:44   | 07:44     |
-      | TOO  | 07:48   | 07:49     |
-      | HYR  | 07:52   | 07:52     |
-      | WIM  | 07:54   | 07:55     |
-      | WBO  | 07:58   | 07:58     |
-      | SMO  | 08:00   | 08:00     |
-      | MDS  | 08:03   | 08:03     |
-      | SIH  | 08:05   | 08:05     |
-      | SUC  | 08:07   | 08:07     |
-      | WSU  | 08:10   | 08:10     |
-      | SUO  | 08:14   | --:--     |
-    When I query between "BDM" and "SUO" on "2020-03-28" at "06:02"
-    Then I should see a service "W41023" that stops at
+      | SRA  | --:--   | 06:23     |
+      | HKW  | 06:27   | 06:27     |
+      | HMN  | 06:30   | 06:30     |
+      | HKC  | 06:32   | 06:32     |
+      | DLK  | 06:34   | 06:34     |
+      | CNN  | 06:36   | 06:36     |
+      | HHY  | 06:38   | 06:38     |
+      | CIR  | 06:40   | 06:40     |
+      | CMD  | 06:43   | 06:43     |
+      | KTW  | 06:46   | 06:46     |
+      | GPO  | 06:49   | 06:49     |
+      | HDH  | 06:51   | 06:51     |
+      | FNY  | 06:53   | 06:53     |
+      | WHD  | 06:55   | 06:55     |
+      | BSY  | 06:56   | 06:56     |
+      | BSP  | 06:58   | 06:58     |
+      | KNR  | 07:00   | 07:00     |
+      | WIJ  | 07:04   | 07:05     |
+      | SPB  | 07:11   | 07:11     |
+      | KPA  | 07:13   | 07:13     |
+      | WBP  | 07:16   | 07:16     |
+      | IMW  | 07:19   | 07:19     |
+      | CLJ  | 07:25   | --:--     |
+    When I query between "WIJ" and "CLJ" on "2020-03-28" at "06:23"
+    Then I should see a service "L44570" that stops at
       | stop | arrival | departure |
-      | BDM  | --:--   | 06:02     |
-      | LUT  | 06:19   | 06:22     |
-      | LTN  | 06:24   | 06:25     |
-      | HPD  | 06:30   | 06:30     |
-      | SAC  | 06:35   | 06:37     |
-      | RDT  | 06:42   | 06:42     |
-      | ELS  | 06:46   | 06:46     |
-      | MIL  | 06:49   | 06:50     |
-      | HEN  | 06:53   | 06:53     |
-      | CRI  | 06:57   | 06:58     |
-      | WHP  | 07:00   | 07:01     |
-      | KTN  | 07:06   | 07:06     |
-      | STP  | 07:12   | 07:12     |
-      | ZFD  | 07:16   | 07:17     |
-      | BFR  | 07:21   | 07:21     |
-      | EPH  | 07:25   | 07:25     |
-      | LGJ  | 07:30   | 07:30     |
-      | HNH  | 07:34   | 07:35     |
-      | TUH  | 07:39   | 07:40     |
-      | STE  | 07:44   | 07:44     |
-      | TOO  | 07:48   | 07:49     |
-      | HYR  | 07:52   | 07:52     |
-      | WIM  | 07:54   | 07:55     |
-      | WBO  | 07:58   | 07:58     |
-      | SMO  | 08:00   | 08:00     |
-      | MDS  | 08:03   | 08:03     |
-      | SIH  | 08:05   | 08:05     |
-      | SUC  | 08:07   | 08:07     |
-      | WSU  | 08:10   | 08:10     |
-      | SUO  | 08:14   | --:--     |
+      | WIJ  | --:--   | 07:05     |
+      | SPB  | 07:11   | 07:11     |
+      | KPA  | 07:13   | 07:13     |
+      | WBP  | 07:16   | 07:16     |
+      | IMW  | 07:19   | 07:19     |
+      | CLJ  | 07:30   | --:--     |
 
   Scenario: Changing calling point stopping times
-    Given a query between "EDB" and "GLC" on "2020-04-18" at "06:22"
-    Then I should see a service "C76984" that stops at
+    Given a query between "LBG" and "SUO" on "2020-04-12" at "08:30"
+    Then I should see a service "W40056" that stops at
       | stop | arrival | departure |
-      | EDB  | --:--   | 06:22     |
-      | MTH  | 07:05   | 07:06     |
-      | GLC  | 07:22   | --:--     |
-    When I query between "EDB" and "MTH" on "2020-04-25" at "06:22"
-    Then I should see a service "C76984" that stops at
+      | LBG  | --:--   | 08:30     |
+      | TUH  | 08:43   | 08:46     |
+      | STE  | 08:50   | 08:50     |
+      | MTC  | 08:53   | 08:53     |
+      | MIJ  | 08:56   | 08:56     |
+      | HCB  | 08:59   | 08:59     |
+      | CSH  | 09:02   | 09:02     |
+      | SUO  | 09:05   | --:--     |
+    When I query between "BFR" and "SUO" on "2020-04-19" at "08:30"
+    Then I should see a service "W40056" that stops at
       | stop | arrival | departure |
-      | EDB  | --:--   | 06:22     |
-      | MTH  | 07:05   | --:--     |
+      | BFR  | --:--   | 08:27     |
+      | EPH  | 08:30   | 08:31     |
+      | LGJ  | 08:36   | 08:36     |
+      | HNH  | 08:39   | 08:41     |
+      | TUH  | 08:45   | 08:45     |
+      | STE  | 08:49   | 08:49     |
+      | MTC  | 08:53   | 08:53     |
+      | MIJ  | 08:56   | 08:56     |
+      | HCB  | 08:59   | 08:59     |
+      | CSH  | 09:01   | 09:01     |
+      | SUO  | 09:05   | --:--     |
 
   Scenario: Changing calling point stopping times
-    Given a query between "BRI" and "PAD" on "2020-03-16" at "11:00"
-    Then I should see a service "Y94021" that stops at
+    Given a query between "FST" and "GRY" on "2020-05-04" at "20:25"
+    Then I should see a service "L40696" that stops at
       | stop | arrival | departure |
-      | BRI  | --:--   | 11:00     |
-      | BTH  | 11:11   | 11:13     |
-      | CPM  | 11:24   | 11:26     |
-      | SWI  | 11:38   | 11:40     |
-      | DID  | 11:56   | 11:57     |
-      | RDG  | 12:09   | 12:12     |
-      | PAD  | 12:37   | --:--     |
-    When I query between "BRI" and "PAD" on "2020-03-23" at "11:00"
-    Then I should see a service "Y94021" that stops at
+      | FST  | --:--   | 20:25     |
+      | LHS  | 20:29   | 20:29     |
+      | WEH  | 20:34   | 20:34     |
+      | BKG  | 20:39   | 20:40     |
+      | DDK  | 20:44   | 20:44     |
+      | RNM  | 20:48   | 20:48     |
+      | PFL  | 20:54   | 20:55     |
+      | GRY  | 21:01   | --:--     |
+    When I query between "FST" and "GRY" on "2020-05-11" at "20:25"
+    Then I should see a service "L40696" that stops at
       | stop | arrival | departure |
-      | BRI  | --:--   | 11:00     |
-      | BTH  | 11:11   | 11:13     |
-      | CPM  | 11:24   | 11:26     |
-      | SWI  | 11:38   | 11:40     |
-      | DID  | 11:56   | 11:57     |
-      | RDG  | 12:09   | 12:12     |
-      | PAD  | 12:37   | --:--     |
+      | FST  | --:--   | 20:25     |
+      | LHS  | 20:29   | 20:29     |
+      | WEH  | 20:34   | 20:34     |
+      | BKG  | 20:39   | 20:40     |
+      | DDK  | 20:44   | 20:44     |
+      | RNM  | 20:48   | 20:48     |
+      | PFL  | 20:53   | 20:54     |
+      | GRY  | 21:05   | --:--     |
 
   Scenario: Changing calling point stopping times
-    Given a query between "CDF" and "PAD" on "2020-04-06" at "13:53"
-    Then I should see a service "Y94425" that stops at
+    Given a query between "LBG" and "HRH" on "2020-03-22" at "18:21"
+    Then I should see a service "L09842" that stops at
       | stop | arrival | departure |
-      | CDF  | --:--   | 13:53     |
-      | NWP  | 14:03   | 14:05     |
-      | BPW  | 14:25   | 14:26     |
-      | SWI  | 14:48   | 14:50     |
-      | RDG  | 15:14   | 15:17     |
-      | PAD  | 15:41   | --:--     |
-    When I query between "BPW" and "PAD" on "2020-04-13" at "13:53"
-    Then I should see a service "Y94425" that stops at
+      | LBG  | --:--   | 18:21     |
+      | NWD  | 18:33   | 18:33     |
+      | ECR  | 18:37   | 18:37     |
+      | CDS  | 18:44   | 18:44     |
+      | MHM  | 18:49   | 18:49     |
+      | RDH  | 18:53   | 18:53     |
+      | HOR  | 18:59   | 18:59     |
+      | GTW  | 19:02   | 19:03     |
+      | TBD  | 19:08   | 19:09     |
+      | CRW  | 19:12   | 19:13     |
+      | IFI  | 19:15   | 19:15     |
+      | LVN  | 19:21   | 19:21     |
+      | HRH  | 19:25   | --:--     |
+    When I query between "BFR" and "HRH" on "2020-03-29" at "18:21"
+    Then I should see a service "L09842" that stops at
       | stop | arrival | departure |
-      | BPW  | --:--   | 14:30     |
-      | SWI  | 14:52   | 14:53     |
-      | RDG  | 15:19   | 15:20     |
-      | PAD  | 15:43   | --:--     |
+      | BFR  | --:--   | 18:15     |
+      | ECR  | 18:42   | 18:44     |
+      | CDS  | 18:50   | 18:50     |
+      | MHM  | 18:56   | 18:56     |
+      | RDH  | 18:59   | 19:00     |
+      | HOR  | 19:06   | 19:06     |
+      | GTW  | 19:08   | 19:09     |
+      | TBD  | 19:14   | 19:15     |
+      | CRW  | 19:19   | 19:19     |
+      | IFI  | 19:22   | 19:22     |
+      | LVN  | 19:28   | 19:28     |
+      | HRH  | 19:32   | --:--     |
 
