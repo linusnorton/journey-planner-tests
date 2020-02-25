@@ -11,6 +11,8 @@ import io.ljn.jp.test.generator.timetable.AssociationScenarioFactory;
 import io.ljn.jp.test.generator.timetable.CancellationScenarioFactory;
 import io.ljn.jp.test.generator.timetable.OverlayScenarioFactory;
 import io.ljn.jp.test.generator.timetable.PublicTimeScenarioFactory;
+import io.ljn.jp.test.generator.timetable.repository.AssociationCategory;
+import io.ljn.jp.test.generator.timetable.repository.AssociationRepository;
 import io.ljn.jp.test.generator.timetable.repository.ScheduleRepository;
 import io.ljn.jp.test.generator.timetable.repository.StopTimeRepository;
 
@@ -42,6 +44,7 @@ public class GenerateTestsApp {
         MustacheFactory mustacheFactory = new DefaultMustacheFactory();
         FareRepository fareRepository = new FareRepository(faresDatabase);
         ScheduleRepository scheduleRepository = new ScheduleRepository(timetableDatabase);
+        AssociationRepository associationRepository = new AssociationRepository(timetableDatabase);
         StopTimeRepository stopTimeRepository = new StopTimeRepository(timetableDatabase);
         FeatureGenerator generator = new FeatureGenerator();
 
@@ -65,10 +68,16 @@ public class GenerateTestsApp {
                 mustacheFactory.compile("template/timetable/public-time.mustache")
             ),
             () -> generator.run(
-                scheduleRepository::getSplits,
+                associationRepository::getSplits,
                 new AssociationScenarioFactory(stopTimeRepository),
                 "src/main/resources/feature/timetable/splits.feature",
                 mustacheFactory.compile("template/timetable/splits.mustache")
+            ),
+            () -> generator.run(
+                associationRepository::getJoins,
+                new AssociationScenarioFactory(stopTimeRepository),
+                "src/main/resources/feature/timetable/joins.feature",
+                mustacheFactory.compile("template/timetable/joins.mustache")
             ),
             () -> generator.run(
                 fareRepository::getNonDerivableFaresThatOverrideFlowFares,

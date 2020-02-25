@@ -60,18 +60,6 @@ public class ScheduleRepository {
         "AND scheduled_departure_time > '10:00:00' " +
         "LIMIT 5";
 
-    private static final String splitSql = "" +
-        "SELECT *, CURDATE() + INTERVAL 1 MONTH AS date FROM association ass " +
-        "JOIN schedule bs ON bs.train_uid = ass.base_uid AND bs.runs_to = ass.end_date " +
-        "JOIN schedule a_s ON a_s.train_uid = ass.assoc_uid " +
-        "JOIN physical_station ON assoc_location = tiploc_code " +
-        "WHERE CURDATE() + INTERVAL 1 MONTH BETWEEN bs.runs_from AND bs.runs_to " +
-        "AND CURDATE() + INTERVAL 1 MONTH BETWEEN a_s.runs_from AND a_s.runs_to " +
-        "AND assoc_location LIKE 'ASH%' " +
-        "AND assoc_cat = 'VV' " +
-        "ORDER BY RAND() " +
-        "LIMIT 5";
-
     public List<ScheduleRow> getOverlaySchedules() {
         return getSchedules(overlaySql);
     }
@@ -113,36 +101,4 @@ public class ScheduleRepository {
         );
     }
 
-    public List<AssociationRow> getSplits() {
-        return getAssociationRows(splitSql);
-    }
-
-    private List<AssociationRow> getAssociationRows(String sql) {
-        List<AssociationRow> rows = new ArrayList<>();
-
-        try (Connection con = db.getConnection();
-             PreparedStatement pst = con.prepareStatement(sql);
-             ResultSet rs = pst.executeQuery();
-        ) {
-            while (rs.next()) {
-                rows.add(getAssociationRow(rs));
-            }
-        } catch (SQLException e) {
-            throw new GeneratorException("SQL error: " + sql, e);
-        }
-
-        return rows;
-    }
-
-    private AssociationRow getAssociationRow(ResultSet rs) throws SQLException {
-        return new AssociationRow(
-            rs.getInt("bs.id"),
-            rs.getInt("a_s.id"),
-            rs.getString("bs.train_uid"),
-            rs.getString("a_s.train_uid"),
-            rs.getString("crs_code"),
-            AssociationCategory.valueOf(rs.getString("ass.assoc_cat")),
-            rs.getDate("date").toLocalDate()
-        );
-    }
 }
