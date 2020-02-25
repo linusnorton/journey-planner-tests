@@ -42,6 +42,18 @@ public class FareRepository {
         "ORDER BY RAND() " +
         "LIMIT 5";
 
+    private final String groupMemberFaresSql = "" +
+        "SELECT *, CURDATE() + INTERVAL 1 MONTH as date FROM location_group_member " +
+        "JOIN location ON member_crs_code = crs " +
+        "JOIN flow fl ON fl.destination_code = nlc " +
+        "JOIN fare fr ON fr.flow_id = fl.flow_id " +
+        "JOIN flow fl2 ON fl2.origin_code = fl.origin_code " +
+        "JOIN fare fr2 ON fr2.flow_id = fl2.flow_id AND fr.ticket_code = fr2.ticket_code " +
+        "WHERE group_uic_code = '7010720' " +
+        "AND fl2.destination_code = '1072' " +
+        "AND fr.ticket_code IN ('SDS', 'SDR', 'FDR', 'FDS', 'SVR', 'CDS', 'SOR', 'SOS', 'SSS', 'SSR', 'SVS', 'ODS') " +
+        "LIMIT 5";
+
     public List<FareRow> getNonDerivableFaresThatOverrideFlowFares() {
         List<FareRow> rows = new ArrayList<>();
 
@@ -58,7 +70,6 @@ public class FareRepository {
         }
 
         return rows;
-
     }
 
     private FareRow getNonDerivableRow(ResultSet rs) throws SQLException {
@@ -88,7 +99,6 @@ public class FareRepository {
         }
 
         return rows;
-
     }
 
     private FareRow getClusteredRow(ResultSet rs) throws SQLException {
@@ -97,6 +107,37 @@ public class FareRepository {
             rs.getString("dl.crs"),
             rs.getString("fr.ticket_code"),
             rs.getString("fl.route_code"),
+            rs.getInt("fr.fare"),
+            rs.getDate("date")
+        );
+    }
+
+    public List<GroupFareRow> getGroupMemberFares() {
+        List<GroupFareRow> rows = new ArrayList<>();
+
+        try (
+            Connection con = db.getConnection();
+            PreparedStatement pst = con.prepareStatement(groupMemberFaresSql);
+            ResultSet rs = pst.executeQuery();
+        ) {
+            while (rs.next()) {
+                rows.add(getGroupMemberRow(rs));
+            }
+        } catch (SQLException e) {
+            throw new GeneratorException("SQL error: " + clusterFareSql, e);
+        }
+
+        return rows;
+    }
+
+    private GroupFareRow getGroupMemberRow(ResultSet rs) throws SQLException {
+        return new GroupFareRow(
+            rs.getString("crs"),
+            "1072",
+            rs.getString("fr.ticket_code"),
+            rs.getString("fl2.route_code"),
+            rs.getString("fl.route_code"),
+            rs.getInt("fr2.fare"),
             rs.getInt("fr.fare"),
             rs.getDate("date")
         );

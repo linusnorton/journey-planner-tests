@@ -6,12 +6,12 @@ import com.github.mustachejava.MustacheFactory;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import io.ljn.jp.test.generator.fares.FareScenarioFactory;
+import io.ljn.jp.test.generator.fares.GroupFareScenarioFactory;
 import io.ljn.jp.test.generator.fares.repository.FareRepository;
 import io.ljn.jp.test.generator.timetable.AssociationScenarioFactory;
 import io.ljn.jp.test.generator.timetable.CancellationScenarioFactory;
 import io.ljn.jp.test.generator.timetable.OverlayScenarioFactory;
 import io.ljn.jp.test.generator.timetable.PublicTimeScenarioFactory;
-import io.ljn.jp.test.generator.timetable.repository.AssociationCategory;
 import io.ljn.jp.test.generator.timetable.repository.AssociationRepository;
 import io.ljn.jp.test.generator.timetable.repository.ScheduleRepository;
 import io.ljn.jp.test.generator.timetable.repository.StopTimeRepository;
@@ -90,6 +90,12 @@ public class GenerateTestsApp {
                 new FareScenarioFactory(),
                 "src/main/resources/feature/fares/cluster-fares.feature",
                 mustacheFactory.compile("template/fares/cluster-fares.mustache")
+            ),
+            () -> generator.run(
+                fareRepository::getGroupMemberFares,
+                new GroupFareScenarioFactory(),
+                "src/main/resources/feature/fares/group-member-fares.feature",
+                mustacheFactory.compile("template/fares/group-member-fares.mustache")
             )
         );
     }

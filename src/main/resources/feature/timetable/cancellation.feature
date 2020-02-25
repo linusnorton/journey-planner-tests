@@ -2,96 +2,98 @@ Feature: Schedule cancellations
   A schedule might be cancelled for a subset of dates using an overlay record
 
   Scenario: Service is cancelled on a particular day
-    Given a query between "GLC" and "PRE" on "2020-09-18" at "21:01"
-    Then I should see a service "C05086" that stops at
+    Given a query between "CSS" and "WAT" on "2020-04-03" at "19:38"
+    Then I should see a service "W18873" that stops at
       | stop | arrival | departure |
-      | GLC  | --:--   | 21:01     |
-      | LOC  | 22:19   | 22:20     |
-      | CAR  | 22:41   | 22:42     |
-      | PNR  | 22:56   | 22:57     |
-      | PRE  | 00:13   | --:--     |
-    When I query between "GLC" and "PRE" on "2020-09-25" at "21:01"
-    Then I should not see a service "C05086" in the results
+      | CSS  | --:--   | 19:38     |
+      | CSN  | 19:40   | 19:40     |
+      | TOL  | 19:43   | 19:43     |
+      | MAL  | 19:45   | 19:45     |
+      | MOT  | 19:49   | 19:49     |
+      | RAY  | 19:53   | 19:53     |
+      | WIM  | 19:57   | 19:57     |
+      | EAD  | 20:01   | 20:01     |
+      | CLJ  | 20:04   | 20:05     |
+      | VXH  | 20:09   | 20:10     |
+      | WAT  | 20:16   | --:--     |
+    When I query between "CSS" and "WAT" on "2020-04-10" at "19:38"
+    Then I should not see a service "W18873" in the results
 
   Scenario: Service is cancelled on a particular day
-    Given a query between "RMD" and "SRA" on "2020-04-06" at "08:09"
-    Then I should see a service "L43383" that stops at
+    Given a query between "CHX" and "GRV" on "2020-04-06" at "19:32"
+    Then I should see a service "W43761" that stops at
       | stop | arrival | departure |
-      | RMD  | --:--   | 08:09     |
-      | KWG  | 08:12   | 08:12     |
-      | GUN  | 08:15   | 08:15     |
-      | SAT  | 08:18   | 08:18     |
-      | ACC  | 08:20   | 08:21     |
-      | WIJ  | 08:26   | 08:27     |
-      | KNR  | 08:30   | 08:30     |
-      | BSP  | 08:32   | 08:32     |
-      | BSY  | 08:33   | 08:33     |
-      | WHD  | 08:35   | 08:35     |
-      | FNY  | 08:37   | 08:37     |
-      | HDH  | 08:39   | 08:39     |
-      | GPO  | 08:42   | 08:42     |
-      | KTW  | 08:44   | 08:44     |
-      | CMD  | 08:49   | 08:49     |
-      | CIR  | 08:52   | 08:52     |
-      | HHY  | 08:54   | 08:55     |
-      | CNN  | 08:57   | 08:57     |
-      | DLK  | 08:59   | 08:59     |
-      | HKC  | 09:01   | 09:01     |
-      | HMN  | 09:03   | 09:03     |
-      | HKW  | 09:05   | 09:05     |
-      | SRA  | 09:11   | --:--     |
-    When I query between "RMD" and "SRA" on "2020-04-13" at "08:09"
-    Then I should not see a service "L43383" in the results
+      | CHX  | --:--   | 19:32     |
+      | WAE  | 19:34   | 19:35     |
+      | LBG  | 19:39   | 19:41     |
+      | NEH  | 19:55   | 19:55     |
+      | SID  | 19:58   | 19:58     |
+      | BXY  | 20:02   | 20:02     |
+      | CRY  | 20:05   | 20:05     |
+      | DFD  | 20:10   | 20:11     |
+      | SCG  | 20:15   | 20:15     |
+      | GNH  | 20:17   | 20:17     |
+      | SWM  | 20:20   | 20:20     |
+      | NFL  | 20:22   | 20:22     |
+      | GRV  | 20:26   | --:--     |
+    When I query between "CHX" and "GRV" on "2020-04-13" at "19:32"
+    Then I should not see a service "W43761" in the results
 
   Scenario: Service is cancelled on a particular day
-    Given a query between "KGX" and "WGC" on "2020-05-01" at "17:36"
-    Then I should see a service "L07276" that stops at
+    Given a query between "WNR" and "WAT" on "2020-04-06" at "20:23"
+    Then I should see a service "W14589" that stops at
       | stop | arrival | departure |
-      | KGX  | --:--   | 17:36     |
-      | FPK  | 17:42   | 17:45     |
-      | NSG  | 17:51   | 17:52     |
-      | OKL  | 17:55   | 17:55     |
-      | NBA  | 17:57   | 17:57     |
-      | PBR  | 18:02   | 18:02     |
-      | HAT  | 18:08   | 18:08     |
-      | WGC  | 18:12   | --:--     |
-    When I query between "KGX" and "WGC" on "2020-05-08" at "17:36"
-    Then I should not see a service "L07276" in the results
+      | WNR  | --:--   | 20:23     |
+      | DAT  | 20:26   | 20:26     |
+      | SNY  | 20:29   | 20:29     |
+      | WRY  | 20:32   | 20:32     |
+      | SNS  | 20:37   | 20:38     |
+      | AFS  | 20:41   | 20:41     |
+      | FEL  | 20:45   | 20:46     |
+      | WTN  | 20:50   | 20:50     |
+      | TWI  | 20:53   | 20:53     |
+      | RMD  | 20:57   | 20:58     |
+      | PUT  | 21:04   | 21:04     |
+      | CLJ  | 21:08   | 21:09     |
+      | VXH  | 21:14   | 21:15     |
+      | WAT  | 21:19   | --:--     |
+    When I query between "WNR" and "WAT" on "2020-04-13" at "20:23"
+    Then I should not see a service "W14589" in the results
 
   Scenario: Service is cancelled on a particular day
-    Given a query between "VIC" and "BTN" on "2020-04-06" at "08:25"
-    Then I should see a service "L00007" that stops at
+    Given a query between "CST" and "ORP" on "2020-04-03" at "21:50"
+    Then I should see a service "W52586" that stops at
       | stop | arrival | departure |
-      | VIC  | --:--   | 08:25     |
-      | CLJ  | 08:31   | 08:32     |
-      | ECR  | 08:41   | 08:41     |
-      | GTW  | 08:56   | 08:58     |
-      | HHE  | 09:09   | 09:11     |
-      | BUG  | 09:16   | 09:16     |
-      | HSK  | 09:20   | 09:20     |
-      | BTN  | 09:32   | --:--     |
-    When I query between "VIC" and "BTN" on "2020-04-13" at "08:25"
-    Then I should not see a service "L00007" in the results
+      | CST  | --:--   | 21:50     |
+      | LBG  | 21:53   | 21:54     |
+      | NWX  | 21:59   | 22:00     |
+      | SAJ  | 22:02   | 22:02     |
+      | LEW  | 22:04   | 22:05     |
+      | HGR  | 22:09   | 22:09     |
+      | GRP  | 22:13   | 22:13     |
+      | ESD  | 22:16   | 22:16     |
+      | CIT  | 22:19   | 22:19     |
+      | PET  | 22:22   | 22:22     |
+      | ORP  | 22:26   | --:--     |
+    When I query between "CST" and "ORP" on "2020-04-10" at "21:50"
+    Then I should not see a service "W52586" in the results
 
   Scenario: Service is cancelled on a particular day
-    Given a query between "VIC" and "LBG" on "2020-04-06" at "11:50"
-    Then I should see a service "L04264" that stops at
+    Given a query between "LBG" and "BKJ" on "2020-04-03" at "07:31"
+    Then I should see a service "L04654" that stops at
       | stop | arrival | departure |
-      | VIC  | --:--   | 11:50     |
-      | BAK  | 11:54   | 11:54     |
-      | CLJ  | 11:58   | 11:58     |
-      | WSW  | 12:01   | 12:01     |
-      | BAL  | 12:04   | 12:04     |
-      | SRH  | 12:08   | 12:09     |
-      | WNW  | 12:12   | 12:12     |
-      | GIP  | 12:15   | 12:15     |
-      | CYP  | 12:21   | 12:22     |
-      | SYD  | 12:26   | 12:26     |
-      | FOH  | 12:28   | 12:28     |
-      | HPA  | 12:31   | 12:31     |
-      | BCY  | 12:33   | 12:33     |
-      | NXG  | 12:35   | 12:36     |
-      | LBG  | 12:47   | --:--     |
-    When I query between "VIC" and "LBG" on "2020-04-13" at "11:50"
-    Then I should not see a service "L04264" in the results
+      | LBG  | --:--   | 07:31     |
+      | SBM  | 07:35   | 07:35     |
+      | QRP  | 07:38   | 07:38     |
+      | PMR  | 07:41   | 07:41     |
+      | EDW  | 07:44   | 07:44     |
+      | NDL  | 07:46   | 07:47     |
+      | TUH  | 07:50   | 07:51     |
+      | WNW  | 07:54   | 07:54     |
+      | GIP  | 07:57   | 07:57     |
+      | CYP  | 08:01   | 08:01     |
+      | BIK  | 08:05   | 08:05     |
+      | BKJ  | 08:09   | --:--     |
+    When I query between "LBG" and "BKJ" on "2020-04-10" at "07:31"
+    Then I should not see a service "L04654" in the results
 
