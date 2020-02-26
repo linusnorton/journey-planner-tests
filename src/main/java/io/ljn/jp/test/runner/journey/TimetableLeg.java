@@ -1,4 +1,4 @@
-package io.ljn.jp.test.journey;
+package io.ljn.jp.test.runner.journey;
 
 import lombok.Data;
 

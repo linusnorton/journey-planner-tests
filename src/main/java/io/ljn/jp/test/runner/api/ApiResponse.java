@@ -1,4 +1,4 @@
-package io.ljn.jp.test.api;
+package io.ljn.jp.test.runner.api;
 
 public class ApiResponse<T> {
     public final T data;

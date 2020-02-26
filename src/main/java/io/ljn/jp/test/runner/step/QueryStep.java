@@ -1,9 +1,9 @@
-package io.ljn.jp.test.step;
+package io.ljn.jp.test.runner.step;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.ljn.jp.test.api.JourneyPlannerApi;
+import io.ljn.jp.test.runner.api.JourneyPlannerApi;
 
 public class QueryStep {
     private final JourneyPlannerApi journeyPlanner;

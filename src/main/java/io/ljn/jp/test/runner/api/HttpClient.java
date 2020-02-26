@@ -1,4 +1,4 @@
-package io.ljn.jp.test.api;
+package io.ljn.jp.test.runner.api;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

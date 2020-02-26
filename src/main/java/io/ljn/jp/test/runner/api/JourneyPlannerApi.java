@@ -1,9 +1,9 @@
-package io.ljn.jp.test.api;
+package io.ljn.jp.test.runner.api;
 
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
 import com.squareup.moshi.Types;
-import io.ljn.jp.test.journey.Journey;
+import io.ljn.jp.test.runner.journey.Journey;
 import okhttp3.Response;
 
 import java.io.IOException;
