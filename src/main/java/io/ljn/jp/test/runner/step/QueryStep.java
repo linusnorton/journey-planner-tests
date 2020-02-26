@@ -4,13 +4,11 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.ljn.jp.test.runner.api.JourneyPlannerApi;
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
 public class QueryStep {
     private final JourneyPlannerApi journeyPlanner;
-
-    public QueryStep(JourneyPlannerApi journeyPlanner) {
-        this.journeyPlanner = journeyPlanner;
-    }
 
     @Given("a/I query between {string} and {string} on {string} at {string}")
     public void aQueryBetweenAndOnAt(String origin, String destination, String date, String time) {

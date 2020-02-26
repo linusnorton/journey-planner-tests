@@ -1,9 +1,6 @@
 package io.ljn.jp.test.runner.api;
 
 import okhttp3.*;
-import okio.BufferedSink;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 
@@ -24,10 +21,11 @@ public class HttpClient {
         return http.newCall(request).execute();
     }
 
-    public Response post(String url, Object query) {
-        RequestBody body = 
+    public Response post(String url, String postJson) throws IOException {
+        System.out.println(postJson);
+        RequestBody body = RequestBody.create(postJson, MediaType.parse("application/json"));
         Request request = new Request.Builder()
-            .post()
+            .post(body)
             .url(host + url)
             .build();
 

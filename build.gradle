@@ -48,7 +48,7 @@ task cucumber() {
         javaexec {
             main = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = ['--strict', '--plugin', 'pretty', '--glue', 'io.ljn.jp.test', 'src/main/resources']
+            args = ['--strict', '--plugin', 'pretty', '--glue', 'io.ljn.jp.test.runner', 'src/main/resources']
         }
     }
 }
