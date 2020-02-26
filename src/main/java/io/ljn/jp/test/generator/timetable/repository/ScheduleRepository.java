@@ -15,8 +15,9 @@ import java.util.List;
 @AllArgsConstructor
 public class ScheduleRepository {
     private final DataSource db;
+
     private static final String overlaySql = "" +
-        "SELECT s.id AS original_id, c.* " +
+        "SELECT s.id AS original_id, c.*, c.runs_from AS date " +
         "FROM schedule s " +
         "JOIN schedule c ON s.train_uid = c.train_uid " +
             "AND s.stp_indicator = 'P' " +
@@ -37,8 +38,9 @@ public class ScheduleRepository {
         "AND st.public_departure_time > '4:00' " +
         "ORDER BY RAND()" +
         "LIMIT 5";
+
     private static final String cancellationSql = "" +
-        "SELECT s.id AS original_id, c.* " +
+        "SELECT s.id AS original_id, c.*, c.runs_from AS date " +
         "FROM schedule s " +
         "JOIN schedule c " +
             "ON s.train_uid = c.train_uid  " +
@@ -53,11 +55,13 @@ public class ScheduleRepository {
         "LIMIT 5 ";
 
     private static final String publicTimeSql = "" +
-        "SELECT *, schedule.id AS original_id FROM stop_time " +
+        "SELECT *, schedule.id AS original_id, CURDATE() + INTERVAL 1 MONTH as date " +
+        "FROM stop_time " +
         "JOIN physical_station ON location = tiploc_code " +
         "JOIN schedule ON schedule.id = stop_time.schedule " +
         "WHERE ABS(public_departure_time - scheduled_departure_time) > 4170 " +
         "AND scheduled_departure_time > '10:00:00' " +
+        "AND CURDATE() + INTERVAL 1 MONTH BETWEEN runs_from AND runs_to " +
         "LIMIT 5";
 
     public List<ScheduleRow> getOverlaySchedules() {
@@ -90,7 +94,7 @@ public class ScheduleRepository {
     }
 
     private ScheduleRow getScheduleRow(ResultSet rs) throws SQLException {
-        LocalDate overlayRunsFrom = rs.getDate("runs_from").toLocalDate();
+        LocalDate overlayRunsFrom = rs.getDate("date").toLocalDate();
 
         return new ScheduleRow(
             rs.getInt("original_id"),

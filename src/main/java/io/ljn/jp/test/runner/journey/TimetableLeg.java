@@ -5,6 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class TimetableLeg implements Leg {
-    private final List<StopTime> stopTimes;
+public class TimetableLeg {
+    public final List<StopTime> tisCallingPointList;
+    public final TrainInfo tisTrainInfo;
 }

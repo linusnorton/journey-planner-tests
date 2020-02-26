@@ -1,9 +1,12 @@
 package io.ljn.jp.test.runner.api;
 
-public class ApiResponse<T> {
-    public final T data;
+import lombok.Data;
+import io.ljn.jp.test.runner.journey.Journey;
 
-    public ApiResponse(T data) {
-        this.data = data;
-    }
+import java.util.List;
+
+@Data
+public class ApiResponse {
+
+    public final List<Journey> outboundJourneyList;
 }
