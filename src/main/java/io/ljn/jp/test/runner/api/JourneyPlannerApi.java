@@ -25,7 +25,8 @@ public class JourneyPlannerApi {
 
     public List<Journey> planJourney(String origin, String destination, String date, String time) {
         try {
-            Response response = http.get("jp?origin=%s&destination=%s&date=%s&time=%s", origin, destination, date, time);
+            JourneyPlannerQuery query = new JourneyPlannerQuery(origin, destination, date, time);
+            Response response = http.post("/apiproxy/train/tisuk/fare/fare/train", query);
             ApiResponse<List<Journey>> json = jsonAdapter.fromJson(response.body().source());
 
             return json.data;
