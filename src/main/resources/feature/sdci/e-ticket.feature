@@ -30,7 +30,7 @@ Feature: SDCI+ for e-ticket transactions
       | BF          | 0     | N/A                   | debit                | N/A         |
       | CW          | 1000  | credit                | credit               | N/A         |
 
-  Scenario: Uncollected ToD refund
+  Scenario: e-ticket refund
     Given I have non-issued an order with "a return" ticket for "2" passengers, including "2" reservations each
     When I refund all tickets in the order before it is collected
     Then I should generate the following SDCI+
