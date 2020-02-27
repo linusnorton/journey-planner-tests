@@ -1,8 +1,9 @@
+@fares
 Feature: Clustered fares
   A clustered fare should be overridden by a fare to an NLC
 
   {{#scenarios}}
-  Scenario: Clustered fare overridden by an NLC flow
+  Scenario: Clustered fare overridden by an NLC flow between {{origin}} and {{destination}}
     Given a query between "{{origin}}" and "{{destination}}" on "{{date}}" at "10:00"
     Then I should see a fare "{{ticketCode}}" on "{{routeCode}}" that is "{{price}}" pence
 

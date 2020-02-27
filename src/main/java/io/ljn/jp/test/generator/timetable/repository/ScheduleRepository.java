@@ -49,8 +49,14 @@ public class ScheduleRepository {
             "AND  " +
                 "CONCAT (s.monday, s.tuesday, s.wednesday, s.thursday, s.friday, s.saturday, s.sunday) != " +
                 "CONCAT (c.monday, c.tuesday, c.wednesday, c.thursday, c.friday, c.saturday, c.sunday) " +
+        "LEFT JOIN schedule c2 " +
+            "ON s.train_uid = c2.train_uid  " +
+            "AND s.stp_indicator = 'P'  " +
+            "AND c2.stp_indicator = 'C' " +
+            "AND CURDATE() + INTERVAL 1 MONTH - INTERVAL 1 WEEK BETWEEN c2.runs_from AND c2.runs_to " +
         "WHERE s.runs_to > CURDATE() " +
         "AND c.runs_from > CURDATE() + INTERVAL 1 MONTH " +
+        "AND c2.id IS NULL " +
         "ORDER BY RAND() " +
         "LIMIT 5 ";
 

@@ -1,23 +1,24 @@
+@fares
 Feature: Clustered fares
   A clustered fare should be overridden by a fare to an NLC
 
-  Scenario: Clustered fare overridden by an NLC flow
-    Given a query between "JOR" and "ARA" on "2020-03-26" at "10:00"
-    Then I should see a fare "SOR" on "00000" that is "6280" pence
+  Scenario: Clustered fare overridden by an NLC flow between HPD and GRA
+    Given a query between "HPD" and "GRA" on "2020-03-27" at "10:00"
+    Then I should see a fare "SVR" on "00595" that is "9400" pence
 
-  Scenario: Clustered fare overridden by an NLC flow
-    Given a query between "CLY" and "QMA" on "2020-03-26" at "10:00"
-    Then I should see a fare "CDS" on "00000" that is "1140" pence
+  Scenario: Clustered fare overridden by an NLC flow between LCS and CTB
+    Given a query between "LCS" and "CTB" on "2020-03-27" at "10:00"
+    Then I should see a fare "SOR" on "01000" that is "7630" pence
 
-  Scenario: Clustered fare overridden by an NLC flow
-    Given a query between "CRR" and "ARA" on "2020-03-26" at "10:00"
-    Then I should see a fare "SDS" on "01000" that is "2750" pence
+  Scenario: Clustered fare overridden by an NLC flow between BCC and QDK
+    Given a query between "BCC" and "QDK" on "2020-03-27" at "10:00"
+    Then I should see a fare "SDS" on "00074" that is "1780" pence
 
-  Scenario: Clustered fare overridden by an NLC flow
-    Given a query between "CLY" and "QMC" on "2020-03-26" at "10:00"
-    Then I should see a fare "CDS" on "00000" that is "1380" pence
+  Scenario: Clustered fare overridden by an NLC flow between BSL and CTB
+    Given a query between "BSL" and "CTB" on "2020-03-27" at "10:00"
+    Then I should see a fare "SDS" on "01000" that is "4820" pence
 
-  Scenario: Clustered fare overridden by an NLC flow
-    Given a query between "CYK" and "ARA" on "2020-03-26" at "10:00"
-    Then I should see a fare "SVR" on "00000" that is "5540" pence
+  Scenario: Clustered fare overridden by an NLC flow between PLN and EDA
+    Given a query between "PLN" and "EDA" on "2020-03-27" at "10:00"
+    Then I should see a fare "SVR" on "01002" that is "6100" pence
 

@@ -22,7 +22,6 @@ public class HttpClient {
     }
 
     public Response post(String url, String postJson) throws IOException {
-        System.out.println(postJson);
         RequestBody body = RequestBody.create(postJson, MediaType.parse("application/json"));
         Request request = new Request.Builder()
             .post(body)

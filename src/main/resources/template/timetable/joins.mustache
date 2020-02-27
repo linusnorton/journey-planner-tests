@@ -1,8 +1,9 @@
+@timetable
 Feature: Journey joins another train
   Journey planners should treat trains that join another train as a single journey
 
   {{#scenarios}}
-  Scenario: Train joins another train
+  Scenario: Train joins another train to form a single train between {{origin}} and {{destination}}
     Given a query between "{{origin}}" and "{{destination}}" on "{{date}}" at "{{departureTime}}"
     Then I should see a service "{{tuid}}" that stops at
       | stop | arrival | departure |

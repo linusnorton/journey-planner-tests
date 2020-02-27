@@ -1,8 +1,9 @@
+@timetable
 Feature: Schedule cancellations
   A schedule might be cancelled for a subset of dates using an overlay record
 
   {{#scenarios}}
-  Scenario: Service is cancelled on a particular day
+  Scenario: Service between {{origin}} and {{destination}} is cancelled on a particular day
     Given a query between "{{origin}}" and "{{destination}}" on "{{originalDate}}" at "{{departureTime}}"
     Then I should see a service "{{tuid}}" that stops at
       | stop | arrival | departure |

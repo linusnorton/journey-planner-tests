@@ -1,4 +1,4 @@
-@skipped
+@ignore
 Feature: SDCI+ for ToD transactions
 
   Scenario: ToD Sale
@@ -40,5 +40,5 @@ Feature: SDCI+ for ToD transactions
       | BS          | 0     | credit                | credit               | N/A         |
       | BS          | 500   | N/A                   | credit               | N/A         |
       | BS          | 0     | credit                | credit               | N/A         |
-      | BP          | 100   | debit                 | debit                | 91013       |
+      | BP          | 100   | debit                 | debit                | 91311       |
       | CW          | 900   | credit                | credit               | N/A         |

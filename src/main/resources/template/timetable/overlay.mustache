@@ -1,8 +1,9 @@
+@timetable
 Feature: Schedule overlays
   A schedule might be changed for a subset of dates using an overlay record
 
   {{#scenarios}}
-  Scenario: Changing calling point stopping times
+  Scenario: Changing calling point stopping times between {{origin}} and {{destination}}
     Given a query between "{{originalOrigin}}" and "{{originalDestination}}" on "{{originalDate}}" at "{{departureTime}}"
     Then I should see a service "{{tuid}}" that stops at
       | stop | arrival | departure |
