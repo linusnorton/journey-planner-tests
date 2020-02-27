@@ -49,12 +49,13 @@ task cucumber() {
             main = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
             args = [
-                '--threads', '4',
+//                '--threads', '4',
                 '--strict',
                 '--plugin', 'html:build/reports/cucumber/html',
                 '--plugin', 'json:build/reports/cucumber/json/report.json',
                 '--plugin', 'pretty',
-                '--tags', '@timetable or @fares',
+                '--tags', '@timetable',
+//                '--tags', '@timetable or @fares',
                 '--glue', 'io.ljn.jp.test.runner',
                 'src/main/resources'
             ]

@@ -7,4 +7,5 @@ import java.util.List;
 @Data
 public class Journey {
     public final List<TimetableLeg> tisSegmentList;
+    public final List<Fare> tisFareList;
 }
