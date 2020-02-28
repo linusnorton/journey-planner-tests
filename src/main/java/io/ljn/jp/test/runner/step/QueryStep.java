@@ -5,11 +5,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.ljn.jp.test.runner.api.ApiResponse;
 import io.ljn.jp.test.runner.api.JourneyPlannerApi;
-import io.ljn.jp.test.runner.journey.Journey;
 import io.ljn.jp.test.runner.journey.StopTime;
 import lombok.RequiredArgsConstructor;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -74,7 +72,10 @@ public class QueryStep {
         final float pricePounds = Float.parseFloat(price) / 100;
         boolean actual = response.tisFareList
             .stream()
-            .anyMatch(f -> f.fareClassification.ticketCode.equals(ticketCode) && f.fareClassification.routeCode.equals(routeCode) && f.farePrice.price == pricePounds);
+            .anyMatch(f -> f.fareClassification.ticketCode.equals(ticketCode)
+                && f.fareClassification.routeCode.equals(routeCode)
+                && f.farePrice.price == pricePounds
+            );
 
         assertTrue("Could not find a fare", actual);
     }

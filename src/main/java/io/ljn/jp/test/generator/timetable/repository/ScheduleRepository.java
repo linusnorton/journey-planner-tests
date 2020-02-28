@@ -32,10 +32,13 @@ public class ScheduleRepository {
                 "OR (s.saturday = 1 AND c.saturday = 1) " +
                 "OR (s.sunday = 1 AND c.sunday = 1) " +
             ") " +
-        "JOIN stop_time st ON s.id = st.schedule " +
-        "WHERE CURDATE() BETWEEN s.runs_from AND s.runs_to " +
-        "AND c.runs_from > CURDATE() + INTERVAL 1 MONTH " +
-        "AND st.public_departure_time > '4:00' " +
+        "LEFT JOIN schedule c2 " +
+            "ON s.train_uid = c2.train_uid " +
+            "AND c2.stp_indicator != 'P' " +
+            "AND CURDATE() + INTERVAL 1 MONTH - INTERVAL 1 WEEK BETWEEN c2.runs_from AND c2.runs_to " +
+        "WHERE CURDATE() + INTERVAL 1 MONTH - INTERVAL 1 WEEK BETWEEN s.runs_from AND s.runs_to " +
+        "AND CURDATE() + INTERVAL 1 MONTH BETWEEN c.runs_from AND c.runs_to " +
+        "AND c2.id IS NULL " +
         "ORDER BY RAND()" +
         "LIMIT 5";
 
@@ -52,10 +55,10 @@ public class ScheduleRepository {
         "LEFT JOIN schedule c2 " +
             "ON s.train_uid = c2.train_uid  " +
             "AND s.stp_indicator = 'P'  " +
-            "AND c2.stp_indicator = 'C' " +
+            "AND c2.stp_indicator != 'P' " +
             "AND CURDATE() + INTERVAL 1 MONTH - INTERVAL 1 WEEK BETWEEN c2.runs_from AND c2.runs_to " +
-        "WHERE s.runs_to > CURDATE() " +
-        "AND c.runs_from > CURDATE() + INTERVAL 1 MONTH " +
+        "WHERE s.runs_to > CURDATE() + INTERVAL 1 MONTH " +
+        "AND CURDATE() + INTERVAL 1 MONTH BETWEEN c.runs_from AND c.runs_to " +
         "AND c2.id IS NULL " +
         "ORDER BY RAND() " +
         "LIMIT 5 ";

@@ -3,7 +3,7 @@ Feature: Public time different to scheduled time
   Journey planners should use the public time not the scheduled time
 
   Scenario: Public departure time differs to scheduled departure time by more than a minute between MAN and EUS
-    Given a query between "MAN" and "EUS" on "2020-03-27" at "20:21"
+    Given a query between "MAN" and "EUS" on "2020-03-28" at "20:21"
     Then I should see a service "C72648" that stops at
       | stop | arrival | departure |
       | MAN  | --:--   | 20:21     |
@@ -14,7 +14,7 @@ Feature: Public time different to scheduled time
       | EUS  | 22:56   | --:--     |
 
   Scenario: Public departure time differs to scheduled departure time by more than a minute between FTW and EDB
-    Given a query between "FTW" and "EDB" on "2020-03-27" at "19:00"
+    Given a query between "FTW" and "EDB" on "2020-03-28" at "19:00"
     Then I should see a service "C75037" that stops at
       | stop | arrival | departure |
       | FTW  | --:--   | 19:00     |
@@ -36,7 +36,7 @@ Feature: Public time different to scheduled time
       | EDB  | 00:24   | --:--     |
 
   Scenario: Public departure time differs to scheduled departure time by more than a minute between EDB and INV
-    Given a query between "EDB" and "INV" on "2020-03-27" at "09:29"
+    Given a query between "EDB" and "INV" on "2020-03-28" at "09:29"
     Then I should see a service "G60534" that stops at
       | stop | arrival | departure |
       | EDB  | --:--   | 09:29     |
@@ -58,7 +58,7 @@ Feature: Public time different to scheduled time
       | INV  | 13:16   | --:--     |
 
   Scenario: Public departure time differs to scheduled departure time by more than a minute between HHY and WCY
-    Given a query between "HHY" and "WCY" on "2020-03-27" at "11:37"
+    Given a query between "HHY" and "WCY" on "2020-03-28" at "11:37"
     Then I should see a service "L45850" that stops at
       | stop | arrival | departure |
       | HHY  | --:--   | 11:37     |
@@ -84,7 +84,7 @@ Feature: Public time different to scheduled time
       | WCY  | 12:29   | --:--     |
 
   Scenario: Public departure time differs to scheduled departure time by more than a minute between CLJ and HHY
-    Given a query between "CLJ" and "HHY" on "2020-03-27" at "11:50"
+    Given a query between "CLJ" and "HHY" on "2020-03-28" at "11:50"
     Then I should see a service "L46879" that stops at
       | stop | arrival | departure |
       | CLJ  | --:--   | 11:50     |
