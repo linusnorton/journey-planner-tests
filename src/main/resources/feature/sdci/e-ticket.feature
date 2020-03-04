@@ -1,4 +1,4 @@
-@ignore
+@sdci
 Feature: SDCI+ for e-ticket transactions
 
   Scenario: e-ticket sale

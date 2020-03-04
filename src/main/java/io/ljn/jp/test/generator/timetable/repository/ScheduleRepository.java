@@ -64,13 +64,19 @@ public class ScheduleRepository {
         "LIMIT 5 ";
 
     private static final String publicTimeSql = "" +
-        "SELECT *, schedule.id AS original_id, CURDATE() + INTERVAL 1 MONTH as date " +
+        "SELECT *, s.id AS original_id, CURDATE() + INTERVAL 1 MONTH as date " +
         "FROM stop_time " +
         "JOIN physical_station ON location = tiploc_code " +
-        "JOIN schedule ON schedule.id = stop_time.schedule " +
+        "JOIN schedule s ON s.id = stop_time.schedule " +
+        "LEFT JOIN schedule c2 " +
+            "ON s.train_uid = c2.train_uid  " +
+            "AND c2.stp_indicator != 'P' " +
+            "AND CURDATE() + INTERVAL 1 MONTH BETWEEN c2.runs_from AND c2.runs_to " +
         "WHERE ABS(public_departure_time - scheduled_departure_time) > 4170 " +
-        "AND scheduled_departure_time > '10:00:00' " +
-        "AND CURDATE() + INTERVAL 1 MONTH BETWEEN runs_from AND runs_to " +
+        "AND CURDATE() + INTERVAL 1 MONTH BETWEEN s.runs_from AND s.runs_to " +
+        "AND s.stp_indicator = 'P' " +
+        "AND c2.id IS NULL " +
+        "AND s." + LocalDate.now().plusMonths(1).getDayOfWeek().name() + " = 1 " +
         "LIMIT 5";
 
     public List<ScheduleRow> getOverlaySchedules() {

@@ -29,6 +29,7 @@ public class OverlayScenarioFactory implements ScenarioFactory<ScheduleRow> {
             newStops.get(0).stop,
             newStops.get(newStops.size() - 1).stop,
             originalStops.get(0).departureTime,
+            newStops.get(0).departureTime,
             schedule.originalRunsFrom.format(dateFormat),
             schedule.overlayRunsFrom.format(dateFormat),
             originalStops,
@@ -44,6 +45,7 @@ public class OverlayScenarioFactory implements ScenarioFactory<ScheduleRow> {
         public final String newOrigin;
         public final String newDestination;
         public final String departureTime;
+        public final String overlayDepartureTime;
         public final String originalDate;
         public final String overlayDate;
         public final List<StopTimeRow> originalStops;

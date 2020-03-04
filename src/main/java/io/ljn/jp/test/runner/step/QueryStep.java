@@ -22,7 +22,7 @@ public class QueryStep {
     public void aQueryBetweenAndOnAt(String origin, String destination, String date, String time) {
         response = journeyPlanner.planJourney(origin, destination, date, time);
 
-        if (response.outboundJourneyList == null || response.outboundJourneyList.size() == 0) {
+        if (response.outboundJourneyList == null) {
             throw new NoResultsException(String.format("No results between %s and %s on %s %s", origin, destination, date, time));
         }
     }
@@ -43,12 +43,13 @@ public class QueryStep {
             .findFirst()
             .orElseThrow(() -> new MissingTrainException("Could not find: " + tuid));
 
-        assertEquals(expected, actual);
+        assertEquals("Expected " + expected + " to equal " + actual, expected, actual);
     }
 
     private String serialize(List<StopTime> tisCallingPointList) {
         return tisCallingPointList
             .stream()
+            .filter(s -> s.getPublicArrivalTime() != null || s.getPublicDepartureTime() != null)
             .map(s -> s.getCrsCode() + "_" + getTime(s.getPublicArrivalTime()) + "_" + getTime(s.getPublicDepartureTime()))
             .reduce((acc, item) -> acc + "\n" + item)
             .get();
