@@ -87,6 +87,17 @@ public class QueryStep {
         assertTrue("Could not find a fare", actual);
     }
 
+    @Then("I should see a fare {string} on {string}")
+    public void iShouldSeeAFareOn(String ticketCode, String routeCode) {
+        boolean actual = response.tisFareList
+            .stream()
+            .anyMatch(f -> f.fareClassification.ticketCode.equals(ticketCode)
+                && f.fareClassification.routeCode.equals(routeCode)
+            );
+
+        assertTrue("Could not find a fare", actual);
+    }
+
     @Then("I should see the following transfer patterns")
     public void iShouldSeeTheFollowingTransferPatterns(DataTable dataTable) {
         if (response.outboundJourneyList.size() == 0) {
