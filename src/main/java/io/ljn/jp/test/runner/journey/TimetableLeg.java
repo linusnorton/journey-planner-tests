@@ -8,4 +8,6 @@ import java.util.List;
 public class TimetableLeg {
     public final List<StopTime> tisCallingPointList;
     public final TrainInfo tisTrainInfo;
+    public final StationInfo dptStation;
+    public final StationInfo arrStation;
 }

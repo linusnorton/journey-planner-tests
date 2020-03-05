@@ -9,7 +9,9 @@ import io.ljn.jp.test.runner.journey.StopTime;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
+import static io.ljn.jp.test.runner.step.date.DateUtil.getNextWeekday;
 import static org.junit.Assert.*;
 
 @RequiredArgsConstructor
@@ -20,6 +22,10 @@ public class QueryStep {
 
     @Given("a/I query between {string} and {string} on {string} at {string}")
     public void aQueryBetweenAndOnAt(String origin, String destination, String date, String time) {
+        if (date.equals("a weekday")) {
+            date = getNextWeekday();
+        }
+
         response = journeyPlanner.planJourney(origin, destination, date, time);
 
         if (response.outboundJourneyList == null) {
@@ -79,5 +85,27 @@ public class QueryStep {
             );
 
         assertTrue("Could not find a fare", actual);
+    }
+
+    @Then("I should see the following transfer patterns")
+    public void iShouldSeeTheFollowingTransferPatterns(DataTable dataTable) {
+        if (response.outboundJourneyList.size() == 0) {
+            throw new NoResultsException("No results found");
+        }
+
+        List<String> expected = dataTable
+            .asList()
+            .stream()
+            .map(s -> s.replace(" ", ""))
+            .collect(Collectors.toList());
+
+        List<String> actual = response.outboundJourneyList
+            .stream()
+            .map(j -> j.dptLocation.crsCode + "," + j.tisSegmentList.stream().map(l -> l.arrStation.crsCode).collect(Collectors.joining(",")))
+            .collect(Collectors.toList());
+
+        for (String pattern : expected) {
+            assertTrue("Could not find pattern: " + pattern, actual.contains(pattern));
+        }
     }
 }

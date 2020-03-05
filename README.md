@@ -22,7 +22,12 @@ These tests aim to cover the application of:
   * Easements
   * Correct handling of the London group
   * NFM64
-
+  * Split map routeing
+* Journey planning
+  * Use of transfers
+  * via routes
+  * Appropriate spread of routes
+   
 # Run
 
 ```
@@ -31,7 +36,7 @@ These tests aim to cover the application of:
 
 # Generate
 
-Due the nature of the timetable data the tests need to be regenerated periodically. This requires a mysql database with the lastest DTD timetable loaded.
+Due the nature of the timetable data, the tests need to be regenerated periodically. This requires a mysql database with the latest DTD timetable loaded.
 
 ```
 ./gradlew run

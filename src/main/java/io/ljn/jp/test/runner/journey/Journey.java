@@ -8,4 +8,7 @@ import java.util.List;
 public class Journey {
     public final List<TimetableLeg> tisSegmentList;
     public final List<Fare> tisFareList;
+    public final StationInfo dptLocation;
+    public final StationInfo arrLocation;
+
 }
