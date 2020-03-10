@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -23,6 +24,7 @@ public class FeatureGenerator {
         List<Object> scenarios = repository.getRows()
             .parallelStream()
             .map(scenarioFactory::getScenario)
+            .filter(Objects::nonNull)
             .collect(Collectors.toList());
 
         Map<String, Object> context = new HashMap<>();

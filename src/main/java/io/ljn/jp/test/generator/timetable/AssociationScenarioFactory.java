@@ -20,6 +20,10 @@ public class AssociationScenarioFactory implements ScenarioFactory<AssociationRo
         final List<StopTimeRow> assocStops = stopTimeRepository.getStopTimes(row.assocId);
         final List<StopTimeRow> stops = row.assocCategory.getStopTimes(baseStops, assocStops, row.assocLocation);
 
+        if (stops == null) {
+            return null;
+        }
+
         return new AssociationScenario(
             row.baseTuid,
             stops.get(0).stop,

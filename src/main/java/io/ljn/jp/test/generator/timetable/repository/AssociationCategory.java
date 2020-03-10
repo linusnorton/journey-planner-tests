@@ -9,6 +9,11 @@ public enum AssociationCategory {
         public List<StopTimeRow> getStopTimes(List<StopTimeRow> baseStops, List<StopTimeRow> assocStops, String location) {
             final int baseIndex = indexOf(baseStops, location);
             final int assocIndex = indexOf(assocStops, location);
+
+            if (baseIndex == -1 || assocIndex == -1) {
+                return null;
+            }
+
             final List<StopTimeRow> newStops = assocStops.subList(0, assocIndex - 1);
 
             newStops.addAll(baseStops.subList(baseIndex, baseStops.size()));
@@ -21,6 +26,11 @@ public enum AssociationCategory {
         public List<StopTimeRow> getStopTimes(List<StopTimeRow> baseStops, List<StopTimeRow> assocStops, String location) {
             final int baseIndex = indexOf(baseStops, location);
             final int assocIndex = indexOf(assocStops, location);
+
+            if (baseIndex == -1 || assocIndex == -1) {
+                return null;
+            }
+
             final List<StopTimeRow> newStops = baseStops.subList(0, baseIndex - 1);
 
             newStops.addAll(assocStops.subList(assocIndex, assocStops.size()));

@@ -62,7 +62,7 @@ public class QueryStep {
         return tisCallingPointList
             .stream()
             .filter(s -> (s.getPublicArrivalTime() != null || s.getPublicDepartureTime() != null)
-                && (!"00:00:00".equals(s.getPublicArrivalTime()) && !"00:00:00".equals(s.getPublicDepartureTime()))
+                && (!"00:00:00".equals(s.getPublicArrivalTime()) || !"00:00:00".equals(s.getPublicDepartureTime()))
             )
             .map(s -> s.getCrsCode() + "_" + getTime(s.getPublicArrivalTime()) + "_" + getTime(s.getPublicDepartureTime()))
             .reduce((acc, item) -> acc + "\n" + item)
@@ -70,7 +70,7 @@ public class QueryStep {
     }
 
     private String getTime(String time) {
-        return time == null ? "--:--" : time.substring(0, 5);
+        return time == null || time.equals("00:00:00") ? "--:--" : time.substring(0, 5);
     }
 
     @Then("I should not see a service {string} in the results")
