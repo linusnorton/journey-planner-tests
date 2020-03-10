@@ -17,7 +17,7 @@ public class JourneyPlannerQuery {
     public final String returnDate;
     public final boolean isOpenReturn;
 
-    public JourneyPlannerQuery(String origin, String destination, String date, String time) {
+    public JourneyPlannerQuery(String origin, String destination, String date, String time, String railcard) {
         dptCrsCode = origin.length() == 3 ? origin : "";
         dptNlcCode = origin.length() == 4 ? origin : "";
         arrCrsCode = destination.length() == 3 ? destination : "";
@@ -26,7 +26,7 @@ public class JourneyPlannerQuery {
         departureDate = LocalDate.parse(date).atTime(LocalTime.parse(time)).format(localDateTimeFormat);
         returnDate = "";
 
-        railCardList = "";
+        railCardList = railcard;
         adultCount = 1;
         childCount = 0;
         isOpenReturn = false;

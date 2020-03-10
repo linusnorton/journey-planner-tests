@@ -19,8 +19,8 @@ public class JourneyPlannerApi {
         this.http = http;
     }
 
-    public ApiResponse planJourney(String origin, String destination, String date, String time) {
-        JourneyPlannerQuery query = new JourneyPlannerQuery(origin, destination, date, time);
+    public ApiResponse planJourney(String origin, String destination, String date, String time, String railcard) {
+        JourneyPlannerQuery query = new JourneyPlannerQuery(origin, destination, date, time, railcard);
         String postJson = requestAdapter.toJson(query);
 
         try {

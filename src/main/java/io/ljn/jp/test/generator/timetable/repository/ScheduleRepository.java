@@ -76,6 +76,7 @@ public class ScheduleRepository {
         "AND CURDATE() + INTERVAL 1 MONTH BETWEEN s.runs_from AND s.runs_to " +
         "AND s.stp_indicator = 'P' " +
         "AND c2.id IS NULL " +
+        "AND s.train_uid NOT IN ('C76472') " +
         "AND s." + LocalDate.now().plusMonths(1).getDayOfWeek().name() + " = 1 " +
         "LIMIT 5";
 

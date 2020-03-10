@@ -22,15 +22,21 @@ public class QueryStep {
 
     @Given("a/I query between {string} and {string} on {string} at {string}")
     public void aQueryBetweenAndOnAt(String origin, String destination, String date, String time) {
+        aQueryBetweenAndOnAtWithARailcard(origin, destination, date, time, "");
+    }
+
+    @Given("a query between {string} and {string} on {string} at {string} with a {string} railcard")
+    public void aQueryBetweenAndOnAtWithARailcard(String origin, String destination, String date, String time, String railcard) {
         if (date.equals("a weekday")) {
             date = getNextWeekday();
         }
 
-        response = journeyPlanner.planJourney(origin, destination, date, time);
+        response = journeyPlanner.planJourney(origin, destination, date, time, railcard);
 
         if (response.outboundJourneyList == null) {
             throw new NoResultsException(String.format("No results between %s and %s on %s %s", origin, destination, date, time));
         }
+
     }
 
     @Then("I should see a service {string} that stops at")
@@ -55,7 +61,9 @@ public class QueryStep {
     private String serialize(List<StopTime> tisCallingPointList) {
         return tisCallingPointList
             .stream()
-            .filter(s -> s.getPublicArrivalTime() != null || s.getPublicDepartureTime() != null)
+            .filter(s -> (s.getPublicArrivalTime() != null || s.getPublicDepartureTime() != null)
+                && (!"00:00:00".equals(s.getPublicArrivalTime()) && !"00:00:00".equals(s.getPublicDepartureTime()))
+            )
             .map(s -> s.getCrsCode() + "_" + getTime(s.getPublicArrivalTime()) + "_" + getTime(s.getPublicDepartureTime()))
             .reduce((acc, item) -> acc + "\n" + item)
             .get();
