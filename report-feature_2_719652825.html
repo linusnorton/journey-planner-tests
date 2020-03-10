@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Feature: Schedule overlays</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>No Name (add projectName to cucumber-reporting.properties)</td>
+      <td>10 Mar 2020, 15:26</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">Schedule overlays</td>
+          <td      class="passed"    >20</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">20</td>
+
+          <td  class="passed"    >5</td>
+          <td >0</td>
+          <td class="total">5</td>
+
+          <td class="duration" data-value="15837263000">15.837</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2511005920.html">@timetable</a>
+</div>
+
+
+<div class="brief passed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">Schedule overlays</span>
+
+
+</div>
+
+        <div class="description indention">  A schedule might be changed for a subset of dates using an overlay record</div>
+
+        <div class="elements inner-level">
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2511005920.html">@timetable</a>
+</div>
+
+
+  <span class="lead-duration duration">4.025</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Changing calling point stopping times between MAN and HUL</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">a query between <span class="argument">&quot;MAN&quot;</span> and <span class="argument">&quot;HUL&quot;</span> on <span class="argument">&quot;2020-04-03&quot;</span> at <span class="argument">&quot;22:32&quot;</span></span>
+
+  <span class="lead-duration duration">1.520</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;Y33210&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>MAN</td>
+                  <td>--:--</td>
+                  <td>22:32</td>
+              </tr>
+              <tr>
+                  <td>SYB</td>
+                  <td>22:49</td>
+                  <td>22:50</td>
+              </tr>
+              <tr>
+                  <td>HUD</td>
+                  <td>23:08</td>
+                  <td>23:12</td>
+              </tr>
+              <tr>
+                  <td>LDS</td>
+                  <td>23:31</td>
+                  <td>23:33</td>
+              </tr>
+              <tr>
+                  <td>SBY</td>
+                  <td>23:51</td>
+                  <td>23:52</td>
+              </tr>
+              <tr>
+                  <td>BUH</td>
+                  <td>00:10</td>
+                  <td>00:11</td>
+              </tr>
+              <tr>
+                  <td>HUL</td>
+                  <td>00:26</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I query between <span class="argument">&quot;MAN&quot;</span> and <span class="argument">&quot;SBY&quot;</span> on <span class="argument">&quot;2020-04-10&quot;</span> at <span class="argument">&quot;22:32&quot;</span></span>
+
+  <span class="lead-duration duration">2.503</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;Y33210&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>MAN</td>
+                  <td>--:--</td>
+                  <td>22:32</td>
+              </tr>
+              <tr>
+                  <td>SYB</td>
+                  <td>22:49</td>
+                  <td>22:50</td>
+              </tr>
+              <tr>
+                  <td>HUD</td>
+                  <td>23:08</td>
+                  <td>23:12</td>
+              </tr>
+              <tr>
+                  <td>LDS</td>
+                  <td>23:31</td>
+                  <td>23:33</td>
+              </tr>
+              <tr>
+                  <td>SBY</td>
+                  <td>23:51</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2511005920.html">@timetable</a>
+</div>
+
+
+  <span class="lead-duration duration">5.172</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Changing calling point stopping times between SUO and SAC</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-3" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-4">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-4" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">a query between <span class="argument">&quot;SUO&quot;</span> and <span class="argument">&quot;SAC&quot;</span> on <span class="argument">&quot;2020-04-03&quot;</span> at <span class="argument">&quot;07:16&quot;</span></span>
+
+  <span class="lead-duration duration">4.204</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;W41017&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>SUO</td>
+                  <td>--:--</td>
+                  <td>07:16</td>
+              </tr>
+              <tr>
+                  <td>CSH</td>
+                  <td>07:19</td>
+                  <td>07:19</td>
+              </tr>
+              <tr>
+                  <td>HCB</td>
+                  <td>07:22</td>
+                  <td>07:22</td>
+              </tr>
+              <tr>
+                  <td>MIJ</td>
+                  <td>07:25</td>
+                  <td>07:25</td>
+              </tr>
+              <tr>
+                  <td>MTC</td>
+                  <td>07:28</td>
+                  <td>07:28</td>
+              </tr>
+              <tr>
+                  <td>STE</td>
+                  <td>07:32</td>
+                  <td>07:33</td>
+              </tr>
+              <tr>
+                  <td>TUH</td>
+                  <td>07:37</td>
+                  <td>07:38</td>
+              </tr>
+              <tr>
+                  <td>HNH</td>
+                  <td>07:41</td>
+                  <td>07:42</td>
+              </tr>
+              <tr>
+                  <td>LGJ</td>
+                  <td>07:45</td>
+                  <td>07:45</td>
+              </tr>
+              <tr>
+                  <td>EPH</td>
+                  <td>07:49</td>
+                  <td>07:49</td>
+              </tr>
+              <tr>
+                  <td>BFR</td>
+                  <td>07:54</td>
+                  <td>07:54</td>
+              </tr>
+              <tr>
+                  <td>CTK</td>
+                  <td>07:56</td>
+                  <td>07:56</td>
+              </tr>
+              <tr>
+                  <td>ZFD</td>
+                  <td>07:58</td>
+                  <td>07:59</td>
+              </tr>
+              <tr>
+                  <td>STP</td>
+                  <td>08:03</td>
+                  <td>08:03</td>
+              </tr>
+              <tr>
+                  <td>KTN</td>
+                  <td>08:08</td>
+                  <td>08:08</td>
+              </tr>
+              <tr>
+                  <td>WHP</td>
+                  <td>08:13</td>
+                  <td>08:13</td>
+              </tr>
+              <tr>
+                  <td>MIL</td>
+                  <td>08:22</td>
+                  <td>08:22</td>
+              </tr>
+              <tr>
+                  <td>ELS</td>
+                  <td>08:26</td>
+                  <td>08:26</td>
+              </tr>
+              <tr>
+                  <td>RDT</td>
+                  <td>08:29</td>
+                  <td>08:29</td>
+              </tr>
+              <tr>
+                  <td>SAC</td>
+                  <td>08:36</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I query between <span class="argument">&quot;SUO&quot;</span> and <span class="argument">&quot;SAC&quot;</span> on <span class="argument">&quot;2020-04-10&quot;</span> at <span class="argument">&quot;07:16&quot;</span></span>
+
+  <span class="lead-duration duration">0.967</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;W41017&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>SUO</td>
+                  <td>--:--</td>
+                  <td>07:16</td>
+              </tr>
+              <tr>
+                  <td>CSH</td>
+                  <td>07:19</td>
+                  <td>07:19</td>
+              </tr>
+              <tr>
+                  <td>HCB</td>
+                  <td>07:22</td>
+                  <td>07:22</td>
+              </tr>
+              <tr>
+                  <td>MIJ</td>
+                  <td>07:25</td>
+                  <td>07:25</td>
+              </tr>
+              <tr>
+                  <td>MTC</td>
+                  <td>07:28</td>
+                  <td>07:28</td>
+              </tr>
+              <tr>
+                  <td>STE</td>
+                  <td>07:32</td>
+                  <td>07:33</td>
+              </tr>
+              <tr>
+                  <td>TUH</td>
+                  <td>07:37</td>
+                  <td>07:38</td>
+              </tr>
+              <tr>
+                  <td>HNH</td>
+                  <td>07:41</td>
+                  <td>07:42</td>
+              </tr>
+              <tr>
+                  <td>LGJ</td>
+                  <td>07:45</td>
+                  <td>07:45</td>
+              </tr>
+              <tr>
+                  <td>EPH</td>
+                  <td>07:49</td>
+                  <td>07:49</td>
+              </tr>
+              <tr>
+                  <td>BFR</td>
+                  <td>07:54</td>
+                  <td>07:54</td>
+              </tr>
+              <tr>
+                  <td>ZFD</td>
+                  <td>07:58</td>
+                  <td>07:59</td>
+              </tr>
+              <tr>
+                  <td>STP</td>
+                  <td>08:03</td>
+                  <td>08:03</td>
+              </tr>
+              <tr>
+                  <td>KTN</td>
+                  <td>08:08</td>
+                  <td>08:08</td>
+              </tr>
+              <tr>
+                  <td>WHP</td>
+                  <td>08:14</td>
+                  <td>08:14</td>
+              </tr>
+              <tr>
+                  <td>CRI</td>
+                  <td>08:16</td>
+                  <td>08:17</td>
+              </tr>
+              <tr>
+                  <td>HEN</td>
+                  <td>08:20</td>
+                  <td>08:20</td>
+              </tr>
+              <tr>
+                  <td>MIL</td>
+                  <td>08:23</td>
+                  <td>08:23</td>
+              </tr>
+              <tr>
+                  <td>ELS</td>
+                  <td>08:27</td>
+                  <td>08:27</td>
+              </tr>
+              <tr>
+                  <td>RDT</td>
+                  <td>08:31</td>
+                  <td>08:31</td>
+              </tr>
+              <tr>
+                  <td>SAC</td>
+                  <td>08:37</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2511005920.html">@timetable</a>
+</div>
+
+
+  <span class="lead-duration duration">1.584</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Changing calling point stopping times between BTN and BDM</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-5" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-6">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-6" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">a query between <span class="argument">&quot;BTN&quot;</span> and <span class="argument">&quot;BDM&quot;</span> on <span class="argument">&quot;2020-04-03&quot;</span> at <span class="argument">&quot;08:00&quot;</span></span>
+
+  <span class="lead-duration duration">0.778</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;W40802&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>BTN</td>
+                  <td>--:--</td>
+                  <td>08:00</td>
+              </tr>
+              <tr>
+                  <td>BUG</td>
+                  <td>08:11</td>
+                  <td>08:11</td>
+              </tr>
+              <tr>
+                  <td>WVF</td>
+                  <td>08:13</td>
+                  <td>08:14</td>
+              </tr>
+              <tr>
+                  <td>HHE</td>
+                  <td>08:18</td>
+                  <td>08:19</td>
+              </tr>
+              <tr>
+                  <td>BAB</td>
+                  <td>08:25</td>
+                  <td>08:25</td>
+              </tr>
+              <tr>
+                  <td>TBD</td>
+                  <td>08:30</td>
+                  <td>08:31</td>
+              </tr>
+              <tr>
+                  <td>GTW</td>
+                  <td>08:35</td>
+                  <td>08:36</td>
+              </tr>
+              <tr>
+                  <td>ECR</td>
+                  <td>08:51</td>
+                  <td>08:51</td>
+              </tr>
+              <tr>
+                  <td>LBG</td>
+                  <td>09:04</td>
+                  <td>09:05</td>
+              </tr>
+              <tr>
+                  <td>BFR</td>
+                  <td>09:11</td>
+                  <td>09:12</td>
+              </tr>
+              <tr>
+                  <td>CTK</td>
+                  <td>09:13</td>
+                  <td>09:14</td>
+              </tr>
+              <tr>
+                  <td>ZFD</td>
+                  <td>09:16</td>
+                  <td>09:16</td>
+              </tr>
+              <tr>
+                  <td>STP</td>
+                  <td>09:20</td>
+                  <td>09:21</td>
+              </tr>
+              <tr>
+                  <td>HPD</td>
+                  <td>09:43</td>
+                  <td>09:43</td>
+              </tr>
+              <tr>
+                  <td>LTN</td>
+                  <td>09:48</td>
+                  <td>09:49</td>
+              </tr>
+              <tr>
+                  <td>LUT</td>
+                  <td>09:52</td>
+                  <td>09:53</td>
+              </tr>
+              <tr>
+                  <td>FLT</td>
+                  <td>10:02</td>
+                  <td>10:02</td>
+              </tr>
+              <tr>
+                  <td>BDM</td>
+                  <td>10:16</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I query between <span class="argument">&quot;BTN&quot;</span> and <span class="argument">&quot;BDM&quot;</span> on <span class="argument">&quot;2020-04-10&quot;</span> at <span class="argument">&quot;07:58&quot;</span></span>
+
+  <span class="lead-duration duration">0.803</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;W40802&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>BTN</td>
+                  <td>--:--</td>
+                  <td>07:58</td>
+              </tr>
+              <tr>
+                  <td>BUG</td>
+                  <td>08:08</td>
+                  <td>08:08</td>
+              </tr>
+              <tr>
+                  <td>WVF</td>
+                  <td>08:10</td>
+                  <td>08:10</td>
+              </tr>
+              <tr>
+                  <td>HHE</td>
+                  <td>08:15</td>
+                  <td>08:16</td>
+              </tr>
+              <tr>
+                  <td>BAB</td>
+                  <td>08:22</td>
+                  <td>08:22</td>
+              </tr>
+              <tr>
+                  <td>TBD</td>
+                  <td>08:27</td>
+                  <td>08:29</td>
+              </tr>
+              <tr>
+                  <td>GTW</td>
+                  <td>08:33</td>
+                  <td>08:36</td>
+              </tr>
+              <tr>
+                  <td>ECR</td>
+                  <td>08:51</td>
+                  <td>08:51</td>
+              </tr>
+              <tr>
+                  <td>LBG</td>
+                  <td>09:04</td>
+                  <td>09:05</td>
+              </tr>
+              <tr>
+                  <td>BFR</td>
+                  <td>09:11</td>
+                  <td>09:12</td>
+              </tr>
+              <tr>
+                  <td>CTK</td>
+                  <td>09:13</td>
+                  <td>09:14</td>
+              </tr>
+              <tr>
+                  <td>ZFD</td>
+                  <td>09:16</td>
+                  <td>09:16</td>
+              </tr>
+              <tr>
+                  <td>STP</td>
+                  <td>09:20</td>
+                  <td>09:21</td>
+              </tr>
+              <tr>
+                  <td>WHP</td>
+                  <td>09:29</td>
+                  <td>09:29</td>
+              </tr>
+              <tr>
+                  <td>SAC</td>
+                  <td>09:42</td>
+                  <td>09:43</td>
+              </tr>
+              <tr>
+                  <td>HPD</td>
+                  <td>09:48</td>
+                  <td>09:48</td>
+              </tr>
+              <tr>
+                  <td>LTN</td>
+                  <td>09:53</td>
+                  <td>09:54</td>
+              </tr>
+              <tr>
+                  <td>LUT</td>
+                  <td>09:57</td>
+                  <td>09:58</td>
+              </tr>
+              <tr>
+                  <td>LEA</td>
+                  <td>10:02</td>
+                  <td>10:02</td>
+              </tr>
+              <tr>
+                  <td>HLN</td>
+                  <td>10:06</td>
+                  <td>10:06</td>
+              </tr>
+              <tr>
+                  <td>FLT</td>
+                  <td>10:10</td>
+                  <td>10:10</td>
+              </tr>
+              <tr>
+                  <td>BDM</td>
+                  <td>10:22</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2511005920.html">@timetable</a>
+</div>
+
+
+  <span class="lead-duration duration">2.865</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-7">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Changing calling point stopping times between BTN and BDM</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-7" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-8">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-8" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">a query between <span class="argument">&quot;BTN&quot;</span> and <span class="argument">&quot;BDM&quot;</span> on <span class="argument">&quot;2020-04-03&quot;</span> at <span class="argument">&quot;19:58&quot;</span></span>
+
+  <span class="lead-duration duration">1.232</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;W40941&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>BTN</td>
+                  <td>--:--</td>
+                  <td>19:58</td>
+              </tr>
+              <tr>
+                  <td>BUG</td>
+                  <td>20:08</td>
+                  <td>20:08</td>
+              </tr>
+              <tr>
+                  <td>WVF</td>
+                  <td>20:10</td>
+                  <td>20:10</td>
+              </tr>
+              <tr>
+                  <td>HHE</td>
+                  <td>20:15</td>
+                  <td>20:16</td>
+              </tr>
+              <tr>
+                  <td>BAB</td>
+                  <td>20:22</td>
+                  <td>20:22</td>
+              </tr>
+              <tr>
+                  <td>TBD</td>
+                  <td>20:27</td>
+                  <td>20:29</td>
+              </tr>
+              <tr>
+                  <td>GTW</td>
+                  <td>20:33</td>
+                  <td>20:36</td>
+              </tr>
+              <tr>
+                  <td>ECR</td>
+                  <td>20:51</td>
+                  <td>20:51</td>
+              </tr>
+              <tr>
+                  <td>LBG</td>
+                  <td>21:04</td>
+                  <td>21:05</td>
+              </tr>
+              <tr>
+                  <td>BFR</td>
+                  <td>21:11</td>
+                  <td>21:12</td>
+              </tr>
+              <tr>
+                  <td>CTK</td>
+                  <td>21:13</td>
+                  <td>21:14</td>
+              </tr>
+              <tr>
+                  <td>ZFD</td>
+                  <td>21:16</td>
+                  <td>21:16</td>
+              </tr>
+              <tr>
+                  <td>STP</td>
+                  <td>21:20</td>
+                  <td>21:21</td>
+              </tr>
+              <tr>
+                  <td>WHP</td>
+                  <td>21:29</td>
+                  <td>21:29</td>
+              </tr>
+              <tr>
+                  <td>SAC</td>
+                  <td>21:41</td>
+                  <td>21:41</td>
+              </tr>
+              <tr>
+                  <td>HPD</td>
+                  <td>21:47</td>
+                  <td>21:47</td>
+              </tr>
+              <tr>
+                  <td>LTN</td>
+                  <td>21:52</td>
+                  <td>21:53</td>
+              </tr>
+              <tr>
+                  <td>LUT</td>
+                  <td>21:56</td>
+                  <td>21:57</td>
+              </tr>
+              <tr>
+                  <td>LEA</td>
+                  <td>22:01</td>
+                  <td>22:01</td>
+              </tr>
+              <tr>
+                  <td>HLN</td>
+                  <td>22:05</td>
+                  <td>22:05</td>
+              </tr>
+              <tr>
+                  <td>FLT</td>
+                  <td>22:09</td>
+                  <td>22:09</td>
+              </tr>
+              <tr>
+                  <td>BDM</td>
+                  <td>22:21</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I query between <span class="argument">&quot;BTN&quot;</span> and <span class="argument">&quot;BDM&quot;</span> on <span class="argument">&quot;2020-04-10&quot;</span> at <span class="argument">&quot;19:58&quot;</span></span>
+
+  <span class="lead-duration duration">1.631</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;W40941&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>BTN</td>
+                  <td>--:--</td>
+                  <td>19:58</td>
+              </tr>
+              <tr>
+                  <td>BUG</td>
+                  <td>20:08</td>
+                  <td>20:08</td>
+              </tr>
+              <tr>
+                  <td>WVF</td>
+                  <td>20:10</td>
+                  <td>20:10</td>
+              </tr>
+              <tr>
+                  <td>HHE</td>
+                  <td>20:15</td>
+                  <td>20:16</td>
+              </tr>
+              <tr>
+                  <td>BAB</td>
+                  <td>20:22</td>
+                  <td>20:22</td>
+              </tr>
+              <tr>
+                  <td>TBD</td>
+                  <td>20:27</td>
+                  <td>20:29</td>
+              </tr>
+              <tr>
+                  <td>GTW</td>
+                  <td>20:33</td>
+                  <td>20:36</td>
+              </tr>
+              <tr>
+                  <td>ECR</td>
+                  <td>20:51</td>
+                  <td>20:51</td>
+              </tr>
+              <tr>
+                  <td>LBG</td>
+                  <td>21:04</td>
+                  <td>21:05</td>
+              </tr>
+              <tr>
+                  <td>BFR</td>
+                  <td>21:11</td>
+                  <td>21:12</td>
+              </tr>
+              <tr>
+                  <td>ZFD</td>
+                  <td>21:16</td>
+                  <td>21:16</td>
+              </tr>
+              <tr>
+                  <td>STP</td>
+                  <td>21:20</td>
+                  <td>21:21</td>
+              </tr>
+              <tr>
+                  <td>WHP</td>
+                  <td>21:29</td>
+                  <td>21:29</td>
+              </tr>
+              <tr>
+                  <td>SAC</td>
+                  <td>21:41</td>
+                  <td>21:41</td>
+              </tr>
+              <tr>
+                  <td>HPD</td>
+                  <td>21:47</td>
+                  <td>21:47</td>
+              </tr>
+              <tr>
+                  <td>LTN</td>
+                  <td>21:52</td>
+                  <td>21:53</td>
+              </tr>
+              <tr>
+                  <td>LUT</td>
+                  <td>21:56</td>
+                  <td>21:57</td>
+              </tr>
+              <tr>
+                  <td>LEA</td>
+                  <td>22:01</td>
+                  <td>22:01</td>
+              </tr>
+              <tr>
+                  <td>HLN</td>
+                  <td>22:05</td>
+                  <td>22:05</td>
+              </tr>
+              <tr>
+                  <td>FLT</td>
+                  <td>22:09</td>
+                  <td>22:09</td>
+              </tr>
+              <tr>
+                  <td>BDM</td>
+                  <td>22:22</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2511005920.html">@timetable</a>
+</div>
+
+
+  <span class="lead-duration duration">2.189</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Changing calling point stopping times between BTN and BDM</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-9" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-10">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-10" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">a query between <span class="argument">&quot;BTN&quot;</span> and <span class="argument">&quot;BDM&quot;</span> on <span class="argument">&quot;2020-04-03&quot;</span> at <span class="argument">&quot;06:48&quot;</span></span>
+
+  <span class="lead-duration duration">1.428</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;W40792&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>BTN</td>
+                  <td>--:--</td>
+                  <td>06:48</td>
+              </tr>
+              <tr>
+                  <td>PRP</td>
+                  <td>06:52</td>
+                  <td>06:52</td>
+              </tr>
+              <tr>
+                  <td>HSK</td>
+                  <td>06:59</td>
+                  <td>06:59</td>
+              </tr>
+              <tr>
+                  <td>BUG</td>
+                  <td>07:03</td>
+                  <td>07:03</td>
+              </tr>
+              <tr>
+                  <td>WVF</td>
+                  <td>07:05</td>
+                  <td>07:06</td>
+              </tr>
+              <tr>
+                  <td>HHE</td>
+                  <td>07:10</td>
+                  <td>07:11</td>
+              </tr>
+              <tr>
+                  <td>TBD</td>
+                  <td>07:19</td>
+                  <td>07:20</td>
+              </tr>
+              <tr>
+                  <td>GTW</td>
+                  <td>07:24</td>
+                  <td>07:25</td>
+              </tr>
+              <tr>
+                  <td>ECR</td>
+                  <td>07:40</td>
+                  <td>07:40</td>
+              </tr>
+              <tr>
+                  <td>LBG</td>
+                  <td>07:53</td>
+                  <td>07:54</td>
+              </tr>
+              <tr>
+                  <td>BFR</td>
+                  <td>08:01</td>
+                  <td>08:02</td>
+              </tr>
+              <tr>
+                  <td>CTK</td>
+                  <td>08:03</td>
+                  <td>08:04</td>
+              </tr>
+              <tr>
+                  <td>ZFD</td>
+                  <td>08:06</td>
+                  <td>08:06</td>
+              </tr>
+              <tr>
+                  <td>STP</td>
+                  <td>08:10</td>
+                  <td>08:11</td>
+              </tr>
+              <tr>
+                  <td>SAC</td>
+                  <td>08:29</td>
+                  <td>08:29</td>
+              </tr>
+              <tr>
+                  <td>HPD</td>
+                  <td>08:35</td>
+                  <td>08:35</td>
+              </tr>
+              <tr>
+                  <td>LTN</td>
+                  <td>08:40</td>
+                  <td>08:40</td>
+              </tr>
+              <tr>
+                  <td>LUT</td>
+                  <td>08:44</td>
+                  <td>08:45</td>
+              </tr>
+              <tr>
+                  <td>LEA</td>
+                  <td>08:49</td>
+                  <td>08:49</td>
+              </tr>
+              <tr>
+                  <td>HLN</td>
+                  <td>08:53</td>
+                  <td>08:53</td>
+              </tr>
+              <tr>
+                  <td>FLT</td>
+                  <td>08:57</td>
+                  <td>08:57</td>
+              </tr>
+              <tr>
+                  <td>BDM</td>
+                  <td>09:09</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I query between <span class="argument">&quot;BTN&quot;</span> and <span class="argument">&quot;BDM&quot;</span> on <span class="argument">&quot;2020-04-10&quot;</span> at <span class="argument">&quot;06:58&quot;</span></span>
+
+  <span class="lead-duration duration">0.759</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;W40792&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>BTN</td>
+                  <td>--:--</td>
+                  <td>06:58</td>
+              </tr>
+              <tr>
+                  <td>BUG</td>
+                  <td>07:08</td>
+                  <td>07:08</td>
+              </tr>
+              <tr>
+                  <td>WVF</td>
+                  <td>07:10</td>
+                  <td>07:10</td>
+              </tr>
+              <tr>
+                  <td>HHE</td>
+                  <td>07:15</td>
+                  <td>07:16</td>
+              </tr>
+              <tr>
+                  <td>BAB</td>
+                  <td>07:22</td>
+                  <td>07:22</td>
+              </tr>
+              <tr>
+                  <td>TBD</td>
+                  <td>07:27</td>
+                  <td>07:29</td>
+              </tr>
+              <tr>
+                  <td>GTW</td>
+                  <td>07:33</td>
+                  <td>07:36</td>
+              </tr>
+              <tr>
+                  <td>ECR</td>
+                  <td>07:51</td>
+                  <td>07:51</td>
+              </tr>
+              <tr>
+                  <td>LBG</td>
+                  <td>08:04</td>
+                  <td>08:05</td>
+              </tr>
+              <tr>
+                  <td>BFR</td>
+                  <td>08:11</td>
+                  <td>08:12</td>
+              </tr>
+              <tr>
+                  <td>ZFD</td>
+                  <td>08:16</td>
+                  <td>08:16</td>
+              </tr>
+              <tr>
+                  <td>STP</td>
+                  <td>08:20</td>
+                  <td>08:21</td>
+              </tr>
+              <tr>
+                  <td>WHP</td>
+                  <td>08:29</td>
+                  <td>08:29</td>
+              </tr>
+              <tr>
+                  <td>SAC</td>
+                  <td>08:41</td>
+                  <td>08:41</td>
+              </tr>
+              <tr>
+                  <td>HPD</td>
+                  <td>08:47</td>
+                  <td>08:47</td>
+              </tr>
+              <tr>
+                  <td>LTN</td>
+                  <td>08:52</td>
+                  <td>08:53</td>
+              </tr>
+              <tr>
+                  <td>LUT</td>
+                  <td>08:56</td>
+                  <td>08:57</td>
+              </tr>
+              <tr>
+                  <td>LEA</td>
+                  <td>09:01</td>
+                  <td>09:01</td>
+              </tr>
+              <tr>
+                  <td>HLN</td>
+                  <td>09:05</td>
+                  <td>09:05</td>
+              </tr>
+              <tr>
+                  <td>FLT</td>
+                  <td>09:09</td>
+                  <td>09:09</td>
+              </tr>
+              <tr>
+                  <td>BDM</td>
+                  <td>09:24</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
