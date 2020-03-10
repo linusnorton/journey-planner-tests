@@ -4,5 +4,5 @@ import lombok.Data;
 
 @Data
 public class FarePrice {
-    public final double price;
+    public final float price;
 }
