@@ -1,4 +1,4 @@
-@journey-planning
+@journey-planning @pending
 Feature: The journey planner should make use of transfers to connect trains
 
   Scenario: Journeys between NRW and WWW can go via PBO or use a transfer to connect LST to EUS to go via London

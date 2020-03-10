@@ -1,4 +1,4 @@
-@fares
+@fares @pending
 Feature: Non-derivable fares
   A non-derivable fare should be used instead of a flow fare provided they have the same
   origin, destination route code
