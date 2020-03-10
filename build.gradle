@@ -21,6 +21,7 @@ dependencies {
     implementation("com.zaxxer:HikariCP:3.4.2")
     implementation("mysql:mysql-connector-java:5.1.6")
     implementation("com.github.spullara.mustache.java:compiler:0.9.6")
+    implementation("de.monochromata.cucumber:reporting-plugin:4.0.29")
 
     compileOnly 'org.projectlombok:lombok:1.18.12'
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
@@ -51,7 +52,7 @@ task cucumber() {
             args = [
                 '--threads', '4',
                 '--strict',
-                '--plugin', 'html:build/reports/cucumber/html',
+                '--plugin', 'de.monochromata.cucumber.report.PrettyReports:build/reports/cucumber',
                 '--plugin', 'json:build/reports/cucumber/json/report.json',
                 '--plugin', 'pretty',
                 '--tags', 'not @sdci and not @fares and not @routeing and not @journey-planning',
