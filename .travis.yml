@@ -5,7 +5,7 @@ versions:
 install: ./gradlew assemble
 script:
   - ./gradlew check
-  - ./gradlew cucumber || :
+  - ./gradlew cucumber || exit 0
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
