@@ -2,23 +2,23 @@
 Feature: Clustered fares
   A clustered fare should be overridden by a fare to an NLC
 
-  Scenario: Clustered fare overridden by an NLC flow between MLN and CRU
-    Given a query between "MLN" and "CRU" on "2020-04-10" at "10:00"
-    Then I should see a fare "SVR" on "00000" that is "4350" pence
+  Scenario: Clustered fare overridden by an NLC flow between JOR and CTB
+    Given a query between "JOR" and "CTB" on "2020-04-12" at "10:00"
+    Then I should see a fare "SDS" on "00000" that is "4230" pence
 
-  Scenario: Clustered fare overridden by an NLC flow between GRS and EDA
-    Given a query between "GRS" and "EDA" on "2020-04-10" at "10:00"
-    Then I should see a fare "SDR" on "00644" that is "3400" pence
+  Scenario: Clustered fare overridden by an NLC flow between DEN and BPO
+    Given a query between "DEN" and "BPO" on "2020-04-12" at "10:00"
+    Then I should see a fare "FDR" on "00000" that is "5840" pence
 
-  Scenario: Clustered fare overridden by an NLC flow between JOR and ARA
-    Given a query between "JOR" and "ARA" on "2020-04-10" at "10:00"
-    Then I should see a fare "SOR" on "00000" that is "6300" pence
+  Scenario: Clustered fare overridden by an NLC flow between BES and QMB
+    Given a query between "BES" and "QMB" on "2020-04-12" at "10:00"
+    Then I should see a fare "SDS" on "00327" that is "1560" pence
 
-  Scenario: Clustered fare overridden by an NLC flow between GTW and DON
-    Given a query between "GTW" and "DON" on "2020-04-10" at "10:00"
-    Then I should see a fare "SOR" on "00595" that is "18900" pence
+  Scenario: Clustered fare overridden by an NLC flow between ADC and QMC
+    Given a query between "ADC" and "QMC" on "2020-04-12" at "10:00"
+    Then I should see a fare "SDR" on "00325" that is "1860" pence
 
-  Scenario: Clustered fare overridden by an NLC flow between CYK and ARA
-    Given a query between "CYK" and "ARA" on "2020-04-10" at "10:00"
-    Then I should see a fare "SOR" on "00000" that is "6110" pence
+  Scenario: Clustered fare overridden by an NLC flow between DMY and CRU
+    Given a query between "DMY" and "CRU" on "2020-04-12" at "10:00"
+    Then I should see a fare "SOR" on "00000" that is "4740" pence
 

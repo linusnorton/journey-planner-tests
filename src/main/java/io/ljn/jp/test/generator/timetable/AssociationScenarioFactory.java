@@ -25,7 +25,7 @@ public class AssociationScenarioFactory implements ScenarioFactory<AssociationRo
         }
 
         return new AssociationScenario(
-            row.baseTuid,
+            row.assocTuid,
             stops.get(0).stop,
             stops.get(stops.size() - 1).stop,
             stops.get(0).departureTime,

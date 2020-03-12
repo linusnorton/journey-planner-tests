@@ -1,5 +1,6 @@
 package io.ljn.jp.test.generator.timetable.repository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 
@@ -14,9 +15,14 @@ public enum AssociationCategory {
                 return null;
             }
 
-            final List<StopTimeRow> newStops = assocStops.subList(0, assocIndex - 1);
-
+            final List<StopTimeRow> newStops = new ArrayList<>(assocStops.subList(0, assocIndex));
             newStops.addAll(baseStops.subList(baseIndex, baseStops.size()));
+
+            newStops.set(assocIndex , new StopTimeRow(
+                location,
+                assocStops.get(assocIndex).arrivalTime,
+                baseStops.get(baseIndex).departureTime
+            ));
 
             return newStops;
         }
@@ -31,9 +37,16 @@ public enum AssociationCategory {
                 return null;
             }
 
-            final List<StopTimeRow> newStops = baseStops.subList(0, baseIndex - 1);
+            final List<StopTimeRow> newStops = new ArrayList<>(baseStops.subList(0, baseIndex));
 
             newStops.addAll(assocStops.subList(assocIndex, assocStops.size()));
+
+            newStops.set(baseIndex, new StopTimeRow(
+                location,
+                baseStops.get(baseIndex).arrivalTime,
+                assocStops.get(assocIndex).departureTime
+            ));
+
 
             return newStops;
         }

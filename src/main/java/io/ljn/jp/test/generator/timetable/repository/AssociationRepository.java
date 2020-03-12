@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,14 +17,15 @@ public class AssociationRepository {
     private final DataSource db;
 
     private static final String sql = "" +
-        "SELECT *, CURDATE() + INTERVAL 1 MONTH AS date FROM association ass " +
+        "SELECT *, CURDATE() + INTERVAL 1 WEEK AS date FROM association ass " +
         "JOIN schedule bs ON bs.train_uid = ass.base_uid AND bs.runs_to = ass.end_date " +
         "JOIN schedule a_s ON a_s.train_uid = ass.assoc_uid " +
         "JOIN physical_station ON assoc_location = tiploc_code " +
-        "WHERE CURDATE() + INTERVAL 1 MONTH BETWEEN bs.runs_from AND bs.runs_to " +
-        "AND CURDATE() + INTERVAL 1 MONTH BETWEEN a_s.runs_from AND a_s.runs_to " +
+        "WHERE CURDATE() + INTERVAL 1 WEEK BETWEEN bs.runs_from AND bs.runs_to " +
+        "AND CURDATE() + INTERVAL 1 WEEK BETWEEN a_s.runs_from AND a_s.runs_to " +
         "AND assoc_location LIKE 'ASH%' " +
         "AND assoc_cat = ? " +
+        "AND bs." + LocalDate.now().plusWeeks(1).getDayOfWeek().name() + " = 1 " +
         "ORDER BY RAND() " +
         "LIMIT 5";
 
