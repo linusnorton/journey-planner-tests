@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>12 Mar 2020, 12:43</td>
+      <td>12 Mar 2020, 12:48</td>
     </tr>
   </tbody>
 </table>
@@ -115,7 +115,7 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_2_467630994.html">Journey joins another train</a>
+      <a href="report-feature_3_719652825.html">Schedule overlays</a>
     </div>
 
 
@@ -125,14 +125,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">13.370</span>
+  <span class="lead-duration duration">10.739</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Train joins another train to form a single train between RAM and CHX</span>
+  <span class="name">Changing calling point stopping times between HWV and PAD</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -164,11 +164,87 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-03-19&quot;</span> at <span class="argument">&quot;07:12&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;HWV&quot;</span> and <span class="argument">&quot;PAD&quot;</span> on <span class="argument">&quot;2020-04-05&quot;</span> at <span class="argument">&quot;22:27&quot;</span></span>
 
-  <span class="lead-duration duration">13.370</span>
+  <span class="lead-duration duration">0.492</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;P59685&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>HWV</td>
+                  <td>--:--</td>
+                  <td>22:27</td>
+              </tr>
+              <tr>
+                  <td>HXX</td>
+                  <td>22:31</td>
+                  <td>22:32</td>
+              </tr>
+              <tr>
+                  <td>PAD</td>
+                  <td>22:49</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When failed">
+  <span class="keyword indention">When</span>
+  <span class="name">I query between <span class="argument">&quot;HWV&quot;</span> and <span class="argument">&quot;PAD&quot;</span> on <span class="argument">&quot;2020-04-12&quot;</span> at <span class="argument">&quot;22:27&quot;</span></span>
+
+  <span class="lead-duration duration">10.247</span>
 
 </div>
 
@@ -183,11 +259,11 @@ $(document).ready(function() {
           <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;CHX&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-03-19 07:12&quot;,&quot;dptCrsCode&quot;:&quot;RAM&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;isOpenReturn&quot;:false,&quot;railCardList&quot;:&quot;&quot;,&quot;returnDate&quot;:&quot;&quot;}
+        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;PAD&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-12 22:27&quot;,&quot;dptCrsCode&quot;:&quot;HWV&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;isOpenReturn&quot;:false,&quot;railCardList&quot;:&quot;&quot;,&quot;returnDate&quot;:&quot;&quot;}
 	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:35)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:34)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:25)
-	at &#10045;.a query between &quot;RAM&quot; and &quot;CHX&quot; on &quot;2020-03-19&quot; at &quot;07:12&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:50)
+	at &#10045;.I query between &quot;HWV&quot; and &quot;PAD&quot; on &quot;2020-04-12&quot; at &quot;22:27&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:12)
 Caused by: java.net.SocketTimeoutException: timeout
 	at okio.SocketAsyncTimeout.newTimeoutException(Okio.kt:142)
 	at okio.AsyncTimeout.exit$okio(AsyncTimeout.kt:157)
@@ -261,7 +337,7 @@ Caused by: java.net.SocketException: Socket closed
 
 <div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;W52869&quot;</span> that stops at</span>
+  <span class="name">I should see a service <span class="argument">&quot;P59685&quot;</span> that stops at</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -280,93 +356,404 @@ Caused by: java.net.SocketException: Socket closed
                   <td>departure</td>
               </tr>
               <tr>
-                  <td>RAM</td>
+                  <td>HWV</td>
                   <td>--:--</td>
-                  <td>07:12</td>
+                  <td>22:27</td>
               </tr>
               <tr>
-                  <td>MSR</td>
-                  <td>07:18</td>
-                  <td>07:18</td>
+                  <td>HXX</td>
+                  <td>22:31</td>
+                  <td>22:32</td>
               </tr>
               <tr>
-                  <td>STU</td>
-                  <td>07:29</td>
-                  <td>07:30</td>
+                  <td>PAD</td>
+                  <td>22:48</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_3_719652825.html">Schedule overlays</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2511005920.html">@timetable</a>
+</div>
+
+
+  <span class="lead-duration duration">11.800</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Changing calling point stopping times between GLD and WAT</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-4" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">a query between <span class="argument">&quot;GLD&quot;</span> and <span class="argument">&quot;WAT&quot;</span> on <span class="argument">&quot;2020-04-05&quot;</span> at <span class="argument">&quot;18:24&quot;</span></span>
+
+  <span class="lead-duration duration">1.782</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;W17931&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
               </tr>
               <tr>
-                  <td>CBW</td>
-                  <td>07:34</td>
-                  <td>07:36</td>
+                  <td>GLD</td>
+                  <td>--:--</td>
+                  <td>18:24</td>
               </tr>
               <tr>
-                  <td>CRT</td>
-                  <td>07:41</td>
-                  <td>07:41</td>
+                  <td>WPL</td>
+                  <td>18:30</td>
+                  <td>18:30</td>
               </tr>
               <tr>
-                  <td>CIL</td>
-                  <td>07:44</td>
-                  <td>07:44</td>
+                  <td>WOK</td>
+                  <td>18:34</td>
+                  <td>18:36</td>
               </tr>
               <tr>
-                  <td>WYE</td>
-                  <td>07:50</td>
-                  <td>07:51</td>
+                  <td>WBY</td>
+                  <td>18:40</td>
+                  <td>18:40</td>
               </tr>
               <tr>
-                  <td>AFK</td>
-                  <td>07:58</td>
-                  <td>08:03</td>
+                  <td>BFN</td>
+                  <td>18:43</td>
+                  <td>18:43</td>
               </tr>
               <tr>
-                  <td>PLC</td>
-                  <td>08:09</td>
-                  <td>08:09</td>
+                  <td>WYB</td>
+                  <td>18:46</td>
+                  <td>18:46</td>
               </tr>
               <tr>
-                  <td>HCN</td>
-                  <td>08:16</td>
-                  <td>08:16</td>
+                  <td>WAL</td>
+                  <td>18:50</td>
+                  <td>18:50</td>
               </tr>
               <tr>
-                  <td>SPU</td>
-                  <td>08:21</td>
-                  <td>08:21</td>
+                  <td>HER</td>
+                  <td>18:52</td>
+                  <td>18:52</td>
               </tr>
               <tr>
-                  <td>MRN</td>
-                  <td>08:25</td>
-                  <td>08:25</td>
+                  <td>ESH</td>
+                  <td>18:55</td>
+                  <td>18:55</td>
               </tr>
               <tr>
-                  <td>PDW</td>
-                  <td>08:31</td>
-                  <td>08:31</td>
+                  <td>SUR</td>
+                  <td>18:59</td>
+                  <td>19:00</td>
               </tr>
               <tr>
-                  <td>TON</td>
-                  <td>08:39</td>
-                  <td>08:40</td>
+                  <td>WIM</td>
+                  <td>19:07</td>
+                  <td>19:08</td>
               </tr>
               <tr>
-                  <td>SEV</td>
-                  <td>08:50</td>
-                  <td>08:51</td>
+                  <td>EAD</td>
+                  <td>19:11</td>
+                  <td>19:11</td>
               </tr>
               <tr>
-                  <td>LBG</td>
-                  <td>09:15</td>
-                  <td>09:17</td>
+                  <td>CLJ</td>
+                  <td>19:15</td>
+                  <td>19:15</td>
               </tr>
               <tr>
-                  <td>WAE</td>
-                  <td>09:21</td>
-                  <td>09:22</td>
+                  <td>VXH</td>
+                  <td>19:20</td>
+                  <td>19:20</td>
               </tr>
               <tr>
-                  <td>CHX</td>
-                  <td>09:29</td>
+                  <td>WAT</td>
+                  <td>19:25</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When failed">
+  <span class="keyword indention">When</span>
+  <span class="name">I query between <span class="argument">&quot;WOK&quot;</span> and <span class="argument">&quot;WAT&quot;</span> on <span class="argument">&quot;2020-04-12&quot;</span> at <span class="argument">&quot;18:36&quot;</span></span>
+
+  <span class="lead-duration duration">10.014</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;WAT&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-12 18:36&quot;,&quot;dptCrsCode&quot;:&quot;WOK&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;isOpenReturn&quot;:false,&quot;railCardList&quot;:&quot;&quot;,&quot;returnDate&quot;:&quot;&quot;}
+	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:35)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:25)
+	at &#10045;.I query between &quot;WOK&quot; and &quot;WAT&quot; on &quot;2020-04-12&quot; at &quot;18:36&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:129)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.kt:117)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:266)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.kt:180)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:238)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:111)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:79)
+	at okhttp3.internal.connection.Transmitter.newExchange$okhttp(Transmitter.kt:163)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:35)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
+	at okhttp3.RealCall.execute(RealCall.kt:67)
+	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:31)
+	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:27)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:25)
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;W17931&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>WOK</td>
+                  <td>--:--</td>
+                  <td>18:36</td>
+              </tr>
+              <tr>
+                  <td>WBY</td>
+                  <td>18:40</td>
+                  <td>18:40</td>
+              </tr>
+              <tr>
+                  <td>BFN</td>
+                  <td>18:43</td>
+                  <td>18:43</td>
+              </tr>
+              <tr>
+                  <td>WYB</td>
+                  <td>18:46</td>
+                  <td>18:46</td>
+              </tr>
+              <tr>
+                  <td>WAL</td>
+                  <td>18:50</td>
+                  <td>18:50</td>
+              </tr>
+              <tr>
+                  <td>HER</td>
+                  <td>18:52</td>
+                  <td>18:52</td>
+              </tr>
+              <tr>
+                  <td>ESH</td>
+                  <td>18:55</td>
+                  <td>18:55</td>
+              </tr>
+              <tr>
+                  <td>SUR</td>
+                  <td>18:59</td>
+                  <td>19:00</td>
+              </tr>
+              <tr>
+                  <td>WIM</td>
+                  <td>19:07</td>
+                  <td>19:08</td>
+              </tr>
+              <tr>
+                  <td>EAD</td>
+                  <td>19:11</td>
+                  <td>19:11</td>
+              </tr>
+              <tr>
+                  <td>CLJ</td>
+                  <td>19:15</td>
+                  <td>19:15</td>
+              </tr>
+              <tr>
+                  <td>VXH</td>
+                  <td>19:20</td>
+                  <td>19:20</td>
+              </tr>
+              <tr>
+                  <td>WAT</td>
+                  <td>19:25</td>
                   <td>--:--</td>
               </tr>
           </table>
@@ -404,10 +791,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.477</span>
+  <span class="lead-duration duration">1.520</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -420,14 +807,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-4" class="collapse collapsable-details  in ">
+  <div id="element-7" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -439,7 +826,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -447,7 +834,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;CBW&quot;</span> on <span class="argument">&quot;2020-03-19&quot;</span> at <span class="argument">&quot;23:40&quot;</span></span>
 
-  <span class="lead-duration duration">0.474</span>
+  <span class="lead-duration duration">1.519</span>
 
 </div>
 
@@ -474,7 +861,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W47768&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -485,10 +872,10 @@ Caused by: java.net.SocketException: Socket closed
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
           <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
       </div>
-      <div id="msg-6" class="collapse collapsable-details  in ">
+      <div id="msg-9" class="collapse collapsable-details  in ">
         <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: W47768
 	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$4(QueryStep.java:56)
 	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
