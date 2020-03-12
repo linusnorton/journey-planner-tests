@@ -18,7 +18,7 @@ public enum AssociationCategory {
             final List<StopTimeRow> newStops = new ArrayList<>(assocStops.subList(0, assocIndex));
             newStops.addAll(baseStops.subList(baseIndex, baseStops.size()));
 
-            newStops.set(assocIndex , new StopTimeRow(
+            newStops.set(assocIndex, new StopTimeRow(
                 location,
                 assocStops.get(assocIndex).arrivalTime,
                 baseStops.get(baseIndex).departureTime
