@@ -50,7 +50,7 @@ task cucumber() {
             main = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
             args = [
-                '--threads', '4',
+                '--threads', '2',
                 '--strict',
                 '--plugin', 'de.monochromata.cucumber.report.PrettyReports:build/reports/cucumber',
                 '--plugin', 'json:build/reports/cucumber/json/report.json',
