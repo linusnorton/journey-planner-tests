@@ -25,7 +25,10 @@ public class AssociationRepository {
         "AND CURDATE() + INTERVAL 1 WEEK BETWEEN a_s.runs_from AND a_s.runs_to " +
         "AND assoc_location LIKE 'ASH%' " +
         "AND assoc_cat = ? " +
+        "AND bs.stp_indicator != 'C' " +
+        "AND a_s.stp_indicator != 'C' " +
         "AND bs." + LocalDate.now().plusWeeks(1).getDayOfWeek().name() + " = 1 " +
+        "AND a_s." + LocalDate.now().plusWeeks(1).getDayOfWeek().name() + " = 1 " +
         "ORDER BY RAND() " +
         "LIMIT 5";
 

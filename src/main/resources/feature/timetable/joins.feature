@@ -3,28 +3,7 @@ Feature: Journey joins another train
   Journey planners should treat trains that join another train as a single journey
 
   Scenario: Train joins another train to form a single train between RAM and CHX
-    Given a query between "RAM" and "CHX" on "2020-03-19" at "17:18"
-    Then I should see a service "W48744" that stops at
-      | stop | arrival | departure |
-      | RAM  | --:--   | 17:18     |
-      | MSR  | 17:24   | 17:24     |
-      | STU  | 17:35   | 17:35     |
-      | CBW  | 17:39   | 17:40     |
-      | WYE  | 17:51   | 17:52     |
-      | AFK  | 17:58   | 18:02     |
-      | PLC  | 18:08   | 18:08     |
-      | HCN  | 18:15   | 18:15     |
-      | SPU  | 18:19   | 18:20     |
-      | MRN  | 18:24   | 18:24     |
-      | PDW  | 18:29   | 18:30     |
-      | TON  | 18:40   | 18:42     |
-      | SEV  | 18:50   | 18:51     |
-      | LBG  | 19:13   | 19:15     |
-      | WAE  | 19:21   | 19:21     |
-      | CHX  | 19:24   | --:--     |
-
-  Scenario: Train joins another train to form a single train between RAM and CHX
-    Given a query between "RAM" and "CHX" on "2020-03-19" at "09:08"
+    Given a query between "RAM" and "CHX" on "2020-03-20" at "09:08"
     Then I should see a service "W48694" that stops at
       | stop | arrival | departure |
       | RAM  | --:--   | 09:08     |
@@ -47,7 +26,7 @@ Feature: Journey joins another train
       | CHX  | 11:22   | --:--     |
 
   Scenario: Train joins another train to form a single train between RAM and CHX
-    Given a query between "RAM" and "CHX" on "2020-03-19" at "07:12"
+    Given a query between "RAM" and "CHX" on "2020-03-20" at "07:12"
     Then I should see a service "W52869" that stops at
       | stop | arrival | departure |
       | RAM  | --:--   | 07:12     |
@@ -70,30 +49,7 @@ Feature: Journey joins another train
       | CHX  | 09:29   | --:--     |
 
   Scenario: Train joins another train to form a single train between RAM and CHX
-    Given a query between "RAM" and "CHX" on "2020-03-19" at "08:14"
-    Then I should see a service "W48687" that stops at
-      | stop | arrival | departure |
-      | RAM  | --:--   | 08:14     |
-      | MSR  | 08:20   | 08:20     |
-      | STU  | 08:31   | 08:31     |
-      | CBW  | 08:35   | 08:36     |
-      | CRT  | 08:41   | 08:41     |
-      | CIL  | 08:44   | 08:44     |
-      | WYE  | 08:50   | 08:51     |
-      | AFK  | 08:58   | 09:02     |
-      | PLC  | 09:08   | 09:08     |
-      | HCN  | 09:15   | 09:15     |
-      | SPU  | 09:19   | 09:20     |
-      | MRN  | 09:24   | 09:24     |
-      | PDW  | 09:29   | 09:30     |
-      | TON  | 09:37   | 09:39     |
-      | SEV  | 09:48   | 09:49     |
-      | LBG  | 10:11   | 10:13     |
-      | WAE  | 10:17   | 10:18     |
-      | CHX  | 10:24   | --:--     |
-
-  Scenario: Train joins another train to form a single train between RAM and CHX
-    Given a query between "RAM" and "CHX" on "2020-03-19" at "16:17"
+    Given a query between "RAM" and "CHX" on "2020-03-20" at "16:17"
     Then I should see a service "W48737" that stops at
       | stop | arrival | departure |
       | RAM  | --:--   | 16:17     |
@@ -115,4 +71,48 @@ Feature: Journey joins another train
       | LBG  | 18:19   | 18:21     |
       | WAE  | 18:26   | 18:27     |
       | CHX  | 18:32   | --:--     |
+
+  Scenario: Train joins another train to form a single train between RAM and CHX
+    Given a query between "RAM" and "CHX" on "2020-03-20" at "18:10"
+    Then I should see a service "W48751" that stops at
+      | stop | arrival | departure |
+      | RAM  | --:--   | 18:10     |
+      | MSR  | 18:16   | 18:20     |
+      | STU  | 18:31   | 18:31     |
+      | CBW  | 18:35   | 18:36     |
+      | CRT  | 18:41   | 18:41     |
+      | CIL  | 18:44   | 18:44     |
+      | WYE  | 18:50   | 18:51     |
+      | AFK  | 18:58   | 19:02     |
+      | PLC  | 19:08   | 19:08     |
+      | HCN  | 19:15   | 19:15     |
+      | SPU  | 19:19   | 19:20     |
+      | MRN  | 19:24   | 19:24     |
+      | PDW  | 19:29   | 19:30     |
+      | TON  | 19:38   | 19:39     |
+      | SEV  | 19:48   | 19:49     |
+      | LBG  | 20:11   | 20:13     |
+      | WAE  | 20:17   | 20:18     |
+      | CHX  | 20:22   | --:--     |
+
+  Scenario: Train joins another train to form a single train between RAM and CHX
+    Given a query between "RAM" and "CHX" on "2020-03-20" at "17:18"
+    Then I should see a service "W48744" that stops at
+      | stop | arrival | departure |
+      | RAM  | --:--   | 17:18     |
+      | MSR  | 17:24   | 17:24     |
+      | STU  | 17:35   | 17:35     |
+      | CBW  | 17:39   | 17:40     |
+      | WYE  | 17:51   | 17:52     |
+      | AFK  | 17:58   | 18:02     |
+      | PLC  | 18:08   | 18:08     |
+      | HCN  | 18:15   | 18:15     |
+      | SPU  | 18:19   | 18:20     |
+      | MRN  | 18:24   | 18:24     |
+      | PDW  | 18:29   | 18:30     |
+      | TON  | 18:40   | 18:42     |
+      | SEV  | 18:50   | 18:51     |
+      | LBG  | 19:13   | 19:15     |
+      | WAE  | 19:21   | 19:21     |
+      | CHX  | 19:24   | --:--     |
 
