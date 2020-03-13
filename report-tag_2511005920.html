@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>13 Mar 2020, 06:27</td>
+      <td>13 Mar 2020, 13:50</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@timetable</td>
-          <td      class="passed"    >64</td>
-          <td      class="failed"    >2</td>
-          <td     class="skipped"   >4</td>
+          <td      class="passed"    >70</td>
+          <td >0</td>
+          <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">70</td>
 
-          <td  class="passed"    >23</td>
-          <td  class="failed"    >2</td>
+          <td  class="passed"    >25</td>
+          <td >0</td>
           <td class="total">25</td>
 
-          <td class="duration" data-value="74204948000">1:14.204</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="64745634000">1:4.745</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -181,12 +181,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">10.220</span>
+  <span class="lead-duration duration">9.132</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Service between LTV and LOB is cancelled on a particular day</span>
 
@@ -197,16 +197,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -216,15 +216,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;LTV&quot;</span> and <span class="argument">&quot;LOB&quot;</span> on <span class="argument">&quot;2020-04-06&quot;</span> at <span class="argument">&quot;09:50&quot;</span></span>
 
-  <span class="lead-duration duration">10.216</span>
+  <span class="lead-duration duration">8.024</span>
 
 </div>
 
@@ -233,87 +233,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;LOB&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-06 09:50&quot;,&quot;dptCrsCode&quot;:&quot;LTV&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;isOpenReturn&quot;:false,&quot;railCardList&quot;:&quot;&quot;,&quot;returnDate&quot;:&quot;&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:35)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:34)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:25)
-	at &#10045;.a query between &quot;LTV&quot; and &quot;LOB&quot; on &quot;2020-04-06&quot; at &quot;09:50&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:6)
-Caused by: java.net.SocketTimeoutException: timeout
-	at okio.SocketAsyncTimeout.newTimeoutException(Okio.kt:142)
-	at okio.AsyncTimeout.exit$okio(AsyncTimeout.kt:157)
-	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:353)
-	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
-	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
-	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
-	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
-	at okhttp3.RealCall.execute(RealCall.kt:67)
-	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:31)
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:27)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:34)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:25)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
-	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at io.cucumber.core.runtime.Runtime$SameThreadExecutorService.execute(Runtime.java:243)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:118)
-	at io.cucumber.core.runtime.Runtime.lambda$run$3(Runtime.java:100)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.SliceOps$1$1.accept(SliceOps.java:199)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1631)
-	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
-	at io.cucumber.core.runtime.Runtime.run(Runtime.java:101)
-	at io.cucumber.core.cli.Main.run(Main.java:75)
-	at io.cucumber.core.cli.Main.main(Main.java:31)
-Caused by: java.net.SocketException: Socket closed
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
-	at okio.InputStreamSource.read(Okio.kt:93)
-	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
-	... 55 more
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -328,11 +247,11 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;P82486&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.004</span>
+  <span class="lead-duration duration">0.117</span>
 
 </div>
 
@@ -462,11 +381,11 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-When skipped">
+<div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;LTV&quot;</span> and <span class="argument">&quot;LOB&quot;</span> on <span class="argument">&quot;2020-04-13&quot;</span> at <span class="argument">&quot;09:50&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.984</span>
 
 </div>
 
@@ -489,11 +408,11 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should not see a service <span class="argument">&quot;P82486&quot;</span> in the results</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.006</span>
 
 </div>
 
@@ -537,10 +456,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">3.195</span>
+  <span class="lead-duration duration">3.301</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-4">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -553,14 +472,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-4" class="collapse collapsable-details ">
+  <div id="element-3" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-4">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -572,7 +491,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-5" class="inner-level collapse collapsable-details ">
+  <div id="steps-4" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -580,7 +499,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;EUS&quot;</span> and <span class="argument">&quot;SHR&quot;</span> on <span class="argument">&quot;2020-04-06&quot;</span> at <span class="argument">&quot;18:23&quot;</span></span>
 
-  <span class="lead-duration duration">1.997</span>
+  <span class="lead-duration duration">0.768</span>
 
 </div>
 
@@ -607,7 +526,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;C73635&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.096</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -691,7 +610,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;EUS&quot;</span> and <span class="argument">&quot;SHR&quot;</span> on <span class="argument">&quot;2020-04-13&quot;</span> at <span class="argument">&quot;18:23&quot;</span></span>
 
-  <span class="lead-duration duration">1.095</span>
+  <span class="lead-duration duration">2.532</span>
 
 </div>
 
@@ -718,7 +637,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Then</span>
   <span class="name">I should not see a service <span class="argument">&quot;C73635&quot;</span> in the results</span>
 
-  <span class="lead-duration duration">0.006</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -762,10 +681,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">2.025</span>
+  <span class="lead-duration duration">4.816</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-6">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -778,14 +697,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-6" class="collapse collapsable-details ">
+  <div id="element-5" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-7">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-6">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -797,7 +716,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-7" class="inner-level collapse collapsable-details ">
+  <div id="steps-6" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -805,7 +724,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;EUS&quot;</span> and <span class="argument">&quot;WFJ&quot;</span> on <span class="argument">&quot;2020-04-06&quot;</span> at <span class="argument">&quot;14:45&quot;</span></span>
 
-  <span class="lead-duration duration">1.130</span>
+  <span class="lead-duration duration">4.048</span>
 
 </div>
 
@@ -961,7 +880,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;EUS&quot;</span> and <span class="argument">&quot;WFJ&quot;</span> on <span class="argument">&quot;2020-04-13&quot;</span> at <span class="argument">&quot;14:45&quot;</span></span>
 
-  <span class="lead-duration duration">0.894</span>
+  <span class="lead-duration duration">0.766</span>
 
 </div>
 
@@ -1032,10 +951,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1.993</span>
+  <span class="lead-duration duration">4.742</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-8">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-7">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -1048,14 +967,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-8" class="collapse collapsable-details ">
+  <div id="element-7" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-9">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-8">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -1067,7 +986,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-9" class="inner-level collapse collapsable-details ">
+  <div id="steps-8" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -1075,7 +994,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;SEF&quot;</span> and <span class="argument">&quot;BTN&quot;</span> on <span class="argument">&quot;2020-04-06&quot;</span> at <span class="argument">&quot;09:53&quot;</span></span>
 
-  <span class="lead-duration duration">0.497</span>
+  <span class="lead-duration duration">3.580</span>
 
 </div>
 
@@ -1102,7 +1021,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;L03661&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.007</span>
 
 </div>
 
@@ -1186,7 +1105,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;SEF&quot;</span> and <span class="argument">&quot;BTN&quot;</span> on <span class="argument">&quot;2020-04-13&quot;</span> at <span class="argument">&quot;09:53&quot;</span></span>
 
-  <span class="lead-duration duration">1.493</span>
+  <span class="lead-duration duration">1.154</span>
 
 </div>
 
@@ -1257,10 +1176,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">2.148</span>
+  <span class="lead-duration duration">3.233</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-10">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -1273,14 +1192,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-10" class="collapse collapsable-details ">
+  <div id="element-9" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-11">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-10">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -1292,7 +1211,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-11" class="inner-level collapse collapsable-details ">
+  <div id="steps-10" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -1300,7 +1219,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;HSL&quot;</span> and <span class="argument">&quot;WAT&quot;</span> on <span class="argument">&quot;2020-04-06&quot;</span> at <span class="argument">&quot;13:40&quot;</span></span>
 
-  <span class="lead-duration duration">1.688</span>
+  <span class="lead-duration duration">0.714</span>
 
 </div>
 
@@ -1406,7 +1325,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;HSL&quot;</span> and <span class="argument">&quot;WAT&quot;</span> on <span class="argument">&quot;2020-04-13&quot;</span> at <span class="argument">&quot;13:40&quot;</span></span>
 
-  <span class="lead-duration duration">0.458</span>
+  <span class="lead-duration duration">2.518</span>
 
 </div>
 
@@ -1477,10 +1396,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">2.760</span>
+  <span class="lead-duration duration">4.830</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-12">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-11">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -1493,14 +1412,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-12" class="collapse collapsable-details ">
+  <div id="element-11" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-13">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-12">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -1512,7 +1431,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-13" class="inner-level collapse collapsable-details ">
+  <div id="steps-12" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -1520,7 +1439,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-03-20&quot;</span> at <span class="argument">&quot;09:08&quot;</span></span>
 
-  <span class="lead-duration duration">2.759</span>
+  <span class="lead-duration duration">4.829</span>
 
 </div>
 
@@ -1547,7 +1466,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W48694&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -1688,10 +1607,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.682</span>
+  <span class="lead-duration duration">1.504</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-14">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -1704,14 +1623,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-14" class="collapse collapsable-details ">
+  <div id="element-13" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-15">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -1723,7 +1642,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-15" class="inner-level collapse collapsable-details ">
+  <div id="steps-14" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -1731,7 +1650,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-03-20&quot;</span> at <span class="argument">&quot;07:12&quot;</span></span>
 
-  <span class="lead-duration duration">0.682</span>
+  <span class="lead-duration duration">1.504</span>
 
 </div>
 
@@ -1899,10 +1818,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1.090</span>
+  <span class="lead-duration duration">0.505</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-16">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-15">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -1915,14 +1834,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-16" class="collapse collapsable-details ">
+  <div id="element-15" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-17">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-16">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -1934,7 +1853,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-17" class="inner-level collapse collapsable-details ">
+  <div id="steps-16" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -1942,7 +1861,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-03-20&quot;</span> at <span class="argument">&quot;16:17&quot;</span></span>
 
-  <span class="lead-duration duration">1.090</span>
+  <span class="lead-duration duration">0.504</span>
 
 </div>
 
@@ -2115,10 +2034,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1.156</span>
+  <span class="lead-duration duration">1.180</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-18">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-17">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -2131,14 +2050,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-18" class="collapse collapsable-details ">
+  <div id="element-17" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-19">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-18">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -2150,7 +2069,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-19" class="inner-level collapse collapsable-details ">
+  <div id="steps-18" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -2158,7 +2077,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-03-20&quot;</span> at <span class="argument">&quot;18:10&quot;</span></span>
 
-  <span class="lead-duration duration">1.156</span>
+  <span class="lead-duration duration">1.179</span>
 
 </div>
 
@@ -2326,10 +2245,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.502</span>
+  <span class="lead-duration duration">1.222</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-20">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-19">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -2342,14 +2261,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-20" class="collapse collapsable-details ">
+  <div id="element-19" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-21">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-20">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -2361,7 +2280,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-21" class="inner-level collapse collapsable-details ">
+  <div id="steps-20" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -2369,7 +2288,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-03-20&quot;</span> at <span class="argument">&quot;17:18&quot;</span></span>
 
-  <span class="lead-duration duration">0.501</span>
+  <span class="lead-duration duration">1.221</span>
 
 </div>
 
@@ -2527,10 +2446,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">5.672</span>
+  <span class="lead-duration duration">3.251</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-22">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-21">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -2543,14 +2462,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-22" class="collapse collapsable-details ">
+  <div id="element-21" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-23">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-22">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -2562,7 +2481,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-23" class="inner-level collapse collapsable-details ">
+  <div id="steps-22" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -2570,7 +2489,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BTN&quot;</span> and <span class="argument">&quot;CBG&quot;</span> on <span class="argument">&quot;2020-04-06&quot;</span> at <span class="argument">&quot;11:08&quot;</span></span>
 
-  <span class="lead-duration duration">4.744</span>
+  <span class="lead-duration duration">2.761</span>
 
 </div>
 
@@ -2731,7 +2650,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;BTN&quot;</span> and <span class="argument">&quot;CBG&quot;</span> on <span class="argument">&quot;2020-04-13&quot;</span> at <span class="argument">&quot;11:08&quot;</span></span>
 
-  <span class="lead-duration duration">0.926</span>
+  <span class="lead-duration duration">0.488</span>
 
 </div>
 
@@ -2909,10 +2828,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">2.687</span>
+  <span class="lead-duration duration">4.408</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-24">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-23">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -2925,14 +2844,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-24" class="collapse collapsable-details ">
+  <div id="element-23" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-25">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-24">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -2944,7 +2863,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-25" class="inner-level collapse collapsable-details ">
+  <div id="steps-24" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -2952,7 +2871,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;SUO&quot;</span> and <span class="argument">&quot;SAC&quot;</span> on <span class="argument">&quot;2020-04-06&quot;</span> at <span class="argument">&quot;15:19&quot;</span></span>
 
-  <span class="lead-duration duration">0.691</span>
+  <span class="lead-duration duration">2.432</span>
 
 </div>
 
@@ -3133,7 +3052,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;SUO&quot;</span> and <span class="argument">&quot;SAC&quot;</span> on <span class="argument">&quot;2020-04-13&quot;</span> at <span class="argument">&quot;15:19&quot;</span></span>
 
-  <span class="lead-duration duration">1.994</span>
+  <span class="lead-duration duration">1.974</span>
 
 </div>
 
@@ -3346,10 +3265,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">3.164</span>
+  <span class="lead-duration duration">7.093</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-26">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-25">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -3362,14 +3281,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-26" class="collapse collapsable-details ">
+  <div id="element-25" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-27">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-26">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -3381,7 +3300,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-27" class="inner-level collapse collapsable-details ">
+  <div id="steps-26" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -3389,7 +3308,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BAN&quot;</span> and <span class="argument">&quot;MYB&quot;</span> on <span class="argument">&quot;2020-04-06&quot;</span> at <span class="argument">&quot;14:46&quot;</span></span>
 
-  <span class="lead-duration duration">2.474</span>
+  <span class="lead-duration duration">5.938</span>
 
 </div>
 
@@ -3490,7 +3409,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;BAN&quot;</span> and <span class="argument">&quot;MYB&quot;</span> on <span class="argument">&quot;2020-04-13&quot;</span> at <span class="argument">&quot;14:46&quot;</span></span>
 
-  <span class="lead-duration duration">0.689</span>
+  <span class="lead-duration duration">1.153</span>
 
 </div>
 
@@ -3517,7 +3436,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;C79735&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -3613,10 +3532,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.884</span>
+  <span class="lead-duration duration">1.003</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-28">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-27">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -3629,14 +3548,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-28" class="collapse collapsable-details ">
+  <div id="element-27" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-29">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-28">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -3648,7 +3567,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-29" class="inner-level collapse collapsable-details ">
+  <div id="steps-28" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -3656,7 +3575,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;DDG&quot;</span> and <span class="argument">&quot;WOS&quot;</span> on <span class="argument">&quot;2020-04-06&quot;</span> at <span class="argument">&quot;13:46&quot;</span></span>
 
-  <span class="lead-duration duration">0.446</span>
+  <span class="lead-duration duration">0.524</span>
 
 </div>
 
@@ -3683,7 +3602,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;P83853&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -3812,7 +3731,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;DDG&quot;</span> and <span class="argument">&quot;WOS&quot;</span> on <span class="argument">&quot;2020-04-13&quot;</span> at <span class="argument">&quot;13:46&quot;</span></span>
 
-  <span class="lead-duration duration">0.436</span>
+  <span class="lead-duration duration">0.477</span>
 
 </div>
 
@@ -3985,10 +3904,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">4.970</span>
+  <span class="lead-duration duration">1.070</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-30">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-29">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -4001,14 +3920,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-30" class="collapse collapsable-details ">
+  <div id="element-29" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-31">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-30">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -4020,7 +3939,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-31" class="inner-level collapse collapsable-details ">
+  <div id="steps-30" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -4028,7 +3947,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BDW&quot;</span> and <span class="argument">&quot;PAD&quot;</span> on <span class="argument">&quot;2020-04-06&quot;</span> at <span class="argument">&quot;13:41&quot;</span></span>
 
-  <span class="lead-duration duration">3.525</span>
+  <span class="lead-duration duration">0.571</span>
 
 </div>
 
@@ -4129,7 +4048,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;BDW&quot;</span> and <span class="argument">&quot;PAD&quot;</span> on <span class="argument">&quot;2020-04-13&quot;</span> at <span class="argument">&quot;13:45&quot;</span></span>
 
-  <span class="lead-duration duration">1.444</span>
+  <span class="lead-duration duration">0.498</span>
 
 </div>
 
@@ -4247,10 +4166,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1.583</span>
+  <span class="lead-duration duration">1.897</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-32">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-31">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -4263,14 +4182,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-32" class="collapse collapsable-details ">
+  <div id="element-31" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-33">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-32">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -4282,7 +4201,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-33" class="inner-level collapse collapsable-details ">
+  <div id="steps-32" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -4290,7 +4209,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;STP&quot;</span> and <span class="argument">&quot;LDS&quot;</span> on <span class="argument">&quot;2020-04-13&quot;</span> at <span class="argument">&quot;18:34&quot;</span></span>
 
-  <span class="lead-duration duration">1.581</span>
+  <span class="lead-duration duration">1.897</span>
 
 </div>
 
@@ -4317,7 +4236,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;C68179&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -4438,10 +4357,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1.980</span>
+  <span class="lead-duration duration">1.682</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-34">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-33">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -4454,14 +4373,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-34" class="collapse collapsable-details ">
+  <div id="element-33" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-35">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-34">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -4473,7 +4392,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-35" class="inner-level collapse collapsable-details ">
+  <div id="steps-34" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -4481,7 +4400,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;PAD&quot;</span> and <span class="argument">&quot;RDG&quot;</span> on <span class="argument">&quot;2020-04-13&quot;</span> at <span class="argument">&quot;05:43&quot;</span></span>
 
-  <span class="lead-duration duration">1.980</span>
+  <span class="lead-duration duration">1.681</span>
 
 </div>
 
@@ -4624,10 +4543,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">2.967</span>
+  <span class="lead-duration duration">1.404</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-36">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-35">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -4640,14 +4559,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-36" class="collapse collapsable-details ">
+  <div id="element-35" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-37">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-36">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -4659,7 +4578,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-37" class="inner-level collapse collapsable-details ">
+  <div id="steps-36" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -4667,7 +4586,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;PAD&quot;</span> and <span class="argument">&quot;RDG&quot;</span> on <span class="argument">&quot;2020-04-13&quot;</span> at <span class="argument">&quot;18:43&quot;</span></span>
 
-  <span class="lead-duration duration">2.965</span>
+  <span class="lead-duration duration">1.403</span>
 
 </div>
 
@@ -4694,7 +4613,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;G37634&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -4810,10 +4729,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1.915</span>
+  <span class="lead-duration duration">1.753</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-38">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-37">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -4826,14 +4745,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-38" class="collapse collapsable-details ">
+  <div id="element-37" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-39">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-38">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -4845,7 +4764,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-39" class="inner-level collapse collapsable-details ">
+  <div id="steps-38" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -4853,7 +4772,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;PAD&quot;</span> and <span class="argument">&quot;RDG&quot;</span> on <span class="argument">&quot;2020-04-13&quot;</span> at <span class="argument">&quot;06:43&quot;</span></span>
 
-  <span class="lead-duration duration">1.915</span>
+  <span class="lead-duration duration">1.752</span>
 
 </div>
 
@@ -4996,10 +4915,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.668</span>
+  <span class="lead-duration duration">1.510</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-40">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-39">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -5012,14 +4931,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-40" class="collapse collapsable-details ">
+  <div id="element-39" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-41">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-40">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -5031,7 +4950,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-41" class="inner-level collapse collapsable-details ">
+  <div id="steps-40" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -5039,7 +4958,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;PAD&quot;</span> and <span class="argument">&quot;RDG&quot;</span> on <span class="argument">&quot;2020-04-13&quot;</span> at <span class="argument">&quot;19:43&quot;</span></span>
 
-  <span class="lead-duration duration">0.668</span>
+  <span class="lead-duration duration">1.509</span>
 
 </div>
 
@@ -5182,10 +5101,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">8.813</span>
+  <span class="lead-duration duration">1.817</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-42">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-41">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -5198,14 +5117,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-42" class="collapse collapsable-details ">
+  <div id="element-41" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-43">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-42">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -5217,7 +5136,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-43" class="inner-level collapse collapsable-details ">
+  <div id="steps-42" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -5225,7 +5144,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;RAM&quot;</span> on <span class="argument">&quot;2020-03-20&quot;</span> at <span class="argument">&quot;13:10&quot;</span></span>
 
-  <span class="lead-duration duration">8.812</span>
+  <span class="lead-duration duration">1.816</span>
 
 </div>
 
@@ -5413,10 +5332,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1.034</span>
+  <span class="lead-duration duration">0.707</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-44">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-43">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -5429,14 +5348,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-44" class="collapse collapsable-details ">
+  <div id="element-43" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-45">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-44">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -5448,7 +5367,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-45" class="inner-level collapse collapsable-details ">
+  <div id="steps-44" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -5456,7 +5375,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;RAM&quot;</span> on <span class="argument">&quot;2020-03-20&quot;</span> at <span class="argument">&quot;13:10&quot;</span></span>
 
-  <span class="lead-duration duration">1.033</span>
+  <span class="lead-duration duration">0.707</span>
 
 </div>
 
@@ -5483,7 +5402,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W52427&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -5644,10 +5563,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.729</span>
+  <span class="lead-duration duration">1.412</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-46">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-45">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -5660,14 +5579,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-46" class="collapse collapsable-details ">
+  <div id="element-45" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-47">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-46">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -5679,7 +5598,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-47" class="inner-level collapse collapsable-details ">
+  <div id="steps-46" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -5687,7 +5606,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;RAM&quot;</span> on <span class="argument">&quot;2020-03-20&quot;</span> at <span class="argument">&quot;14:10&quot;</span></span>
 
-  <span class="lead-duration duration">0.721</span>
+  <span class="lead-duration duration">1.411</span>
 
 </div>
 
@@ -5714,7 +5633,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W47702&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.007</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -5875,12 +5794,12 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">10.008</span>
+  <span class="lead-duration duration">0.515</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-48">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-47">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Train splits so there appears to be a single train between CHX and RAM</span>
 
@@ -5891,16 +5810,16 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-48" class="collapse collapsable-details  in ">
+  <div id="element-47" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-49">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-48">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -5910,15 +5829,15 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-49" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-48" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;RAM&quot;</span> on <span class="argument">&quot;2020-03-20&quot;</span> at <span class="argument">&quot;19:10&quot;</span></span>
 
-  <span class="lead-duration duration">10.008</span>
+  <span class="lead-duration duration">0.515</span>
 
 </div>
 
@@ -5927,83 +5846,6 @@ Caused by: java.net.SocketException: Socket closed
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-50">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-50" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;RAM&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-03-20 19:10&quot;,&quot;dptCrsCode&quot;:&quot;CHX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;isOpenReturn&quot;:false,&quot;railCardList&quot;:&quot;&quot;,&quot;returnDate&quot;:&quot;&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:35)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:34)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:25)
-	at &#10045;.a query between &quot;CHX&quot; and &quot;RAM&quot; on &quot;2020-03-20&quot; at &quot;19:10&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:87)
-Caused by: java.net.SocketTimeoutException: connect timed out
-	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
-	at java.base/java.net.Socket.connect(Socket.java:591)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.kt:117)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:266)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.kt:180)
-	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:238)
-	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:111)
-	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:79)
-	at okhttp3.internal.connection.Transmitter.newExchange$okhttp(Transmitter.kt:163)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:35)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
-	at okhttp3.RealCall.execute(RealCall.kt:67)
-	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:31)
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:27)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:34)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:25)
-	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
-	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at io.cucumber.core.runtime.Runtime$SameThreadExecutorService.execute(Runtime.java:243)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:118)
-	at io.cucumber.core.runtime.Runtime.lambda$run$3(Runtime.java:100)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.SliceOps$1$1.accept(SliceOps.java:199)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1631)
-	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
-	at io.cucumber.core.runtime.Runtime.run(Runtime.java:101)
-	at io.cucumber.core.cli.Main.run(Main.java:75)
-	at io.cucumber.core.cli.Main.main(Main.java:31)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -6018,7 +5860,7 @@ Caused by: java.net.SocketTimeoutException: connect timed out
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W47738&quot;</span> that stops at</span>
 
@@ -6178,10 +6020,10 @@ Caused by: java.net.SocketTimeoutException: connect timed out
 </div>
 
 
-  <span class="lead-duration duration">1.347</span>
+  <span class="lead-duration duration">0.746</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-51">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-49">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -6194,14 +6036,14 @@ Caused by: java.net.SocketTimeoutException: connect timed out
   </span>
   <div class="description indention"></div>
 
-  <div id="element-51" class="collapse collapsable-details ">
+  <div id="element-49" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-52">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-50">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -6213,7 +6055,7 @@ Caused by: java.net.SocketTimeoutException: connect timed out
 
   </div>
 
-  <div id="steps-52" class="inner-level collapse collapsable-details ">
+  <div id="steps-50" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -6221,7 +6063,7 @@ Caused by: java.net.SocketTimeoutException: connect timed out
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;CBW&quot;</span> on <span class="argument">&quot;2020-03-20&quot;</span> at <span class="argument">&quot;07:37&quot;</span></span>
 
-  <span class="lead-duration duration">1.347</span>
+  <span class="lead-duration duration">0.745</span>
 
 </div>
 
