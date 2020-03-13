@@ -31,3 +31,25 @@ Feature: The journey planner should offer the user multiple routes
       | LIV, MAN, NUN, LEI |
       | LIV, MCV, MAN, NUN, LEI |
 
+  Scenario: Journeys between HNH and SMD have a number of routes
+    Given a query between "HNH" and "SMD" on "a weekday" at "07:00"
+    Then I should see the following transfer patterns
+      | HNH, STP, LEI, SMD |
+      | HNH, STP, KGX, PDO, SMD |
+
+  Scenario: Journeys between NRW and COV have a number of routes
+    Given a query between "NRW" and "COV" on "a weekday" at "14:00"
+    Then I should see the following transfer patterns
+      | NRW, CBG, FPK, EUS, COV |
+      | NRW, ELY, CBG, KGX, EUS, COV |
+      | NRW, PBO, BHM, COV |
+      | NRW, ELY, NUN, COV |
+
+  Scenario: Journeys between BAU and SWA have a number of routes
+    Given a query between "BAU" and "SWA" on "a weekday" at "07:00"
+    Then I should see the following transfer patterns
+      | BAU, HUU, HUL, SHF, BHM, NWP, SWA |
+      | BAU, HAB, SPT, SHR, SWA |
+      | BAU, HUU, HUL, MAN, SWA |
+      | BAU, HUU, HUL, SHF, DBY, CDF, SWA |
+

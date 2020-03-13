@@ -15,3 +15,9 @@ Feature: The journey planner should make use of transfers to connect trains
       | FAV, STP, SHF           |
     And I should see a fare "SOS" on "00200"
     And I should see a fare "SOS" on "00129"
+
+  Scenario: Journeys between CBW and DVP should involve a walk from CBW to CBE and then train to DVP
+    Given a query between "CBW" and "DVP" on "a weekday" at "9:00"
+    Then I should see the following transfer patterns
+      | CBW, CBE, DVP |
+      | CBW, AFK, DVP |
