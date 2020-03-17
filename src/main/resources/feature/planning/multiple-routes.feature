@@ -53,3 +53,9 @@ Feature: The journey planner should offer the user multiple routes
       | BAU, HUU, HUL, MAN, SWA |
       | BAU, HUU, HUL, SHF, DBY, CDF, SWA |
 
+
+  Scenario: Journeys between WFJ and STN have a number of routes
+    Given a query between "WFJ" and "STN" on "a weekday" at "07:00"
+    Then I should see the following transfer patterns
+      | WFJ, EUS, KGX, EDB, STN |
+      | WFJ, MKC, CRE, PRE, HY, STN |
