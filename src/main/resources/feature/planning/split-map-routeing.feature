@@ -10,3 +10,8 @@ Feature: Some journeys may require the routeing guide maps to be divided at a vi
       | NUN, LEI, DBY, YRK |
       | NUN, BHM, YRK |
     And I should see a fare "SOS" on "00072"
+
+  Scenario: Journeys between SAJ and TON may involve a doubleback, the route needs to be split at G01
+    Given a query between "SAJ" and "TON" on "a weekday" at "08:15"
+    Then I should see the following transfer patterns
+      | SAJ, LBG, TON |
