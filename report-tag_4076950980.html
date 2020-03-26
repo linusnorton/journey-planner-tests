@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>25 Mar 2020, 15:35</td>
+      <td>26 Mar 2020, 15:22</td>
     </tr>
   </tbody>
 </table>
@@ -127,9 +127,9 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@fares</td>
-          <td >0</td>
+          <td      class="passed"    >2</td>
           <td      class="failed"    >2</td>
-          <td     class="skipped"   >4</td>
+          <td     class="skipped"   >2</td>
           <td >0</td>
           <td >0</td>
           <td class="total">6</td>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >2</td>
           <td class="total">2</td>
 
-          <td class="duration" data-value="1986862000">1.986</td>
+          <td class="duration" data-value="3554462000">3.554</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -182,7 +182,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.420</span>
+  <span class="lead-duration duration">1.825</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -221,11 +221,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;HGS&quot;</span> and <span class="argument">&quot;TON&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span> with a <span class="argument">&quot;YNG&quot;</span> railcard</span>
 
-  <span class="lead-duration duration">1.420</span>
+  <span class="lead-duration duration">1.799</span>
 
 </div>
 
@@ -233,21 +233,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;TON&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-01 09:00&quot;,&quot;dptCrsCode&quot;:&quot;HGS&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;isOpenReturn&quot;:false,&quot;railCardList&quot;:&quot;YNG&quot;,&quot;returnDate&quot;:&quot;&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:30)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:34)
-	at &#10045;.a query between &quot;HGS&quot; and &quot;TON&quot; on &quot;a weekday&quot; at &quot;09:00&quot; with a &quot;YNG&quot; railcard(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/fares/railcard-minimum-fare.feature:7)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -263,11 +248,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a fare <span class="argument">&quot;SDS&quot;</span> on <span class="argument">&quot;01000&quot;</span> that is <span class="argument">&quot;1200&quot;</span> pence</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.025</span>
 
 </div>
 
@@ -275,6 +260,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find a fare
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAFareOnThatIsPence(QueryStep.java:95)
+	at &#10045;.I should see a fare &quot;SDS&quot; on &quot;01000&quot; that is &quot;1200&quot; pence(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/fares/railcard-minimum-fare.feature:8)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -339,7 +340,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.566</span>
+  <span class="lead-duration duration">1.728</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
@@ -378,11 +379,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;WEY&quot;</span> and <span class="argument">&quot;WAT&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;06:15&quot;</span> with a <span class="argument">&quot;SRN&quot;</span> railcard</span>
 
-  <span class="lead-duration duration">0.566</span>
+  <span class="lead-duration duration">1.727</span>
 
 </div>
 
@@ -390,21 +391,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-6" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;WAT&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-01 06:15&quot;,&quot;dptCrsCode&quot;:&quot;WEY&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;isOpenReturn&quot;:false,&quot;railCardList&quot;:&quot;SRN&quot;,&quot;returnDate&quot;:&quot;&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:30)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:34)
-	at &#10045;.a query between &quot;WEY&quot; and &quot;WAT&quot; on &quot;a weekday&quot; at &quot;06:15&quot; with a &quot;SRN&quot; railcard(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/fares/senior-railcards.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -420,7 +406,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a fare <span class="argument">&quot;SDS&quot;</span> on <span class="argument">&quot;00637&quot;</span> that is <span class="argument">&quot;69.50&quot;</span> pence</span>
 
@@ -432,6 +418,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find a fare
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAFareOnThatIsPence(QueryStep.java:95)
+	at &#10045;.I should see a fare &quot;SDS&quot; on &quot;00637&quot; that is &quot;69.50&quot; pence(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/fares/senior-railcards.feature:7)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
