@@ -1,4 +1,4 @@
-@journey-planning @pending
+@journey-planning
 Feature: The journey planner should make use of transfers to connect trains
 
   Scenario: Journeys between NRW and WWW can go via PBO or use a transfer to connect LST to EUS to go via London
@@ -17,7 +17,7 @@ Feature: The journey planner should make use of transfers to connect trains
     And I should see a fare "SOS" on "00129"
 
   Scenario: Journeys between CBW and DVP should involve a walk from CBW to CBE and then train to DVP
-    Given a query between "CBW" and "DVP" on "a weekday" at "9:00"
+    Given a query between "CBW" and "DVP" on "a weekday" at "09:00"
     Then I should see the following transfer patterns
       | CBW, CBE, DVP |
       | CBW, AFK, DVP |

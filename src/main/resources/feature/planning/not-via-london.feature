@@ -1,4 +1,4 @@
-@journey-planning @pending
+@journey-planning
 Feature: The journey planner should offer routes via London and not via London with appropriate fares
 
   Scenario: Journeys between DFD and TON can go via WAE or via SOO

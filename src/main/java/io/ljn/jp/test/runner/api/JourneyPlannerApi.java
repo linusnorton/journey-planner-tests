@@ -24,7 +24,7 @@ public class JourneyPlannerApi {
         String postJson = requestAdapter.toJson(query);
 
         try {
-            Response response = http.post("/apiproxy/train/tisuk/fare/fare/train", postJson);
+            Response response = http.post("/apiproxy/train/tisuk/fare/fare/tisSearch", postJson);
 
             if (!response.isSuccessful()) {
                 throw new JourneyPlannerException("Unable to plan journey: " + postJson);

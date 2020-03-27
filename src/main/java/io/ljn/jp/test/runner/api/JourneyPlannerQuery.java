@@ -15,7 +15,7 @@ public class JourneyPlannerQuery {
     public final String railCardList;
     public final String departureDate;
     public final String returnDate;
-    public final boolean isOpenReturn;
+    public final boolean openReturn;
 
     public JourneyPlannerQuery(String origin, String destination, String date, String time, String railcard) {
         dptCrsCode = origin.length() == 3 ? origin : "";
@@ -29,6 +29,6 @@ public class JourneyPlannerQuery {
         railCardList = railcard;
         adultCount = 1;
         childCount = 0;
-        isOpenReturn = false;
+        openReturn = false;
     }
 }

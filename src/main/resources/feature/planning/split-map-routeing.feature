@@ -1,4 +1,4 @@
-@journey-planning @pending
+@journey-planning
 Feature: Some journeys may require the routeing guide maps to be divided at a via station
 
   Scenario: Journeys between Nuneaton and York should show a journey via Peterborough that is only valid if

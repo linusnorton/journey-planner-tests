@@ -124,7 +124,7 @@ public class QueryStep {
             .collect(Collectors.toList());
 
         for (String pattern : expected) {
-            assertTrue("Could not find pattern: " + pattern, actual.contains(pattern));
+            assertTrue("Could not find pattern: " + pattern + " in \n\n" + String.join("\n", actual), actual.contains(pattern));
         }
     }
 }

@@ -1,4 +1,4 @@
-@journey-planning @pending
+@journey-planning
 Feature: The journey planner should offer the user multiple routes
 
   Scenario: Journeys between OXF and ARU have a number of routes

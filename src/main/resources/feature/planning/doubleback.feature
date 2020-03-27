@@ -1,4 +1,4 @@
-@journey-planning @pending
+@journey-planning
 Feature: Some journeys may involve a valid doubleback
 
   Scenario: Journeys between CHM and BXB may involve a doubleback at Bethnel Green
