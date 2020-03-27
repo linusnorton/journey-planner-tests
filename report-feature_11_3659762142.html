@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>26 Mar 2020, 15:22</td>
+      <td>27 Mar 2020, 10:39</td>
     </tr>
   </tbody>
 </table>
@@ -127,9 +127,9 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">Journey splits</td>
-          <td      class="passed"    >5</td>
-          <td      class="failed"    >5</td>
           <td >0</td>
+          <td      class="failed"    >5</td>
+          <td     class="skipped"   >5</td>
           <td >0</td>
           <td >0</td>
           <td class="total">10</td>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >5</td>
           <td class="total">5</td>
 
-          <td class="duration" data-value="15219134000">15.219</td>
+          <td class="duration" data-value="9652121000">9.652</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.617</span>
+  <span class="lead-duration duration">1.497</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -232,11 +232,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;RAM&quot;</span> on <span class="argument">&quot;2020-03-20&quot;</span> at <span class="argument">&quot;13:10&quot;</span></span>
 
-  <span class="lead-duration duration">1.616</span>
+  <span class="lead-duration duration">1.497</span>
 
 </div>
 
@@ -244,6 +244,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;RAM&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-03-20 13:10&quot;,&quot;dptCrsCode&quot;:&quot;CHX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;openReturn&quot;:false,&quot;railCardList&quot;:&quot;&quot;,&quot;returnDate&quot;:&quot;&quot;}
+	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:30)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:25)
+	at &#10045;.a query between &quot;CHX&quot; and &quot;RAM&quot; on &quot;2020-03-20&quot; at &quot;13:10&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:6)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -259,7 +275,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W52427&quot;</span> that stops at</span>
 
@@ -271,22 +287,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: W52427
-	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$4(QueryStep.java:56)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:56)
-	at &#10045;.I should see a service &quot;W52427&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:7)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -436,7 +436,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.632</span>
+  <span class="lead-duration duration">2.461</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
@@ -475,11 +475,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;RAM&quot;</span> on <span class="argument">&quot;2020-03-20&quot;</span> at <span class="argument">&quot;13:10&quot;</span></span>
 
-  <span class="lead-duration duration">0.631</span>
+  <span class="lead-duration duration">2.461</span>
 
 </div>
 
@@ -487,6 +487,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;RAM&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-03-20 13:10&quot;,&quot;dptCrsCode&quot;:&quot;CHX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;openReturn&quot;:false,&quot;railCardList&quot;:&quot;&quot;,&quot;returnDate&quot;:&quot;&quot;}
+	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:30)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:25)
+	at &#10045;.a query between &quot;CHX&quot; and &quot;RAM&quot; on &quot;2020-03-20&quot; at &quot;13:10&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:33)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -502,7 +518,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W52427&quot;</span> that stops at</span>
 
@@ -514,22 +530,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
-          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
-      </div>
-      <div id="msg-6" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: W52427
-	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$4(QueryStep.java:56)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:56)
-	at &#10045;.I should see a service &quot;W52427&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:34)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -679,7 +679,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">7.713</span>
+  <span class="lead-duration duration">2.133</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
@@ -718,11 +718,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;RAM&quot;</span> on <span class="argument">&quot;2020-03-20&quot;</span> at <span class="argument">&quot;14:10&quot;</span></span>
 
-  <span class="lead-duration duration">7.712</span>
+  <span class="lead-duration duration">2.133</span>
 
 </div>
 
@@ -730,6 +730,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;RAM&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-03-20 14:10&quot;,&quot;dptCrsCode&quot;:&quot;CHX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;openReturn&quot;:false,&quot;railCardList&quot;:&quot;&quot;,&quot;returnDate&quot;:&quot;&quot;}
+	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:30)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:25)
+	at &#10045;.a query between &quot;CHX&quot; and &quot;RAM&quot; on &quot;2020-03-20&quot; at &quot;14:10&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:60)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -745,7 +761,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W47702&quot;</span> that stops at</span>
 
@@ -757,22 +773,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
-          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
-      </div>
-      <div id="msg-9" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: W47702
-	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$4(QueryStep.java:56)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:56)
-	at &#10045;.I should see a service &quot;W47702&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:61)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -922,7 +922,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">4.656</span>
+  <span class="lead-duration duration">2.078</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
@@ -961,11 +961,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;RAM&quot;</span> on <span class="argument">&quot;2020-03-20&quot;</span> at <span class="argument">&quot;19:10&quot;</span></span>
 
-  <span class="lead-duration duration">4.655</span>
+  <span class="lead-duration duration">2.078</span>
 
 </div>
 
@@ -973,6 +973,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
+          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;RAM&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-03-20 19:10&quot;,&quot;dptCrsCode&quot;:&quot;CHX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;openReturn&quot;:false,&quot;railCardList&quot;:&quot;&quot;,&quot;returnDate&quot;:&quot;&quot;}
+	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:30)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:25)
+	at &#10045;.a query between &quot;CHX&quot; and &quot;RAM&quot; on &quot;2020-03-20&quot; at &quot;19:10&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:87)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -988,7 +1004,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W47738&quot;</span> that stops at</span>
 
@@ -1000,22 +1016,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
-          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
-      </div>
-      <div id="msg-12" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: W47738
-	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$4(QueryStep.java:56)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:56)
-	at &#10045;.I should see a service &quot;W47738&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:88)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -1160,7 +1160,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.600</span>
+  <span class="lead-duration duration">1.480</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
@@ -1199,11 +1199,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;CBW&quot;</span> on <span class="argument">&quot;2020-03-20&quot;</span> at <span class="argument">&quot;07:37&quot;</span></span>
 
-  <span class="lead-duration duration">0.599</span>
+  <span class="lead-duration duration">1.480</span>
 
 </div>
 
@@ -1211,6 +1211,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
+          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;CBW&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-03-20 07:37&quot;,&quot;dptCrsCode&quot;:&quot;CHX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;openReturn&quot;:false,&quot;railCardList&quot;:&quot;&quot;,&quot;returnDate&quot;:&quot;&quot;}
+	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:30)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:25)
+	at &#10045;.a query between &quot;CHX&quot; and &quot;CBW&quot; on &quot;2020-03-20&quot; at &quot;07:37&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:113)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -1226,7 +1242,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W47657&quot;</span> that stops at</span>
 
@@ -1238,22 +1254,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
-          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
-      </div>
-      <div id="msg-15" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: W47657
-	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$4(QueryStep.java:56)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:56)
-	at &#10045;.I should see a service &quot;W47657&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:114)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">

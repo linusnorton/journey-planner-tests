@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports  - Feature: Railcard minimum fares</title>
+<title>Cucumber Reports  - Feature: Some journeys may involve a valid doubleback</title>
 
 </head>
 <body>
@@ -126,20 +126,20 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">Railcard minimum fares</td>
-          <td      class="passed"    >3</td>
+          <td class="tagname">Some journeys may involve a valid doubleback</td>
+          <td      class="passed"    >2</td>
+          <td      class="failed"    >2</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td >0</td>
-          <td class="total">3</td>
+          <td class="total">4</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
-          <td class="total">1</td>
+          <td  class="failed"    >2</td>
+          <td class="total">2</td>
 
-          <td class="duration" data-value="3643240000">3.643</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="4623402000">4.623</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -169,20 +169,18 @@ $(document).ready(function() {
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_4076950980.html">@fares</a>
-       <a href="report-tag_600402984.html">@not-summer</a>
+       <a href="report-tag_2054189833.html">@journey-planning</a>
 </div>
 
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Feature</span>
-  <span class="name">Railcard minimum fares</span>
+  <span class="name">Some journeys may involve a valid doubleback</span>
 
 
 </div>
 
-        <div class="description indention">  A minimum fare should be applied to certain fares at certain times.
-  Note that these scenarios don't apply in summer as min fares don't apply</div>
+        <div class="description indention"></div>
 
         <div class="elements inner-level">
 
@@ -191,19 +189,18 @@ $(document).ready(function() {
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_4076950980.html">@fares</a>
-       <a href="report-tag_600402984.html">@not-summer</a>
+       <a href="report-tag_2054189833.html">@journey-planning</a>
 </div>
 
 
-  <span class="lead-duration duration">3.643</span>
+  <span class="lead-duration duration">2.349</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Minimum fare of &pound;12.00 between HGS and TON</span>
+  <span class="name">Journeys between CHM and BXB may involve a doubleback at Bethnel Green</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -212,16 +209,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -231,15 +228,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details ">
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;HGS&quot;</span> and <span class="argument">&quot;TON&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span> with a <span class="argument">&quot;YNG&quot;</span> railcard</span>
+  <span class="name">a query between <span class="argument">&quot;CHM&quot;</span> and <span class="argument">&quot;BXB&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;08:15&quot;</span></span>
 
-  <span class="lead-duration duration">3.630</span>
+  <span class="lead-duration duration">2.300</span>
 
 </div>
 
@@ -262,11 +259,173 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
-  <span class="name">I should see a fare <span class="argument">&quot;SDS&quot;</span> on <span class="argument">&quot;01000&quot;</span> that is <span class="argument">&quot;1200&quot;</span> pence</span>
+  <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.012</span>
+  <span class="lead-duration duration">0.049</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: CHM,LST,BXB in 
+
+CHM,SRA,TOM,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,TOM,BXB
+CHM,SRA,BXB
+CHM,SRA,BXB
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:127)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/doubleback.feature:6)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>CHM, SRA, BXB</td>
+              </tr>
+              <tr>
+                  <td>CHM, LST, BXB</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2054189833.html">@journey-planning</a>
+</div>
+
+
+  <span class="lead-duration duration">2.273</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Journeys between SED and SSD may involve a doubleback at CBG</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-4" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">a query between <span class="argument">&quot;SED&quot;</span> and <span class="argument">&quot;SSD&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:30&quot;</span></span>
+
+  <span class="lead-duration duration">2.272</span>
 
 </div>
 
@@ -289,9 +448,9 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">I should see a fare <span class="argument">&quot;SDS&quot;</span> on <span class="argument">&quot;01000&quot;</span> that is <span class="argument">&quot;1135&quot;</span> pence</span>
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see the following transfer patterns</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -302,7 +461,44 @@ $(document).ready(function() {
 
 
 
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: SED,CBG,SSD in 
 
+SED,AUD,SSD
+SED,AUD,SSD
+SED,AUD,SSD
+SED,AUD,SSD
+SED,AUD,SSD
+SED,AUD,SSD
+SED,AUD,SSD
+SED,AUD,SSD
+SED,AUD,SSD
+SED,AUD,SSD
+SED,AUD,SSD
+SED,SST,SSD
+SED,AUD,SSD
+SED,SST,SSD
+SED,SST,SSD
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:127)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/doubleback.feature:12)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>SED, CBG, SSD</td>
+              </tr>
+          </table>
 
 
 
