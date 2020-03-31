@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static io.ljn.jp.test.runner.step.date.DateUtil.getNextWeekday;
+import static io.ljn.jp.test.runner.step.date.DateUtil.getWeekDay;
 import static org.junit.Assert.*;
 
 @RequiredArgsConstructor
@@ -34,7 +34,7 @@ public class QueryStep {
     @Given("a query between {string} and {string} on {string} at {string} with a {string} railcard")
     public void aQueryBetweenAndOnAtWithARailcard(String origin, String destination, String date, String time, String railcard) {
         if (date.equals("a weekday")) {
-            date = getNextWeekday();
+            date = getWeekDay();
         }
 
         this.origin = origin;

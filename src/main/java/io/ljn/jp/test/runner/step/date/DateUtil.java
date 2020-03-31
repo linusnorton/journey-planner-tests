@@ -4,11 +4,11 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class DateUtil {
-    public static String getNextWeekday() {
+    public static String getWeekDay() {
         return LocalDate
             .now()
-            .plusWeeks(1)
-            .datesUntil(LocalDate.now().plusWeeks(2))
+            .plusWeeks(8)
+            .datesUntil(LocalDate.now().plusWeeks(10))
             .filter(d -> d.getDayOfWeek().getValue() < 6)
             .findFirst()
             .get()
