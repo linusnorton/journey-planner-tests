@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>27 Mar 2020, 11:35</td>
+      <td>31 Mar 2020, 13:48</td>
     </tr>
   </tbody>
 </table>
@@ -127,9 +127,9 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">The journey planner should offer the user multiple routes</td>
-          <td      class="passed"    >7</td>
+          <td      class="passed"    >6</td>
           <td      class="failed"    >8</td>
-          <td     class="skipped"   >1</td>
+          <td     class="skipped"   >2</td>
           <td >0</td>
           <td >0</td>
           <td class="total">16</td>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >8</td>
           <td class="total">8</td>
 
-          <td class="duration" data-value="21924351000">21.924</td>
+          <td class="duration" data-value="30143628000">30.143</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">2.012</span>
+  <span class="lead-duration duration">3.271</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -236,7 +236,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;OXF&quot;</span> and <span class="argument">&quot;ARU&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;05:30&quot;</span></span>
 
-  <span class="lead-duration duration">2.012</span>
+  <span class="lead-duration duration">3.266</span>
 
 </div>
 
@@ -263,7 +263,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.005</span>
 
 </div>
 
@@ -275,11 +275,131 @@ $(document).ready(function() {
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+          <a>java.lang.AssertionError:</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results found
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:112)
+        <pre>java.lang.AssertionError: Could not find pattern: OXF,DID,RDG,GTW,ARU in 
+
+OXF (07:17:00) -&gt; ARU (10:28:00)
+	OXF (07:17:00) -&gt; RDG (07:41:00)
+	RDG (07:58:00) -&gt; DPD (09:12:00)
+	DPD -&gt; DKG (3)
+	DKG (09:22:00) -&gt; HRH (09:43:00)
+	HRH (10:04:00) -&gt; ARU (10:28:00)
+
+OXF (08:16:00) -&gt; ARU (11:28:00)
+	OXF (08:16:00) -&gt; RDG (08:42:00)
+	RDG (08:58:00) -&gt; DPD (10:09:00)
+	DPD -&gt; DKG (3)
+	DKG (10:22:00) -&gt; HRH (10:43:00)
+	HRH (11:04:00) -&gt; ARU (11:28:00)
+
+OXF (09:02:00) -&gt; ARU (12:28:00)
+	OXF (09:02:00) -&gt; RDG (09:24:00)
+	RDG (09:33:00) -&gt; DPD (10:28:00)
+	DPD -&gt; DKG (3)
+	DKG (11:22:00) -&gt; HRH (11:43:00)
+	HRH (12:04:00) -&gt; ARU (12:28:00)
+
+OXF (10:16:00) -&gt; ARU (13:28:00)
+	OXF (10:16:00) -&gt; RDG (10:40:00)
+	RDG (10:55:00) -&gt; DPD (12:05:00)
+	DPD -&gt; DKG (3)
+	DKG (12:22:00) -&gt; HRH (12:43:00)
+	HRH (13:04:00) -&gt; ARU (13:28:00)
+
+OXF (11:16:00) -&gt; ARU (14:28:00)
+	OXF (11:16:00) -&gt; RDG (11:39:00)
+	RDG (11:59:00) -&gt; DPD (13:06:00)
+	DPD -&gt; DKG (3)
+	DKG (13:22:00) -&gt; HRH (13:43:00)
+	HRH (14:04:00) -&gt; ARU (14:28:00)
+
+OXF (12:16:00) -&gt; ARU (15:31:00)
+	OXF (12:16:00) -&gt; RDG (12:42:00)
+	RDG (12:53:00) -&gt; DPD (14:03:00)
+	DPD -&gt; DKG (3)
+	DKG (14:22:00) -&gt; HRH (14:43:00)
+	HRH (15:04:00) -&gt; ARU (15:31:00)
+
+OXF (13:16:00) -&gt; ARU (16:30:00)
+	OXF (13:16:00) -&gt; RDG (13:40:00)
+	RDG (13:51:00) -&gt; DPD (15:03:00)
+	DPD -&gt; DKG (3)
+	DKG (15:22:00) -&gt; HRH (15:43:00)
+	HRH (16:04:00) -&gt; ARU (16:30:00)
+
+OXF (14:16:00) -&gt; ARU (17:32:00)
+	OXF (14:16:00) -&gt; RDG (14:40:00)
+	RDG (14:57:00) -&gt; DPD (16:09:00)
+	DPD -&gt; DKG (3)
+	DKG (16:22:00) -&gt; HRH (16:43:00)
+	HRH (17:04:00) -&gt; ARU (17:32:00)
+
+OXF (14:42:00) -&gt; ARU (18:24:00)
+	OXF (14:42:00) -&gt; RDG (15:05:00)
+	RDG (15:26:00) -&gt; DPD (16:28:00)
+	DPD -&gt; DKG (3)
+	DKG (17:22:00) -&gt; HRH (17:47:00)
+	HRH (17:58:00) -&gt; ARU (18:24:00)
+
+OXF (16:02:00) -&gt; ARU (19:02:00)
+	OXF (16:02:00) -&gt; RDG (16:24:00)
+	RDG (16:31:00) -&gt; DPD (17:26:00)
+	DPD -&gt; DKG (3)
+	DKG (17:52:00) -&gt; HRH (18:17:00)
+	HRH (18:34:00) -&gt; ARU (19:02:00)
+
+OXF (16:42:00) -&gt; ARU (20:01:00)
+	OXF (16:42:00) -&gt; RDG (17:09:00)
+	RDG (17:18:00) -&gt; DPD (18:22:00)
+	DPD -&gt; DKG (3)
+	DKG (18:52:00) -&gt; HRH (19:15:00)
+	HRH (19:34:00) -&gt; ARU (20:01:00)
+
+OXF (17:42:00) -&gt; ARU (21:31:00)
+	OXF (17:42:00) -&gt; GLD (18:51:00)
+	GLD (19:02:00) -&gt; LHD (19:29:00)
+	LHD (20:14:00) -&gt; HRH (20:45:00)
+	HRH (21:04:00) -&gt; ARU (21:31:00)
+
+OXF (17:42:00) -&gt; ARU (21:31:00)
+	OXF (17:42:00) -&gt; RDG (18:11:00)
+	RDG (18:28:00) -&gt; DPD (19:26:00)
+	DPD -&gt; DKG (3)
+	DKG (20:22:00) -&gt; HRH (20:45:00)
+	HRH (21:04:00) -&gt; ARU (21:31:00)
+
+OXF (19:02:00) -&gt; ARU (22:32:00)
+	OXF (19:02:00) -&gt; RDG (19:24:00)
+	RDG (19:32:00) -&gt; DPD (20:26:00)
+	DPD -&gt; DKG (3)
+	DKG (21:22:00) -&gt; HRH (21:43:00)
+	HRH (22:05:00) -&gt; ARU (22:32:00)
+
+OXF (19:42:00) -&gt; ARU (23:25:00)
+	OXF (19:42:00) -&gt; RDG (20:10:00)
+	RDG (20:27:00) -&gt; DPD (21:27:00)
+	DPD -&gt; DKG (3)
+	DKG (22:22:00) -&gt; HRH (22:43:00)
+	HRH (22:58:00) -&gt; ARU (23:25:00)
+
+OXF (21:44:00) -&gt; ARU (06:45:00)
+	OXF (21:44:00) -&gt; RDG (22:07:00)
+	RDG (22:29:00) -&gt; DPD (23:45:00)
+	DPD -&gt; DKG (3)
+	DKG (00:26:00) -&gt; HRH (00:48:00)
+	HRH (06:18:00) -&gt; ARU (06:45:00)
+
+OXF (23:16:00) -&gt; ARU (08:28:00)
+	OXF (23:16:00) -&gt; RDG (23:50:00)
+	RDG (05:32:00) -&gt; DPD (06:24:00)
+	DPD -&gt; DKG (3)
+	DKG (07:21:00) -&gt; HRH (07:46:00)
+	HRH (08:00:00) -&gt; ARU (08:28:00)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:133)
 	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:6)
 </pre>
       </div>
@@ -331,7 +451,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">2.299</span>
+  <span class="lead-duration duration">5.792</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
@@ -374,7 +494,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;EDB&quot;</span> and <span class="argument">&quot;BHM&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;05:30&quot;</span></span>
 
-  <span class="lead-duration duration">2.298</span>
+  <span class="lead-duration duration">5.789</span>
 
 </div>
 
@@ -401,7 +521,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -418,34 +538,86 @@ $(document).ready(function() {
       <div id="msg-6" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: EDB,NCL,BHM in 
 
-EDB,BHM
-EDB,WVH,BHM
-EDB,BHM
-EDB,BHM
-EDB,BHM
-EDB,WVH,BHM
-EDB,BHM
-EDB,BHM
-EDB,WVH,BHM
-EDB,BHM
-EDB,BHM
-EDB,WVH,BHM
-EDB,BHM
-EDB,BHM
-EDB,WVH,BHM
-EDB,HYM,WVH,BHM
-EDB,BHM
-EDB,BHM
-EDB,WVH,BHM
-EDB,BHM
-EDB,BHM
-EDB,WVH,BHM
-EDB,PRE,WBQ,WVH,BHM
-EDB,HYM,WVH,BHM
-EDB,HYM,PRE,WVH,BHM
+EDB (06:52:00) -&gt; BHM (11:05:00)
+	EDB (06:52:00) -&gt; BHM (11:05:00)
+
+EDB (06:52:00) -&gt; BHM (10:58:00)
+	EDB (06:52:00) -&gt; WVH (10:33:00)
+	WVH (10:42:00) -&gt; BHM (10:58:00)
+
+EDB (07:00:00) -&gt; BHM (11:27:00)
+	EDB (07:00:00) -&gt; BHM (11:27:00)
+
+EDB (07:10:00) -&gt; BHM (12:06:00)
+	EDB (07:10:00) -&gt; BHM (12:06:00)
+
+EDB (08:52:00) -&gt; BHM (13:05:00)
+	EDB (08:52:00) -&gt; BHM (13:05:00)
+
+EDB (08:52:00) -&gt; BHM (12:59:00)
+	EDB (08:52:00) -&gt; WVH (12:32:00)
+	WVH (12:42:00) -&gt; BHM (12:59:00)
+
+EDB (09:07:00) -&gt; BHM (14:05:00)
+	EDB (09:07:00) -&gt; BHM (14:05:00)
+
+EDB (10:52:00) -&gt; BHM (15:05:00)
+	EDB (10:52:00) -&gt; BHM (15:05:00)
+
+EDB (11:06:00) -&gt; BHM (16:04:00)
+	EDB (11:06:00) -&gt; BHM (16:04:00)
+
+EDB (12:52:00) -&gt; BHM (17:05:00)
+	EDB (12:52:00) -&gt; BHM (17:05:00)
+
+EDB (13:08:00) -&gt; BHM (18:05:00)
+	EDB (13:08:00) -&gt; BHM (18:05:00)
+
+EDB (14:52:00) -&gt; BHM (19:05:00)
+	EDB (14:52:00) -&gt; BHM (19:05:00)
+
+EDB (14:52:00) -&gt; BHM (18:57:00)
+	EDB (14:52:00) -&gt; WVH (18:32:00)
+	WVH (18:41:00) -&gt; BHM (18:57:00)
+
+EDB (15:08:00) -&gt; BHM (20:07:00)
+	EDB (15:08:00) -&gt; BHM (20:07:00)
+
+EDB (16:52:00) -&gt; BHM (21:04:00)
+	EDB (16:52:00) -&gt; BHM (21:04:00)
+
+EDB (17:07:00) -&gt; BHM (22:09:00)
+	EDB (17:07:00) -&gt; BHM (22:09:00)
+
+EDB (18:52:00) -&gt; BHM (22:52:00)
+	EDB (18:52:00) -&gt; BHM (22:52:00)
+
+EDB (22:12:00) -&gt; BHM (07:56:00)
+	EDB (22:12:00) -&gt; PRE (00:46:00)
+	PRE (06:17:00) -&gt; BHM (07:56:00)
+
+EDB (22:12:00) -&gt; BHM (07:56:00)
+	EDB (22:12:00) -&gt; PRE (00:46:00)
+	PRE (05:33:00) -&gt; WGN (05:44:00)
+	WGN (06:29:00) -&gt; BHM (07:56:00)
+
+EDB (23:56:00) -&gt; BHM (11:05:00)
+	EDB (23:56:00) -&gt; HYM (00:01:00)
+	HYM (06:57:00) -&gt; BHM (11:05:00)
+
+EDB (23:56:00) -&gt; BHM (10:58:00)
+	EDB (23:56:00) -&gt; HYM (00:01:00)
+	HYM (06:57:00) -&gt; WVH (10:33:00)
+	WVH (10:42:00) -&gt; BHM (10:58:00)
+
+EDB (23:56:00) -&gt; BHM (10:58:00)
+	EDB (23:56:00) -&gt; HYM (00:01:00)
+	HYM (06:17:00) -&gt; PRE (08:46:00)
+	PRE (09:18:00) -&gt; WVH (10:33:00)
+	WVH (10:42:00) -&gt; BHM (10:58:00)
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:127)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:133)
 	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:14)
 </pre>
       </div>
@@ -491,7 +663,7 @@ EDB,HYM,PRE,WVH,BHM
 </div>
 
 
-  <span class="lead-duration duration">3.515</span>
+  <span class="lead-duration duration">1.980</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
@@ -534,7 +706,7 @@ EDB,HYM,PRE,WVH,BHM
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BMH&quot;</span> and <span class="argument">&quot;MAN&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;06:00&quot;</span></span>
 
-  <span class="lead-duration duration">3.513</span>
+  <span class="lead-duration duration">1.977</span>
 
 </div>
 
@@ -561,7 +733,7 @@ EDB,HYM,PRE,WVH,BHM
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -578,22 +750,47 @@ EDB,HYM,PRE,WVH,BHM
       <div id="msg-9" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: BMH,SOU,BHM,MAN in 
 
-BMH,MAN
-BMH,MAN
-BMH,MAN
-BMH,MAN
-BMH,MAN
-BMH,MAN
-BMH,MAN
-BMH,MAN
-BMH,MAN
-BMH,MAN
-BMH,MAN
-BMH,MAN
-BMH,MAN
+BMH (06:30:00) -&gt; MAN (11:24:00)
+	BMH (06:30:00) -&gt; MAN (11:24:00)
+
+BMH (07:30:00) -&gt; MAN (12:24:00)
+	BMH (07:30:00) -&gt; MAN (12:24:00)
+
+BMH (08:45:00) -&gt; MAN (13:24:00)
+	BMH (08:45:00) -&gt; MAN (13:24:00)
+
+BMH (09:45:00) -&gt; MAN (14:24:00)
+	BMH (09:45:00) -&gt; MAN (14:24:00)
+
+BMH (10:45:00) -&gt; MAN (15:24:00)
+	BMH (10:45:00) -&gt; MAN (15:24:00)
+
+BMH (11:45:00) -&gt; MAN (16:24:00)
+	BMH (11:45:00) -&gt; MAN (16:24:00)
+
+BMH (12:45:00) -&gt; MAN (17:24:00)
+	BMH (12:45:00) -&gt; MAN (17:24:00)
+
+BMH (13:45:00) -&gt; MAN (18:24:00)
+	BMH (13:45:00) -&gt; MAN (18:24:00)
+
+BMH (14:45:00) -&gt; MAN (19:24:00)
+	BMH (14:45:00) -&gt; MAN (19:24:00)
+
+BMH (15:45:00) -&gt; MAN (20:24:00)
+	BMH (15:45:00) -&gt; MAN (20:24:00)
+
+BMH (16:45:00) -&gt; MAN (21:24:00)
+	BMH (16:45:00) -&gt; MAN (21:24:00)
+
+BMH (17:45:00) -&gt; MAN (22:25:00)
+	BMH (17:45:00) -&gt; MAN (22:25:00)
+
+BMH (18:45:00) -&gt; MAN (23:24:00)
+	BMH (18:45:00) -&gt; MAN (23:24:00)
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:127)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:133)
 	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:20)
 </pre>
       </div>
@@ -642,7 +839,7 @@ BMH,MAN
 </div>
 
 
-  <span class="lead-duration duration">4.308</span>
+  <span class="lead-duration duration">4.772</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
@@ -685,7 +882,7 @@ BMH,MAN
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;LIV&quot;</span> and <span class="argument">&quot;LEI&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;06:00&quot;</span></span>
 
-  <span class="lead-duration duration">4.307</span>
+  <span class="lead-duration duration">4.769</span>
 
 </div>
 
@@ -712,7 +909,7 @@ BMH,MAN
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -729,13 +926,148 @@ BMH,MAN
       <div id="msg-12" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: LIV,TAM,DBY,LEI in 
 
-LIV,NUN,LEI
-LIV,TAM,NUN,LEI
-LIV,RUN,NUN,LEI
-LIV,LPY,RUN,NUN,LEI
+LIV (06:10:00) -&gt; LEI (08:50:00)
+	LIV (06:10:00) -&gt; STA (07:09:00)
+	STA (07:39:00) -&gt; NUN (08:18:00)
+	NUN (08:24:00) -&gt; LEI (08:50:00)
+
+LIV (07:05:00) -&gt; LEI (09:50:00)
+	LIV (07:05:00) -&gt; STA (08:09:00)
+	STA (08:36:00) -&gt; NUN (09:15:00)
+	NUN (09:24:00) -&gt; LEI (09:50:00)
+
+LIV (08:05:00) -&gt; LEI (11:02:00)
+	LIV (08:05:00) -&gt; CRE (08:48:00)
+	CRE (09:07:00) -&gt; DBY (10:21:00)
+	DBY (10:33:00) -&gt; LEI (11:02:00)
+
+LIV (08:47:00) -&gt; LEI (11:11:00)
+	LIV (08:47:00) -&gt; STA (09:41:00)
+	STA (09:52:00) -&gt; NUN (10:34:00)
+	NUN (10:52:00) -&gt; LEI (11:11:00)
+
+LIV (09:05:00) -&gt; LEI (12:02:00)
+	LIV (09:05:00) -&gt; CRE (09:48:00)
+	CRE (10:07:00) -&gt; DBY (11:22:00)
+	DBY (11:32:00) -&gt; LEI (12:02:00)
+
+LIV (09:47:00) -&gt; LEI (12:12:00)
+	LIV (09:47:00) -&gt; STA (10:40:00)
+	STA (10:52:00) -&gt; NUN (11:34:00)
+	NUN (11:51:00) -&gt; LEI (12:12:00)
+
+LIV (10:05:00) -&gt; LEI (13:04:00)
+	LIV (10:05:00) -&gt; CRE (10:48:00)
+	CRE (11:07:00) -&gt; DBY (12:21:00)
+	DBY (12:32:00) -&gt; LEI (13:04:00)
+
+LIV (10:47:00) -&gt; LEI (13:15:00)
+	LIV (10:47:00) -&gt; STA (11:40:00)
+	STA (11:55:00) -&gt; NUN (12:34:00)
+	NUN (12:51:00) -&gt; LEI (13:15:00)
+
+LIV (11:05:00) -&gt; LEI (14:02:00)
+	LIV (11:05:00) -&gt; CRE (11:49:00)
+	CRE (12:07:00) -&gt; DBY (13:26:00)
+	DBY (13:32:00) -&gt; LEI (14:02:00)
+
+LIV (11:47:00) -&gt; LEI (14:11:00)
+	LIV (11:47:00) -&gt; STA (12:40:00)
+	STA (12:55:00) -&gt; NUN (13:34:00)
+	NUN (13:51:00) -&gt; LEI (14:11:00)
+
+LIV (12:05:00) -&gt; LEI (15:07:00)
+	LIV (12:05:00) -&gt; CRE (12:48:00)
+	CRE (13:07:00) -&gt; DBY (14:22:00)
+	DBY (14:33:00) -&gt; LEI (15:07:00)
+
+LIV (12:47:00) -&gt; LEI (15:11:00)
+	LIV (12:47:00) -&gt; STA (13:42:00)
+	STA (13:55:00) -&gt; NUN (14:34:00)
+	NUN (14:51:00) -&gt; LEI (15:11:00)
+
+LIV (13:47:00) -&gt; LEI (16:11:00)
+	LIV (13:47:00) -&gt; STA (14:43:00)
+	STA (14:55:00) -&gt; NUN (15:34:00)
+	NUN (15:52:00) -&gt; LEI (16:11:00)
+
+LIV (14:05:00) -&gt; LEI (17:02:00)
+	LIV (14:05:00) -&gt; CRE (14:49:00)
+	CRE (15:07:00) -&gt; DBY (16:23:00)
+	DBY (16:32:00) -&gt; LEI (17:02:00)
+
+LIV (14:47:00) -&gt; LEI (17:08:00)
+	LIV (14:47:00) -&gt; STA (15:40:00)
+	STA (15:55:00) -&gt; NUN (16:34:00)
+	NUN (16:40:00) -&gt; LEI (17:08:00)
+
+LIV (15:05:00) -&gt; LEI (18:04:00)
+	LIV (15:05:00) -&gt; CRE (15:51:00)
+	CRE (16:07:00) -&gt; DBY (17:22:00)
+	DBY (17:32:00) -&gt; LEI (18:04:00)
+
+LIV (15:47:00) -&gt; LEI (18:11:00)
+	LIV (15:47:00) -&gt; STA (16:41:00)
+	STA (16:55:00) -&gt; NUN (17:34:00)
+	NUN (17:40:00) -&gt; LEI (18:11:00)
+
+LIV (16:05:00) -&gt; LEI (19:03:00)
+	LIV (16:05:00) -&gt; CRE (16:49:00)
+	CRE (17:07:00) -&gt; DBY (18:21:00)
+	DBY (18:32:00) -&gt; LEI (19:03:00)
+
+LIV (16:47:00) -&gt; LEI (19:11:00)
+	LIV (16:47:00) -&gt; STA (17:36:00)
+	STA (17:55:00) -&gt; NUN (18:34:00)
+	NUN (18:51:00) -&gt; LEI (19:11:00)
+
+LIV (17:05:00) -&gt; LEI (20:08:00)
+	LIV (17:05:00) -&gt; CRE (17:48:00)
+	CRE (18:07:00) -&gt; DBY (19:24:00)
+	DBY (19:35:00) -&gt; LEI (20:08:00)
+
+LIV (17:47:00) -&gt; LEI (20:13:00)
+	LIV (17:47:00) -&gt; STA (18:41:00)
+	STA (18:55:00) -&gt; NUN (19:34:00)
+	NUN (19:51:00) -&gt; LEI (20:13:00)
+
+LIV (18:47:00) -&gt; LEI (21:15:00)
+	LIV (18:47:00) -&gt; STA (19:40:00)
+	STA (19:52:00) -&gt; NUN (20:31:00)
+	NUN (20:54:00) -&gt; LEI (21:15:00)
+
+LIV (19:47:00) -&gt; LEI (21:51:00)
+	LIV (19:47:00) -&gt; NUN (21:00:00)
+	NUN (21:24:00) -&gt; LEI (21:51:00)
+
+LIV (20:48:00) -&gt; LEI (23:19:00)
+	LIV (20:48:00) -&gt; NUN (22:17:00)
+	NUN (22:51:00) -&gt; LEI (23:19:00)
+
+LIV (20:48:00) -&gt; LEI (23:19:00)
+	LIV (20:48:00) -&gt; TAM (22:03:00)
+	TAM (22:13:00) -&gt; NUN (22:27:00)
+	NUN (22:51:00) -&gt; LEI (23:19:00)
+
+LIV (23:35:00) -&gt; LEI (07:15:00)
+	LIV (23:35:00) -&gt; CRE (00:23:00)
+	CRE (05:36:00) -&gt; NUN (06:17:00)
+	NUN (06:51:00) -&gt; LEI (07:15:00)
+
+LIV (23:35:00) -&gt; LEI (07:15:00)
+	LIV (23:35:00) -&gt; CRE (00:23:00)
+	CRE (04:59:00) -&gt; STA (05:24:00)
+	STA (05:55:00) -&gt; NUN (06:17:00)
+	NUN (06:51:00) -&gt; LEI (07:15:00)
+
+LIV (23:38:00) -&gt; LEI (08:50:00)
+	LIV (23:38:00) -&gt; LPY (23:53:00)
+	LPY (06:20:00) -&gt; STA (07:09:00)
+	STA (07:39:00) -&gt; NUN (08:18:00)
+	NUN (08:24:00) -&gt; LEI (08:50:00)
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:127)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:133)
 	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:27)
 </pre>
       </div>
@@ -790,7 +1122,7 @@ LIV,LPY,RUN,NUN,LEI
 </div>
 
 
-  <span class="lead-duration duration">2.066</span>
+  <span class="lead-duration duration">8.953</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
@@ -829,11 +1161,11 @@ LIV,LPY,RUN,NUN,LEI
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;HNH&quot;</span> and <span class="argument">&quot;SMD&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">2.066</span>
+  <span class="lead-duration duration">8.949</span>
 
 </div>
 
@@ -841,22 +1173,6 @@ LIV,LPY,RUN,NUN,LEI
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-15" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;SMD&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-03 07:00&quot;,&quot;dptCrsCode&quot;:&quot;HNH&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;openReturn&quot;:false,&quot;railCardList&quot;:&quot;&quot;,&quot;returnDate&quot;:&quot;&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:30)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:34)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:25)
-	at &#10045;.a query between &quot;HNH&quot; and &quot;SMD&quot; on &quot;a weekday&quot; at &quot;07:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:35)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -872,11 +1188,11 @@ LIV,LPY,RUN,NUN,LEI
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.003</span>
 
 </div>
 
@@ -884,6 +1200,244 @@ LIV,LPY,RUN,NUN,LEI
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: HNH,STP,LEI,SMD in 
+
+HNH (07:45:00) -&gt; SMD (10:06:00)
+	HNH (07:45:00) -&gt; BFR (07:59:00)
+	BFR (08:07:00) -&gt; PBO (09:35:00)
+	PBO (09:54:00) -&gt; SMD (10:06:00)
+
+HNH (07:57:00) -&gt; SMD (10:06:00)
+	HNH (07:57:00) -&gt; STP (08:18:00)
+	STP -&gt; KGX (1)
+	KGX (09:00:00) -&gt; PBO (09:46:00)
+	PBO (09:54:00) -&gt; SMD (10:06:00)
+
+HNH (07:57:00) -&gt; SMD (10:06:00)
+	HNH (07:57:00) -&gt; EPH (08:04:00)
+	EPH -&gt; KGX (35)
+	KGX (09:00:00) -&gt; PBO (09:46:00)
+	PBO (09:54:00) -&gt; SMD (10:06:00)
+
+HNH (07:57:00) -&gt; SMD (10:06:00)
+	HNH (07:57:00) -&gt; ZFD (08:13:00)
+	ZFD (08:17:00) -&gt; CTK (08:18:00)
+	CTK (08:21:00) -&gt; STP (08:28:00)
+	STP -&gt; KGX (1)
+	KGX (09:00:00) -&gt; PBO (09:46:00)
+	PBO (09:54:00) -&gt; SMD (10:06:00)
+
+HNH (08:45:00) -&gt; SMD (11:06:00)
+	HNH (08:45:00) -&gt; BFR (08:59:00)
+	BFR (09:07:00) -&gt; PBO (10:40:00)
+	PBO (10:54:00) -&gt; SMD (11:06:00)
+
+HNH (08:45:00) -&gt; SMD (11:06:00)
+	HNH (08:45:00) -&gt; BFR (08:59:00)
+	BFR (09:04:00) -&gt; ZFD (09:08:00)
+	ZFD (09:11:00) -&gt; PBO (10:40:00)
+	PBO (10:54:00) -&gt; SMD (11:06:00)
+
+HNH (09:42:00) -&gt; SMD (12:06:00)
+	HNH (09:42:00) -&gt; ZFD (09:58:00)
+	ZFD (10:11:00) -&gt; PBO (11:39:00)
+	PBO (11:54:00) -&gt; SMD (12:06:00)
+
+HNH (09:42:00) -&gt; SMD (12:06:00)
+	HNH (09:42:00) -&gt; ZFD (09:58:00)
+	ZFD (10:02:00) -&gt; CTK (10:03:00)
+	CTK (10:09:00) -&gt; PBO (11:39:00)
+	PBO (11:54:00) -&gt; SMD (12:06:00)
+
+HNH (10:42:00) -&gt; SMD (13:06:00)
+	HNH (10:42:00) -&gt; ZFD (10:58:00)
+	ZFD (11:11:00) -&gt; PBO (12:39:00)
+	PBO (12:54:00) -&gt; SMD (13:06:00)
+
+HNH (10:42:00) -&gt; SMD (13:06:00)
+	HNH (10:42:00) -&gt; ZFD (10:58:00)
+	ZFD (11:02:00) -&gt; CTK (11:03:00)
+	CTK (11:09:00) -&gt; PBO (12:39:00)
+	PBO (12:54:00) -&gt; SMD (13:06:00)
+
+HNH (11:42:00) -&gt; SMD (14:06:00)
+	HNH (11:42:00) -&gt; ZFD (11:58:00)
+	ZFD (12:11:00) -&gt; PBO (13:39:00)
+	PBO (13:54:00) -&gt; SMD (14:06:00)
+
+HNH (11:57:00) -&gt; SMD (14:06:00)
+	HNH (11:57:00) -&gt; STP (12:18:00)
+	STP -&gt; KGX (1)
+	KGX (13:00:00) -&gt; PBO (13:46:00)
+	PBO (13:54:00) -&gt; SMD (14:06:00)
+
+HNH (11:57:00) -&gt; SMD (14:06:00)
+	HNH (11:57:00) -&gt; ZFD (12:13:00)
+	ZFD (12:17:00) -&gt; CTK (12:18:00)
+	CTK (12:21:00) -&gt; STP (12:28:00)
+	STP -&gt; KGX (1)
+	KGX (13:00:00) -&gt; PBO (13:46:00)
+	PBO (13:54:00) -&gt; SMD (14:06:00)
+
+HNH (12:08:00) -&gt; SMD (14:06:00)
+	HNH (12:08:00) -&gt; VIC (12:18:00)
+	VIC -&gt; KGX (11)
+	KGX (13:00:00) -&gt; PBO (13:46:00)
+	PBO (13:54:00) -&gt; SMD (14:06:00)
+
+HNH (12:42:00) -&gt; SMD (15:06:00)
+	HNH (12:42:00) -&gt; ZFD (12:58:00)
+	ZFD (13:11:00) -&gt; PBO (14:39:00)
+	PBO (14:54:00) -&gt; SMD (15:06:00)
+
+HNH (12:42:00) -&gt; SMD (15:06:00)
+	HNH (12:42:00) -&gt; ZFD (12:58:00)
+	ZFD (13:02:00) -&gt; CTK (13:03:00)
+	CTK (13:09:00) -&gt; PBO (14:39:00)
+	PBO (14:54:00) -&gt; SMD (15:06:00)
+
+HNH (13:42:00) -&gt; SMD (16:06:00)
+	HNH (13:42:00) -&gt; ZFD (13:58:00)
+	ZFD (14:11:00) -&gt; PBO (15:39:00)
+	PBO (15:54:00) -&gt; SMD (16:06:00)
+
+HNH (13:42:00) -&gt; SMD (16:06:00)
+	HNH (13:42:00) -&gt; ZFD (13:58:00)
+	ZFD (14:02:00) -&gt; CTK (14:03:00)
+	CTK (14:09:00) -&gt; PBO (15:39:00)
+	PBO (15:54:00) -&gt; SMD (16:06:00)
+
+HNH (14:42:00) -&gt; SMD (17:06:00)
+	HNH (14:42:00) -&gt; ZFD (14:58:00)
+	ZFD (15:11:00) -&gt; PBO (16:39:00)
+	PBO (16:54:00) -&gt; SMD (17:06:00)
+
+HNH (14:42:00) -&gt; SMD (17:06:00)
+	HNH (14:42:00) -&gt; ZFD (14:58:00)
+	ZFD (15:02:00) -&gt; CTK (15:03:00)
+	CTK (15:09:00) -&gt; PBO (16:39:00)
+	PBO (16:54:00) -&gt; SMD (17:06:00)
+
+HNH (15:42:00) -&gt; SMD (18:06:00)
+	HNH (15:42:00) -&gt; ZFD (15:58:00)
+	ZFD (16:11:00) -&gt; PBO (17:35:00)
+	PBO (17:54:00) -&gt; SMD (18:06:00)
+
+HNH (15:42:00) -&gt; SMD (18:06:00)
+	HNH (15:42:00) -&gt; ZFD (15:58:00)
+	ZFD (16:02:00) -&gt; CTK (16:03:00)
+	CTK (16:09:00) -&gt; PBO (17:35:00)
+	PBO (17:54:00) -&gt; SMD (18:06:00)
+
+HNH (16:42:00) -&gt; SMD (19:06:00)
+	HNH (16:42:00) -&gt; ZFD (16:58:00)
+	ZFD (17:11:00) -&gt; PBO (18:34:00)
+	PBO (18:54:00) -&gt; SMD (19:06:00)
+
+HNH (16:42:00) -&gt; SMD (19:06:00)
+	HNH (16:42:00) -&gt; CTK (16:56:00)
+	CTK (17:01:00) -&gt; BFR (17:03:00)
+	BFR (17:07:00) -&gt; PBO (18:34:00)
+	PBO (18:54:00) -&gt; SMD (19:06:00)
+
+HNH (16:42:00) -&gt; SMD (19:06:00)
+	HNH (16:42:00) -&gt; ZFD (16:58:00)
+	ZFD (17:02:00) -&gt; CTK (17:03:00)
+	CTK (17:06:00) -&gt; STP (17:13:00)
+	STP -&gt; KGX (1)
+	KGX (17:48:00) -&gt; PBO (18:36:00)
+	PBO (18:54:00) -&gt; SMD (19:06:00)
+
+HNH (16:53:00) -&gt; SMD (19:06:00)
+	HNH (16:53:00) -&gt; VIC (17:03:00)
+	VIC -&gt; KGX (11)
+	KGX (17:48:00) -&gt; PBO (18:36:00)
+	PBO (18:54:00) -&gt; SMD (19:06:00)
+
+HNH (17:42:00) -&gt; SMD (20:06:00)
+	HNH (17:42:00) -&gt; ZFD (17:58:00)
+	ZFD (18:11:00) -&gt; PBO (19:41:00)
+	PBO (19:54:00) -&gt; SMD (20:06:00)
+
+HNH (17:42:00) -&gt; SMD (20:06:00)
+	HNH (17:42:00) -&gt; CTK (17:56:00)
+	CTK (18:01:00) -&gt; BFR (18:03:00)
+	BFR (18:07:00) -&gt; PBO (19:41:00)
+	PBO (19:54:00) -&gt; SMD (20:06:00)
+
+HNH (18:42:00) -&gt; SMD (21:04:00)
+	HNH (18:42:00) -&gt; ZFD (18:58:00)
+	ZFD (19:11:00) -&gt; PBO (20:35:00)
+	PBO (20:52:00) -&gt; SMD (21:04:00)
+
+HNH (18:42:00) -&gt; SMD (21:04:00)
+	HNH (18:42:00) -&gt; CTK (18:56:00)
+	CTK (19:01:00) -&gt; BFR (19:03:00)
+	BFR (19:07:00) -&gt; PBO (20:35:00)
+	PBO (20:52:00) -&gt; SMD (21:04:00)
+
+HNH (19:12:00) -&gt; SMD (21:44:00)
+	HNH (19:12:00) -&gt; ZFD (19:28:00)
+	ZFD (19:41:00) -&gt; PBO (21:05:00)
+	PBO (21:31:00) -&gt; SMD (21:44:00)
+
+HNH (19:27:00) -&gt; SMD (21:44:00)
+	HNH (19:27:00) -&gt; ZFD (19:43:00)
+	ZFD (19:56:00) -&gt; SVG (20:28:00)
+	SVG (20:34:00) -&gt; PBO (21:22:00)
+	PBO (21:31:00) -&gt; SMD (21:44:00)
+
+HNH (19:27:00) -&gt; SMD (21:44:00)
+	HNH (19:27:00) -&gt; ZFD (19:43:00)
+	ZFD (19:47:00) -&gt; CTK (19:48:00)
+	CTK (19:54:00) -&gt; SVG (20:28:00)
+	SVG (20:34:00) -&gt; PBO (21:22:00)
+	PBO (21:31:00) -&gt; SMD (21:44:00)
+
+HNH (19:42:00) -&gt; SMD (22:12:00)
+	HNH (19:42:00) -&gt; ZFD (19:58:00)
+	ZFD (20:11:00) -&gt; PBO (21:35:00)
+	PBO (22:00:00) -&gt; SMD (22:12:00)
+
+HNH (19:57:00) -&gt; SMD (22:12:00)
+	HNH (19:57:00) -&gt; STP (20:18:00)
+	STP -&gt; KGX (1)
+	KGX (21:00:00) -&gt; PBO (21:51:00)
+	PBO (22:00:00) -&gt; SMD (22:12:00)
+
+HNH (19:57:00) -&gt; SMD (22:12:00)
+	HNH (19:57:00) -&gt; BFR (20:09:00)
+	BFR -&gt; KGX (33)
+	KGX (21:00:00) -&gt; PBO (21:51:00)
+	PBO (22:00:00) -&gt; SMD (22:12:00)
+
+HNH (19:57:00) -&gt; SMD (22:12:00)
+	HNH (19:57:00) -&gt; ZFD (20:13:00)
+	ZFD (20:17:00) -&gt; CTK (20:18:00)
+	CTK (20:21:00) -&gt; STP (20:28:00)
+	STP -&gt; KGX (1)
+	KGX (21:00:00) -&gt; PBO (21:51:00)
+	PBO (22:00:00) -&gt; SMD (22:12:00)
+
+HNH (23:57:00) -&gt; SMD (06:22:00)
+	HNH (23:57:00) -&gt; ZFD (00:13:00)
+	ZFD (00:41:00) -&gt; PBO (02:19:00)
+	PBO (06:10:00) -&gt; SMD (06:22:00)
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:133)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:36)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -924,7 +1478,7 @@ LIV,LPY,RUN,NUN,LEI
 </div>
 
 
-  <span class="lead-duration duration">2.342</span>
+  <span class="lead-duration duration">2.563</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-16">
@@ -963,11 +1517,11 @@ LIV,LPY,RUN,NUN,LEI
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;NRW&quot;</span> and <span class="argument">&quot;COV&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;14:00&quot;</span></span>
 
-  <span class="lead-duration duration">2.341</span>
+  <span class="lead-duration duration">2.563</span>
 
 </div>
 
@@ -975,6 +1529,22 @@ LIV,LPY,RUN,NUN,LEI
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-18">
+          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-18" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;COV&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-07 14:00&quot;,&quot;dptCrsCode&quot;:&quot;NRW&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:35)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:26)
+	at &#10045;.a query between &quot;NRW&quot; and &quot;COV&quot; on &quot;a weekday&quot; at &quot;14:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:41)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -990,7 +1560,7 @@ LIV,LPY,RUN,NUN,LEI
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
@@ -1002,30 +1572,6 @@ LIV,LPY,RUN,NUN,LEI
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-18">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-18" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: NRW,CBG,FPK,EUS,COV in 
-
-NRW,PBO,NUN,COV
-NRW,PBO,NUN,COV
-NRW,ELY,MCH,NUN,COV
-NRW,PBO,NUN,COV
-NRW,MCH,NUN,COV
-NRW,PBO,NUN,COV
-NRW,ELY,NUN,COV
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:127)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:42)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -1072,7 +1618,7 @@ NRW,ELY,NUN,COV
 </div>
 
 
-  <span class="lead-duration duration">4.233</span>
+  <span class="lead-duration duration">1.292</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-19">
@@ -1111,11 +1657,11 @@ NRW,ELY,NUN,COV
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BAU&quot;</span> and <span class="argument">&quot;SWA&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">4.233</span>
+  <span class="lead-duration duration">1.292</span>
 
 </div>
 
@@ -1123,6 +1669,22 @@ NRW,ELY,NUN,COV
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-21">
+          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-21" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;SWA&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-07 07:00&quot;,&quot;dptCrsCode&quot;:&quot;BAU&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:35)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:26)
+	at &#10045;.a query between &quot;BAU&quot; and &quot;SWA&quot; on &quot;a weekday&quot; at &quot;07:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:49)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -1138,7 +1700,7 @@ NRW,ELY,NUN,COV
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
@@ -1150,20 +1712,6 @@ NRW,ELY,NUN,COV
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-21">
-          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
-      </div>
-      <div id="msg-21" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results found
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:112)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:50)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -1210,7 +1758,7 @@ NRW,ELY,NUN,COV
 </div>
 
 
-  <span class="lead-duration duration">1.145</span>
+  <span class="lead-duration duration">1.517</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-22">
@@ -1253,7 +1801,7 @@ NRW,ELY,NUN,COV
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;WFJ&quot;</span> and <span class="argument">&quot;STN&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.144</span>
+  <span class="lead-duration duration">1.516</span>
 
 </div>
 
@@ -1280,7 +1828,7 @@ NRW,ELY,NUN,COV
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -1297,11 +1845,39 @@ NRW,ELY,NUN,COV
       <div id="msg-24" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: WFJ,EUS,KGX,EDB,STN in 
 
-WFJ,PRE,HYM,STN
-WFJ,WGN,PNR,HYM,STN
+WFJ (08:04:00) -&gt; STN (16:45:00)
+	WFJ (08:04:00) -&gt; RUG (09:18:00)
+	RUG (09:46:00) -&gt; WGN (11:10:00)
+	WGN (11:38:00) -&gt; HYM (14:10:00)
+	HYM (14:34:00) -&gt; STN (16:45:00)
+
+WFJ (10:04:00) -&gt; STN (18:43:00)
+	WFJ (10:04:00) -&gt; RUG (11:18:00)
+	RUG (11:25:00) -&gt; WGN (12:43:00)
+	WGN (13:38:00) -&gt; HYM (16:12:00)
+	HYM (16:33:00) -&gt; STN (18:43:00)
+
+WFJ (21:25:00) -&gt; STN (12:41:00)
+	WFJ (21:25:00) -&gt; WGN (23:31:00)
+	WGN (06:25:00) -&gt; PNR (07:34:00)
+	PNR (07:59:00) -&gt; EDB (09:40:00)
+	EDB (10:28:00) -&gt; STN (12:41:00)
+
+WFJ (21:25:00) -&gt; STN (12:41:00)
+	WFJ (21:25:00) -&gt; WGN (23:31:00)
+	WGN (06:25:00) -&gt; PNR (07:34:00)
+	PNR (07:59:00) -&gt; HYM (09:32:00)
+	HYM (10:07:00) -&gt; LEU (11:07:00)
+	LEU (11:30:00) -&gt; STN (12:41:00)
+
+WFJ (22:15:00) -&gt; STN (13:31:00)
+	WFJ (22:15:00) -&gt; RUG (23:41:00)
+	RUG (06:45:00) -&gt; PRE (08:14:00)
+	PRE (09:04:00) -&gt; HYM (11:29:00)
+	HYM (11:37:00) -&gt; STN (13:31:00)
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:127)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:133)
 	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:58)
 </pre>
       </div>
