@@ -14,15 +14,14 @@ public class LegAdapter {
         Moshi moshi = new Moshi.Builder().build();
         JsonReader peeked = json.peekJson();
         try {
-            Map<String, Double> derp = (Map<String, Double>) peeked.readJsonValue();
-            if (derp.get("segmentType") == 0.0) {
+            Map<String, Double> obj = (Map<String, Double>) peeked.readJsonValue();
+            if (obj.get("segmentType") == 0.0) {
                 JsonAdapter<TimetableLeg> childJsonAdapter = moshi.adapter(TimetableLeg.class);
                 return childJsonAdapter.fromJson(json);
             }
             else {
                 JsonAdapter<TransferLeg> parentJsonAdapter = moshi.adapter(TransferLeg.class);
                 return parentJsonAdapter.fromJson(json);
-
             }
         } catch (IOException e) {
             e.printStackTrace();
