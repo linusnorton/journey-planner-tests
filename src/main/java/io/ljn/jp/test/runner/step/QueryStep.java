@@ -20,6 +20,11 @@ import static org.junit.Assert.*;
 public class QueryStep {
     private final JourneyPlannerApi journeyPlanner;
     private ApiResponse response;
+    private String origin;
+    private String destination;
+    private String date;
+    private String time;
+    private String railcard;
 
     @Given("a/I query between {string} and {string} on {string} at {string}")
     public void aQueryBetweenAndOnAt(String origin, String destination, String date, String time) {
@@ -31,6 +36,12 @@ public class QueryStep {
         if (date.equals("a weekday")) {
             date = getNextWeekday();
         }
+
+        this.origin = origin;
+        this.destination = destination;
+        this.date = date;
+        this.time = time;
+        this.railcard = railcard;
 
         response = journeyPlanner.planJourney(origin, destination, date, time, railcard);
 
@@ -128,9 +139,12 @@ public class QueryStep {
             .collect(Collectors.toList());
 
         String journeys = response.outwardToString();
+        String nreDate = date.substring(8, 10) + date.substring(5, 7) + date.substring(0, 4);
+        String nre = String.format("http://ojp.nationalrail.co.uk/service/timesandfares/%s/%s/%s/%s/dep", origin, destination, nreDate, time.replace(":", ""));
+        String errorHelp = journeys + "\n\nCheck NRE with: " + nre + "\n\n";
 
         for (String pattern : expected) {
-            assertTrue("Could not find pattern: " + pattern + " in \n\n" + journeys, actual.contains(pattern));
+            assertTrue("Could not find pattern: " + pattern + " in \n\n" + errorHelp, actual.contains(pattern));
         }
     }
 }

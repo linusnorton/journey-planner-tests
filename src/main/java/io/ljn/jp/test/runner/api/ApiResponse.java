@@ -16,6 +16,7 @@ public class ApiResponse {
     public String outwardToString() {
         return outboundJourneyList.stream()
             .map(Journey::toString)
+            .limit(6)
             .collect(Collectors.joining("\n\n"));
     }
 

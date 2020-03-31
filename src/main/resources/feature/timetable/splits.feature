@@ -3,61 +3,7 @@ Feature: Journey splits
   Journey planners should treat trains that split as a single journey
 
   Scenario: Train splits so there appears to be a single train between CHX and RAM
-    Given a query between "CHX" and "RAM" on "2020-03-20" at "13:10"
-    Then I should see a service "W52427" that stops at
-      | stop | arrival | departure |
-      | CHX  | --:--   | 13:10     |
-      | WAE  | 13:12   | 13:13     |
-      | LBG  | 13:17   | 13:19     |
-      | SEV  | 13:42   | 13:43     |
-      | TON  | 13:51   | 13:52     |
-      | PDW  | 13:58   | 13:59     |
-      | MRN  | 14:04   | 14:04     |
-      | SPU  | 14:08   | 14:08     |
-      | HCN  | 14:14   | 14:14     |
-      | PLC  | 14:20   | 14:20     |
-      | AFK  | 14:29   | 14:38     |
-      | WHA  | 14:46   | 14:46     |
-      | SDG  | 14:49   | 14:49     |
-      | FKW  | 14:55   | 14:55     |
-      | FKC  | 14:57   | 14:58     |
-      | DVP  | 15:09   | 15:25     |
-      | MTM  | 15:34   | 15:34     |
-      | WAM  | 15:38   | 15:38     |
-      | DEA  | 15:42   | 15:42     |
-      | SDW  | 15:48   | 15:50     |
-      | MSR  | 15:57   | 16:02     |
-      | RAM  | 16:13   | --:--     |
-
-  Scenario: Train splits so there appears to be a single train between CHX and RAM
-    Given a query between "CHX" and "RAM" on "2020-03-20" at "13:10"
-    Then I should see a service "W52427" that stops at
-      | stop | arrival | departure |
-      | CHX  | --:--   | 13:10     |
-      | WAE  | 13:12   | 13:13     |
-      | LBG  | 13:17   | 13:19     |
-      | SEV  | 13:42   | 13:43     |
-      | TON  | 13:51   | 13:52     |
-      | PDW  | 13:58   | 13:59     |
-      | MRN  | 14:04   | 14:04     |
-      | SPU  | 14:08   | 14:08     |
-      | HCN  | 14:14   | 14:14     |
-      | PLC  | 14:20   | 14:20     |
-      | AFK  | 14:29   | 14:38     |
-      | WHA  | 14:46   | 14:46     |
-      | SDG  | 14:49   | 14:49     |
-      | FKW  | 14:55   | 14:55     |
-      | FKC  | 14:57   | 14:58     |
-      | DVP  | 15:09   | 15:25     |
-      | MTM  | 15:34   | 15:34     |
-      | WAM  | 15:38   | 15:38     |
-      | DEA  | 15:42   | 15:42     |
-      | SDW  | 15:48   | 15:50     |
-      | MSR  | 15:57   | 16:02     |
-      | RAM  | 16:13   | --:--     |
-
-  Scenario: Train splits so there appears to be a single train between CHX and RAM
-    Given a query between "CHX" and "RAM" on "2020-03-20" at "14:10"
+    Given a query between "CHX" and "RAM" on "2020-04-07" at "14:10"
     Then I should see a service "W47702" that stops at
       | stop | arrival | departure |
       | CHX  | --:--   | 14:10     |
@@ -84,7 +30,7 @@ Feature: Journey splits
       | RAM  | 16:54   | --:--     |
 
   Scenario: Train splits so there appears to be a single train between CHX and RAM
-    Given a query between "CHX" and "RAM" on "2020-03-20" at "19:10"
+    Given a query between "CHX" and "RAM" on "2020-04-07" at "19:10"
     Then I should see a service "W47738" that stops at
       | stop | arrival | departure |
       | CHX  | --:--   | 19:10     |
@@ -109,8 +55,55 @@ Feature: Journey splits
       | SDW  | 21:33   | 21:34     |
       | RAM  | 21:50   | --:--     |
 
+  Scenario: Train splits so there appears to be a single train between CHX and RAM
+    Given a query between "CHX" and "RAM" on "2020-04-07" at "16:10"
+    Then I should see a service "W47716" that stops at
+      | stop | arrival | departure |
+      | CHX  | --:--   | 16:10     |
+      | WAE  | 16:12   | 16:13     |
+      | LBG  | 16:17   | 16:19     |
+      | SEV  | 16:42   | 16:43     |
+      | TON  | 16:51   | 16:52     |
+      | PDW  | 16:58   | 16:59     |
+      | MRN  | 17:04   | 17:04     |
+      | SPU  | 17:08   | 17:08     |
+      | HCN  | 17:14   | 17:14     |
+      | PLC  | 17:20   | 17:20     |
+      | AFK  | 17:30   | 17:38     |
+      | WHA  | 17:46   | 17:46     |
+      | SDG  | 17:49   | 17:49     |
+      | FKW  | 17:55   | 17:55     |
+      | FKC  | 17:57   | 17:58     |
+      | DVP  | 18:09   | 18:12     |
+      | MTM  | 18:21   | 18:21     |
+      | WAM  | 18:25   | 18:25     |
+      | DEA  | 18:29   | 18:30     |
+      | SDW  | 18:36   | 18:37     |
+      | RAM  | 18:53   | --:--     |
+
+  Scenario: Train splits so there appears to be a single train between CHX and DVP
+    Given a query between "CHX" and "DVP" on "2020-04-07" at "16:39"
+    Then I should see a service "W47720" that stops at
+      | stop | arrival | departure |
+      | CHX  | --:--   | 16:39     |
+      | WAE  | 16:41   | 16:42     |
+      | LBG  | 16:46   | 16:48     |
+      | SEV  | 17:11   | 17:12     |
+      | TON  | 17:20   | 17:21     |
+      | PDW  | 17:27   | 17:28     |
+      | MRN  | 17:33   | 17:34     |
+      | SPU  | 17:37   | 17:38     |
+      | HCN  | 17:43   | 17:44     |
+      | PLC  | 17:50   | 17:50     |
+      | AFK  | 17:59   | 18:05     |
+      | WHA  | 18:13   | 18:13     |
+      | SDG  | 18:16   | 18:16     |
+      | FKW  | 18:22   | 18:22     |
+      | FKC  | 18:24   | 18:25     |
+      | DVP  | 18:39   | --:--     |
+
   Scenario: Train splits so there appears to be a single train between CHX and CBW
-    Given a query between "CHX" and "CBW" on "2020-03-20" at "07:37"
+    Given a query between "CHX" and "CBW" on "2020-04-07" at "07:37"
     Then I should see a service "W47657" that stops at
       | stop | arrival | departure |
       | CHX  | --:--   | 07:37     |
