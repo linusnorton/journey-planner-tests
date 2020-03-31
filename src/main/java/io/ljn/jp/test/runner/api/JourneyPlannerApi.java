@@ -11,7 +11,10 @@ import java.io.IOException;
  */
 public class JourneyPlannerApi {
     private final HttpClient http;
-    private final Moshi moshi = new Moshi.Builder().build();
+    private final Moshi moshi = new Moshi.Builder()
+        .add(new LegAdapter())
+        .build();
+
     private final JsonAdapter<ApiResponse> responseAdapter = moshi.adapter(ApiResponse.class);
     private final JsonAdapter<JourneyPlannerQuery> requestAdapter = moshi.adapter(JourneyPlannerQuery.class);
 

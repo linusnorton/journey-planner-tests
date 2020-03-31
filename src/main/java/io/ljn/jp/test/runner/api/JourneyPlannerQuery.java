@@ -12,10 +12,12 @@ public class JourneyPlannerQuery {
     public final String arrNlcCode;
     public final int adultCount;
     public final int childCount;
-    public final String railCardList;
+    public final String[] railCardList;
     public final String departureDate;
     public final String returnDate;
     public final boolean openReturn;
+    public final boolean keepOvertaken;
+    public final boolean showRouteingDetail;
 
     public JourneyPlannerQuery(String origin, String destination, String date, String time, String railcard) {
         dptCrsCode = origin.length() == 3 ? origin : "";
@@ -26,9 +28,11 @@ public class JourneyPlannerQuery {
         departureDate = LocalDate.parse(date).atTime(LocalTime.parse(time)).format(localDateTimeFormat);
         returnDate = "";
 
-        railCardList = railcard;
+        railCardList = railcard.split(",");
         adultCount = 1;
         childCount = 0;
         openReturn = false;
+        keepOvertaken = false;
+        showRouteingDetail = false;
     }
 }

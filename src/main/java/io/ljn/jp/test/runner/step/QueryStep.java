@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.ljn.jp.test.runner.api.ApiResponse;
 import io.ljn.jp.test.runner.api.JourneyPlannerApi;
 import io.ljn.jp.test.runner.journey.StopTime;
+import io.ljn.jp.test.runner.journey.TimetableLeg;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
@@ -50,8 +51,9 @@ public class QueryStep {
 
         String actual = response.outboundJourneyList
             .stream()
-            .filter(j -> j.tisSegmentList.get(0).tisTrainInfo.trainUid.equals(tuid))
-            .map(j -> serialize(j.tisSegmentList.get(0).tisCallingPointList))
+            .map(j -> j.tisSegmentList.get(0))
+            .filter(l -> l instanceof TimetableLeg && ((TimetableLeg) l).tisTrainInfo.trainUid.equals(tuid))
+            .map(l -> serialize(((TimetableLeg) l).tisCallingPointList))
             .findFirst()
             .orElseThrow(() -> new MissingTrainException("Could not find: " + tuid));
 
@@ -77,7 +79,9 @@ public class QueryStep {
     public void iShouldNotSeeAServiceInTheResults(String tuid) {
         boolean actual = response.outboundJourneyList
             .stream()
-            .anyMatch(j -> j.tisSegmentList.get(0).tisTrainInfo.trainUid.equals(tuid));
+            .map(j -> j.tisSegmentList.get(0))
+            .filter(l -> l instanceof TimetableLeg && ((TimetableLeg) l).tisTrainInfo.trainUid.equals(tuid))
+            .anyMatch(l -> ((TimetableLeg) l).tisTrainInfo.trainUid.equals(tuid));
 
         assertFalse("Found " + tuid + " when it should not be present", actual);
     }
@@ -120,11 +124,13 @@ public class QueryStep {
 
         List<String> actual = response.outboundJourneyList
             .stream()
-            .map(j -> j.dptLocation.crsCode + "," + j.tisSegmentList.stream().map(l -> l.arrStation.crsCode).collect(Collectors.joining(",")))
+            .map(j -> j.dptLocation.crsCode + "," + j.tisSegmentList.stream().map(l -> l.getArrStation().crsCode).collect(Collectors.joining(",")))
             .collect(Collectors.toList());
 
+        String journeys = response.outwardToString();
+
         for (String pattern : expected) {
-            assertTrue("Could not find pattern: " + pattern + " in \n\n" + String.join("\n", actual), actual.contains(pattern));
+            assertTrue("Could not find pattern: " + pattern + " in \n\n" + journeys, actual.contains(pattern));
         }
     }
 }
