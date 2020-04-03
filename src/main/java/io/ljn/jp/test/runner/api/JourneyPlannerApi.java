@@ -30,7 +30,7 @@ public class JourneyPlannerApi {
             Response response = http.post("/apiproxy/train/tisuk/fare/fare/tisSearch", postJson);
 
             if (!response.isSuccessful()) {
-                throw new JourneyPlannerException("Unable to plan journey: " + postJson);
+                throw new JourneyPlannerException("Unable to plan journey: " + postJson + "\n" + response.body().string());
             }
 
             return responseAdapter.fromJson(response.body().source());

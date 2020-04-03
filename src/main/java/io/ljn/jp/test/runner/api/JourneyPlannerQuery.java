@@ -12,6 +12,7 @@ public class JourneyPlannerQuery {
     public final String arrNlcCode;
     public final int adultCount;
     public final int childCount;
+    public final int maxJourney;
     public final String[] railCardList;
     public final String departureDate;
     public final String returnDate;
@@ -31,6 +32,7 @@ public class JourneyPlannerQuery {
         railCardList = railcard.split(",");
         adultCount = 1;
         childCount = 0;
+        maxJourney = 5000;
         openReturn = false;
         keepOvertaken = false;
         showRouteingDetail = false;

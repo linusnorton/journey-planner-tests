@@ -3,12 +3,20 @@ package io.ljn.jp.test.runner.api;
 import okhttp3.*;
 
 import java.io.IOException;
+import java.time.Duration;
+
+import static java.time.Duration.*;
 
 /**
  * Wrapper around OkHttp library to simplify API calls
  */
 public class HttpClient {
-    private final OkHttpClient http = new OkHttpClient();
+    private final OkHttpClient http = new OkHttpClient().newBuilder()
+        .connectTimeout(ofMinutes(1))
+        .readTimeout(ofMinutes(1))
+        .callTimeout(ofMinutes(1))
+        .build();
+
     private final String host = "http://apiproxy-fws.ctripqa.com";
 
     public Response get(String urlFormat, Object... values) throws IOException {
