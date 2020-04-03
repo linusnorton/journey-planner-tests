@@ -3,9 +3,8 @@ package io.ljn.jp.test.runner.api;
 import okhttp3.*;
 
 import java.io.IOException;
-import java.time.Duration;
 
-import static java.time.Duration.*;
+import static java.time.Duration.ofMinutes;
 
 /**
  * Wrapper around OkHttp library to simplify API calls

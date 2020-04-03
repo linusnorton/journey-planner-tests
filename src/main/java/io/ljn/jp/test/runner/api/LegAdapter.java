@@ -18,8 +18,7 @@ public class LegAdapter {
             if (obj.get("segmentType") == 0.0) {
                 JsonAdapter<TimetableLeg> childJsonAdapter = moshi.adapter(TimetableLeg.class);
                 return childJsonAdapter.fromJson(json);
-            }
-            else {
+            } else {
                 JsonAdapter<TransferLeg> parentJsonAdapter = moshi.adapter(TransferLeg.class);
                 return parentJsonAdapter.fromJson(json);
             }
