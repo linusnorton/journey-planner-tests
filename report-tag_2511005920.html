@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>06 Apr 2020, 15:32</td>
+      <td>07 Apr 2020, 15:30</td>
     </tr>
   </tbody>
 </table>
@@ -127,18 +127,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@timetable</td>
-          <td      class="passed"    >16</td>
-          <td      class="failed"    >21</td>
-          <td     class="skipped"   >33</td>
+          <td      class="passed"    >29</td>
+          <td      class="failed"    >17</td>
+          <td     class="skipped"   >24</td>
           <td >0</td>
           <td >0</td>
           <td class="total">70</td>
 
-          <td  class="passed"    >4</td>
-          <td  class="failed"    >21</td>
+          <td  class="passed"    >8</td>
+          <td  class="failed"    >17</td>
           <td class="total">25</td>
 
-          <td class="duration" data-value="132603651000">2:12.603</td>
+          <td class="duration" data-value="70810263000">1:10.810</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -181,7 +181,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">21.206</span>
+  <span class="lead-duration duration">3.742</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -220,11 +220,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;TBD&quot;</span> and <span class="argument">&quot;BDM&quot;</span> on <span class="argument">&quot;2020-04-21&quot;</span> at <span class="argument">&quot;04:15&quot;</span></span>
 
-  <span class="lead-duration duration">21.206</span>
+  <span class="lead-duration duration">3.140</span>
 
 </div>
 
@@ -232,23 +232,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BDM&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-21 04:15&quot;,&quot;dptCrsCode&quot;:&quot;TBD&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187054328,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: Failed to invoke the method journeySearch in the service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService. Tried 1 times of the providers [10.5.31.177:20880] (1/1) from the registry dummyAddress:9090 on the consumer 10.6.58.232 using the dubbo version 2.7.3-ctrip.10. Last error is: Failed to invoke remote method: journeySearch, provider: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,hasCancel,getAllTiplocStations&amp;payload=100000000&amp;pid=39&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1586100887201&amp;version=1.0.0&amp;weight=5, cause: org.apache.dubbo.remoting.RemotingException: Data length too large: 143720260, max payload: 100000000, channel: NettyChannel [channel=[id: 0x79bac39e, /10.6.58.232:39554 =&gt; /10.5.31.177:20880]]&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;TBD&quot; and &quot;BDM&quot; on &quot;2020-04-21&quot; at &quot;04:15&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -264,11 +247,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W41228&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.040</span>
 
 </div>
 
@@ -378,11 +361,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When skipped">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;TBD&quot;</span> and <span class="argument">&quot;BDM&quot;</span> on <span class="argument">&quot;2020-04-28&quot;</span> at <span class="argument">&quot;04:15&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.561</span>
 
 </div>
 
@@ -390,6 +373,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between TBD and BDM on 2020-04-28 04:15
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
+	at &#10045;.I query between &quot;TBD&quot; and &quot;BDM&quot; on &quot;2020-04-28&quot; at &quot;04:15&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:25)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -453,12 +451,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">11.025</span>
+  <span class="lead-duration duration">1.461</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-4">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Service between DLJ and CLJ is cancelled on a particular day</span>
 
@@ -469,16 +467,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-4" class="collapse collapsable-details ">
+  <div id="element-4" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -488,15 +486,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-5" class="inner-level collapse collapsable-details ">
+  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;DLJ&quot;</span> and <span class="argument">&quot;CLJ&quot;</span> on <span class="argument">&quot;2020-04-20&quot;</span> at <span class="argument">&quot;23:19&quot;</span></span>
 
-  <span class="lead-duration duration">6.891</span>
+  <span class="lead-duration duration">1.461</span>
 
 </div>
 
@@ -504,6 +502,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between DLJ and CLJ on 2020-04-20 23:19
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
+	at &#10045;.a query between &quot;DLJ&quot; and &quot;CLJ&quot; on &quot;2020-04-20&quot; at &quot;23:19&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:29)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -519,11 +532,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;L46802&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.026</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -633,11 +646,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When skipped">
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;DLJ&quot;</span> and <span class="argument">&quot;CLJ&quot;</span> on <span class="argument">&quot;2020-04-27&quot;</span> at <span class="argument">&quot;23:19&quot;</span></span>
 
-  <span class="lead-duration duration">4.101</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -660,11 +673,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should not see a service <span class="argument">&quot;L46802&quot;</span> in the results</span>
 
-  <span class="lead-duration duration">0.006</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -708,12 +721,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">3.248</span>
+  <span class="lead-duration duration">2.160</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-6">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Service between AFK and CBW is cancelled on a particular day</span>
 
@@ -724,16 +737,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-6" class="collapse collapsable-details ">
+  <div id="element-7" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-7">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -743,15 +756,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-7" class="inner-level collapse collapsable-details ">
+  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;AFK&quot;</span> and <span class="argument">&quot;CBW&quot;</span> on <span class="argument">&quot;2020-04-23&quot;</span> at <span class="argument">&quot;01:07&quot;</span></span>
 
-  <span class="lead-duration duration">1.453</span>
+  <span class="lead-duration duration">2.160</span>
 
 </div>
 
@@ -759,6 +772,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between AFK and CBW on 2020-04-23 01:07
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
+	at &#10045;.a query between &quot;AFK&quot; and &quot;CBW&quot; on &quot;2020-04-23&quot; at &quot;01:07&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:52)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -774,7 +802,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W47768&quot;</span> that stops at</span>
 
@@ -833,11 +861,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When skipped">
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;AFK&quot;</span> and <span class="argument">&quot;CBW&quot;</span> on <span class="argument">&quot;2020-04-30&quot;</span> at <span class="argument">&quot;01:07&quot;</span></span>
 
-  <span class="lead-duration duration">1.794</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -860,7 +888,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should not see a service <span class="argument">&quot;W47768&quot;</span> in the results</span>
 
@@ -908,12 +936,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">4.122</span>
+  <span class="lead-duration duration">1.792</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-8">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Service between BHM and HNF is cancelled on a particular day</span>
 
@@ -924,16 +952,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-8" class="collapse collapsable-details ">
+  <div id="element-10" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-9">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-11">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -943,7 +971,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-9" class="inner-level collapse collapsable-details ">
+  <div id="steps-11" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -951,7 +979,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BHM&quot;</span> and <span class="argument">&quot;HNF&quot;</span> on <span class="argument">&quot;2020-04-20&quot;</span> at <span class="argument">&quot;23:18&quot;</span></span>
 
-  <span class="lead-duration duration">2.131</span>
+  <span class="lead-duration duration">1.290</span>
 
 </div>
 
@@ -1078,11 +1106,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;BHM&quot;</span> and <span class="argument">&quot;HNF&quot;</span> on <span class="argument">&quot;2020-04-27&quot;</span> at <span class="argument">&quot;23:18&quot;</span></span>
 
-  <span class="lead-duration duration">1.990</span>
+  <span class="lead-duration duration">0.502</span>
 
 </div>
 
@@ -1090,6 +1118,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between BHM and HNF on 2020-04-27 23:18
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
+	at &#10045;.I query between &quot;BHM&quot; and &quot;HNF&quot; on &quot;2020-04-27&quot; at &quot;23:18&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:81)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -1105,7 +1148,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should not see a service <span class="argument">&quot;P82191&quot;</span> in the results</span>
 
@@ -1153,10 +1196,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">10.913</span>
+  <span class="lead-duration duration">7.346</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-10">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -1169,14 +1212,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-10" class="collapse collapsable-details ">
+  <div id="element-13" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-11">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -1188,7 +1231,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-11" class="inner-level collapse collapsable-details ">
+  <div id="steps-14" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -1196,7 +1239,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;DLJ&quot;</span> and <span class="argument">&quot;CLJ&quot;</span> on <span class="argument">&quot;2020-04-20&quot;</span> at <span class="argument">&quot;23:04&quot;</span></span>
 
-  <span class="lead-duration duration">4.712</span>
+  <span class="lead-duration duration">1.929</span>
 
 </div>
 
@@ -1337,7 +1380,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;DLJ&quot;</span> and <span class="argument">&quot;CLJ&quot;</span> on <span class="argument">&quot;2020-04-27&quot;</span> at <span class="argument">&quot;23:04&quot;</span></span>
 
-  <span class="lead-duration duration">6.200</span>
+  <span class="lead-duration duration">5.410</span>
 
 </div>
 
@@ -1364,7 +1407,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">I should not see a service <span class="argument">&quot;L46799&quot;</span> in the results</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.005</span>
 
 </div>
 
@@ -1408,12 +1451,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.631</span>
+  <span class="lead-duration duration">4.402</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-12">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-15">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Train joins another train to form a single train between RAM and CHX</span>
 
@@ -1424,16 +1467,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-12" class="collapse collapsable-details  in ">
+  <div id="element-15" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-13">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-16">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -1443,15 +1486,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-13" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-16" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-04-07&quot;</span> at <span class="argument">&quot;16:17&quot;</span></span>
 
-  <span class="lead-duration duration">30.630</span>
+  <span class="lead-duration duration">4.402</span>
 
 </div>
 
@@ -1460,23 +1503,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-14">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-14" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;CHX&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-07 16:17&quot;,&quot;dptCrsCode&quot;:&quot;RAM&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;RAM&quot; and &quot;CHX&quot; on &quot;2020-04-07&quot; at &quot;16:17&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -1491,7 +1517,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W48737&quot;</span> that stops at</span>
 
@@ -1641,12 +1667,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">31.670</span>
+  <span class="lead-duration duration">3.833</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-15">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-17">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Train joins another train to form a single train between RAM and CHX</span>
 
@@ -1657,16 +1683,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-15" class="collapse collapsable-details  in ">
+  <div id="element-17" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-16">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-18">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -1676,15 +1702,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-16" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-18" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-04-07&quot;</span> at <span class="argument">&quot;09:08&quot;</span></span>
 
-  <span class="lead-duration duration">31.670</span>
+  <span class="lead-duration duration">3.832</span>
 
 </div>
 
@@ -1693,23 +1719,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-17">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-17" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;CHX&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-07 09:08&quot;,&quot;dptCrsCode&quot;:&quot;RAM&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;RAM&quot; and &quot;CHX&quot; on &quot;2020-04-07&quot; at &quot;09:08&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:30)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -1724,7 +1733,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W48694&quot;</span> that stops at</span>
 
@@ -1869,12 +1878,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.620</span>
+  <span class="lead-duration duration">1.887</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-18">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-19">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Train joins another train to form a single train between RAM and CHX</span>
 
@@ -1885,16 +1894,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-18" class="collapse collapsable-details  in ">
+  <div id="element-19" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-19">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-20">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -1904,15 +1913,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-19" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-20" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-04-07&quot;</span> at <span class="argument">&quot;07:12&quot;</span></span>
 
-  <span class="lead-duration duration">0.620</span>
+  <span class="lead-duration duration">1.887</span>
 
 </div>
 
@@ -1921,23 +1930,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-20">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-20" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;CHX&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-07 07:12&quot;,&quot;dptCrsCode&quot;:&quot;RAM&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187146575,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: Failed to invoke the method journeySearch in the service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService. Tried 1 times of the providers [10.5.31.177:20880] (1/1) from the registry dummyAddress:9090 on the consumer 10.6.58.232 using the dubbo version 2.7.3-ctrip.10. Last error is: Failed to invoke remote method: journeySearch, provider: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,hasCancel,getAllTiplocStations&amp;payload=100000000&amp;pid=39&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1586100887201&amp;version=1.0.0&amp;weight=5, cause: client(url: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;_client_memo=referencecounthandler.replacewithlazyclient&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;codec=dubbo&amp;connect.lazy.initial.state=true&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;lazyclient_request_with_warning=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,getAllTiplocStations,hasCancel&amp;payload=100000000&amp;pid=39&amp;reconnect=false&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;send.reconnect=true&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1585908307372&amp;version=1.0.0&amp;warning=true&amp;weight=5) failed to connect to server /10.5.31.177:20880, error message is:Connection refused: /10.5.31.177:20880&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;RAM&quot; and &quot;CHX&quot; on &quot;2020-04-07&quot; at &quot;07:12&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:53)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -1952,7 +1944,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W52869&quot;</span> that stops at</span>
 
@@ -2097,12 +2089,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.661</span>
+  <span class="lead-duration duration">2.882</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-21">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-21">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Train joins another train to form a single train between RAM and CHX</span>
 
@@ -2113,16 +2105,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-21" class="collapse collapsable-details  in ">
+  <div id="element-21" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-22">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-22">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -2132,15 +2124,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-22" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-22" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-04-07&quot;</span> at <span class="argument">&quot;17:18&quot;</span></span>
 
-  <span class="lead-duration duration">1.661</span>
+  <span class="lead-duration duration">2.880</span>
 
 </div>
 
@@ -2149,23 +2141,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-23">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-23" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;CHX&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-07 17:18&quot;,&quot;dptCrsCode&quot;:&quot;RAM&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187148248,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: Failed to invoke the method journeySearch in the service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService. Tried 1 times of the providers [10.5.31.177:20880] (1/1) from the registry dummyAddress:9090 on the consumer 10.6.58.232 using the dubbo version 2.7.3-ctrip.10. Last error is: Failed to invoke remote method: journeySearch, provider: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,hasCancel,getAllTiplocStations&amp;payload=100000000&amp;pid=39&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1586100887201&amp;version=1.0.0&amp;weight=5, cause: client(url: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;_client_memo=referencecounthandler.replacewithlazyclient&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;codec=dubbo&amp;connect.lazy.initial.state=true&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;lazyclient_request_with_warning=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,getAllTiplocStations,hasCancel&amp;payload=100000000&amp;pid=39&amp;reconnect=false&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;send.reconnect=true&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1585908307372&amp;version=1.0.0&amp;warning=true&amp;weight=5) failed to connect to server /10.5.31.177:20880, error message is:Connection refused: /10.5.31.177:20880&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;RAM&quot; and &quot;CHX&quot; on &quot;2020-04-07&quot; at &quot;17:18&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:76)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -2180,11 +2155,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W48744&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -2315,12 +2290,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.588</span>
+  <span class="lead-duration duration">2.506</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-24">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-23">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Train joins another train to form a single train between RAM and CHX</span>
 
@@ -2331,16 +2306,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-24" class="collapse collapsable-details  in ">
+  <div id="element-23" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-25">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-24">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -2350,15 +2325,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-25" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-24" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-04-07&quot;</span> at <span class="argument">&quot;08:14&quot;</span></span>
 
-  <span class="lead-duration duration">0.588</span>
+  <span class="lead-duration duration">2.506</span>
 
 </div>
 
@@ -2367,23 +2342,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-26">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-26" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;CHX&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-07 08:14&quot;,&quot;dptCrsCode&quot;:&quot;RAM&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187148841,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: Failed to invoke the method journeySearch in the service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService. Tried 1 times of the providers [10.5.31.177:20880] (1/1) from the registry dummyAddress:9090 on the consumer 10.6.58.232 using the dubbo version 2.7.3-ctrip.10. Last error is: Failed to invoke remote method: journeySearch, provider: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,hasCancel,getAllTiplocStations&amp;payload=100000000&amp;pid=39&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1586100887201&amp;version=1.0.0&amp;weight=5, cause: client(url: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;_client_memo=referencecounthandler.replacewithlazyclient&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;codec=dubbo&amp;connect.lazy.initial.state=true&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;lazyclient_request_with_warning=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,getAllTiplocStations,hasCancel&amp;payload=100000000&amp;pid=39&amp;reconnect=false&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;send.reconnect=true&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1585908307372&amp;version=1.0.0&amp;warning=true&amp;weight=5) failed to connect to server /10.5.31.177:20880, error message is:Connection refused: /10.5.31.177:20880&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;RAM&quot; and &quot;CHX&quot; on &quot;2020-04-07&quot; at &quot;08:14&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:97)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -2398,7 +2356,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W48687&quot;</span> that stops at</span>
 
@@ -2543,10 +2501,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.655</span>
+  <span class="lead-duration duration">0.625</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-27">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-25">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -2559,14 +2517,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-27" class="collapse collapsable-details  in ">
+  <div id="element-25" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-28">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-26">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -2578,7 +2536,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-28" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-26" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -2586,7 +2544,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;GLD&quot;</span> and <span class="argument">&quot;WAT&quot;</span> on <span class="argument">&quot;2020-04-20&quot;</span> at <span class="argument">&quot;14:37&quot;</span></span>
 
-  <span class="lead-duration duration">1.655</span>
+  <span class="lead-duration duration">0.625</span>
 
 </div>
 
@@ -2597,14 +2555,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-29">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-27">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-29" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;WAT&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-20 14:37&quot;,&quot;dptCrsCode&quot;:&quot;GLD&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187150509,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: Failed to invoke the method journeySearch in the service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService. Tried 1 times of the providers [10.5.31.177:20880] (1/1) from the registry dummyAddress:9090 on the consumer 10.6.58.232 using the dubbo version 2.7.3-ctrip.10. Last error is: Failed to invoke remote method: journeySearch, provider: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,hasCancel,getAllTiplocStations&amp;payload=100000000&amp;pid=39&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1586100887201&amp;version=1.0.0&amp;weight=5, cause: client(url: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;_client_memo=referencecounthandler.replacewithlazyclient&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;codec=dubbo&amp;connect.lazy.initial.state=true&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;lazyclient_request_with_warning=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,getAllTiplocStations,hasCancel&amp;payload=100000000&amp;pid=39&amp;reconnect=false&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;send.reconnect=true&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1585908307372&amp;version=1.0.0&amp;warning=true&amp;weight=5) failed to connect to server /10.5.31.177:20880, error message is:Connection refused: /10.5.31.177:20880&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
+      <div id="msg-27" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between GLD and WAT on 2020-04-20 14:37
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
 	at &#10045;.a query between &quot;GLD&quot; and &quot;WAT&quot; on &quot;2020-04-20&quot; at &quot;14:37&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:6)
 </pre>
@@ -2892,12 +2848,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.557</span>
+  <span class="lead-duration duration">8.097</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-30">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-28">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Changing calling point stopping times between WAT and AON</span>
 
@@ -2908,16 +2864,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-30" class="collapse collapsable-details  in ">
+  <div id="element-28" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-31">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-29">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -2927,15 +2883,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-31" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-29" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;WAT&quot;</span> and <span class="argument">&quot;AON&quot;</span> on <span class="argument">&quot;2020-04-20&quot;</span> at <span class="argument">&quot;10:23&quot;</span></span>
 
-  <span class="lead-duration duration">0.557</span>
+  <span class="lead-duration duration">5.074</span>
 
 </div>
 
@@ -2944,23 +2900,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-32">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-32" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;AON&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-20 10:23&quot;,&quot;dptCrsCode&quot;:&quot;WAT&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187151085,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: Failed to invoke the method journeySearch in the service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService. Tried 1 times of the providers [10.5.31.177:20880] (1/1) from the registry dummyAddress:9090 on the consumer 10.6.58.232 using the dubbo version 2.7.3-ctrip.10. Last error is: Failed to invoke remote method: journeySearch, provider: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,hasCancel,getAllTiplocStations&amp;payload=100000000&amp;pid=39&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1586100887201&amp;version=1.0.0&amp;weight=5, cause: client(url: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;_client_memo=referencecounthandler.replacewithlazyclient&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;codec=dubbo&amp;connect.lazy.initial.state=true&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;lazyclient_request_with_warning=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,getAllTiplocStations,hasCancel&amp;payload=100000000&amp;pid=39&amp;reconnect=false&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;send.reconnect=true&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1585908307372&amp;version=1.0.0&amp;warning=true&amp;weight=5) failed to connect to server /10.5.31.177:20880, error message is:Connection refused: /10.5.31.177:20880&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;WAT&quot; and &quot;AON&quot; on &quot;2020-04-20&quot; at &quot;10:23&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:44)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -2975,7 +2914,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W16494&quot;</span> that stops at</span>
 
@@ -3059,11 +2998,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When skipped">
+<div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;WAT&quot;</span> and <span class="argument">&quot;AON&quot;</span> on <span class="argument">&quot;2020-04-27&quot;</span> at <span class="argument">&quot;10:23&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">3.022</span>
 
 </div>
 
@@ -3086,7 +3025,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W16494&quot;</span> that stops at</span>
 
@@ -3191,10 +3130,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.525</span>
+  <span class="lead-duration duration">0.627</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-33">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-30">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -3207,14 +3146,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-33" class="collapse collapsable-details  in ">
+  <div id="element-30" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-34">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-31">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -3226,7 +3165,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-34" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-31" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -3234,7 +3173,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;VIC&quot;</span> and <span class="argument">&quot;HGS&quot;</span> on <span class="argument">&quot;2020-04-20&quot;</span> at <span class="argument">&quot;20:46&quot;</span></span>
 
-  <span class="lead-duration duration">0.525</span>
+  <span class="lead-duration duration">0.627</span>
 
 </div>
 
@@ -3245,14 +3184,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-35">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-32">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-35" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;HGS&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-20 20:46&quot;,&quot;dptCrsCode&quot;:&quot;VIC&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187151613,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: Failed to invoke the method journeySearch in the service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService. Tried 1 times of the providers [10.5.31.177:20880] (1/1) from the registry dummyAddress:9090 on the consumer 10.6.58.232 using the dubbo version 2.7.3-ctrip.10. Last error is: Failed to invoke remote method: journeySearch, provider: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,hasCancel,getAllTiplocStations&amp;payload=100000000&amp;pid=39&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1586100887201&amp;version=1.0.0&amp;weight=5, cause: client(url: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;_client_memo=referencecounthandler.replacewithlazyclient&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;codec=dubbo&amp;connect.lazy.initial.state=true&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;lazyclient_request_with_warning=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,getAllTiplocStations,hasCancel&amp;payload=100000000&amp;pid=39&amp;reconnect=false&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;send.reconnect=true&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1585908307372&amp;version=1.0.0&amp;warning=true&amp;weight=5) failed to connect to server /10.5.31.177:20880, error message is:Connection refused: /10.5.31.177:20880&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
+      <div id="msg-32" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between VIC and HGS on 2020-04-20 20:46
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
 	at &#10045;.a query between &quot;VIC&quot; and &quot;HGS&quot; on &quot;2020-04-20&quot; at &quot;20:46&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:72)
 </pre>
@@ -3505,10 +3442,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">2.594</span>
+  <span class="lead-duration duration">0.649</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-36">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-33">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -3521,14 +3458,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-36" class="collapse collapsable-details  in ">
+  <div id="element-33" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-37">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-34">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -3540,7 +3477,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-37" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-34" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -3548,7 +3485,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;WAT&quot;</span> and <span class="argument">&quot;RDG&quot;</span> on <span class="argument">&quot;2020-04-20&quot;</span> at <span class="argument">&quot;19:35&quot;</span></span>
 
-  <span class="lead-duration duration">2.594</span>
+  <span class="lead-duration duration">0.649</span>
 
 </div>
 
@@ -3559,14 +3496,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-38">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-35">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-38" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;RDG&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-20 19:35&quot;,&quot;dptCrsCode&quot;:&quot;WAT&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187154213,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: Failed to invoke the method journeySearch in the service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService. Tried 1 times of the providers [10.5.31.177:20880] (1/1) from the registry dummyAddress:9090 on the consumer 10.6.58.232 using the dubbo version 2.7.3-ctrip.10. Last error is: Failed to invoke remote method: journeySearch, provider: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,hasCancel,getAllTiplocStations&amp;payload=100000000&amp;pid=39&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1586100887201&amp;version=1.0.0&amp;weight=5, cause: client(url: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;_client_memo=referencecounthandler.replacewithlazyclient&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;codec=dubbo&amp;connect.lazy.initial.state=true&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;lazyclient_request_with_warning=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,getAllTiplocStations,hasCancel&amp;payload=100000000&amp;pid=39&amp;reconnect=false&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;send.reconnect=true&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1585908307372&amp;version=1.0.0&amp;warning=true&amp;weight=5) failed to connect to server /10.5.31.177:20880, error message is:Connection refused: /10.5.31.177:20880&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
+      <div id="msg-35" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between WAT and RDG on 2020-04-20 19:35
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
 	at &#10045;.a query between &quot;WAT&quot; and &quot;RDG&quot; on &quot;2020-04-20&quot; at &quot;19:35&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:103)
 </pre>
@@ -3874,10 +3809,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">3.533</span>
+  <span class="lead-duration duration">4.282</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-39">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-36">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -3890,14 +3825,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-39" class="collapse collapsable-details  in ">
+  <div id="element-36" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-40">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-37">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -3909,15 +3844,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-40" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-37" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;HOT&quot;</span> and <span class="argument">&quot;TWY&quot;</span> on <span class="argument">&quot;2020-04-21&quot;</span> at <span class="argument">&quot;22:01&quot;</span></span>
 
-  <span class="lead-duration duration">3.533</span>
+  <span class="lead-duration duration">2.857</span>
 
 </div>
 
@@ -3926,23 +3861,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-41">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-41" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;TWY&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-21 22:01&quot;,&quot;dptCrsCode&quot;:&quot;HOT&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187157750,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: Failed to invoke the method journeySearch in the service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService. Tried 1 times of the providers [10.5.31.177:20880] (1/1) from the registry dummyAddress:9090 on the consumer 10.6.58.232 using the dubbo version 2.7.3-ctrip.10. Last error is: Failed to invoke remote method: journeySearch, provider: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,hasCancel,getAllTiplocStations&amp;payload=100000000&amp;pid=39&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1586100887201&amp;version=1.0.0&amp;weight=5, cause: client(url: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;_client_memo=referencecounthandler.replacewithlazyclient&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;codec=dubbo&amp;connect.lazy.initial.state=true&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;lazyclient_request_with_warning=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,getAllTiplocStations,hasCancel&amp;payload=100000000&amp;pid=39&amp;reconnect=false&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;send.reconnect=true&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1585908307372&amp;version=1.0.0&amp;warning=true&amp;weight=5) failed to connect to server /10.5.31.177:20880, error message is:Connection refused: /10.5.31.177:20880&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;HOT&quot; and &quot;TWY&quot; on &quot;2020-04-21&quot; at &quot;22:01&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:145)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -3957,7 +3875,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;Y95185&quot;</span> that stops at</span>
 
@@ -4011,11 +3929,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When skipped">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;HOT&quot;</span> and <span class="argument">&quot;TWY&quot;</span> on <span class="argument">&quot;2020-04-28&quot;</span> at <span class="argument">&quot;22:08&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">1.424</span>
 
 </div>
 
@@ -4023,6 +3941,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-38">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-38" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between HOT and TWY on 2020-04-28 22:08
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
+	at &#10045;.I query between &quot;HOT&quot; and &quot;TWY&quot; on &quot;2020-04-28&quot; at &quot;22:08&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:152)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -4113,10 +4046,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.594</span>
+  <span class="lead-duration duration">1.507</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-42">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-39">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -4129,14 +4062,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-42" class="collapse collapsable-details  in ">
+  <div id="element-39" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-43">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-40">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -4148,7 +4081,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-43" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-40" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -4156,7 +4089,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;STP&quot;</span> and <span class="argument">&quot;LDS&quot;</span> on <span class="argument">&quot;2020-04-30&quot;</span> at <span class="argument">&quot;18:34&quot;</span></span>
 
-  <span class="lead-duration duration">0.594</span>
+  <span class="lead-duration duration">1.507</span>
 
 </div>
 
@@ -4167,14 +4100,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-44">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-41">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-44" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;LDS&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-30 18:34&quot;,&quot;dptCrsCode&quot;:&quot;STP&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187158354,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: Failed to invoke the method journeySearch in the service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService. Tried 1 times of the providers [10.5.31.177:20880] (1/1) from the registry dummyAddress:9090 on the consumer 10.6.58.232 using the dubbo version 2.7.3-ctrip.10. Last error is: Failed to invoke remote method: journeySearch, provider: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,hasCancel,getAllTiplocStations&amp;payload=100000000&amp;pid=39&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1586100887201&amp;version=1.0.0&amp;weight=5, cause: client(url: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;_client_memo=referencecounthandler.replacewithlazyclient&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;codec=dubbo&amp;connect.lazy.initial.state=true&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;lazyclient_request_with_warning=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,getAllTiplocStations,hasCancel&amp;payload=100000000&amp;pid=39&amp;reconnect=false&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;send.reconnect=true&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1585908307372&amp;version=1.0.0&amp;warning=true&amp;weight=5) failed to connect to server /10.5.31.177:20880, error message is:Connection refused: /10.5.31.177:20880&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
+      <div id="msg-41" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between STP and LDS on 2020-04-30 18:34
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
 	at &#10045;.a query between &quot;STP&quot; and &quot;LDS&quot; on &quot;2020-04-30&quot; at &quot;18:34&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:6)
 </pre>
@@ -4321,10 +4252,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.639</span>
+  <span class="lead-duration duration">1.954</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-45">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-42">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -4337,14 +4268,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-45" class="collapse collapsable-details  in ">
+  <div id="element-42" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-46">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-43">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -4356,15 +4287,42 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-46" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-43" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;EUS&quot;</span> and <span class="argument">&quot;PRE&quot;</span> on <span class="argument">&quot;2020-04-30&quot;</span> at <span class="argument">&quot;21:10&quot;</span></span>
 
-  <span class="lead-duration duration">0.639</span>
+  <span class="lead-duration duration">1.953</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;C73014&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -4375,47 +4333,19 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-47">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-44">
+          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
       </div>
-      <div id="msg-47" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;PRE&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-30 21:10&quot;,&quot;dptCrsCode&quot;:&quot;EUS&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187159000,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: Failed to invoke the method journeySearch in the service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService. Tried 1 times of the providers [10.5.31.177:20880] (1/1) from the registry dummyAddress:9090 on the consumer 10.6.58.232 using the dubbo version 2.7.3-ctrip.10. Last error is: Failed to invoke remote method: journeySearch, provider: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,hasCancel,getAllTiplocStations&amp;payload=100000000&amp;pid=39&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1586100887201&amp;version=1.0.0&amp;weight=5, cause: client(url: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;_client_memo=referencecounthandler.replacewithlazyclient&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;codec=dubbo&amp;connect.lazy.initial.state=true&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;lazyclient_request_with_warning=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,getAllTiplocStations,hasCancel&amp;payload=100000000&amp;pid=39&amp;reconnect=false&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;send.reconnect=true&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1585908307372&amp;version=1.0.0&amp;warning=true&amp;weight=5) failed to connect to server /10.5.31.177:20880, error message is:Connection refused: /10.5.31.177:20880&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;EUS&quot; and &quot;PRE&quot; on &quot;2020-04-30&quot; at &quot;21:10&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:25)
+      <div id="msg-44" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: C73014
+	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$5(QueryStep.java:69)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:69)
+	at &#10045;.I should see a service &quot;C73014&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:26)
 </pre>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;C73014&quot;</span> that stops at</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
 
 
           <table class="step-arguments">
@@ -4499,10 +4429,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.651</span>
+  <span class="lead-duration duration">1.626</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-48">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-45">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -4515,14 +4445,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-48" class="collapse collapsable-details  in ">
+  <div id="element-45" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-49">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-46">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -4534,7 +4464,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-49" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-46" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -4542,7 +4472,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;WVH&quot;</span> and <span class="argument">&quot;EUS&quot;</span> on <span class="argument">&quot;2020-04-30&quot;</span> at <span class="argument">&quot;05:45&quot;</span></span>
 
-  <span class="lead-duration duration">0.651</span>
+  <span class="lead-duration duration">1.626</span>
 
 </div>
 
@@ -4553,14 +4483,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-50">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-47">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-50" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;EUS&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-30 05:45&quot;,&quot;dptCrsCode&quot;:&quot;WVH&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187159656,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: Failed to invoke the method journeySearch in the service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService. Tried 1 times of the providers [10.5.31.177:20880] (1/1) from the registry dummyAddress:9090 on the consumer 10.6.58.232 using the dubbo version 2.7.3-ctrip.10. Last error is: Failed to invoke remote method: journeySearch, provider: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,hasCancel,getAllTiplocStations&amp;payload=100000000&amp;pid=39&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1586100887201&amp;version=1.0.0&amp;weight=5, cause: client(url: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;_client_memo=referencecounthandler.replacewithlazyclient&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;codec=dubbo&amp;connect.lazy.initial.state=true&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;lazyclient_request_with_warning=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,getAllTiplocStations,hasCancel&amp;payload=100000000&amp;pid=39&amp;reconnect=false&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;send.reconnect=true&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1585908307372&amp;version=1.0.0&amp;warning=true&amp;weight=5) failed to connect to server /10.5.31.177:20880, error message is:Connection refused: /10.5.31.177:20880&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
+      <div id="msg-47" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between WVH and EUS on 2020-04-30 05:45
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
 	at &#10045;.a query between &quot;WVH&quot; and &quot;EUS&quot; on &quot;2020-04-30&quot; at &quot;05:45&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:38)
 </pre>
@@ -4672,10 +4600,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.585</span>
+  <span class="lead-duration duration">0.589</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-51">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-48">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -4688,14 +4616,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-51" class="collapse collapsable-details  in ">
+  <div id="element-48" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-52">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-49">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -4707,7 +4635,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-52" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-49" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -4715,7 +4643,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;PAD&quot;</span> and <span class="argument">&quot;RDG&quot;</span> on <span class="argument">&quot;2020-04-30&quot;</span> at <span class="argument">&quot;05:43&quot;</span></span>
 
-  <span class="lead-duration duration">1.585</span>
+  <span class="lead-duration duration">0.589</span>
 
 </div>
 
@@ -4726,14 +4654,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-53">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-50">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-53" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;RDG&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-30 05:43&quot;,&quot;dptCrsCode&quot;:&quot;PAD&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187161242,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: Failed to invoke the method journeySearch in the service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService. Tried 1 times of the providers [10.5.31.177:20880] (1/1) from the registry dummyAddress:9090 on the consumer 10.6.58.232 using the dubbo version 2.7.3-ctrip.10. Last error is: Failed to invoke remote method: journeySearch, provider: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,hasCancel,getAllTiplocStations&amp;payload=100000000&amp;pid=39&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1586100887201&amp;version=1.0.0&amp;weight=5, cause: client(url: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;_client_memo=referencecounthandler.replacewithlazyclient&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;codec=dubbo&amp;connect.lazy.initial.state=true&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;lazyclient_request_with_warning=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,getAllTiplocStations,hasCancel&amp;payload=100000000&amp;pid=39&amp;reconnect=false&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;send.reconnect=true&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1585908307372&amp;version=1.0.0&amp;warning=true&amp;weight=5) failed to connect to server /10.5.31.177:20880, error message is:Connection refused: /10.5.31.177:20880&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
+      <div id="msg-50" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between PAD and RDG on 2020-04-30 05:43
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
 	at &#10045;.a query between &quot;PAD&quot; and &quot;RDG&quot; on &quot;2020-04-30&quot; at &quot;05:43&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:50)
 </pre>
@@ -4875,10 +4801,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.630</span>
+  <span class="lead-duration duration">1.650</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-54">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-51">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -4891,14 +4817,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-54" class="collapse collapsable-details  in ">
+  <div id="element-51" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-55">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-52">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -4910,15 +4836,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-55" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-52" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;PAD&quot;</span> and <span class="argument">&quot;RDG&quot;</span> on <span class="argument">&quot;2020-04-30&quot;</span> at <span class="argument">&quot;18:43&quot;</span></span>
 
-  <span class="lead-duration duration">0.630</span>
+  <span class="lead-duration duration">1.649</span>
 
 </div>
 
@@ -4927,23 +4853,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-56">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-56" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;RDG&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-30 18:43&quot;,&quot;dptCrsCode&quot;:&quot;PAD&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187161879,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: Failed to invoke the method journeySearch in the service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService. Tried 1 times of the providers [10.5.31.177:20880] (1/1) from the registry dummyAddress:9090 on the consumer 10.6.58.232 using the dubbo version 2.7.3-ctrip.10. Last error is: Failed to invoke remote method: journeySearch, provider: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,hasCancel,getAllTiplocStations&amp;payload=100000000&amp;pid=39&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1586100887201&amp;version=1.0.0&amp;weight=5, cause: client(url: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;_client_memo=referencecounthandler.replacewithlazyclient&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;codec=dubbo&amp;connect.lazy.initial.state=true&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;lazyclient_request_with_warning=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,getAllTiplocStations,hasCancel&amp;payload=100000000&amp;pid=39&amp;reconnect=false&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;send.reconnect=true&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1585908307372&amp;version=1.0.0&amp;warning=true&amp;weight=5) failed to connect to server /10.5.31.177:20880, error message is:Connection refused: /10.5.31.177:20880&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;PAD&quot; and &quot;RDG&quot; on &quot;2020-04-30&quot; at &quot;18:43&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:68)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -4958,7 +4867,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;G37634&quot;</span> that stops at</span>
 
@@ -4970,6 +4879,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-53">
+          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
+      </div>
+      <div id="msg-53" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: G37634
+	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$5(QueryStep.java:69)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:69)
+	at &#10045;.I should see a service &quot;G37634&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:69)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -5078,10 +5003,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.581</span>
+  <span class="lead-duration duration">6.937</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-57">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-54">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -5094,14 +5019,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-57" class="collapse collapsable-details  in ">
+  <div id="element-54" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-58">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-55">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -5113,15 +5038,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-58" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-55" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;RAM&quot;</span> on <span class="argument">&quot;2020-04-07&quot;</span> at <span class="argument">&quot;14:10&quot;</span></span>
 
-  <span class="lead-duration duration">0.581</span>
+  <span class="lead-duration duration">6.936</span>
 
 </div>
 
@@ -5130,23 +5055,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-59">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-59" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;RAM&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-07 14:10&quot;,&quot;dptCrsCode&quot;:&quot;CHX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187162474,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: No provider available from registry dummyAddress:9090 for service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService:1.0.0 on consumer 10.6.58.232 use dubbo version 2.7.3-ctrip.10, please check status of providers(disabled, not registered or in blacklist).&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;CHX&quot; and &quot;RAM&quot; on &quot;2020-04-07&quot; at &quot;14:10&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -5161,7 +5069,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W47702&quot;</span> that stops at</span>
 
@@ -5173,6 +5081,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-56">
+          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
+      </div>
+      <div id="msg-56" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: W47702
+	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$5(QueryStep.java:69)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:69)
+	at &#10045;.I should see a service &quot;W47702&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:7)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -5326,10 +5250,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.589</span>
+  <span class="lead-duration duration">3.965</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-60">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-57">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -5342,14 +5266,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-60" class="collapse collapsable-details  in ">
+  <div id="element-57" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-61">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-58">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -5361,7 +5285,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-61" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-58" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -5369,7 +5293,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;RAM&quot;</span> on <span class="argument">&quot;2020-04-07&quot;</span> at <span class="argument">&quot;19:10&quot;</span></span>
 
-  <span class="lead-duration duration">0.589</span>
+  <span class="lead-duration duration">3.965</span>
 
 </div>
 
@@ -5380,14 +5304,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-62">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-59">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-62" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;RAM&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-07 19:10&quot;,&quot;dptCrsCode&quot;:&quot;CHX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187163066,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: No provider available from registry dummyAddress:9090 for service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService:1.0.0 on consumer 10.6.58.232 use dubbo version 2.7.3-ctrip.10, please check status of providers(disabled, not registered or in blacklist).&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
+      <div id="msg-59" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between CHX and RAM on 2020-04-07 19:10
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
 	at &#10045;.a query between &quot;CHX&quot; and &quot;RAM&quot; on &quot;2020-04-07&quot; at &quot;19:10&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:33)
 </pre>
@@ -5569,10 +5491,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.598</span>
+  <span class="lead-duration duration">0.615</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-63">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-60">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -5585,14 +5507,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-63" class="collapse collapsable-details  in ">
+  <div id="element-60" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-64">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-61">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -5604,7 +5526,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-64" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-61" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -5612,7 +5534,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;RAM&quot;</span> on <span class="argument">&quot;2020-04-07&quot;</span> at <span class="argument">&quot;16:10&quot;</span></span>
 
-  <span class="lead-duration duration">1.598</span>
+  <span class="lead-duration duration">0.615</span>
 
 </div>
 
@@ -5623,14 +5545,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-65">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-62">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-65" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;RAM&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-07 16:10&quot;,&quot;dptCrsCode&quot;:&quot;CHX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187164671,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: No provider available from registry dummyAddress:9090 for service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService:1.0.0 on consumer 10.6.58.232 use dubbo version 2.7.3-ctrip.10, please check status of providers(disabled, not registered or in blacklist).&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
+      <div id="msg-62" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between CHX and RAM on 2020-04-07 16:10
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
 	at &#10045;.a query between &quot;CHX&quot; and &quot;RAM&quot; on &quot;2020-04-07&quot; at &quot;16:10&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:59)
 </pre>
@@ -5812,12 +5732,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.586</span>
+  <span class="lead-duration duration">4.291</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-66">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-63">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Train splits so there appears to be a single train between CHX and DVP</span>
 
@@ -5828,16 +5748,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-66" class="collapse collapsable-details  in ">
+  <div id="element-63" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-67">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-64">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -5847,15 +5767,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-67" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-64" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;DVP&quot;</span> on <span class="argument">&quot;2020-04-07&quot;</span> at <span class="argument">&quot;16:39&quot;</span></span>
 
-  <span class="lead-duration duration">0.586</span>
+  <span class="lead-duration duration">4.291</span>
 
 </div>
 
@@ -5864,23 +5784,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-68">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-68" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;DVP&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-07 16:39&quot;,&quot;dptCrsCode&quot;:&quot;CHX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187165260,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: No provider available from registry dummyAddress:9090 for service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService:1.0.0 on consumer 10.6.58.232 use dubbo version 2.7.3-ctrip.10, please check status of providers(disabled, not registered or in blacklist).&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;CHX&quot; and &quot;DVP&quot; on &quot;2020-04-07&quot; at &quot;16:39&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:85)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -5895,7 +5798,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W47720&quot;</span> that stops at</span>
 
@@ -6030,10 +5933,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.590</span>
+  <span class="lead-duration duration">1.373</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-69">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-65">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -6046,14 +5949,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-69" class="collapse collapsable-details  in ">
+  <div id="element-65" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-70">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-66">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -6065,7 +5968,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-70" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-66" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -6073,7 +5976,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;CBW&quot;</span> on <span class="argument">&quot;2020-04-07&quot;</span> at <span class="argument">&quot;07:37&quot;</span></span>
 
-  <span class="lead-duration duration">0.590</span>
+  <span class="lead-duration duration">1.373</span>
 
 </div>
 
@@ -6084,14 +5987,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-71">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-67">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-71" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;CBW&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-07 07:37&quot;,&quot;dptCrsCode&quot;:&quot;CHX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187165856,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: No provider available from registry dummyAddress:9090 for service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService:1.0.0 on consumer 10.6.58.232 use dubbo version 2.7.3-ctrip.10, please check status of providers(disabled, not registered or in blacklist).&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
+      <div id="msg-67" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between CHX and CBW on 2020-04-07 07:37
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
 	at &#10045;.a query between &quot;CHX&quot; and &quot;CBW&quot; on &quot;2020-04-07&quot; at &quot;07:37&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:106)
 </pre>

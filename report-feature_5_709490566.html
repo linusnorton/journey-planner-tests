@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>06 Apr 2020, 15:32</td>
+      <td>07 Apr 2020, 15:30</td>
     </tr>
   </tbody>
 </table>
@@ -127,9 +127,9 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">Some journeys may require the routeing guide maps to be divided at a via station</td>
-          <td      class="passed"    >2</td>
+          <td      class="passed"    >1</td>
           <td      class="failed"    >2</td>
-          <td     class="skipped"   >1</td>
+          <td     class="skipped"   >2</td>
           <td >0</td>
           <td >0</td>
           <td class="total">5</td>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >2</td>
           <td class="total">2</td>
 
-          <td class="duration" data-value="18290695000">18.290</td>
+          <td class="duration" data-value="3505789000">3.505</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">3.207</span>
+  <span class="lead-duration duration">0.567</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -232,11 +232,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;NUN&quot;</span> and <span class="argument">&quot;YRK&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:30&quot;</span></span>
 
-  <span class="lead-duration duration">3.204</span>
+  <span class="lead-duration duration">0.567</span>
 
 </div>
 
@@ -244,6 +244,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between NUN and YRK on 2020-06-02 07:30
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
+	at &#10045;.a query between &quot;NUN&quot; and &quot;YRK&quot; on &quot;a weekday&quot; at &quot;07:30&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/split-map-routeing.feature:6)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -259,11 +274,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -271,53 +286,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: NUN,BHM,YRK in 
-
-NUN (07:42:00) -&gt; YRK (10:30:00)
-	NUN (07:42:00) -&gt; TAM (07:55:00)
-	TAM (08:19:00) -&gt; YRK (10:30:00)
-
-NUN (07:51:00) -&gt; YRK (10:51:00)
-	NUN (07:51:00) -&gt; PBO (09:13:00)
-	PBO (09:48:00) -&gt; YRK (10:51:00)
-
-NUN (07:51:00) -&gt; YRK (10:40:00)
-	NUN (07:51:00) -&gt; LEI (08:17:00)
-	LEI (08:40:00) -&gt; DBY (09:14:00)
-	DBY (09:21:00) -&gt; YRK (10:40:00)
-
-NUN (08:24:00) -&gt; YRK (11:13:00)
-	NUN (08:24:00) -&gt; LEI (08:50:00)
-	LEI (09:07:00) -&gt; SHF (10:03:00)
-	SHF (10:29:00) -&gt; YRK (11:13:00)
-
-NUN (09:24:00) -&gt; YRK (12:15:00)
-	NUN (09:24:00) -&gt; LEI (09:50:00)
-	LEI (10:06:00) -&gt; SHF (11:01:00)
-	SHF (11:29:00) -&gt; YRK (12:15:00)
-
-NUN (09:55:00) -&gt; YRK (12:31:00)
-	NUN (09:55:00) -&gt; TAM (10:08:00)
-	TAM (10:19:00) -&gt; YRK (12:31:00)
-
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NUN/YRK/01062020/0730/dep
-
-
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:147)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/split-map-routeing.feature:7)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -391,7 +359,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NUN/YRK/0106
 </div>
 
 
-  <span class="lead-duration duration">15.082</span>
+  <span class="lead-duration duration">2.938</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
@@ -434,7 +402,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NUN/YRK/0106
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;SAJ&quot;</span> and <span class="argument">&quot;TON&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;08:15&quot;</span></span>
 
-  <span class="lead-duration duration">15.081</span>
+  <span class="lead-duration duration">2.937</span>
 
 </div>
 
@@ -502,7 +470,7 @@ SAJ (11:02:00) -&gt; TON (11:58:00)
 	SAJ (11:02:00) -&gt; ORP (11:26:00)
 	ORP (11:39:00) -&gt; TON (11:58:00)
 
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SAJ/TON/01062020/0815/dep
+Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SAJ/TON/02062020/0815/dep
 
 
 	at org.junit.Assert.fail(Assert.java:89)

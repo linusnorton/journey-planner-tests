@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>06 Apr 2020, 15:32</td>
+      <td>07 Apr 2020, 15:30</td>
     </tr>
   </tbody>
 </table>
@@ -127,18 +127,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">Schedule cancellations</td>
-          <td      class="passed"    >16</td>
-          <td      class="failed"    >1</td>
-          <td     class="skipped"   >3</td>
+          <td      class="passed"    >8</td>
+          <td      class="failed"    >4</td>
+          <td     class="skipped"   >8</td>
           <td >0</td>
           <td >0</td>
           <td class="total">20</td>
 
-          <td  class="passed"    >4</td>
-          <td  class="failed"    >1</td>
+          <td  class="passed"    >1</td>
+          <td  class="failed"    >4</td>
           <td class="total">5</td>
 
-          <td class="duration" data-value="50515925000">50.515</td>
+          <td class="duration" data-value="16503392000">16.503</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">21.206</span>
+  <span class="lead-duration duration">3.742</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -232,11 +232,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;TBD&quot;</span> and <span class="argument">&quot;BDM&quot;</span> on <span class="argument">&quot;2020-04-21&quot;</span> at <span class="argument">&quot;04:15&quot;</span></span>
 
-  <span class="lead-duration duration">21.206</span>
+  <span class="lead-duration duration">3.140</span>
 
 </div>
 
@@ -244,23 +244,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BDM&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-21 04:15&quot;,&quot;dptCrsCode&quot;:&quot;TBD&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;timestamp&quot;:1586187054328,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;exception&quot;:&quot;java.lang.RuntimeException&quot;,&quot;message&quot;:&quot;java.util.concurrent.ExecutionException: org.apache.dubbo.rpc.RpcException: Failed to invoke the method journeySearch in the service com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService. Tried 1 times of the providers [10.5.31.177:20880] (1/1) from the registry dummyAddress:9090 on the consumer 10.6.58.232 using the dubbo version 2.7.3-ctrip.10. Last error is: Failed to invoke remote method: journeySearch, provider: dubbo://10.5.31.177:20880/com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService?$checkHealth.timeout=3000&amp;anyhost=true&amp;appid=100024725&amp;application=100024727&amp;bean.name=tisUKTimetableService&amp;cdubbo.enabled=1&amp;cdubbo.route=default-route-rule&amp;check=false&amp;checkHealth.timeout=3000&amp;client=netty3&amp;default.qloglevel=0&amp;default.qtrace=false&amp;default.timeout=10000&amp;deprecated=false&amp;dubbo=2.0.2&amp;dynamic=true&amp;generic=false&amp;heartbeat=5000&amp;interface=com.ctrip.global.rail.tis.uk.api.service.TisUKTimetableService&amp;lazy=false&amp;methods=ping,getStationByTiplocCode,transferSearch,journeySearch,directSearch,hasCancel,getAllTiplocStations&amp;payload=100000000&amp;pid=39&amp;reference.filter=catDubboConsumerFilter&amp;register=true&amp;register.ip=10.6.58.232&amp;release=2.7.3-ctrip.10&amp;remote.application=100024725&amp;retries=0&amp;revision=1.0.9-SNAPSHOT&amp;service.filter=catDubboProviderFilter&amp;serviceId=train.globalrail.tisuktimetableservice.v1.tisuktimetableservice&amp;side=consumer&amp;sticky=false&amp;timeout=60000&amp;timestamp=1586100887201&amp;version=1.0.0&amp;weight=5, cause: org.apache.dubbo.remoting.RemotingException: Data length too large: 143720260, max payload: 100000000, channel: NettyChannel [channel=[id: 0x79bac39e, /10.6.58.232:39554 =&gt; /10.5.31.177:20880]]&quot;,&quot;path&quot;:&quot;/fare/tisSearch&quot;}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;TBD&quot; and &quot;BDM&quot; on &quot;2020-04-21&quot; at &quot;04:15&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -276,11 +259,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W41228&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.040</span>
 
 </div>
 
@@ -390,11 +373,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When skipped">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;TBD&quot;</span> and <span class="argument">&quot;BDM&quot;</span> on <span class="argument">&quot;2020-04-28&quot;</span> at <span class="argument">&quot;04:15&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.561</span>
 
 </div>
 
@@ -402,6 +385,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between TBD and BDM on 2020-04-28 04:15
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
+	at &#10045;.I query between &quot;TBD&quot; and &quot;BDM&quot; on &quot;2020-04-28&quot; at &quot;04:15&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:25)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -461,12 +459,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">11.025</span>
+  <span class="lead-duration duration">1.461</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-4">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Service between DLJ and CLJ is cancelled on a particular day</span>
 
@@ -477,16 +475,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-4" class="collapse collapsable-details ">
+  <div id="element-4" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -496,15 +494,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-5" class="inner-level collapse collapsable-details ">
+  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;DLJ&quot;</span> and <span class="argument">&quot;CLJ&quot;</span> on <span class="argument">&quot;2020-04-20&quot;</span> at <span class="argument">&quot;23:19&quot;</span></span>
 
-  <span class="lead-duration duration">6.891</span>
+  <span class="lead-duration duration">1.461</span>
 
 </div>
 
@@ -512,6 +510,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between DLJ and CLJ on 2020-04-20 23:19
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
+	at &#10045;.a query between &quot;DLJ&quot; and &quot;CLJ&quot; on &quot;2020-04-20&quot; at &quot;23:19&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:29)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -527,11 +540,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;L46802&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.026</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -641,11 +654,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When skipped">
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;DLJ&quot;</span> and <span class="argument">&quot;CLJ&quot;</span> on <span class="argument">&quot;2020-04-27&quot;</span> at <span class="argument">&quot;23:19&quot;</span></span>
 
-  <span class="lead-duration duration">4.101</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -668,11 +681,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should not see a service <span class="argument">&quot;L46802&quot;</span> in the results</span>
 
-  <span class="lead-duration duration">0.006</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -712,12 +725,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">3.248</span>
+  <span class="lead-duration duration">2.160</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-6">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Service between AFK and CBW is cancelled on a particular day</span>
 
@@ -728,16 +741,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-6" class="collapse collapsable-details ">
+  <div id="element-7" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-7">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -747,15 +760,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-7" class="inner-level collapse collapsable-details ">
+  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;AFK&quot;</span> and <span class="argument">&quot;CBW&quot;</span> on <span class="argument">&quot;2020-04-23&quot;</span> at <span class="argument">&quot;01:07&quot;</span></span>
 
-  <span class="lead-duration duration">1.453</span>
+  <span class="lead-duration duration">2.160</span>
 
 </div>
 
@@ -763,6 +776,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between AFK and CBW on 2020-04-23 01:07
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
+	at &#10045;.a query between &quot;AFK&quot; and &quot;CBW&quot; on &quot;2020-04-23&quot; at &quot;01:07&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:52)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -778,7 +806,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W47768&quot;</span> that stops at</span>
 
@@ -837,11 +865,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When skipped">
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;AFK&quot;</span> and <span class="argument">&quot;CBW&quot;</span> on <span class="argument">&quot;2020-04-30&quot;</span> at <span class="argument">&quot;01:07&quot;</span></span>
 
-  <span class="lead-duration duration">1.794</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -864,7 +892,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should not see a service <span class="argument">&quot;W47768&quot;</span> in the results</span>
 
@@ -908,12 +936,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">4.122</span>
+  <span class="lead-duration duration">1.792</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-8">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Service between BHM and HNF is cancelled on a particular day</span>
 
@@ -924,16 +952,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-8" class="collapse collapsable-details ">
+  <div id="element-10" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-9">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-11">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -943,7 +971,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-9" class="inner-level collapse collapsable-details ">
+  <div id="steps-11" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -951,7 +979,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BHM&quot;</span> and <span class="argument">&quot;HNF&quot;</span> on <span class="argument">&quot;2020-04-20&quot;</span> at <span class="argument">&quot;23:18&quot;</span></span>
 
-  <span class="lead-duration duration">2.131</span>
+  <span class="lead-duration duration">1.290</span>
 
 </div>
 
@@ -1078,11 +1106,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;BHM&quot;</span> and <span class="argument">&quot;HNF&quot;</span> on <span class="argument">&quot;2020-04-27&quot;</span> at <span class="argument">&quot;23:18&quot;</span></span>
 
-  <span class="lead-duration duration">1.990</span>
+  <span class="lead-duration duration">0.502</span>
 
 </div>
 
@@ -1090,6 +1118,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between BHM and HNF on 2020-04-27 23:18
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
+	at &#10045;.I query between &quot;BHM&quot; and &quot;HNF&quot; on &quot;2020-04-27&quot; at &quot;23:18&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:81)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -1105,7 +1148,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should not see a service <span class="argument">&quot;P82191&quot;</span> in the results</span>
 
@@ -1149,10 +1192,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">10.913</span>
+  <span class="lead-duration duration">7.346</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-10">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -1165,14 +1208,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-10" class="collapse collapsable-details ">
+  <div id="element-13" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-11">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -1184,7 +1227,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-11" class="inner-level collapse collapsable-details ">
+  <div id="steps-14" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -1192,7 +1235,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;DLJ&quot;</span> and <span class="argument">&quot;CLJ&quot;</span> on <span class="argument">&quot;2020-04-20&quot;</span> at <span class="argument">&quot;23:04&quot;</span></span>
 
-  <span class="lead-duration duration">4.712</span>
+  <span class="lead-duration duration">1.929</span>
 
 </div>
 
@@ -1333,7 +1376,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;DLJ&quot;</span> and <span class="argument">&quot;CLJ&quot;</span> on <span class="argument">&quot;2020-04-27&quot;</span> at <span class="argument">&quot;23:04&quot;</span></span>
 
-  <span class="lead-duration duration">6.200</span>
+  <span class="lead-duration duration">5.410</span>
 
 </div>
 
@@ -1360,7 +1403,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">I should not see a service <span class="argument">&quot;L46799&quot;</span> in the results</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.005</span>
 
 </div>
 
