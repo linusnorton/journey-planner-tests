@@ -40,10 +40,12 @@ Feature: The journey planner should offer the user multiple routes
   Scenario: Journeys between NRW and COV have a number of routes
     Given a query between "NRW" and "COV" on "a weekday" at "14:00"
     Then I should see the following transfer patterns
-      | NRW, CBG, FPK, EUS, COV |
-      | NRW, ELY, CBG, KGX, EUS, COV |
-      | NRW, PBO, BHM, COV |
-      | NRW, ELY, NUN, COV |
+      | NRW, LST, EUS, COV |
+#      These all seem redundant now
+#      | NRW, CBG, FPK, EUS, COV |
+#      | NRW, ELY, CBG, KGX, EUS, COV |
+#      | NRW, PBO, BHM, COV |
+#      | NRW, ELY, NUN, COV |
 
   Scenario: Journeys between BAU and SWA have a number of routes
     Given a query between "BAU" and "SWA" on "a weekday" at "07:00"
