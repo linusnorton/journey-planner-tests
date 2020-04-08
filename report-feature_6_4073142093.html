@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>07 Apr 2020, 15:30</td>
+      <td>08 Apr 2020, 06:05</td>
     </tr>
   </tbody>
 </table>
@@ -127,9 +127,9 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">The journey planner should make use of transfers to connect trains</td>
-          <td >0</td>
+          <td      class="passed"    >3</td>
           <td      class="failed"    >3</td>
-          <td     class="skipped"   >5</td>
+          <td     class="skipped"   >2</td>
           <td >0</td>
           <td >0</td>
           <td class="total">8</td>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >3</td>
           <td class="total">3</td>
 
-          <td class="duration" data-value="3231345000">3.231</td>
+          <td class="duration" data-value="7016383000">7.016</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.783</span>
+  <span class="lead-duration duration">2.189</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -232,11 +232,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;NRW&quot;</span> and <span class="argument">&quot;WWW&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:30&quot;</span></span>
 
-  <span class="lead-duration duration">0.783</span>
+  <span class="lead-duration duration">2.187</span>
 
 </div>
 
@@ -244,21 +244,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between NRW and WWW on 2020-06-02 07:30
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;NRW&quot; and &quot;WWW&quot; on &quot;a weekday&quot; at &quot;07:30&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/transfers.feature:5)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -274,11 +259,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -286,6 +271,65 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: NRW,ELY,BHM,BMO,WWW in 
+
+NRW (07:57:00) -&gt; WWW (13:09:00)
+	NRW (07:57:00) -&gt; PBO (09:25:00)
+	PBO (09:54:00) -&gt; BHM (11:38:00)
+	BHM -&gt; BSW (10)
+	BSW (12:28:00) -&gt; WWW (13:09:00)
+
+NRW (08:56:00) -&gt; WWW (14:09:00)
+	NRW (08:56:00) -&gt; PBO (10:26:00)
+	PBO (10:54:00) -&gt; BHM (12:38:00)
+	BHM -&gt; BSW (10)
+	BSW (13:28:00) -&gt; WWW (14:09:00)
+
+NRW (09:00:00) -&gt; WWW (14:37:00)
+	NRW (09:00:00) -&gt; LST (10:30:00)
+	LST -&gt; EUS (13)
+	EUS (11:23:00) -&gt; COV (12:22:00)
+	COV (12:38:00) -&gt; LMS (12:55:00)
+	LMS (13:32:00) -&gt; WMC (13:59:00)
+	WMC (14:33:00) -&gt; WWW (14:37:00)
+
+NRW (09:03:00) -&gt; WWW (14:37:00)
+	NRW (09:03:00) -&gt; LST (10:56:00)
+	LST -&gt; MYB (30)
+	MYB (12:10:00) -&gt; LMS (13:25:00)
+	LMS (13:32:00) -&gt; WMC (13:59:00)
+	WMC (14:33:00) -&gt; WWW (14:37:00)
+
+NRW (09:57:00) -&gt; WWW (15:09:00)
+	NRW (09:57:00) -&gt; PBO (11:27:00)
+	PBO (11:54:00) -&gt; BHM (13:38:00)
+	BHM -&gt; BSW (10)
+	BSW (14:28:00) -&gt; WWW (15:09:00)
+
+NRW (10:57:00) -&gt; WWW (16:09:00)
+	NRW (10:57:00) -&gt; PBO (12:24:00)
+	PBO (12:54:00) -&gt; BHM (14:38:00)
+	BHM -&gt; BSW (10)
+	BSW (15:28:00) -&gt; WWW (16:09:00)
+
+Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NRW/WWW/03062020/0730/dep
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:147)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/transfers.feature:6)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -329,7 +373,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.740</span>
+  <span class="lead-duration duration">3.335</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
@@ -368,11 +412,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;FAV&quot;</span> and <span class="argument">&quot;SHF&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;05:45&quot;</span></span>
 
-  <span class="lead-duration duration">1.740</span>
+  <span class="lead-duration duration">3.334</span>
 
 </div>
 
@@ -380,21 +424,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
-          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
-      </div>
-      <div id="msg-6" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between FAV and SHF on 2020-06-02 05:45
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;FAV&quot; and &quot;SHF&quot; on &quot;a weekday&quot; at &quot;05:45&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/transfers.feature:12)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -410,11 +439,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -422,6 +451,55 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: FAV,STP,KGX,RET,SHF in 
+
+FAV (05:56:00) -&gt; SHF (09:47:00)
+	FAV (05:56:00) -&gt; STP (07:02:00)
+	STP (07:32:00) -&gt; SHF (09:47:00)
+
+FAV (06:07:00) -&gt; SHF (10:03:00)
+	FAV (06:07:00) -&gt; LBG (07:19:00)
+	LBG (07:31:00) -&gt; STP (07:45:00)
+	STP (08:02:00) -&gt; SHF (10:03:00)
+
+FAV (06:23:00) -&gt; SHF (10:42:00)
+	FAV (06:23:00) -&gt; EPH (07:37:00)
+	EPH (07:44:00) -&gt; STP (07:58:00)
+	STP (08:31:00) -&gt; SHF (10:42:00)
+
+FAV (06:23:00) -&gt; SHF (10:42:00)
+	FAV (06:23:00) -&gt; BMS (07:15:00)
+	BMS (07:19:00) -&gt; HNH (07:37:00)
+	HNH (07:42:00) -&gt; STP (08:03:00)
+	STP (08:31:00) -&gt; SHF (10:42:00)
+
+FAV (06:28:00) -&gt; SHF (10:03:00)
+	FAV (06:28:00) -&gt; STP (07:31:00)
+	STP (08:02:00) -&gt; SHF (10:03:00)
+
+FAV (06:57:00) -&gt; SHF (11:01:00)
+	FAV (06:57:00) -&gt; LBG (08:07:00)
+	LBG (08:21:00) -&gt; STP (08:35:00)
+	STP (09:02:00) -&gt; SHF (11:01:00)
+
+Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/FAV/SHF/03062020/0545/dep
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:147)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/transfers.feature:13)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -516,7 +594,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.707</span>
+  <span class="lead-duration duration">1.490</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
@@ -555,11 +633,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CBW&quot;</span> and <span class="argument">&quot;DVP&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
 
-  <span class="lead-duration duration">0.707</span>
+  <span class="lead-duration duration">1.489</span>
 
 </div>
 
@@ -567,21 +645,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
-          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
-      </div>
-      <div id="msg-9" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between CBW and DVP on 2020-06-02 09:00
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;CBW&quot; and &quot;DVP&quot; on &quot;a weekday&quot; at &quot;09:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/transfers.feature:20)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -597,11 +660,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -609,6 +672,50 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: CBW,AFK,DVP in 
+
+CBW (09:05:00) -&gt; DVP (09:42:00)
+	CBW -&gt; CBE (17)
+	CBE (09:22:00) -&gt; DVP (09:42:00)
+
+CBW (09:23:00) -&gt; DVP (10:08:00)
+	CBW -&gt; CBE (17)
+	CBE (09:40:00) -&gt; DVP (10:08:00)
+
+CBW (10:05:00) -&gt; DVP (10:39:00)
+	CBW -&gt; CBE (17)
+	CBE (10:22:00) -&gt; DVP (10:39:00)
+
+CBW (10:23:00) -&gt; DVP (11:08:00)
+	CBW -&gt; CBE (17)
+	CBE (10:40:00) -&gt; DVP (11:08:00)
+
+CBW (11:05:00) -&gt; DVP (11:39:00)
+	CBW -&gt; CBE (17)
+	CBE (11:22:00) -&gt; DVP (11:39:00)
+
+CBW (11:23:00) -&gt; DVP (12:08:00)
+	CBW -&gt; CBE (17)
+	CBE (11:40:00) -&gt; DVP (12:08:00)
+
+Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/CBW/DVP/03062020/0900/dep
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:147)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/transfers.feature:21)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
