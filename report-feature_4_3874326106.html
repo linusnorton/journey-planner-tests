@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>08 Apr 2020, 06:05</td>
+      <td>08 Apr 2020, 15:31</td>
     </tr>
   </tbody>
 </table>
@@ -127,9 +127,9 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">The journey planner should offer routes via London and not via London with appropriate fares</td>
-          <td      class="passed"    >4</td>
+          <td      class="passed"    >5</td>
           <td      class="failed"    >1</td>
-          <td     class="skipped"   >3</td>
+          <td     class="skipped"   >2</td>
           <td >0</td>
           <td >0</td>
           <td class="total">8</td>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >1</td>
           <td class="total">2</td>
 
-          <td class="duration" data-value="2072847000">2.072</td>
+          <td class="duration" data-value="5758510000">5.758</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.548</span>
+  <span class="lead-duration duration">2.989</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -232,11 +232,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;DFD&quot;</span> and <span class="argument">&quot;TON&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:15&quot;</span></span>
 
-  <span class="lead-duration duration">0.548</span>
+  <span class="lead-duration duration">2.985</span>
 
 </div>
 
@@ -244,21 +244,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between DFD and TON on 2020-06-03 09:15
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;DFD&quot; and &quot;TON&quot; on &quot;a weekday&quot; at &quot;09:15&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/not-via-london.feature:5)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -274,11 +259,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.003</span>
 
 </div>
 
@@ -286,6 +271,53 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: DFD,WAE,TON in 
+
+DFD (09:15:00) -&gt; TON (10:46:00)
+	DFD (09:15:00) -&gt; LBG (09:57:00)
+	LBG (10:09:00) -&gt; TON (10:46:00)
+
+DFD (09:21:00) -&gt; TON (10:46:00)
+	DFD (09:21:00) -&gt; HGR (09:41:00)
+	HGR (09:53:00) -&gt; ORP (10:10:00)
+	ORP (10:26:00) -&gt; TON (10:46:00)
+
+DFD (09:28:00) -&gt; TON (10:55:00)
+	DFD (09:28:00) -&gt; SOO (09:54:00)
+	SOO (10:04:00) -&gt; TON (10:55:00)
+
+DFD (09:35:00) -&gt; TON (10:58:00)
+	DFD (09:35:00) -&gt; HGR (10:02:00)
+	HGR (10:09:00) -&gt; ORP (10:28:00)
+	ORP (10:39:00) -&gt; TON (10:58:00)
+
+DFD (09:45:00) -&gt; TON (11:16:00)
+	DFD (09:45:00) -&gt; LBG (10:27:00)
+	LBG (10:39:00) -&gt; TON (11:16:00)
+
+DFD (10:05:00) -&gt; TON (11:28:00)
+	DFD (10:05:00) -&gt; HGR (10:32:00)
+	HGR (10:39:00) -&gt; ORP (10:57:00)
+	ORP (11:10:00) -&gt; TON (11:28:00)
+
+Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/03062020/0915/dep
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:147)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/not-via-london.feature:6)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -380,7 +412,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.524</span>
+  <span class="lead-duration duration">2.769</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-4">
@@ -423,7 +455,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;TON&quot;</span> and <span class="argument">&quot;GTW&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:15&quot;</span></span>
 
-  <span class="lead-duration duration">1.522</span>
+  <span class="lead-duration duration">2.763</span>
 
 </div>
 
@@ -450,7 +482,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.003</span>
 
 </div>
 
@@ -485,7 +517,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">I should see a fare <span class="argument">&quot;SDS&quot;</span> on <span class="argument">&quot;00000&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
