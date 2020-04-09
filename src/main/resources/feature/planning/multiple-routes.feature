@@ -7,12 +7,12 @@ Feature: The journey planner should offer the user multiple routes
       | OXF, DID, RDG, GTW, ARU |
       | OXF, PAD, VIC, ARU |
       | OXF, DID, PAD, VIC, ARU |
-      | OXF, RDG, BSK, FRM, FOD, ARU |
 
   Scenario: Journeys between EDB and BHM have direct and indirect services
     Given a query between "EDB" and "BHM" on "a weekday" at "05:30"
     Then I should see the following transfer patterns
       | EDB, NCL, BHM |
+      | EDB, WVH, BHM |
       | EDB, BHM |
 
   Scenario: Journeys between BMH and MAN have direct and indirect services
@@ -50,10 +50,8 @@ Feature: The journey planner should offer the user multiple routes
   Scenario: Journeys between BAU and SWA have a number of routes
     Given a query between "BAU" and "SWA" on "a weekday" at "07:00"
     Then I should see the following transfer patterns
-      | BAU, HUU, HUL, SHF, BHM, NWP, SWA |
-      | BAU, HAB, SPT, SHR, SWA |
-      | BAU, HUU, HUL, MAN, SWA |
-      | BAU, HUU, HUL, SHF, DBY, CDF, SWA |
+      | BAU, HAB, SHF, BPW, SWA |
+      | BAU, HAB, SHF, BHM, BPW, SWA |
 
   Scenario: Journeys between WFJ and STN have a number of routes
     Given a query between "WFJ" and "STN" on "a weekday" at "07:00"
