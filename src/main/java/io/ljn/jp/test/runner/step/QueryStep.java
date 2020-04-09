@@ -62,7 +62,8 @@ public class QueryStep {
 
         String actual = response.outboundJourneyList
             .stream()
-            .map(j -> j.tisSegmentList.get(0))
+            .filter(j -> j.tisSegmentList.size() == 1)
+            .flatMap(j -> j.tisSegmentList.stream())
             .filter(l -> l instanceof TimetableLeg && ((TimetableLeg) l).tisTrainInfo.trainUid.equals(tuid))
             .map(l -> serialize(((TimetableLeg) l).tisCallingPointList))
             .findFirst()
