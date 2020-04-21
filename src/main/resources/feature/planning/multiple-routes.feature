@@ -4,7 +4,7 @@ Feature: The journey planner should offer the user multiple routes
   Scenario: Journeys between OXF and ARU have a number of routes
     Given a query between "OXF" and "ARU" on "a weekday" at "05:30"
     Then I should see the following transfer patterns
-      | OXF, DID, RDG, GTW, ARU |
+      | OXF, RDG, GTW, ARU |
       | OXF, PAD, VIC, ARU |
       | OXF, DID, PAD, VIC, ARU |
 
@@ -21,7 +21,6 @@ Feature: The journey planner should offer the user multiple routes
       | BMH, MAN |
       | BMH, WAT, EUS, MAN |
       | BMH, WIN, BHM, MAN |
-      | BMH, CLJ, VIC, EUS, MAN |
 
   Scenario: Journeys between LIV and LEI have a number of routes
     Given a query between "LIV" and "LEI" on "a weekday" at "06:00"
@@ -57,4 +56,6 @@ Feature: The journey planner should offer the user multiple routes
     Given a query between "WFJ" and "STN" on "a weekday" at "07:00"
     Then I should see the following transfer patterns
       | WFJ, EUS, KGX, EDB, STN |
-      | WFJ, MKC, CRE, PRE, HY, STN |
+      | WFJ, EUS, PRE, HYM, STN |
+      | WFJ, MKC, CRE, PRE, HYM, STN |
+      | WFJ, EUS, KGX, STN |
