@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>22 Apr 2020, 15:40</td>
+      <td>23 Apr 2020, 15:40</td>
     </tr>
   </tbody>
 </table>
@@ -127,18 +127,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@journey-planning</td>
-          <td      class="passed"    >22</td>
-          <td      class="failed"    >15</td>
-          <td     class="skipped"   >6</td>
+          <td      class="passed"    >31</td>
+          <td      class="failed"    >9</td>
+          <td     class="skipped"   >3</td>
           <td >0</td>
           <td >0</td>
           <td class="total">43</td>
 
-          <td  class="passed"    >3</td>
-          <td  class="failed"    >15</td>
+          <td  class="passed"    >9</td>
+          <td  class="failed"    >9</td>
           <td class="total">18</td>
 
-          <td class="duration" data-value="44641223000">44.641</td>
+          <td class="duration" data-value="40785734000">40.785</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -181,12 +181,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">2.747</span>
+  <span class="lead-duration duration">3.097</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">A journey between EUS and MAN should connect at CRE after midnight</span>
 
@@ -197,16 +197,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -216,7 +216,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -224,7 +224,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;EUS&quot;</span> and <span class="argument">&quot;MAN&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;22:00&quot;</span></span>
 
-  <span class="lead-duration duration">2.659</span>
+  <span class="lead-duration duration">2.996</span>
 
 </div>
 
@@ -247,11 +247,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.088</span>
+  <span class="lead-duration duration">0.100</span>
 
 </div>
 
@@ -259,50 +259,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: EUS,CRE,MAN in 
-
-EUS (23:00:00) -&gt; MAN (01:59:00)
-	EUS (23:00:00) -&gt; MAN (01:59:00)
-
-EUS (23:22:00) -&gt; MAN (07:30:00)
-	EUS (23:22:00) -&gt; MKC (00:22:00)
-	MKC (00:28:00) -&gt; WVH (02:16:00)
-	WVH (06:14:00) -&gt; MAN (07:30:00)
-
-EUS (23:30:00) -&gt; MAN (08:27:00)
-	EUS (23:30:00) -&gt; MKC (00:27:00)
-	MKC (06:46:00) -&gt; MAN (08:27:00)
-
-EUS (23:30:00) -&gt; MAN (07:30:00)
-	EUS (23:30:00) -&gt; WVH (02:16:00)
-	WVH (06:14:00) -&gt; MAN (07:30:00)
-
-EUS (23:42:00) -&gt; MAN (08:27:00)
-	EUS (23:42:00) -&gt; MKC (00:50:00)
-	MKC (06:46:00) -&gt; MAN (08:27:00)
-
-EUS (23:58:00) -&gt; MAN (08:46:00)
-	EUS (23:58:00) -&gt; WFJ (00:46:00)
-	WFJ (06:51:00) -&gt; MAN (08:46:00)
-
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/EUS/MAN/17062020/2200/dep
-
-
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:148)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/after-midnight-connections.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -347,10 +303,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/EUS/MAN/1706
 </div>
 
 
-  <span class="lead-duration duration">2.823</span>
+  <span class="lead-duration duration">3.068</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-3">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -363,14 +319,14 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/EUS/MAN/1706
   </span>
   <div class="description indention"></div>
 
-  <div id="element-4" class="collapse collapsable-details  in ">
+  <div id="element-3" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-4">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -382,7 +338,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/EUS/MAN/1706
 
   </div>
 
-  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-4" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -390,7 +346,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/EUS/MAN/1706
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHM&quot;</span> and <span class="argument">&quot;BXB&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;08:15&quot;</span></span>
 
-  <span class="lead-duration duration">2.820</span>
+  <span class="lead-duration duration">3.065</span>
 
 </div>
 
@@ -428,10 +384,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/EUS/MAN/1706
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-5">
           <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-6" class="collapse collapsable-details  in ">
+      <div id="msg-5" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: CHM,LST,BXB in 
 
 CHM (08:19:00) -&gt; BXB (09:31:00)
@@ -461,7 +417,7 @@ CHM (09:21:00) -&gt; BXB (10:30:00)
 	CHM (09:21:00) -&gt; SRA (09:49:00)
 	SRA (10:00:00) -&gt; BXB (10:30:00)
 
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/17062020/0815/dep
+Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/18062020/0815/dep
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -516,10 +472,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/1706
 </div>
 
 
-  <span class="lead-duration duration">1.140</span>
+  <span class="lead-duration duration">0.673</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-6">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -532,14 +488,14 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/1706
   </span>
   <div class="description indention"></div>
 
-  <div id="element-7" class="collapse collapsable-details  in ">
+  <div id="element-6" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-7">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -551,7 +507,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/1706
 
   </div>
 
-  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-7" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -559,7 +515,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/1706
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;SED&quot;</span> and <span class="argument">&quot;SSD&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:30&quot;</span></span>
 
-  <span class="lead-duration duration">1.134</span>
+  <span class="lead-duration duration">0.671</span>
 
 </div>
 
@@ -586,7 +542,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/1706
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.005</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -597,10 +553,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/1706
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-8">
           <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-9" class="collapse collapsable-details  in ">
+      <div id="msg-8" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: SED,CBG,SSD in 
 
 SED (10:25:00) -&gt; SSD (11:24:00)
@@ -627,7 +583,7 @@ SED (15:25:00) -&gt; SSD (16:24:00)
 	SED (15:25:00) -&gt; WLF (15:30:00)
 	WLF (15:56:00) -&gt; SSD (16:24:00)
 
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SED/SSD/17062020/0930/dep
+Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SED/SSD/18062020/0930/dep
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -679,12 +635,12 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SED/SSD/1706
 </div>
 
 
-  <span class="lead-duration duration">2.527</span>
+  <span class="lead-duration duration">4.643</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Journeys between OXF and ARU have a number of routes</span>
 
@@ -695,16 +651,16 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SED/SSD/1706
   </span>
   <div class="description indention"></div>
 
-  <div id="element-10" class="collapse collapsable-details  in ">
+  <div id="element-9" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-11">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-10">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -714,7 +670,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SED/SSD/1706
 
   </div>
 
-  <div id="steps-11" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-10" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -722,7 +678,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SED/SSD/1706
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;OXF&quot;</span> and <span class="argument">&quot;ARU&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;05:30&quot;</span></span>
 
-  <span class="lead-duration duration">2.521</span>
+  <span class="lead-duration duration">4.641</span>
 
 </div>
 
@@ -745,11 +701,11 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SED/SSD/1706
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.005</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -757,56 +713,6 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SED/SSD/1706
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-12" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: OXF,PAD,VIC,ARU in 
-
-OXF (06:00:00) -&gt; ARU (09:32:00)
-	OXF (06:00:00) -&gt; RDG (06:28:00)
-	RDG (06:41:00) -&gt; CLJ (07:54:00)
-	CLJ (08:12:00) -&gt; ARU (09:32:00)
-
-OXF (06:48:00) -&gt; ARU (10:01:00)
-	OXF (06:48:00) -&gt; RDG (07:09:00)
-	RDG (07:24:00) -&gt; CLJ (08:32:00)
-	CLJ (08:42:00) -&gt; ARU (10:01:00)
-
-OXF (07:17:00) -&gt; ARU (10:28:00)
-	OXF (07:17:00) -&gt; RDG (07:41:00)
-	RDG (07:58:00) -&gt; GTW (09:26:00)
-	GTW (09:39:00) -&gt; ARU (10:28:00)
-
-OXF (07:53:00) -&gt; ARU (11:01:00)
-	OXF (07:53:00) -&gt; RDG (08:14:00)
-	RDG (08:24:00) -&gt; CLJ (09:32:00)
-	CLJ (09:42:00) -&gt; ARU (11:01:00)
-
-OXF (08:16:00) -&gt; ARU (11:28:00)
-	OXF (08:16:00) -&gt; RDG (08:42:00)
-	RDG (09:03:00) -&gt; GTW (10:20:00)
-	GTW (10:39:00) -&gt; ARU (11:28:00)
-
-OXF (09:32:00) -&gt; ARU (12:28:00)
-	OXF (09:32:00) -&gt; RDG (09:55:00)
-	RDG (10:04:00) -&gt; GTW (11:20:00)
-	GTW (11:39:00) -&gt; ARU (12:28:00)
-
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/OXF/ARU/17062020/0530/dep
-
-
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:148)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -854,10 +760,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/OXF/ARU/1706
 </div>
 
 
-  <span class="lead-duration duration">5.020</span>
+  <span class="lead-duration duration">3.454</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-11">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -870,14 +776,14 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/OXF/ARU/1706
   </span>
   <div class="description indention"></div>
 
-  <div id="element-13" class="collapse collapsable-details ">
+  <div id="element-11" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-12">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -889,7 +795,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/OXF/ARU/1706
 
   </div>
 
-  <div id="steps-14" class="inner-level collapse collapsable-details ">
+  <div id="steps-12" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -897,7 +803,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/OXF/ARU/1706
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;EDB&quot;</span> and <span class="argument">&quot;BHM&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;05:30&quot;</span></span>
 
-  <span class="lead-duration duration">5.018</span>
+  <span class="lead-duration duration">3.453</span>
 
 </div>
 
@@ -979,12 +885,12 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/OXF/ARU/1706
 </div>
 
 
-  <span class="lead-duration duration">3.389</span>
+  <span class="lead-duration duration">2.897</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-15">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Journeys between BMH and MAN have direct and indirect services</span>
 
@@ -995,16 +901,16 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/OXF/ARU/1706
   </span>
   <div class="description indention"></div>
 
-  <div id="element-15" class="collapse collapsable-details  in ">
+  <div id="element-13" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-16">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -1014,7 +920,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/OXF/ARU/1706
 
   </div>
 
-  <div id="steps-16" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-14" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -1022,7 +928,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/OXF/ARU/1706
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BMH&quot;</span> and <span class="argument">&quot;MAN&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;06:00&quot;</span></span>
 
-  <span class="lead-duration duration">3.387</span>
+  <span class="lead-duration duration">2.895</span>
 
 </div>
 
@@ -1045,7 +951,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/OXF/ARU/1706
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
@@ -1057,48 +963,6 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/OXF/ARU/1706
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-17">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-17" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: BMH,WAT,EUS,MAN in 
-
-BMH (06:30:00) -&gt; MAN (11:24:00)
-	BMH (06:30:00) -&gt; MAN (11:24:00)
-
-BMH (07:00:00) -&gt; MAN (12:00:00)
-	BMH (07:00:00) -&gt; WIN (08:05:00)
-	WIN (08:12:00) -&gt; BHM (10:18:00)
-	BHM (10:31:00) -&gt; MAN (12:00:00)
-
-BMH (07:30:00) -&gt; MAN (12:24:00)
-	BMH (07:30:00) -&gt; MAN (12:24:00)
-
-BMH (08:45:00) -&gt; MAN (13:24:00)
-	BMH (08:45:00) -&gt; MAN (13:24:00)
-
-BMH (08:59:00) -&gt; MAN (14:00:00)
-	BMH (08:59:00) -&gt; WIN (09:47:00)
-	WIN (10:03:00) -&gt; BHM (12:18:00)
-	BHM (12:31:00) -&gt; MAN (14:00:00)
-
-BMH (09:45:00) -&gt; MAN (14:23:00)
-	BMH (09:45:00) -&gt; MAN (14:23:00)
-
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BMH/MAN/17062020/0600/dep
-
-
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:148)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:20)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -1146,10 +1010,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BMH/MAN/1706
 </div>
 
 
-  <span class="lead-duration duration">2.566</span>
+  <span class="lead-duration duration">4.370</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-18">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-15">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -1162,14 +1026,14 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BMH/MAN/1706
   </span>
   <div class="description indention"></div>
 
-  <div id="element-18" class="collapse collapsable-details ">
+  <div id="element-15" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-19">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-16">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -1181,7 +1045,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BMH/MAN/1706
 
   </div>
 
-  <div id="steps-19" class="inner-level collapse collapsable-details ">
+  <div id="steps-16" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -1189,7 +1053,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BMH/MAN/1706
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;LIV&quot;</span> and <span class="argument">&quot;LEI&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;06:00&quot;</span></span>
 
-  <span class="lead-duration duration">2.565</span>
+  <span class="lead-duration duration">4.368</span>
 
 </div>
 
@@ -1216,7 +1080,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BMH/MAN/1706
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -1274,10 +1138,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BMH/MAN/1706
 </div>
 
 
-  <span class="lead-duration duration">2.647</span>
+  <span class="lead-duration duration">2.392</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-20">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-17">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -1290,14 +1154,14 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BMH/MAN/1706
   </span>
   <div class="description indention"></div>
 
-  <div id="element-20" class="collapse collapsable-details  in ">
+  <div id="element-17" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-21">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-18">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -1309,7 +1173,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BMH/MAN/1706
 
   </div>
 
-  <div id="steps-21" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-18" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -1317,7 +1181,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BMH/MAN/1706
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;HNH&quot;</span> and <span class="argument">&quot;SMD&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">2.646</span>
+  <span class="lead-duration duration">2.391</span>
 
 </div>
 
@@ -1355,15 +1219,21 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BMH/MAN/1706
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-22">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-19">
           <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-22" class="collapse collapsable-details  in ">
+      <div id="msg-19" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: HNH,STP,LEI,SMD in 
 
 HNH (07:45:00) -&gt; SMD (10:06:00)
 	HNH (07:45:00) -&gt; BFR (07:59:00)
 	BFR (08:07:00) -&gt; PBO (09:35:00)
+	PBO (09:54:00) -&gt; SMD (10:06:00)
+
+HNH (08:12:00) -&gt; SMD (10:06:00)
+	HNH (08:12:00) -&gt; STP (08:33:00)
+	STP -&gt; KGX (1)
+	KGX (09:00:00) -&gt; PBO (09:46:00)
 	PBO (09:54:00) -&gt; SMD (10:06:00)
 
 HNH (08:45:00) -&gt; SMD (11:06:00)
@@ -1386,12 +1256,7 @@ HNH (11:42:00) -&gt; SMD (14:06:00)
 	ZFD (12:11:00) -&gt; PBO (13:39:00)
 	PBO (13:54:00) -&gt; SMD (14:06:00)
 
-HNH (12:42:00) -&gt; SMD (15:06:00)
-	HNH (12:42:00) -&gt; ZFD (12:58:00)
-	ZFD (13:11:00) -&gt; PBO (14:39:00)
-	PBO (14:54:00) -&gt; SMD (15:06:00)
-
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/HNH/SMD/17062020/0700/dep
+Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/HNH/SMD/18062020/0700/dep
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -1446,12 +1311,12 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/HNH/SMD/1706
 </div>
 
 
-  <span class="lead-duration duration">1.419</span>
+  <span class="lead-duration duration">1.188</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-23">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-20">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Journeys between NRW and COV have a number of routes</span>
 
@@ -1462,16 +1327,16 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/HNH/SMD/1706
   </span>
   <div class="description indention"></div>
 
-  <div id="element-23" class="collapse collapsable-details  in ">
+  <div id="element-20" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-24">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-21">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -1481,7 +1346,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/HNH/SMD/1706
 
   </div>
 
-  <div id="steps-24" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-21" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -1489,7 +1354,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/HNH/SMD/1706
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;NRW&quot;</span> and <span class="argument">&quot;COV&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;14:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.412</span>
+  <span class="lead-duration duration">1.183</span>
 
 </div>
 
@@ -1512,11 +1377,11 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/HNH/SMD/1706
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.006</span>
+  <span class="lead-duration duration">0.004</span>
 
 </div>
 
@@ -1524,56 +1389,6 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/HNH/SMD/1706
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-25">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-25" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: NRW,LST,EUS,COV in 
-
-NRW (14:57:00) -&gt; COV (19:24:00)
-	NRW (14:57:00) -&gt; PBO (16:25:00)
-	PBO (16:54:00) -&gt; BHM (18:45:00)
-	BHM (19:04:00) -&gt; COV (19:24:00)
-
-NRW (15:48:00) -&gt; COV (19:36:00)
-	NRW (15:48:00) -&gt; PBO (17:23:00)
-	PBO (17:54:00) -&gt; NUN (19:08:00)
-	NUN (19:16:00) -&gt; COV (19:36:00)
-
-NRW (16:56:00) -&gt; COV (20:36:00)
-	NRW (16:56:00) -&gt; PBO (18:25:00)
-	PBO (18:54:00) -&gt; NUN (20:08:00)
-	NUN (20:16:00) -&gt; COV (20:36:00)
-
-NRW (17:52:00) -&gt; COV (21:34:00)
-	NRW (17:52:00) -&gt; PBO (19:26:00)
-	PBO (19:54:00) -&gt; NUN (21:08:00)
-	NUN (21:14:00) -&gt; COV (21:34:00)
-
-NRW (18:56:00) -&gt; COV (22:45:00)
-	NRW (18:56:00) -&gt; PBO (20:25:00)
-	PBO (20:52:00) -&gt; NUN (22:06:00)
-	NUN (22:24:00) -&gt; COV (22:45:00)
-
-NRW (19:27:00) -&gt; COV (23:42:00)
-	NRW (19:27:00) -&gt; ELY (20:27:00)
-	ELY (21:17:00) -&gt; NUN (23:14:00)
-	NUN (23:22:00) -&gt; COV (23:42:00)
-
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NRW/COV/17062020/1400/dep
-
-
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:148)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:41)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -1615,10 +1430,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NRW/COV/1706
 </div>
 
 
-  <span class="lead-duration duration">1.988</span>
+  <span class="lead-duration duration">1.004</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-26">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-22">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -1631,14 +1446,14 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NRW/COV/1706
   </span>
   <div class="description indention"></div>
 
-  <div id="element-26" class="collapse collapsable-details  in ">
+  <div id="element-22" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-27">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-23">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -1650,7 +1465,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NRW/COV/1706
 
   </div>
 
-  <div id="steps-27" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-23" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -1658,7 +1473,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NRW/COV/1706
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BAU&quot;</span> and <span class="argument">&quot;SWA&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.986</span>
+  <span class="lead-duration duration">1.003</span>
 
 </div>
 
@@ -1696,10 +1511,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NRW/COV/1706
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-28">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-24">
           <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-28" class="collapse collapsable-details  in ">
+      <div id="msg-24" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: BAU,HAB,SHF,BPW,SWA in 
 
 BAU (07:56:00) -&gt; SWA (15:33:00)
@@ -1737,7 +1552,7 @@ BAU (11:50:00) -&gt; SWA (20:09:00)
 	HAB (12:44:00) -&gt; SPT (14:52:00)
 	SPT (15:39:00) -&gt; SWA (20:09:00)
 
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BAU/SWA/17062020/0700/dep
+Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BAU/SWA/18062020/0700/dep
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -1792,10 +1607,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BAU/SWA/1706
 </div>
 
 
-  <span class="lead-duration duration">1.304</span>
+  <span class="lead-duration duration">1.367</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-29">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-25">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -1808,14 +1623,14 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BAU/SWA/1706
   </span>
   <div class="description indention"></div>
 
-  <div id="element-29" class="collapse collapsable-details  in ">
+  <div id="element-25" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-30">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-26">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -1827,7 +1642,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BAU/SWA/1706
 
   </div>
 
-  <div id="steps-30" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-26" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -1835,7 +1650,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BAU/SWA/1706
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;WFJ&quot;</span> and <span class="argument">&quot;STN&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.303</span>
+  <span class="lead-duration duration">1.358</span>
 
 </div>
 
@@ -1862,7 +1677,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BAU/SWA/1706
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.009</span>
 
 </div>
 
@@ -1873,44 +1688,37 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/BAU/SWA/1706
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-31">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-27">
           <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-31" class="collapse collapsable-details  in ">
+      <div id="msg-27" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: WFJ,EUS,KGX,EDB,STN in 
-
-WFJ (07:37:00) -&gt; STN (15:33:00)
-	WFJ (07:37:00) -&gt; BHM (08:46:00)
-	BHM (09:15:00) -&gt; PRE (10:51:00)
-	PRE (11:04:00) -&gt; HYM (13:24:00)
-	HYM (13:36:00) -&gt; STN (15:33:00)
-
-WFJ (08:37:00) -&gt; STN (16:45:00)
-	WFJ (08:37:00) -&gt; COV (09:22:00)
-	COV (09:42:00) -&gt; HYM (14:12:00)
-	HYM (14:34:00) -&gt; STN (16:45:00)
-
-WFJ (10:37:00) -&gt; STN (18:43:00)
-	WFJ (10:37:00) -&gt; WVH (12:10:00)
-	WVH (12:37:00) -&gt; EDB (16:18:00)
-	EDB (16:28:00) -&gt; STN (18:43:00)
 
 WFJ (11:37:00) -&gt; STN (20:26:00)
 	WFJ (11:37:00) -&gt; BHM (12:45:00)
 	BHM (13:03:00) -&gt; STN (20:26:00)
 
-WFJ (11:37:00) -&gt; STN (19:48:00)
-	WFJ (11:37:00) -&gt; BHM (12:45:00)
-	BHM (13:15:00) -&gt; PRE (14:51:00)
-	PRE (15:03:00) -&gt; HYM (17:33:00)
-	HYM (17:42:00) -&gt; STN (19:48:00)
+WFJ (00:10:00) -&gt; STN (10:42:00)
+	WFJ (00:10:00) -&gt; CAR (05:08:00)
+	CAR (05:57:00) -&gt; EDB (07:29:00)
+	EDB (08:32:00) -&gt; STN (10:42:00)
 
-WFJ (12:37:00) -&gt; STN (20:52:00)
-	WFJ (12:37:00) -&gt; COV (13:22:00)
-	COV (13:42:00) -&gt; HYM (18:15:00)
-	HYM (18:40:00) -&gt; STN (20:52:00)
+WFJ (05:50:00) -&gt; STN (13:31:00)
+	WFJ (05:50:00) -&gt; PRE (08:14:00)
+	PRE (09:03:00) -&gt; HYM (11:30:00)
+	HYM (11:37:00) -&gt; STN (13:31:00)
 
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/WFJ/STN/17062020/0700/dep
+WFJ (06:51:00) -&gt; STN (15:33:00)
+	WFJ (06:51:00) -&gt; MAN (08:46:00)
+	MAN (10:26:00) -&gt; HYM (13:24:00)
+	HYM (13:36:00) -&gt; STN (15:33:00)
+
+WFJ (21:58:00) -&gt; STN (12:41:00)
+	WFJ (21:58:00) -&gt; WVH (23:44:00)
+	WVH (06:37:00) -&gt; HYM (10:12:00)
+	HYM (10:33:00) -&gt; STN (12:41:00)
+
+Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/WFJ/STN/18062020/0700/dep
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -1971,10 +1779,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/WFJ/STN/1706
 </div>
 
 
-  <span class="lead-duration duration">3.076</span>
+  <span class="lead-duration duration">1.429</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-32">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-28">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -1987,14 +1795,14 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/WFJ/STN/1706
   </span>
   <div class="description indention"></div>
 
-  <div id="element-32" class="collapse collapsable-details  in ">
+  <div id="element-28" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-33">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-29">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -2006,7 +1814,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/WFJ/STN/1706
 
   </div>
 
-  <div id="steps-33" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-29" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -2014,7 +1822,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/WFJ/STN/1706
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;DFD&quot;</span> and <span class="argument">&quot;TON&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:15&quot;</span></span>
 
-  <span class="lead-duration duration">3.075</span>
+  <span class="lead-duration duration">1.428</span>
 
 </div>
 
@@ -2052,10 +1860,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/WFJ/STN/1706
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-34">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-30">
           <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-34" class="collapse collapsable-details  in ">
+      <div id="msg-30" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: DFD,WAE,TON in 
 
 DFD (09:15:00) -&gt; TON (10:46:00)
@@ -2085,7 +1893,7 @@ DFD (10:05:00) -&gt; TON (11:28:00)
 	HGR (10:39:00) -&gt; ORP (10:57:00)
 	ORP (11:10:00) -&gt; TON (11:28:00)
 
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/17062020/0915/dep
+Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/18062020/0915/dep
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -2194,10 +2002,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/1706
 </div>
 
 
-  <span class="lead-duration duration">2.472</span>
+  <span class="lead-duration duration">3.986</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-35">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-31">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -2210,14 +2018,14 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/1706
   </span>
   <div class="description indention"></div>
 
-  <div id="element-35" class="collapse collapsable-details ">
+  <div id="element-31" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-36">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-32">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -2229,7 +2037,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/1706
 
   </div>
 
-  <div id="steps-36" class="inner-level collapse collapsable-details ">
+  <div id="steps-32" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -2237,7 +2045,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/1706
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;TON&quot;</span> and <span class="argument">&quot;GTW&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:15&quot;</span></span>
 
-  <span class="lead-duration duration">2.470</span>
+  <span class="lead-duration duration">3.984</span>
 
 </div>
 
@@ -2299,7 +2107,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/1706
   <span class="keyword indention">And</span>
   <span class="name">I should see a fare <span class="argument">&quot;SDS&quot;</span> on <span class="argument">&quot;00000&quot;</span></span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -2370,10 +2178,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/1706
 </div>
 
 
-  <span class="lead-duration duration">1.239</span>
+  <span class="lead-duration duration">1.108</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-37">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-33">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -2386,14 +2194,14 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/1706
   </span>
   <div class="description indention">            the routeing maps from Nuneaton to Peterborough are combined with the maps from Peterborough to York</div>
 
-  <div id="element-37" class="collapse collapsable-details  in ">
+  <div id="element-33" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-38">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-34">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -2405,7 +2213,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/1706
 
   </div>
 
-  <div id="steps-38" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-34" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -2413,7 +2221,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/1706
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;NUN&quot;</span> and <span class="argument">&quot;YRK&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:30&quot;</span></span>
 
-  <span class="lead-duration duration">1.238</span>
+  <span class="lead-duration duration">1.106</span>
 
 </div>
 
@@ -2451,10 +2259,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/1706
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-39">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-35">
           <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-39" class="collapse collapsable-details  in ">
+      <div id="msg-35" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: NUN,BHM,YRK in 
 
 NUN (07:42:00) -&gt; YRK (10:30:00)
@@ -2484,7 +2292,7 @@ NUN (09:55:00) -&gt; YRK (12:15:00)
 	TAM (10:19:00) -&gt; SHF (11:18:00)
 	SHF (11:29:00) -&gt; YRK (12:15:00)
 
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NUN/YRK/17062020/0730/dep
+Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NUN/YRK/18062020/0730/dep
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -2572,10 +2380,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NUN/YRK/1706
 </div>
 
 
-  <span class="lead-duration duration">4.216</span>
+  <span class="lead-duration duration">1.562</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-40">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-36">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -2588,14 +2396,14 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NUN/YRK/1706
   </span>
   <div class="description indention"></div>
 
-  <div id="element-40" class="collapse collapsable-details  in ">
+  <div id="element-36" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-41">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-37">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -2607,7 +2415,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NUN/YRK/1706
 
   </div>
 
-  <div id="steps-41" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-37" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -2615,7 +2423,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NUN/YRK/1706
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;SAJ&quot;</span> and <span class="argument">&quot;TON&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;08:15&quot;</span></span>
 
-  <span class="lead-duration duration">4.214</span>
+  <span class="lead-duration duration">1.561</span>
 
 </div>
 
@@ -2653,10 +2461,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NUN/YRK/1706
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-42">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-38">
           <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-42" class="collapse collapsable-details  in ">
+      <div id="msg-38" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: SAJ,LBG,TON in 
 
 SAJ (08:30:00) -&gt; TON (09:28:00)
@@ -2683,7 +2491,7 @@ SAJ (11:02:00) -&gt; TON (11:58:00)
 	SAJ (11:02:00) -&gt; ORP (11:26:00)
 	ORP (11:39:00) -&gt; TON (11:58:00)
 
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SAJ/TON/17062020/0815/dep
+Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SAJ/TON/18062020/0815/dep
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -2735,10 +2543,10 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SAJ/TON/1706
 </div>
 
 
-  <span class="lead-duration duration">1.625</span>
+  <span class="lead-duration duration">0.758</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-43">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-39">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -2751,14 +2559,14 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SAJ/TON/1706
   </span>
   <div class="description indention"></div>
 
-  <div id="element-43" class="collapse collapsable-details  in ">
+  <div id="element-39" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-44">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-40">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -2770,7 +2578,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SAJ/TON/1706
 
   </div>
 
-  <div id="steps-44" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-40" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -2778,7 +2586,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SAJ/TON/1706
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;NRW&quot;</span> and <span class="argument">&quot;WWW&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:30&quot;</span></span>
 
-  <span class="lead-duration duration">1.624</span>
+  <span class="lead-duration duration">0.756</span>
 
 </div>
 
@@ -2816,34 +2624,37 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SAJ/TON/1706
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-45">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-41">
           <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-45" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: NRW,PBO,BHM,BSW,WWW in 
+      <div id="msg-41" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: NRW,LST,EUS,BHM,BMO,WWW in 
 
-NRW (08:56:00) -&gt; WWW (14:37:00)
-	NRW (08:56:00) -&gt; PBO (10:26:00)
-	PBO (10:54:00) -&gt; NUN (12:08:00)
-	NUN (12:17:00) -&gt; LMS (12:55:00)
-	LMS (13:32:00) -&gt; WMC (13:59:00)
-	WMC (14:33:00) -&gt; WWW (14:37:00)
+NRW (06:51:00) -&gt; WWW (12:09:00)
+	NRW (06:51:00) -&gt; PBO (08:22:00)
+	PBO (08:54:00) -&gt; BHM (10:38:00)
+	BHM -&gt; BSW (10)
+	BSW (11:28:00) -&gt; WWW (12:09:00)
 
-NRW (10:57:00) -&gt; WWW (16:37:00)
-	NRW (10:57:00) -&gt; PBO (12:24:00)
-	PBO (12:54:00) -&gt; NUN (14:08:00)
-	NUN (14:14:00) -&gt; LMS (14:52:00)
-	LMS (15:32:00) -&gt; WMC (15:59:00)
-	WMC (16:33:00) -&gt; WWW (16:37:00)
+NRW (15:48:00) -&gt; WWW (21:10:00)
+	NRW (15:48:00) -&gt; PBO (17:23:00)
+	PBO (17:54:00) -&gt; BHM (19:39:00)
+	BHM -&gt; BSW (10)
+	BSW (20:28:00) -&gt; WWW (21:10:00)
 
-NRW (13:27:00) -&gt; WWW (19:03:00)
-	NRW (13:27:00) -&gt; ELY (14:25:00)
-	ELY (15:15:00) -&gt; NUN (17:08:00)
-	NUN (17:16:00) -&gt; LMS (17:51:00)
-	LMS (18:11:00) -&gt; WMC (18:44:00)
-	WMC (18:58:00) -&gt; WWW (19:03:00)
+NRW (16:27:00) -&gt; WWW (22:10:00)
+	NRW (16:27:00) -&gt; ELY (17:27:00)
+	ELY (18:15:00) -&gt; BHM (20:38:00)
+	BHM -&gt; BSW (10)
+	BSW (21:28:00) -&gt; WWW (22:10:00)
 
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NRW/WWW/17062020/0730/dep
+NRW (17:27:00) -&gt; WWW (23:10:00)
+	NRW (17:27:00) -&gt; ELY (18:36:00)
+	ELY (19:15:00) -&gt; BHM (21:39:00)
+	BHM -&gt; BSW (10)
+	BSW (22:28:00) -&gt; WWW (23:10:00)
+
+Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NRW/WWW/18062020/0730/dep
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -2898,12 +2709,12 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NRW/WWW/1706
 </div>
 
 
-  <span class="lead-duration duration">2.748</span>
+  <span class="lead-duration duration">3.077</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-46">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-42">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Journeys from FAV to SHF should offer a walking route via London and a non-walking route via Chesterfield</span>
 
@@ -2914,16 +2725,16 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NRW/WWW/1706
   </span>
   <div class="description indention"></div>
 
-  <div id="element-46" class="collapse collapsable-details  in ">
+  <div id="element-42" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-47">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-43">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -2933,7 +2744,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NRW/WWW/1706
 
   </div>
 
-  <div id="steps-47" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-43" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -2941,7 +2752,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NRW/WWW/1706
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;FAV&quot;</span> and <span class="argument">&quot;SHF&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;05:45&quot;</span></span>
 
-  <span class="lead-duration duration">2.747</span>
+  <span class="lead-duration duration">3.076</span>
 
 </div>
 
@@ -2964,11 +2775,11 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NRW/WWW/1706
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -2976,53 +2787,6 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/NRW/WWW/1706
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-48">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-48" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: FAV,STP,KGX,RET,SHF in 
-
-FAV (05:56:00) -&gt; SHF (09:47:00)
-	FAV (05:56:00) -&gt; STP (07:02:00)
-	STP (07:32:00) -&gt; SHF (09:47:00)
-
-FAV (06:07:00) -&gt; SHF (10:03:00)
-	FAV (06:07:00) -&gt; LBG (07:19:00)
-	LBG (07:31:00) -&gt; STP (07:45:00)
-	STP (08:02:00) -&gt; SHF (10:03:00)
-
-FAV (06:23:00) -&gt; SHF (10:42:00)
-	FAV (06:23:00) -&gt; EPH (07:37:00)
-	EPH (07:44:00) -&gt; STP (07:58:00)
-	STP (08:31:00) -&gt; SHF (10:42:00)
-
-FAV (06:28:00) -&gt; SHF (10:03:00)
-	FAV (06:28:00) -&gt; STP (07:31:00)
-	STP (08:02:00) -&gt; SHF (10:03:00)
-
-FAV (06:57:00) -&gt; SHF (11:01:00)
-	FAV (06:57:00) -&gt; LBG (08:07:00)
-	LBG (08:21:00) -&gt; STP (08:35:00)
-	STP (09:02:00) -&gt; SHF (11:01:00)
-
-FAV (07:02:00) -&gt; SHF (10:42:00)
-	FAV (07:02:00) -&gt; STP (08:08:00)
-	STP (08:31:00) -&gt; SHF (10:42:00)
-
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/FAV/SHF/17062020/0545/dep
-
-
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:148)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/transfers.feature:14)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -3046,7 +2810,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/FAV/SHF/1706
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">I should see a fare <span class="argument">&quot;SOS&quot;</span> on <span class="argument">&quot;00200&quot;</span></span>
 
@@ -3073,7 +2837,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/FAV/SHF/1706
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">I should see a fare <span class="argument">&quot;SOS&quot;</span> on <span class="argument">&quot;00129&quot;</span></span>
 
@@ -3121,12 +2885,12 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/FAV/SHF/1706
 </div>
 
 
-  <span class="lead-duration duration">1.687</span>
+  <span class="lead-duration duration">0.704</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-49">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-44">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Journeys between CBW and DVP should involve a walk from CBW to CBE and then train to DVP</span>
 
@@ -3137,16 +2901,16 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/FAV/SHF/1706
   </span>
   <div class="description indention"></div>
 
-  <div id="element-49" class="collapse collapsable-details  in ">
+  <div id="element-44" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-50">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-45">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -3156,15 +2920,15 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/FAV/SHF/1706
 
   </div>
 
-  <div id="steps-50" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-45" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CBW&quot;</span> and <span class="argument">&quot;DVP&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.687</span>
+  <span class="lead-duration duration">0.703</span>
 
 </div>
 
@@ -3173,21 +2937,6 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/FAV/SHF/1706
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-51">
-          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
-      </div>
-      <div id="msg-51" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between CBW and DVP on 2020-06-17 09:00
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:49)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;CBW&quot; and &quot;DVP&quot; on &quot;a weekday&quot; at &quot;09:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/transfers.feature:21)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -3202,7 +2951,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/FAV/SHF/1706
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
