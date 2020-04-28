@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports  - Feature: The journey planner should offer routes via London and not via London with appropriate fares</title>
+<title>Cucumber Reports  - Feature: The journey planner should offer connect services after midnight</title>
 
 </head>
 <body>
@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>25 Apr 2020, 15:41</td>
+      <td>28 Apr 2020, 15:42</td>
     </tr>
   </tbody>
 </table>
@@ -126,19 +126,19 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">The journey planner should offer routes via London and not via London with appropriate fares</td>
-          <td      class="passed"    >5</td>
+          <td class="tagname">The journey planner should offer connect services after midnight</td>
+          <td >0</td>
           <td      class="failed"    >1</td>
-          <td     class="skipped"   >2</td>
+          <td     class="skipped"   >1</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">8</td>
-
-          <td  class="passed"    >1</td>
-          <td  class="failed"    >1</td>
           <td class="total">2</td>
 
-          <td class="duration" data-value="3369614000">3.369</td>
+          <td >0</td>
+          <td  class="failed"    >1</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="32003310000">32.003</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -175,7 +175,7 @@ $(document).ready(function() {
 
 <div class="brief failed">
   <span class="keyword indention">Feature</span>
-  <span class="name">The journey planner should offer routes via London and not via London with appropriate fares</span>
+  <span class="name">The journey planner should offer connect services after midnight</span>
 
 
 </div>
@@ -193,14 +193,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.716</span>
+  <span class="lead-duration duration">32.003</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between DFD and TON can go via WAE or via SOO</span>
+  <span class="name">A journey between EUS and MAN should connect at CRE after midnight</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -232,38 +232,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;DFD&quot;</span> and <span class="argument">&quot;TON&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:15&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;EUS&quot;</span> and <span class="argument">&quot;MAN&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;22:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.706</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then failed">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.006</span>
+  <span class="lead-duration duration">32.003</span>
 
 </div>
 
@@ -275,59 +248,21 @@ $(document).ready(function() {
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>java.lang.AssertionError:</a>
+          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: DFD,WAE,TON in 
-
-DFD (09:15:00) -&gt; TON (10:46:00)
-	DFD (09:15:00) -&gt; LBG (09:57:00)
-	LBG (10:09:00) -&gt; TON (10:46:00)
-
-DFD (09:21:00) -&gt; TON (10:46:00)
-	DFD (09:21:00) -&gt; HGR (09:41:00)
-	HGR (09:53:00) -&gt; ORP (10:10:00)
-	ORP (10:26:00) -&gt; TON (10:46:00)
-
-DFD (09:28:00) -&gt; TON (10:55:00)
-	DFD (09:28:00) -&gt; SOO (09:54:00)
-	SOO (10:04:00) -&gt; TON (10:55:00)
-
-DFD (09:35:00) -&gt; TON (10:58:00)
-	DFD (09:35:00) -&gt; HGR (10:02:00)
-	HGR (10:09:00) -&gt; ORP (10:28:00)
-	ORP (10:39:00) -&gt; TON (10:58:00)
-
-DFD (09:45:00) -&gt; TON (11:16:00)
-	DFD (09:45:00) -&gt; LBG (10:27:00)
-	LBG (10:39:00) -&gt; TON (11:16:00)
-
-DFD (10:05:00) -&gt; TON (11:28:00)
-	DFD (10:05:00) -&gt; HGR (10:32:00)
-	HGR (10:39:00) -&gt; ORP (10:57:00)
-	ORP (11:10:00) -&gt; TON (11:28:00)
-
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/22062020/0915/dep
-
-
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:148)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/not-via-london.feature:6)
+        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;MAN&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-06-23 22:00&quot;,&quot;dptCrsCode&quot;:&quot;EUS&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
+	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
+	at &#10045;.a query between &quot;EUS&quot; and &quot;MAN&quot; on &quot;a weekday&quot; at &quot;22:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/after-midnight-connections.feature:5)
 </pre>
       </div>
     </div>
   </div>
 
 
-          <table class="step-arguments">
-              <tr>
-                  <td>DFD, WAE, TON</td>
-              </tr>
-              <tr>
-                  <td>DFD, SOO, TON</td>
-              </tr>
-          </table>
 
 
 
@@ -341,144 +276,7 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/2206
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">I should see a fare <span class="argument">&quot;CDS&quot;</span> on <span class="argument">&quot;00331&quot;</span></span>
-
-  <span class="lead-duration duration">0.004</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">I should see a fare <span class="argument">&quot;CDS&quot;</span> on <span class="argument">&quot;00700&quot;</span></span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2054189833.html">@journey-planning</a>
-</div>
-
-
-  <span class="lead-duration duration">1.652</span>
-
-
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-4">
-
-<div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between TON and GTW can go via LBG or via RDH</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-4" class="collapse collapsable-details ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
-
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-5" class="inner-level collapse collapsable-details ">
-      <div class="step">
-
-
-<div class="brief step-name-Given passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;TON&quot;</span> and <span class="argument">&quot;GTW&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:15&quot;</span></span>
-
-  <span class="lead-duration duration">1.651</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
@@ -494,66 +292,12 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/2206
 
           <table class="step-arguments">
               <tr>
-                  <td>TON, LBG, GTW</td>
+                  <td>EUS, MAN</td>
               </tr>
               <tr>
-                  <td>TON, RDH, GTW</td>
+                  <td>EUS, CRE, MAN</td>
               </tr>
           </table>
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">I should see a fare <span class="argument">&quot;SDS&quot;</span> on <span class="argument">&quot;00000&quot;</span></span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">I should see a fare <span class="argument">&quot;SDS&quot;</span> on <span class="argument">&quot;00700&quot;</span></span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
 
 
 

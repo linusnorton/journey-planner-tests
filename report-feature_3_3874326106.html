@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports  - Feature: Some journeys may involve a valid doubleback</title>
+<title>Cucumber Reports  - Feature: The journey planner should offer routes via London and not via London with appropriate fares</title>
 
 </head>
 <body>
@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>25 Apr 2020, 15:41</td>
+      <td>28 Apr 2020, 15:42</td>
     </tr>
   </tbody>
 </table>
@@ -126,19 +126,19 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">Some journeys may involve a valid doubleback</td>
-          <td      class="passed"    >2</td>
-          <td      class="failed"    >2</td>
+          <td class="tagname">The journey planner should offer routes via London and not via London with appropriate fares</td>
+          <td      class="passed"    >5</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >2</td>
           <td >0</td>
           <td >0</td>
-          <td >0</td>
-          <td class="total">4</td>
+          <td class="total">8</td>
 
-          <td >0</td>
-          <td  class="failed"    >2</td>
+          <td  class="passed"    >1</td>
+          <td  class="failed"    >1</td>
           <td class="total">2</td>
 
-          <td class="duration" data-value="5709333000">5.709</td>
+          <td class="duration" data-value="3781099000">3.781</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -175,7 +175,7 @@ $(document).ready(function() {
 
 <div class="brief failed">
   <span class="keyword indention">Feature</span>
-  <span class="name">Some journeys may involve a valid doubleback</span>
+  <span class="name">The journey planner should offer routes via London and not via London with appropriate fares</span>
 
 
 </div>
@@ -193,14 +193,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">4.364</span>
+  <span class="lead-duration duration">1.574</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between CHM and BXB may involve a doubleback at Bethnel Green</span>
+  <span class="name">Journeys between DFD and TON can go via WAE or via SOO</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -234,9 +234,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;CHM&quot;</span> and <span class="argument">&quot;BXB&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;08:15&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;DFD&quot;</span> and <span class="argument">&quot;TON&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:15&quot;</span></span>
 
-  <span class="lead-duration duration">4.360</span>
+  <span class="lead-duration duration">1.572</span>
 
 </div>
 
@@ -263,7 +263,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -278,42 +278,45 @@ $(document).ready(function() {
           <a>java.lang.AssertionError:</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: CHM,LST,BXB in 
+        <pre>java.lang.AssertionError: Could not find pattern: DFD,WAE,TON in 
 
-CHM (08:19:00) -&gt; BXB (09:31:00)
-	CHM (08:19:00) -&gt; SRA (08:46:00)
-	SRA (09:00:00) -&gt; BXB (09:31:00)
+DFD (09:15:00) -&gt; TON (10:46:00)
+	DFD (09:15:00) -&gt; LBG (09:57:00)
+	LBG (10:09:00) -&gt; TON (10:46:00)
 
-CHM (08:39:00) -&gt; BXB (10:02:00)
-	CHM (08:39:00) -&gt; SRA (09:09:00)
-	SRA (09:30:00) -&gt; BXB (10:02:00)
+DFD (09:21:00) -&gt; TON (10:46:00)
+	DFD (09:21:00) -&gt; HGR (09:41:00)
+	HGR (09:53:00) -&gt; ORP (10:10:00)
+	ORP (10:26:00) -&gt; TON (10:46:00)
 
-CHM (08:39:00) -&gt; BXB (09:53:00)
-	CHM (08:39:00) -&gt; SRA (09:09:00)
-	SRA (09:17:00) -&gt; TOM (09:26:00)
-	TOM (09:40:00) -&gt; BXB (09:53:00)
+DFD (09:28:00) -&gt; TON (10:55:00)
+	DFD (09:28:00) -&gt; SOO (09:54:00)
+	SOO (10:04:00) -&gt; TON (10:55:00)
 
-CHM (08:45:00) -&gt; BXB (10:02:00)
-	CHM (08:45:00) -&gt; SNF (08:55:00)
-	SNF (09:00:00) -&gt; SRA (09:18:00)
-	SRA (09:30:00) -&gt; BXB (10:02:00)
+DFD (09:35:00) -&gt; TON (10:58:00)
+	DFD (09:35:00) -&gt; HGR (10:02:00)
+	HGR (10:09:00) -&gt; ORP (10:28:00)
+	ORP (10:39:00) -&gt; TON (10:58:00)
 
-CHM (09:09:00) -&gt; BXB (10:23:00)
-	CHM (09:09:00) -&gt; SRA (09:38:00)
-	SRA (09:47:00) -&gt; TOM (09:56:00)
-	TOM (10:10:00) -&gt; BXB (10:23:00)
+DFD (09:45:00) -&gt; TON (11:16:00)
+	DFD (09:45:00) -&gt; LBG (10:27:00)
+	LBG (10:39:00) -&gt; TON (11:16:00)
 
-CHM (09:21:00) -&gt; BXB (10:30:00)
-	CHM (09:21:00) -&gt; SRA (09:49:00)
-	SRA (10:00:00) -&gt; BXB (10:30:00)
+DFD (10:05:00) -&gt; TON (11:28:00)
+	DFD (10:05:00) -&gt; HGR (10:32:00)
+	HGR (10:39:00) -&gt; ORP (10:57:00)
+	ORP (11:10:00) -&gt; TON (11:28:00)
 
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/22062020/0815/dep
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/23062020/0915/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=DFD&amp;destination=TON&amp;date=2020-06-23&amp;time=09:15
 
 
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:148)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/doubleback.feature:6)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:149)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/not-via-london.feature:6)
 </pre>
       </div>
     </div>
@@ -322,12 +325,66 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/2206
 
           <table class="step-arguments">
               <tr>
-                  <td>CHM, SRA, BXB</td>
+                  <td>DFD, WAE, TON</td>
               </tr>
               <tr>
-                  <td>CHM, LST, BXB</td>
+                  <td>DFD, SOO, TON</td>
               </tr>
           </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">I should see a fare <span class="argument">&quot;CDS&quot;</span> on <span class="argument">&quot;00331&quot;</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">I should see a fare <span class="argument">&quot;CDS&quot;</span> on <span class="argument">&quot;00700&quot;</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
 
 
 
@@ -358,14 +415,14 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/2206
 </div>
 
 
-  <span class="lead-duration duration">1.344</span>
+  <span class="lead-duration duration">2.206</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-4">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between SED and SSD may involve a doubleback at CBG</span>
+  <span class="name">Journeys between TON and GTW can go via LBG or via RDH</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -374,16 +431,16 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/2206
   </span>
   <div class="description indention"></div>
 
-  <div id="element-4" class="collapse collapsable-details  in ">
+  <div id="element-4" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -393,15 +450,15 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/2206
 
   </div>
 
-  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-5" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;SED&quot;</span> and <span class="argument">&quot;SSD&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:30&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;TON&quot;</span> and <span class="argument">&quot;GTW&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:15&quot;</span></span>
 
-  <span class="lead-duration duration">1.342</span>
+  <span class="lead-duration duration">2.201</span>
 
 </div>
 
@@ -424,9 +481,44 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/2206
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>TON, LBG, GTW</td>
+              </tr>
+              <tr>
+                  <td>TON, RDH, GTW</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I should see a fare <span class="argument">&quot;SDS&quot;</span> on <span class="argument">&quot;00000&quot;</span></span>
 
   <span class="lead-duration duration">0.002</span>
 
@@ -437,56 +529,34 @@ Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/2206
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
-          <a>java.lang.AssertionError:</a>
+
+
+
+
+
+
+
+
+
+
       </div>
-      <div id="msg-6" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: SED,CBG,SSD in 
-
-SED (10:25:00) -&gt; SSD (11:24:00)
-	SED (10:25:00) -&gt; WLF (10:30:00)
-	WLF (10:57:00) -&gt; SSD (11:24:00)
-
-SED (11:25:00) -&gt; SSD (12:24:00)
-	SED (11:25:00) -&gt; WLF (11:30:00)
-	WLF (11:58:00) -&gt; SSD (12:24:00)
-
-SED (12:25:00) -&gt; SSD (13:24:00)
-	SED (12:25:00) -&gt; WLF (12:30:00)
-	WLF (12:57:00) -&gt; SSD (13:24:00)
-
-SED (13:25:00) -&gt; SSD (14:24:00)
-	SED (13:25:00) -&gt; WLF (13:30:00)
-	WLF (13:58:00) -&gt; SSD (14:24:00)
-
-SED (14:25:00) -&gt; SSD (15:31:00)
-	SED (14:25:00) -&gt; WLF (14:30:00)
-	WLF (14:57:00) -&gt; SSD (15:31:00)
-
-SED (15:25:00) -&gt; SSD (16:24:00)
-	SED (15:25:00) -&gt; WLF (15:30:00)
-	WLF (15:56:00) -&gt; SSD (16:24:00)
-
-Check NRE with: http://ojp.nationalrail.co.uk/service/timesandfares/SED/SSD/22062020/0930/dep
+      <div class="step">
 
 
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:148)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/doubleback.feature:12)
-</pre>
-      </div>
-    </div>
-  </div>
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I should see a fare <span class="argument">&quot;SDS&quot;</span> on <span class="argument">&quot;00700&quot;</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
 
 
-          <table class="step-arguments">
-              <tr>
-                  <td>SED, CBG, SSD</td>
-              </tr>
-          </table>
+
+
+
+
+
 
 
 

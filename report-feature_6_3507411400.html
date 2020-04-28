@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports  - Feature: Public time different to scheduled time</title>
+<title>Cucumber Reports  - Feature: Schedule cancellations</title>
 
 </head>
 <body>
@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>25 Apr 2020, 15:41</td>
+      <td>28 Apr 2020, 15:42</td>
     </tr>
   </tbody>
 </table>
@@ -126,20 +126,20 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">Public time different to scheduled time</td>
-          <td      class="passed"    >8</td>
-          <td      class="failed"    >1</td>
-          <td     class="skipped"   >1</td>
+          <td class="tagname">Schedule cancellations</td>
+          <td      class="passed"    >20</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">10</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">20</td>
 
-          <td  class="passed"    >4</td>
-          <td  class="failed"    >1</td>
+          <td  class="passed"    >5</td>
+          <td >0</td>
           <td class="total">5</td>
 
-          <td class="duration" data-value="51538063000">51.538</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="13920579000">13.920</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -173,14 +173,14 @@ $(document).ready(function() {
 </div>
 
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Feature</span>
-  <span class="name">Public time different to scheduled time</span>
+  <span class="name">Schedule cancellations</span>
 
 
 </div>
 
-        <div class="description indention">  Journey planners should use the public time not the scheduled time</div>
+        <div class="description indention">  A schedule might be cancelled for a subset of dates using an overlay record</div>
 
         <div class="elements inner-level">
 
@@ -193,14 +193,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.810</span>
+  <span class="lead-duration duration">2.543</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Public departure time differs to scheduled departure time by more than a minute between STP and LDS</span>
+  <span class="name">Service between RDH and TON is cancelled on a particular day</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -234,9 +234,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;STP&quot;</span> and <span class="argument">&quot;LDS&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;18:34&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;RDH&quot;</span> and <span class="argument">&quot;TON&quot;</span> on <span class="argument">&quot;2020-05-02&quot;</span> at <span class="argument">&quot;00:16&quot;</span></span>
 
-  <span class="lead-duration duration">1.810</span>
+  <span class="lead-duration duration">0.613</span>
 
 </div>
 
@@ -261,9 +261,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;C64228&quot;</span> that stops at</span>
+  <span class="name">I should see a service <span class="argument">&quot;L03092&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.019</span>
 
 </div>
 
@@ -280,61 +280,95 @@ $(document).ready(function() {
                   <td>departure</td>
               </tr>
               <tr>
-                  <td>STP</td>
+                  <td>RDH</td>
                   <td>--:--</td>
-                  <td>18:34</td>
+                  <td>00:16</td>
               </tr>
               <tr>
-                  <td>MHR</td>
-                  <td>19:28</td>
-                  <td>19:29</td>
+                  <td>NUF</td>
+                  <td>00:20</td>
+                  <td>00:21</td>
               </tr>
               <tr>
-                  <td>LEI</td>
-                  <td>19:42</td>
-                  <td>19:43</td>
+                  <td>GDN</td>
+                  <td>00:26</td>
+                  <td>00:26</td>
               </tr>
               <tr>
-                  <td>EMD</td>
-                  <td>19:59</td>
-                  <td>20:00</td>
+                  <td>EBR</td>
+                  <td>00:32</td>
+                  <td>00:32</td>
               </tr>
               <tr>
-                  <td>NOT</td>
-                  <td>20:17</td>
-                  <td>20:24</td>
+                  <td>PHR</td>
+                  <td>00:38</td>
+                  <td>00:38</td>
               </tr>
               <tr>
-                  <td>LGM</td>
-                  <td>20:42</td>
-                  <td>20:43</td>
+                  <td>LIH</td>
+                  <td>00:42</td>
+                  <td>00:42</td>
               </tr>
               <tr>
-                  <td>ALF</td>
-                  <td>20:50</td>
-                  <td>20:51</td>
-              </tr>
-              <tr>
-                  <td>CHD</td>
-                  <td>21:08</td>
-                  <td>21:09</td>
-              </tr>
-              <tr>
-                  <td>SHF</td>
-                  <td>21:24</td>
-                  <td>21:26</td>
-              </tr>
-              <tr>
-                  <td>WKF</td>
-                  <td>21:57</td>
-                  <td>21:58</td>
-              </tr>
-              <tr>
-                  <td>LDS</td>
-                  <td>22:14</td>
+                  <td>TON</td>
+                  <td>00:46</td>
                   <td>--:--</td>
               </tr>
           </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I query between <span class="argument">&quot;RDH&quot;</span> and <span class="argument">&quot;TON&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;00:16&quot;</span></span>
+
+  <span class="lead-duration duration">1.899</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should not see a service <span class="argument">&quot;L03092&quot;</span> in the results</span>
+
+  <span class="lead-duration duration">0.012</span>
+
+</div>
+
+
+
+
+
+
+
 
 
 
@@ -365,14 +399,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">16.407</span>
+  <span class="lead-duration duration">2.500</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Public departure time differs to scheduled departure time by more than a minute between NRW and LIV</span>
+  <span class="name">Service between HUL and LDS is cancelled on a particular day</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -406,9 +440,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;NRW&quot;</span> and <span class="argument">&quot;LIV&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;05:50&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;HUL&quot;</span> and <span class="argument">&quot;LDS&quot;</span> on <span class="argument">&quot;2020-05-02&quot;</span> at <span class="argument">&quot;23:08&quot;</span></span>
 
-  <span class="lead-duration duration">16.406</span>
+  <span class="lead-duration duration">0.595</span>
 
 </div>
 
@@ -433,7 +467,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;C64578&quot;</span> that stops at</span>
+  <span class="name">I should see a service <span class="argument">&quot;Y33213&quot;</span> that stops at</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -452,126 +486,80 @@ $(document).ready(function() {
                   <td>departure</td>
               </tr>
               <tr>
-                  <td>NRW</td>
+                  <td>HUL</td>
                   <td>--:--</td>
-                  <td>05:50</td>
+                  <td>23:08</td>
               </tr>
               <tr>
-                  <td>WMD</td>
-                  <td>06:02</td>
-                  <td>06:02</td>
+                  <td>BUH</td>
+                  <td>23:19</td>
+                  <td>23:20</td>
               </tr>
               <tr>
-                  <td>ATL</td>
-                  <td>06:09</td>
-                  <td>06:09</td>
+                  <td>SBY</td>
+                  <td>23:39</td>
+                  <td>23:40</td>
               </tr>
               <tr>
-                  <td>TTF</td>
-                  <td>06:23</td>
-                  <td>06:23</td>
-              </tr>
-              <tr>
-                  <td>ELY</td>
-                  <td>06:44</td>
-                  <td>06:51</td>
-              </tr>
-              <tr>
-                  <td>MCH</td>
-                  <td>07:07</td>
-                  <td>07:07</td>
-              </tr>
-              <tr>
-                  <td>PBO</td>
-                  <td>07:25</td>
-                  <td>07:27</td>
-              </tr>
-              <tr>
-                  <td>GRA</td>
-                  <td>07:55</td>
-                  <td>07:58</td>
-              </tr>
-              <tr>
-                  <td>BTF</td>
-                  <td>08:11</td>
-                  <td>08:11</td>
-              </tr>
-              <tr>
-                  <td>ALK</td>
-                  <td>08:17</td>
-                  <td>08:17</td>
-              </tr>
-              <tr>
-                  <td>BIN</td>
-                  <td>08:21</td>
-                  <td>08:22</td>
-              </tr>
-              <tr>
-                  <td>RDF</td>
-                  <td>08:27</td>
-                  <td>08:27</td>
-              </tr>
-              <tr>
-                  <td>NET</td>
-                  <td>08:31</td>
-                  <td>08:32</td>
-              </tr>
-              <tr>
-                  <td>NOT</td>
-                  <td>08:39</td>
-                  <td>08:48</td>
-              </tr>
-              <tr>
-                  <td>ALF</td>
-                  <td>09:09</td>
-                  <td>09:09</td>
-              </tr>
-              <tr>
-                  <td>CHD</td>
-                  <td>09:20</td>
-                  <td>09:20</td>
-              </tr>
-              <tr>
-                  <td>SHF</td>
-                  <td>09:37</td>
-                  <td>09:42</td>
-              </tr>
-              <tr>
-                  <td>SPT</td>
-                  <td>10:26</td>
-                  <td>10:26</td>
-              </tr>
-              <tr>
-                  <td>MAN</td>
-                  <td>10:37</td>
-                  <td>10:38</td>
-              </tr>
-              <tr>
-                  <td>MCO</td>
-                  <td>10:41</td>
-                  <td>10:42</td>
-              </tr>
-              <tr>
-                  <td>WAC</td>
-                  <td>10:58</td>
-                  <td>10:58</td>
-              </tr>
-              <tr>
-                  <td>WID</td>
-                  <td>11:06</td>
-                  <td>11:06</td>
-              </tr>
-              <tr>
-                  <td>LPY</td>
-                  <td>11:15</td>
-                  <td>11:15</td>
-              </tr>
-              <tr>
-                  <td>LIV</td>
-                  <td>11:32</td>
+                  <td>LDS</td>
+                  <td>00:04</td>
                   <td>--:--</td>
               </tr>
           </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I query between <span class="argument">&quot;HUL&quot;</span> and <span class="argument">&quot;LDS&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;23:08&quot;</span></span>
+
+  <span class="lead-duration duration">1.905</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should not see a service <span class="argument">&quot;Y33213&quot;</span> in the results</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
 
 
 
@@ -602,14 +590,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.181</span>
+  <span class="lead-duration duration">5.349</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Public departure time differs to scheduled departure time by more than a minute between GPO and BKG</span>
+  <span class="name">Service between HUD and LDS is cancelled on a particular day</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -643,9 +631,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;GPO&quot;</span> and <span class="argument">&quot;BKG&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;19:35&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;HUD&quot;</span> and <span class="argument">&quot;LDS&quot;</span> on <span class="argument">&quot;2020-04-27&quot;</span> at <span class="argument">&quot;23:54&quot;</span></span>
 
-  <span class="lead-duration duration">1.181</span>
+  <span class="lead-duration duration">4.379</span>
 
 </div>
 
@@ -670,7 +658,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;G38001&quot;</span> that stops at</span>
+  <span class="name">I should see a service <span class="argument">&quot;Y33543&quot;</span> that stops at</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -689,66 +677,105 @@ $(document).ready(function() {
                   <td>departure</td>
               </tr>
               <tr>
-                  <td>GPO</td>
+                  <td>HUD</td>
                   <td>--:--</td>
-                  <td>19:35</td>
+                  <td>23:54</td>
               </tr>
               <tr>
-                  <td>UHL</td>
-                  <td>19:38</td>
-                  <td>19:39</td>
+                  <td>DHN</td>
+                  <td>23:57</td>
+                  <td>23:58</td>
               </tr>
               <tr>
-                  <td>CRH</td>
-                  <td>19:41</td>
-                  <td>19:41</td>
+                  <td>MIR</td>
+                  <td>00:03</td>
+                  <td>00:03</td>
               </tr>
               <tr>
-                  <td>HRY</td>
-                  <td>19:44</td>
-                  <td>19:44</td>
+                  <td>RVN</td>
+                  <td>00:07</td>
+                  <td>00:08</td>
               </tr>
               <tr>
-                  <td>STO</td>
-                  <td>19:48</td>
-                  <td>19:48</td>
+                  <td>DEW</td>
+                  <td>00:10</td>
+                  <td>00:10</td>
               </tr>
               <tr>
-                  <td>BHO</td>
-                  <td>19:51</td>
-                  <td>19:52</td>
+                  <td>BTL</td>
+                  <td>00:13</td>
+                  <td>00:13</td>
               </tr>
               <tr>
-                  <td>WMW</td>
-                  <td>19:54</td>
-                  <td>19:54</td>
+                  <td>MLY</td>
+                  <td>00:18</td>
+                  <td>00:18</td>
               </tr>
               <tr>
-                  <td>LEM</td>
-                  <td>19:56</td>
-                  <td>19:57</td>
+                  <td>COT</td>
+                  <td>00:21</td>
+                  <td>00:22</td>
               </tr>
               <tr>
-                  <td>LER</td>
-                  <td>19:59</td>
-                  <td>19:59</td>
-              </tr>
-              <tr>
-                  <td>WNP</td>
-                  <td>20:01</td>
-                  <td>20:01</td>
-              </tr>
-              <tr>
-                  <td>WGR</td>
-                  <td>20:04</td>
-                  <td>20:04</td>
-              </tr>
-              <tr>
-                  <td>BKG</td>
-                  <td>20:12</td>
+                  <td>LDS</td>
+                  <td>00:29</td>
                   <td>--:--</td>
               </tr>
           </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I query between <span class="argument">&quot;HUD&quot;</span> and <span class="argument">&quot;LDS&quot;</span> on <span class="argument">&quot;2020-05-04&quot;</span> at <span class="argument">&quot;23:54&quot;</span></span>
+
+  <span class="lead-duration duration">0.969</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should not see a service <span class="argument">&quot;Y33543&quot;</span> in the results</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
 
 
 
@@ -779,14 +806,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.903</span>
+  <span class="lead-duration duration">1.368</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-7">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Public departure time differs to scheduled departure time by more than a minute between GPO and BKG</span>
+  <span class="name">Service between LBG and ECR is cancelled on a particular day</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -820,9 +847,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;GPO&quot;</span> and <span class="argument">&quot;BKG&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;19:35&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;LBG&quot;</span> and <span class="argument">&quot;ECR&quot;</span> on <span class="argument">&quot;2020-05-02&quot;</span> at <span class="argument">&quot;00:10&quot;</span></span>
 
-  <span class="lead-duration duration">0.903</span>
+  <span class="lead-duration duration">0.638</span>
 
 </div>
 
@@ -847,9 +874,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;G38001&quot;</span> that stops at</span>
+  <span class="name">I should see a service <span class="argument">&quot;L06949&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -866,66 +893,110 @@ $(document).ready(function() {
                   <td>departure</td>
               </tr>
               <tr>
-                  <td>GPO</td>
+                  <td>LBG</td>
                   <td>--:--</td>
-                  <td>19:35</td>
+                  <td>00:10</td>
               </tr>
               <tr>
-                  <td>UHL</td>
-                  <td>19:38</td>
-                  <td>19:39</td>
+                  <td>NXG</td>
+                  <td>00:16</td>
+                  <td>00:16</td>
               </tr>
               <tr>
-                  <td>CRH</td>
-                  <td>19:41</td>
-                  <td>19:41</td>
+                  <td>BCY</td>
+                  <td>00:19</td>
+                  <td>00:19</td>
               </tr>
               <tr>
-                  <td>HRY</td>
-                  <td>19:44</td>
-                  <td>19:44</td>
+                  <td>HPA</td>
+                  <td>00:21</td>
+                  <td>00:21</td>
               </tr>
               <tr>
-                  <td>STO</td>
-                  <td>19:48</td>
-                  <td>19:48</td>
+                  <td>FOH</td>
+                  <td>00:24</td>
+                  <td>00:24</td>
               </tr>
               <tr>
-                  <td>BHO</td>
-                  <td>19:51</td>
-                  <td>19:52</td>
+                  <td>SYD</td>
+                  <td>00:27</td>
+                  <td>00:27</td>
               </tr>
               <tr>
-                  <td>WMW</td>
-                  <td>19:54</td>
-                  <td>19:54</td>
+                  <td>PNW</td>
+                  <td>00:29</td>
+                  <td>00:29</td>
               </tr>
               <tr>
-                  <td>LEM</td>
-                  <td>19:56</td>
-                  <td>19:57</td>
+                  <td>ANZ</td>
+                  <td>00:31</td>
+                  <td>00:31</td>
               </tr>
               <tr>
-                  <td>LER</td>
-                  <td>19:59</td>
-                  <td>19:59</td>
+                  <td>NWD</td>
+                  <td>00:34</td>
+                  <td>00:35</td>
               </tr>
               <tr>
-                  <td>WNP</td>
-                  <td>20:01</td>
-                  <td>20:01</td>
-              </tr>
-              <tr>
-                  <td>WGR</td>
-                  <td>20:04</td>
-                  <td>20:04</td>
-              </tr>
-              <tr>
-                  <td>BKG</td>
-                  <td>20:12</td>
+                  <td>ECR</td>
+                  <td>00:38</td>
                   <td>--:--</td>
               </tr>
           </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I query between <span class="argument">&quot;LBG&quot;</span> and <span class="argument">&quot;ECR&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;00:10&quot;</span></span>
+
+  <span class="lead-duration duration">0.728</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should not see a service <span class="argument">&quot;L06949&quot;</span> in the results</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
 
 
 
@@ -956,14 +1027,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">31.234</span>
+  <span class="lead-duration duration">2.157</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-9">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Public departure time differs to scheduled departure time by more than a minute between MAI and MLW</span>
+  <span class="name">Service between LBG and ECR is cancelled on a particular day</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -972,16 +1043,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-9" class="collapse collapsable-details  in ">
+  <div id="element-9" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-10">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-10">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -991,15 +1062,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-10" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-10" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;MAI&quot;</span> and <span class="argument">&quot;MLW&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;23:45&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;LBG&quot;</span> and <span class="argument">&quot;ECR&quot;</span> on <span class="argument">&quot;2020-05-02&quot;</span> at <span class="argument">&quot;00:35&quot;</span></span>
 
-  <span class="lead-duration duration">31.234</span>
+  <span class="lead-duration duration">1.273</span>
 
 </div>
 
@@ -1008,23 +1079,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-11">
-          <a>io.ljn.jp.test.runner.api.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-11" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;MLW&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-05-09 23:45&quot;,&quot;dptCrsCode&quot;:&quot;MAI&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:33)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:46)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:31)
-	at &#10045;.a query between &quot;MAI&quot; and &quot;MLW&quot; on &quot;2020-05-09&quot; at &quot;23:45&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:85)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -1039,9 +1093,9 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;L97876&quot;</span> that stops at</span>
+  <span class="name">I should see a service <span class="argument">&quot;L06950&quot;</span> that stops at</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -1060,31 +1114,110 @@ $(document).ready(function() {
                   <td>departure</td>
               </tr>
               <tr>
-                  <td>MAI</td>
+                  <td>LBG</td>
                   <td>--:--</td>
-                  <td>23:45</td>
+                  <td>00:35</td>
               </tr>
               <tr>
-                  <td>FZP</td>
-                  <td>23:48</td>
-                  <td>23:48</td>
+                  <td>NXG</td>
+                  <td>00:41</td>
+                  <td>00:41</td>
               </tr>
               <tr>
-                  <td>COO</td>
-                  <td>23:52</td>
-                  <td>23:52</td>
+                  <td>BCY</td>
+                  <td>00:44</td>
+                  <td>00:44</td>
               </tr>
               <tr>
-                  <td>BNE</td>
-                  <td>23:56</td>
-                  <td>23:59</td>
+                  <td>HPA</td>
+                  <td>00:46</td>
+                  <td>00:46</td>
               </tr>
               <tr>
-                  <td>MLW</td>
-                  <td>00:08</td>
+                  <td>FOH</td>
+                  <td>00:49</td>
+                  <td>00:49</td>
+              </tr>
+              <tr>
+                  <td>SYD</td>
+                  <td>00:52</td>
+                  <td>00:52</td>
+              </tr>
+              <tr>
+                  <td>PNW</td>
+                  <td>00:54</td>
+                  <td>00:54</td>
+              </tr>
+              <tr>
+                  <td>ANZ</td>
+                  <td>00:56</td>
+                  <td>00:56</td>
+              </tr>
+              <tr>
+                  <td>NWD</td>
+                  <td>00:59</td>
+                  <td>01:08</td>
+              </tr>
+              <tr>
+                  <td>ECR</td>
+                  <td>01:13</td>
                   <td>--:--</td>
               </tr>
           </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I query between <span class="argument">&quot;LBG&quot;</span> and <span class="argument">&quot;ECR&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;00:35&quot;</span></span>
+
+  <span class="lead-duration duration">0.883</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should not see a service <span class="argument">&quot;L06950&quot;</span> in the results</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
 
 
 
