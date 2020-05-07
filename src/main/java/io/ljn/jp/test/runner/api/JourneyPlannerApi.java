@@ -15,15 +15,14 @@ public class JourneyPlannerApi {
         .add(new LegAdapter())
         .build();
 
-    private final JsonAdapter<ApiResponse> responseAdapter = moshi.adapter(ApiResponse.class);
+    private final JsonAdapter<JourneyPlanResponse> responseAdapter = moshi.adapter(JourneyPlanResponse.class);
     private final JsonAdapter<JourneyPlannerQuery> requestAdapter = moshi.adapter(JourneyPlannerQuery.class);
 
     public JourneyPlannerApi(HttpClient http) {
         this.http = http;
     }
 
-    public ApiResponse planJourney(String origin, String destination, String date, String time, String railcard) {
-        JourneyPlannerQuery query = new JourneyPlannerQuery(origin, destination, date, time, railcard);
+    public JourneyPlanResponse planJourney(JourneyPlannerQuery query) {
         String postJson = requestAdapter.toJson(query);
 
         try {

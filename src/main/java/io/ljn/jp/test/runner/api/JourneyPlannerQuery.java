@@ -21,20 +21,38 @@ public class JourneyPlannerQuery {
     public final boolean showRouteingDetail;
 
     public JourneyPlannerQuery(String origin, String destination, String date, String time, String railcard) {
+        this(origin, destination, date, time, "", "", railcard, 1, 0);
+    }
+
+    public JourneyPlannerQuery(
+        String origin,
+        String destination,
+        String outwardDate,
+        String outwardTime,
+        String returnDate,
+        String returnTime,
+        String railcard,
+        int adults,
+        int children
+    ) {
         dptCrsCode = origin.length() == 3 ? origin : "";
         dptNlcCode = origin.length() == 4 ? origin : "";
         arrCrsCode = destination.length() == 3 ? destination : "";
         arrNlcCode = destination.length() == 4 ? destination : "";
 
-        departureDate = LocalDate.parse(date).atTime(LocalTime.parse(time)).format(localDateTimeFormat);
-        returnDate = "";
+        this.departureDate = getDateTime(outwardDate, outwardTime);
+        this.returnDate = getDateTime(returnDate, returnTime);
 
         railCardList = railcard.split(",");
-        adultCount = 1;
-        childCount = 0;
+        adultCount = adults;
+        childCount = children;
         maxJourney = -1;
         openReturn = false;
         keepOvertaken = false;
         showRouteingDetail = false;
+    }
+
+    private String getDateTime(String date, String time) {
+        return date.equals("") ? "" : LocalDate.parse(date).atTime(LocalTime.parse(time)).format(localDateTimeFormat);
     }
 }

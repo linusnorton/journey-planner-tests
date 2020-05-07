@@ -3,8 +3,9 @@ package io.ljn.jp.test.runner.step;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.ljn.jp.test.runner.api.ApiResponse;
+import io.ljn.jp.test.runner.api.JourneyPlanResponse;
 import io.ljn.jp.test.runner.api.JourneyPlannerApi;
+import io.ljn.jp.test.runner.api.JourneyPlannerQuery;
 import io.ljn.jp.test.runner.journey.StopTime;
 import io.ljn.jp.test.runner.journey.TimetableLeg;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +20,7 @@ import static org.junit.Assert.*;
 @SuppressWarnings({"checkstyle:MethodName"})
 public class QueryStep {
     private final JourneyPlannerApi journeyPlanner;
-    private ApiResponse response;
+    private JourneyPlanResponse response;
     private String origin;
     private String destination;
     private String date;
@@ -43,7 +44,8 @@ public class QueryStep {
         this.time = time;
         this.railcard = railcard;
 
-        response = journeyPlanner.planJourney(origin, destination, date, time, railcard);
+        JourneyPlannerQuery query = new JourneyPlannerQuery(origin, destination, date, time, railcard);
+        response = journeyPlanner.planJourney(query);
 
         if (response.outboundJourneyList == null) {
             throw new NoResultsException(String.format("No results between %s and %s on %s %s", origin, destination, date, time));

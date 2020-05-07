@@ -22,6 +22,8 @@ dependencies {
     implementation("mysql:mysql-connector-java:5.1.6")
     implementation("com.github.spullara.mustache.java:compiler:0.9.6")
     implementation("de.monochromata.cucumber:reporting-plugin:4.0.29")
+    implementation("org.apache.poi:poi:4.1.2")
+    implementation("org.apache.poi:poi-ooxml:4.1.2")
 
     compileOnly 'org.projectlombok:lombok:1.18.12'
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
@@ -55,7 +57,7 @@ task cucumber() {
                 '--plugin', 'de.monochromata.cucumber.report.PrettyReports:build/reports/cucumber',
                 '--plugin', 'json:build/reports/cucumber/json/report.json',
                 '--plugin', 'pretty',
-                '--tags', 'not @sdci and not @routeing and not @pending and not @not-summer',
+                '--tags', 'not @sdci and not @routeing and not @pending and not @not-summer and not @accreditation',
                 '--glue', 'io.ljn.jp.test.runner',
                 'src/main/resources'
             ]

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Data
-public class ApiResponse {
+public class JourneyPlanResponse {
     public final List<Journey> outboundJourneyList;
     public final List<Journey> inboundJourneyList;
     public final List<Fare> tisFareList;
