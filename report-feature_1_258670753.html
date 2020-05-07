@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>06 May 2020, 15:44</td>
+      <td>07 May 2020, 14:47</td>
     </tr>
   </tbody>
 </table>
@@ -127,18 +127,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">Some journeys may involve a valid doubleback</td>
-          <td      class="passed"    >3</td>
-          <td      class="failed"    >1</td>
+          <td      class="passed"    >2</td>
+          <td      class="failed"    >2</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">4</td>
 
-          <td  class="passed"    >1</td>
-          <td  class="failed"    >1</td>
+          <td >0</td>
+          <td  class="failed"    >2</td>
           <td class="total">2</td>
 
-          <td class="duration" data-value="4026093000">4.026</td>
+          <td class="duration" data-value="3395379000">3.395</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,12 +193,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">3.030</span>
+  <span class="lead-duration duration">2.716</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Journeys between CHM and BXB may involve a doubleback at Bethnel Green</span>
 
@@ -209,16 +209,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -228,7 +228,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details ">
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -236,7 +236,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHM&quot;</span> and <span class="argument">&quot;BXB&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;08:15&quot;</span></span>
 
-  <span class="lead-duration duration">2.906</span>
+  <span class="lead-duration duration">2.579</span>
 
 </div>
 
@@ -259,11 +259,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.124</span>
+  <span class="lead-duration duration">0.136</span>
 
 </div>
 
@@ -271,6 +271,56 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: CHM,LST,BXB in 
+
+CHM (08:19:00) -&gt; BXB (09:31:00)
+	CHM (08:19:00) -&gt; SRA (08:46:00)
+	SRA (09:00:00) -&gt; BXB (09:31:00)
+
+CHM (08:39:00) -&gt; BXB (10:02:00)
+	CHM (08:39:00) -&gt; SRA (09:09:00)
+	SRA (09:30:00) -&gt; BXB (10:02:00)
+
+CHM (08:39:00) -&gt; BXB (09:53:00)
+	CHM (08:39:00) -&gt; SRA (09:09:00)
+	SRA (09:17:00) -&gt; TOM (09:26:00)
+	TOM (09:40:00) -&gt; BXB (09:53:00)
+
+CHM (08:45:00) -&gt; BXB (10:02:00)
+	CHM (08:45:00) -&gt; SNF (08:55:00)
+	SNF (09:00:00) -&gt; SRA (09:18:00)
+	SRA (09:30:00) -&gt; BXB (10:02:00)
+
+CHM (09:09:00) -&gt; BXB (10:23:00)
+	CHM (09:09:00) -&gt; SRA (09:38:00)
+	SRA (09:47:00) -&gt; TOM (09:56:00)
+	TOM (10:10:00) -&gt; BXB (10:23:00)
+
+CHM (09:21:00) -&gt; BXB (10:30:00)
+	CHM (09:21:00) -&gt; SRA (09:49:00)
+	SRA (10:00:00) -&gt; BXB (10:30:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/02072020/0815/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=CHM&amp;destination=BXB&amp;date=2020-07-02&amp;time=08:15
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/doubleback.feature:6)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -311,10 +361,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.995</span>
+  <span class="lead-duration duration">0.679</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-3">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -327,14 +377,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-3" class="collapse collapsable-details  in ">
+  <div id="element-4" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-4">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -346,7 +396,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-4" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -354,7 +404,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;SED&quot;</span> and <span class="argument">&quot;SSD&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:30&quot;</span></span>
 
-  <span class="lead-duration duration">0.991</span>
+  <span class="lead-duration duration">0.674</span>
 
 </div>
 
@@ -381,7 +431,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.004</span>
 
 </div>
 
@@ -392,10 +442,10 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-5">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
           <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-5" class="collapse collapsable-details  in ">
+      <div id="msg-6" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: SED,CBG,SSD in 
 
 SED (10:25:00) -&gt; SSD (11:24:00)
@@ -424,13 +474,13 @@ SED (15:25:00) -&gt; SSD (16:24:00)
 
 Check with: 
 
-http://ojp.nationalrail.co.uk/service/timesandfares/SED/SSD/01072020/0930/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=SED&amp;destination=SSD&amp;date=2020-07-01&amp;time=09:30
+http://ojp.nationalrail.co.uk/service/timesandfares/SED/SSD/02072020/0930/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=SED&amp;destination=SSD&amp;date=2020-07-02&amp;time=09:30
 
 
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:149)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
 	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/doubleback.feature:12)
 </pre>
       </div>
