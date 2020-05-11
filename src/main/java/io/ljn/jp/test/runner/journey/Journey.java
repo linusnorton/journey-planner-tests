@@ -20,9 +20,9 @@ public class Journey {
 
         return String.format(
             "%s (%s) -> %s (%s)\n\t%s",
-            dptLocation.getCrsCode(),
+            dptLocation.crsCode,
             departureDateTime.substring(11),
-            arrLocation.getCrsCode(),
+            arrLocation.crsCode,
             arrivalDateTime.substring(11),
             legs
         );

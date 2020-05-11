@@ -1,11 +1,13 @@
 package io.ljn.jp.test.runner.journey;
 
-import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
-@Data
+@RequiredArgsConstructor
 public class Fare {
+    public final String fareId;
+    public final String fareReferenceId;
     public final FareClassification fareClassification;
     public final FareJourney fareJourney;
     public final FarePrice farePrice;

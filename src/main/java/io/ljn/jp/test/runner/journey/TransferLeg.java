@@ -11,8 +11,8 @@ public class TransferLeg implements Leg {
     public String toString() {
         return String.format(
             "%s -> %s (%s)",
-            dptStation.getCrsCode(),
-            arrStation.getCrsCode(),
+            dptStation.crsCode,
+            arrStation.crsCode,
             durationMinutes
         );
     }

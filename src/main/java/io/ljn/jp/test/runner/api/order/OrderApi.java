@@ -17,7 +17,9 @@ public class OrderApi {
         .add(new LegAdapter())
         .build();
 
-    private final JsonAdapter<Order> adapter = moshi.adapter(Order.class);
+    private final JsonAdapter<Order> adapter = moshi
+        .adapter(Order.class)
+        .serializeNulls();
 
     public Order createOrder(Order query) {
         String postJson = adapter.toJson(query);

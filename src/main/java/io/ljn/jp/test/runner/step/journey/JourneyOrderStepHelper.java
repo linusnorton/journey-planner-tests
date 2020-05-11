@@ -69,7 +69,7 @@ public class JourneyOrderStepHelper {
             FulfilmentType.eTicket
         );
         Order createdOrder = orderApi.createOrder(createOrderQuery);
-        System.out.println(createdOrder.orderTransactionId);
+        System.out.println(createdOrder.ticketIssue.orderTransactionId);
     }
 
     private String getDate(Cell cell) {

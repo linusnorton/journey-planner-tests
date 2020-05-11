@@ -1,8 +1,9 @@
 package io.ljn.jp.test.runner.journey;
 
-import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
-@Data
+@RequiredArgsConstructor
 public class FarePrice {
     public final float price;
+    public final String currency;
 }

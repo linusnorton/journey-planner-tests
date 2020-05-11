@@ -11,4 +11,5 @@ public class RailcardFareDetail {
     public final float pricePreChild;
     public final String adultStatusCode;
     public final String childStatusCode;
+    public final String railcard;
 }
