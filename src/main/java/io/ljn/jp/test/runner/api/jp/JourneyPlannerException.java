@@ -1,4 +1,4 @@
-package io.ljn.jp.test.runner.api;
+package io.ljn.jp.test.runner.api.jp;
 
 public class JourneyPlannerException extends RuntimeException {
     public JourneyPlannerException(String message, Throwable e) {

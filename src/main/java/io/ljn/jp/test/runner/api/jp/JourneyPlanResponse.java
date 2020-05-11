@@ -1,4 +1,4 @@
-package io.ljn.jp.test.runner.api;
+package io.ljn.jp.test.runner.api.jp;
 
 import io.ljn.jp.test.runner.journey.Fare;
 import lombok.Data;

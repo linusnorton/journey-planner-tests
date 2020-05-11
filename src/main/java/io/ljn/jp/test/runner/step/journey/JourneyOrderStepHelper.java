@@ -1,8 +1,11 @@
 package io.ljn.jp.test.runner.step.journey;
 
-import io.ljn.jp.test.runner.api.JourneyPlanResponse;
-import io.ljn.jp.test.runner.api.JourneyPlannerApi;
-import io.ljn.jp.test.runner.api.JourneyPlannerQuery;
+import io.ljn.jp.test.runner.api.jp.JourneyPlanResponse;
+import io.ljn.jp.test.runner.api.jp.JourneyPlannerApi;
+import io.ljn.jp.test.runner.api.jp.JourneyPlannerQuery;
+import io.ljn.jp.test.runner.api.order.Order;
+import io.ljn.jp.test.runner.api.order.OrderApi;
+import io.ljn.jp.test.runner.order.FulfilmentType;
 import lombok.RequiredArgsConstructor;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -14,7 +17,8 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class JourneyOrderStepHelper {
 
-    private final JourneyPlannerApi api;
+    private final JourneyPlannerApi journeyPlannerApi;
+    private final OrderApi orderApi;
     private final Map<String, String> railcards = Map.of(
         "", "",
         "N/A", "",
@@ -39,7 +43,7 @@ public class JourneyOrderStepHelper {
         int numChildren = (int) row.getCell(16).getNumericCellValue();
         String railcard = railcards.get(row.getCell(17).getStringCellValue());
 
-        JourneyPlannerQuery query = new JourneyPlannerQuery(
+        JourneyPlannerQuery journeyPlanQuery = new JourneyPlannerQuery(
             origin,
             destination,
             outwardDate,
@@ -51,7 +55,21 @@ public class JourneyOrderStepHelper {
             numChildren
         );
 
-        JourneyPlanResponse response = api.planJourney(query);
+        JourneyPlanResponse response = journeyPlannerApi.planJourney(journeyPlanQuery);
+
+        if (response.inboundJourneyList == null || response.inboundJourneyList.size() == 0) {
+            System.out.println(String.format("No results for %s to %s", origin, destination));
+
+            return;
+        }
+
+        Order createOrderQuery = new Order(
+            response.inboundJourneyList.get(0),
+            response.tisFareList.get(0),
+            FulfilmentType.eTicket
+        );
+        Order createdOrder = orderApi.createOrder(createOrderQuery);
+        System.out.println(createdOrder.orderTransactionId);
     }
 
     private String getDate(Cell cell) {

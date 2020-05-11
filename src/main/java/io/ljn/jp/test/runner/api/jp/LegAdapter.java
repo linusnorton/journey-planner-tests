@@ -1,4 +1,4 @@
-package io.ljn.jp.test.runner.api;
+package io.ljn.jp.test.runner.api.jp;
 
 import com.squareup.moshi.*;
 import io.ljn.jp.test.runner.journey.Leg;
@@ -32,7 +32,13 @@ public class LegAdapter {
     @ToJson
     String toJson(Leg leg) {
         Moshi moshi = new Moshi.Builder().build();
-        JsonAdapter<Leg> jsonAdapter = moshi.adapter(Leg.class);
+        JsonAdapter jsonAdapter;
+
+        if (leg instanceof TimetableLeg) {
+            jsonAdapter = moshi.adapter(TimetableLeg.class);
+        } else {
+            jsonAdapter = moshi.adapter(TransferLeg.class);
+        }
 
         return jsonAdapter.toJson(leg);
     }

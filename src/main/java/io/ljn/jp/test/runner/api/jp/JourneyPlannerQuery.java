@@ -1,4 +1,4 @@
-package io.ljn.jp.test.runner.api;
+package io.ljn.jp.test.runner.api.jp;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
