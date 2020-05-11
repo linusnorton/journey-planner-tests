@@ -49,8 +49,9 @@ Feature: The journey planner should offer the user multiple routes
   Scenario: Journeys between BAU and SWA have a number of routes
     Given a query between "BAU" and "SWA" on "a weekday" at "07:00"
     Then I should see the following transfer patterns
-      | BAU, HAB, SHF, BPW, SWA |
+      | BAU, HAB, SPT, SWA |
       | BAU, HAB, SHF, BHM, BPW, SWA |
+      | BAU, HAB, SPT, BPW, SWA |
 
   Scenario: Journeys between WFJ and STN have a number of routes
     Given a query between "WFJ" and "STN" on "a weekday" at "07:00"
