@@ -77,10 +77,10 @@ public class QueryStep {
     private String serialize(List<StopTime> tisCallingPointList) {
         return tisCallingPointList
             .stream()
-            .filter(s -> (s.getPublicArrivalTime() != null || s.getPublicDepartureTime() != null)
-                && (!"00:00:00".equals(s.getPublicArrivalTime()) || !"00:00:00".equals(s.getPublicDepartureTime()))
+            .filter(s -> (s.publicArrivalTime != null || s.publicDepartureTime != null)
+                         && (!"00:00:00".equals(s.publicArrivalTime) || !"00:00:00".equals(s.publicDepartureTime))
             )
-            .map(s -> s.getCrsCode() + "_" + getTime(s.getPublicArrivalTime()) + "_" + getTime(s.getPublicDepartureTime()))
+            .map(s -> s.crsCode + "_" + getTime(s.publicArrivalTime) + "_" + getTime(s.publicDepartureTime))
             .reduce((acc, item) -> acc + "\n" + item)
             .get();
     }

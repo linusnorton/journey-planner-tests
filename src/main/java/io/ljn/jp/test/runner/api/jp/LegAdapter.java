@@ -30,7 +30,7 @@ public class LegAdapter {
     }
 
     @ToJson
-    String toJson(Leg leg) {
+    Object toJson(Leg leg) {
         Moshi moshi = new Moshi.Builder().build();
         JsonAdapter jsonAdapter;
 
@@ -40,6 +40,6 @@ public class LegAdapter {
             jsonAdapter = moshi.adapter(TransferLeg.class);
         }
 
-        return jsonAdapter.toJson(leg);
+        return jsonAdapter.toJsonValue(leg);
     }
 }

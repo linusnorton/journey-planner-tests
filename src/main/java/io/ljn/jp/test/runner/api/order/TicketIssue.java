@@ -5,27 +5,29 @@ import io.ljn.jp.test.runner.journey.Journey;
 import io.ljn.jp.test.runner.order.CustomerInfo;
 import io.ljn.jp.test.runner.order.FulfilmentType;
 import io.ljn.jp.test.runner.order.OrderPassenger;
+import lombok.RequiredArgsConstructor;
 
 import java.util.Collections;
 import java.util.List;
 
+@RequiredArgsConstructor
 public class TicketIssue {
-    public final String channelOrderNo = "3055062077";
-    public final String channelType = "TRNP";
+    public final String channelOrderNo;
+    public final String channelType;
 
-    public final Integer adminFee = null;
-    public final CustomerInfo customerInfo = new CustomerInfo();
-    public final List<OrderPassenger> passengers = Collections.singletonList(new OrderPassenger());
-    public final String reservationDemand = null;
-    public final String railCards = null;
+    public final Integer adminFee;
+    public final CustomerInfo customerInfo;
+    public final List<OrderPassenger> passengers;
+    public final String reservationDemand;
+    public final String railCards;
 
-    public final String orderTransactionId = null;
-    public final String transactionReference = null;
-    public final String journeyLegs = null;
-    public final String payment = null;
-    public final String payloads = null;
-    public final String ticketStatus = null;
-    public final String payStatus = null;
+    public final String orderTransactionId;
+    public final String transactionReference;
+    public final List<OrderLeg> journeyLegs;
+    public final String payment;
+    public final String payloads;
+    public final String ticketStatus;
+    public final String payStatus;
 
     public final String departureNLCCode;
     public final String arrivalNLCCode;
@@ -43,6 +45,21 @@ public class TicketIssue {
     public final Fare returnFare;
 
     public TicketIssue(Journey journey, Fare fare, FulfilmentType fulfillType) {
+        channelOrderNo = "3055062077";
+        channelType = "TRNP";
+        adminFee = null;
+        customerInfo = new CustomerInfo();
+        passengers = Collections.singletonList(new OrderPassenger());
+        reservationDemand = null;
+        railCards = null;
+        orderTransactionId = null;
+        transactionReference = null;
+        journeyLegs = null;
+        payment = null;
+        payloads = null;
+        ticketStatus = null;
+        payStatus = null;
+
         this.departureNLCCode = fare.fareJourney.originLocation.nlc;
         this.arrivalNLCCode = fare.fareJourney.destinationLocation.nlc;
         this.departureDateTime = journey.departureDateTime;
