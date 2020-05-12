@@ -7,8 +7,10 @@ import io.ljn.jp.test.runner.order.FulfilmentType;
 import io.ljn.jp.test.runner.order.OrderPassenger;
 import lombok.RequiredArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.IntStream;
 
 @RequiredArgsConstructor
 public class TicketIssue {
@@ -49,7 +51,7 @@ public class TicketIssue {
         channelType = "TRNP";
         adminFee = null;
         customerInfo = new CustomerInfo();
-        passengers = Collections.singletonList(new OrderPassenger());
+        passengers = new ArrayList<>();
         reservationDemand = null;
         railCards = null;
         orderTransactionId = null;
@@ -72,5 +74,9 @@ public class TicketIssue {
         this.returnJourney = null;
         this.outFare = fare;
         this.returnFare = null;
+
+        IntStream
+            .range(0, this.adultCount + this.childCount)
+            .forEach(i -> passengers.add(new OrderPassenger()));
     }
 }

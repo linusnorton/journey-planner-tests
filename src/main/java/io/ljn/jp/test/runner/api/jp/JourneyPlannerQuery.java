@@ -43,7 +43,7 @@ public class JourneyPlannerQuery {
         this.departureDate = getDateTime(outwardDate, outwardTime);
         this.returnDate = getDateTime(returnDate, returnTime);
 
-        railCardList = railcard.split(",");
+        railCardList = railcard == null ? "".split(",") : railcard.split(",");
         adultCount = adults;
         childCount = children;
         maxJourney = -1;

@@ -39,8 +39,9 @@ public class JourneyOrderStepHelper {
         String outwardTime = getTime(row.getCell(12));
         String returnDate = getDate(row.getCell(13));
         String returnTime = getTime(row.getCell(14));
-        int numAdults = (int) row.getCell(15).getNumericCellValue();
-        int numChildren = (int) row.getCell(16).getNumericCellValue();
+
+        int numAdults = getInt(row.getCell(15));
+        int numChildren = getInt(row.getCell(16));
         String railcard = railcards.get(row.getCell(17).getStringCellValue());
 
         JourneyPlannerQuery journeyPlanQuery = new JourneyPlannerQuery(
@@ -70,6 +71,18 @@ public class JourneyOrderStepHelper {
         );
         Order createdOrder = orderApi.createOrder(createOrderQuery);
         System.out.println(createdOrder.ticketIssue.orderTransactionId);
+    }
+
+    private int getInt(Cell cell) {
+        try {
+            return (int) cell.getNumericCellValue();
+        } catch (IllegalStateException e) {
+            try {
+                return Integer.parseInt(cell.getStringCellValue());
+            } catch (NumberFormatException e2) {
+                return 1;
+            }
+        }
     }
 
     private String getDate(Cell cell) {

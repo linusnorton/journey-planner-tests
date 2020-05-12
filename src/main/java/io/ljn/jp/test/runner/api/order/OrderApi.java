@@ -31,7 +31,14 @@ public class OrderApi {
                 throw new OrderApiException("Unable to create order: " + postJson + "\n" + response.body().string());
             }
 
-            return adapter.fromJson(response.body().source());
+            String textResponse = response.body().source().peek().readUtf8();
+            Order order = adapter.fromJson(response.body().source());
+
+            if (order.ticketIssue == null) {
+                throw new OrderApiException("Unable to create order: " + postJson + "\n" + textResponse);
+            }
+
+            return order;
         } catch (IOException e) {
             throw new OrderApiException("Unable to create order: " + postJson, e);
         }
