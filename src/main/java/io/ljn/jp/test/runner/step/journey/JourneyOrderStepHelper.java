@@ -2,9 +2,11 @@ package io.ljn.jp.test.runner.step.journey;
 
 import io.ljn.jp.test.runner.api.jp.JourneyPlanResponse;
 import io.ljn.jp.test.runner.api.jp.JourneyPlannerApi;
+import io.ljn.jp.test.runner.api.jp.JourneyPlannerException;
 import io.ljn.jp.test.runner.api.jp.JourneyPlannerQuery;
 import io.ljn.jp.test.runner.api.order.Order;
 import io.ljn.jp.test.runner.api.order.OrderApi;
+import io.ljn.jp.test.runner.api.order.OrderApiException;
 import io.ljn.jp.test.runner.api.order.OrderPaymentQuery;
 import io.ljn.jp.test.runner.order.FulfilmentType;
 import lombok.RequiredArgsConstructor;
@@ -29,14 +31,22 @@ public class JourneyOrderStepHelper {
     );
 
     public void createOrder(Row row, FulfilmentType fulfilmentType) {
+        int testId = (int) row.getCell(0).getNumericCellValue();
         JourneyPlannerQuery journeyPlannerQuery = getJourneyPlannerQuery(row);
 
         if (journeyPlannerQuery == null) {
-            System.out.println("Cannot process row: " + row.getCell(0).toString());
+            System.out.println("Cannot process row: " + testId);
             return;
         }
 
-        JourneyPlanResponse response = journeyPlannerApi.planJourney(journeyPlannerQuery);
+        JourneyPlanResponse response;
+
+        try {
+            response = journeyPlannerApi.planJourney(journeyPlannerQuery);
+        } catch (JourneyPlannerException e) {
+            System.out.println("Test " + testId + " failed: " + e.getMessage());
+            return;
+        }
 
         if (response.inboundJourneyList == null || response.inboundJourneyList.size() == 0) {
             System.out.println(String.format("No results for %s to %s", journeyPlannerQuery.dptNlcCode, journeyPlannerQuery.arrNlcCode));
@@ -50,13 +60,18 @@ public class JourneyOrderStepHelper {
         );
         Order createdOrder = orderApi.createOrder(createOrderQuery);
         OrderPaymentQuery paymentQuery = new OrderPaymentQuery(createdOrder.ticketIssue.orderTransactionId, createdOrder.ticketIssue.totalPrice);
-        Order paidOrder = orderApi.payForOrder(paymentQuery);
-        System.out.println(paidOrder.ticketIssue.orderTransactionId);
 
-        row.getCell(28).setCellValue(paidOrder.ticketIssue.orderTransactionId);
+        try {
+            Order paidOrder = orderApi.payForOrder(paymentQuery);
+            System.out.println("Test " + testId + " order: " + paidOrder.ticketIssue.orderTransactionId);
 
-        if (paidOrder.ticketIssue.payloads != null) {
-            row.getCell(29).setCellValue(paidOrder.ticketIssue.payloads.get(0).pdfUrl);
+            row.getCell(28).setCellValue(paidOrder.ticketIssue.orderTransactionId);
+
+            if (paidOrder.ticketIssue.payloads != null) {
+                row.getCell(29).setCellValue(paidOrder.ticketIssue.payloads.get(0).pdfUrl);
+            }
+        } catch (OrderApiException e) {
+            System.out.println("Test " + testId + " failed: " + e.getMessage());
         }
     }
 

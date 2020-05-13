@@ -12,6 +12,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.stream.IntStream;
 
@@ -45,7 +46,9 @@ public class AccreditationStep {
     }
 
     @Then("I should be able to collate the results into {string}")
-    public void iShouldBeAbleToCollateTheResultsInto(String filename) {
-
+    public void iShouldBeAbleToCollateTheResultsInto(String filename) throws IOException {
+        FileOutputStream output = new FileOutputStream("build/reports/cucumber/accreditation-results.xlsx");
+        wb.write(output);
+        output.close();
     }
 }
