@@ -1,4 +1,4 @@
-package io.ljn.jp.test.runner.api.order;
+package io.ljn.jp.test.runner.order;
 
 import lombok.RequiredArgsConstructor;
 

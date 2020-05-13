@@ -5,6 +5,7 @@ import io.ljn.jp.test.runner.api.jp.JourneyPlannerApi;
 import io.ljn.jp.test.runner.api.jp.JourneyPlannerQuery;
 import io.ljn.jp.test.runner.api.order.Order;
 import io.ljn.jp.test.runner.api.order.OrderApi;
+import io.ljn.jp.test.runner.api.order.OrderPaymentQuery;
 import io.ljn.jp.test.runner.order.FulfilmentType;
 import lombok.RequiredArgsConstructor;
 import org.apache.poi.ss.usermodel.Cell;
@@ -27,50 +28,71 @@ public class JourneyOrderStepHelper {
         "Two Together", "TGR"
     );
 
-    public void createOrder(Row row) {
-        String origin = getSafeValue(row.getCell(4));
-        String destination = getSafeValue(row.getCell(6));
+    public void createOrder(Row row, FulfilmentType fulfilmentType) {
+        JourneyPlannerQuery journeyPlannerQuery = getJourneyPlannerQuery(row);
 
-        if (origin.isEmpty() || destination.isEmpty()) {
+        if (journeyPlannerQuery == null) {
+            System.out.println("Cannot process row: " + row.getCell(0).toString());
             return;
         }
 
-        String outwardDate = getDate(row.getCell(11));
-        String outwardTime = getTime(row.getCell(12));
-        String returnDate = getDate(row.getCell(13));
-        String returnTime = getTime(row.getCell(14));
-
-        int numAdults = getInt(row.getCell(15));
-        int numChildren = getInt(row.getCell(16));
-        String railcard = railcards.get(row.getCell(17).getStringCellValue());
-
-        JourneyPlannerQuery journeyPlanQuery = new JourneyPlannerQuery(
-            origin,
-            destination,
-            outwardDate,
-            outwardTime,
-            returnDate.equals("N/A") ? "" : returnDate,
-            returnTime.equals("N/A") ? outwardTime : returnTime,
-            railcard,
-            numAdults,
-            numChildren
-        );
-
-        JourneyPlanResponse response = journeyPlannerApi.planJourney(journeyPlanQuery);
+        JourneyPlanResponse response = journeyPlannerApi.planJourney(journeyPlannerQuery);
 
         if (response.inboundJourneyList == null || response.inboundJourneyList.size() == 0) {
-            System.out.println(String.format("No results for %s to %s", origin, destination));
-
+            System.out.println(String.format("No results for %s to %s", journeyPlannerQuery.dptNlcCode, journeyPlannerQuery.arrNlcCode));
             return;
         }
 
         Order createOrderQuery = new Order(
             response.inboundJourneyList.get(0),
             response.tisFareList.get(0),
-            FulfilmentType.eTicket
+            fulfilmentType
         );
         Order createdOrder = orderApi.createOrder(createOrderQuery);
-        System.out.println(createdOrder.ticketIssue.orderTransactionId);
+        OrderPaymentQuery paymentQuery = new OrderPaymentQuery(createdOrder.ticketIssue.orderTransactionId, createdOrder.ticketIssue.totalPrice);
+        Order paidOrder = orderApi.payForOrder(paymentQuery);
+        System.out.println(paidOrder.ticketIssue.orderTransactionId);
+
+        row.getCell(28).setCellValue(paidOrder.ticketIssue.orderTransactionId);
+
+        if (paidOrder.ticketIssue.payloads != null) {
+            row.getCell(29).setCellValue(paidOrder.ticketIssue.payloads.get(0).pdfUrl);
+        }
+    }
+
+    private JourneyPlannerQuery getJourneyPlannerQuery(Row row) {
+        try {
+            String origin = getSafeValue(row.getCell(4));
+            String destination = getSafeValue(row.getCell(6));
+
+            if (origin.isEmpty() || destination.isEmpty()) {
+                return null;
+            }
+
+            String outwardDate = getDate(row.getCell(11));
+            String outwardTime = getTime(row.getCell(12));
+            String returnDate = getDate(row.getCell(13));
+            String returnTime = getTime(row.getCell(14));
+
+            int numAdults = getInt(row.getCell(15));
+            int numChildren = getInt(row.getCell(16));
+            String railcard = railcards.get(row.getCell(17).getStringCellValue());
+
+            return new JourneyPlannerQuery(
+                origin,
+                destination,
+                outwardDate,
+                outwardTime,
+                returnDate.equals("N/A") ? "" : returnDate,
+                returnTime.equals("N/A") ? outwardTime : returnTime,
+                railcard,
+                numAdults,
+                numChildren
+            );
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     private int getInt(Cell cell) {

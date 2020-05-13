@@ -1,14 +1,10 @@
-package io.ljn.jp.test.runner.api.order;
+package io.ljn.jp.test.runner.order;
 
 import io.ljn.jp.test.runner.journey.Fare;
 import io.ljn.jp.test.runner.journey.Journey;
-import io.ljn.jp.test.runner.order.CustomerInfo;
-import io.ljn.jp.test.runner.order.FulfilmentType;
-import io.ljn.jp.test.runner.order.OrderPassenger;
 import lombok.RequiredArgsConstructor;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.IntStream;
 
@@ -26,8 +22,8 @@ public class TicketIssue {
     public final String orderTransactionId;
     public final String transactionReference;
     public final List<OrderLeg> journeyLegs;
-    public final String payment;
-    public final String payloads;
+    public final Payment payment;
+    public final List<TicketPayload> payloads;
     public final String ticketStatus;
     public final String payStatus;
 
@@ -38,7 +34,7 @@ public class TicketIssue {
 
     public final int adultCount;
     public final int childCount;
-    public final float totalPrice;
+    public final int totalPrice;
     public final int fulfillType;
 
     public final Journey outJourney;
@@ -68,7 +64,7 @@ public class TicketIssue {
         this.returnDateTime = null;
         this.adultCount = fare.railcardFareDetailList.get(0).adultCount;
         this.childCount = fare.railcardFareDetailList.get(0).childCount;
-        this.totalPrice = fare.farePrice.price;
+        this.totalPrice = (int) (fare.farePrice.price * 100);
         this.fulfillType = fulfillType.label;
         this.outJourney = journey;
         this.returnJourney = null;
