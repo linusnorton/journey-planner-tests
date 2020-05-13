@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>13 May 2020, 11:19</td>
+      <td>13 May 2020, 15:47</td>
     </tr>
   </tbody>
 </table>
@@ -115,7 +115,7 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_1605046418.html">The journey planner should offer connect services after midnight</a>
+      <a href="report-feature_1_258670753.html">Some journeys may involve a valid doubleback</a>
     </div>
 
 
@@ -125,14 +125,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">31.322</span>
+  <span class="lead-duration duration">5.148</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">A journey between EUS and MAN should connect at CRE after midnight</span>
+  <span class="name">Journeys between CHM and BXB may involve a doubleback at Bethnel Green</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -164,11 +164,38 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;EUS&quot;</span> and <span class="argument">&quot;MAN&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;22:00&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;CHM&quot;</span> and <span class="argument">&quot;BXB&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;08:15&quot;</span></span>
 
-  <span class="lead-duration duration">31.322</span>
+  <span class="lead-duration duration">5.019</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see the following transfer patterns</span>
+
+  <span class="lead-duration duration">0.128</span>
 
 </div>
 
@@ -180,185 +207,52 @@ $(document).ready(function() {
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+          <a>java.lang.AssertionError:</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;MAN&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-07-08 22:00&quot;,&quot;dptCrsCode&quot;:&quot;EUS&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;EUS&quot; and &quot;MAN&quot; on &quot;a weekday&quot; at &quot;22:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/after-midnight-connections.feature:5)
+        <pre>java.lang.AssertionError: Could not find pattern: CHM,LST,BXB in 
+
+CHM (08:19:00) -&gt; BXB (09:31:00)
+	CHM (08:19:00) -&gt; SRA (08:46:00)
+	SRA (09:00:00) -&gt; BXB (09:31:00)
+
+CHM (08:39:00) -&gt; BXB (10:02:00)
+	CHM (08:39:00) -&gt; SRA (09:09:00)
+	SRA (09:30:00) -&gt; BXB (10:02:00)
+
+CHM (08:39:00) -&gt; BXB (09:53:00)
+	CHM (08:39:00) -&gt; SRA (09:09:00)
+	SRA (09:17:00) -&gt; TOM (09:26:00)
+	TOM (09:40:00) -&gt; BXB (09:53:00)
+
+CHM (08:45:00) -&gt; BXB (10:02:00)
+	CHM (08:45:00) -&gt; SNF (08:55:00)
+	SNF (09:00:00) -&gt; SRA (09:18:00)
+	SRA (09:30:00) -&gt; BXB (10:02:00)
+
+CHM (09:09:00) -&gt; BXB (10:23:00)
+	CHM (09:09:00) -&gt; SRA (09:38:00)
+	SRA (09:47:00) -&gt; TOM (09:56:00)
+	TOM (10:10:00) -&gt; BXB (10:23:00)
+
+CHM (09:21:00) -&gt; BXB (10:30:00)
+	CHM (09:21:00) -&gt; SRA (09:49:00)
+	SRA (10:00:00) -&gt; BXB (10:30:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/08072020/0815/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=CHM&amp;destination=BXB&amp;date=2020-07-08&amp;time=08:15
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/doubleback.feature:6)
 </pre>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>EUS, MAN</td>
-              </tr>
-              <tr>
-                  <td>EUS, CRE, MAN</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_1_258670753.html">Some journeys may involve a valid doubleback</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2054189833.html">@journey-planning</a>
-</div>
-
-
-  <span class="lead-duration duration">31.321</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between CHM and BXB may involve a doubleback at Bethnel Green</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-4" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given failed">
-  <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;CHM&quot;</span> and <span class="argument">&quot;BXB&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;08:15&quot;</span></span>
-
-  <span class="lead-duration duration">31.321</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-6" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BXB&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-07-08 08:15&quot;,&quot;dptCrsCode&quot;:&quot;CHM&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;CHM&quot; and &quot;BXB&quot; on &quot;a weekday&quot; at &quot;08:15&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/doubleback.feature:5)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
 
 
           <table class="step-arguments">
@@ -403,581 +297,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.471</span>
+  <span class="lead-duration duration">2.322</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between OXF and ARU have a number of routes</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-7" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given failed">
-  <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;OXF&quot;</span> and <span class="argument">&quot;ARU&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;05:30&quot;</span></span>
-
-  <span class="lead-duration duration">30.471</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-9" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;ARU&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-07-08 05:30&quot;,&quot;dptCrsCode&quot;:&quot;OXF&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;OXF&quot; and &quot;ARU&quot; on &quot;a weekday&quot; at &quot;05:30&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:5)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>OXF, RDG, GTW, ARU</td>
-              </tr>
-              <tr>
-                  <td>OXF, PAD, VIC, ARU</td>
-              </tr>
-              <tr>
-                  <td>OXF, DID, PAD, VIC, ARU</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_2_771976588.html">The journey planner should offer the user multiple routes</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2054189833.html">@journey-planning</a>
-</div>
-
-
-  <span class="lead-duration duration">0.443</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between EDB and BHM have direct and indirect services</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-10" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-11">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-11" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given failed">
-  <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;EDB&quot;</span> and <span class="argument">&quot;BHM&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;05:30&quot;</span></span>
-
-  <span class="lead-duration duration">0.443</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-12" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BHM&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-07-08 05:30&quot;,&quot;dptCrsCode&quot;:&quot;EDB&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare short-circuited and no fallback available.}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;EDB&quot; and &quot;BHM&quot; on &quot;a weekday&quot; at &quot;05:30&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:12)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>EDB, NCL, BHM</td>
-              </tr>
-              <tr>
-                  <td>EDB, WVH, BHM</td>
-              </tr>
-              <tr>
-                  <td>EDB, BHM</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_2_771976588.html">The journey planner should offer the user multiple routes</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2054189833.html">@journey-planning</a>
-</div>
-
-
-  <span class="lead-duration duration">0.439</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between BMH and MAN have direct and indirect services</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-13" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-14">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-14" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given failed">
-  <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;BMH&quot;</span> and <span class="argument">&quot;MAN&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;06:00&quot;</span></span>
-
-  <span class="lead-duration duration">0.439</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-15" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;MAN&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-07-08 06:00&quot;,&quot;dptCrsCode&quot;:&quot;BMH&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare short-circuited and no fallback available.}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;BMH&quot; and &quot;MAN&quot; on &quot;a weekday&quot; at &quot;06:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:19)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>BMH, MAN</td>
-              </tr>
-              <tr>
-                  <td>BMH, WAT, EUS, MAN</td>
-              </tr>
-              <tr>
-                  <td>BMH, WIN, BHM, MAN</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_2_771976588.html">The journey planner should offer the user multiple routes</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2054189833.html">@journey-planning</a>
-</div>
-
-
-  <span class="lead-duration duration">30.404</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-16">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between LIV and LEI have a number of routes</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-16" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-17">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-17" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given failed">
-  <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;LIV&quot;</span> and <span class="argument">&quot;LEI&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;06:00&quot;</span></span>
-
-  <span class="lead-duration duration">30.404</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-18">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-18" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;LEI&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-07-08 06:00&quot;,&quot;dptCrsCode&quot;:&quot;LIV&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;LIV&quot; and &quot;LEI&quot; on &quot;a weekday&quot; at &quot;06:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:26)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>LIV, STA, NUN, LEI</td>
-              </tr>
-              <tr>
-                  <td>LIV, BHM, LEI</td>
-              </tr>
-              <tr>
-                  <td>LIV, MAN, NUN, LEI</td>
-              </tr>
-              <tr>
-                  <td>LIV, MCV, MAN, NUN, LEI</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_2_771976588.html">The journey planner should offer the user multiple routes</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2054189833.html">@journey-planning</a>
-</div>
-
-
-  <span class="lead-duration duration">30.481</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-19">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -990,14 +313,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-19" class="collapse collapsable-details  in ">
+  <div id="element-4" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-20">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -1009,15 +332,42 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-20" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;HNH&quot;</span> and <span class="argument">&quot;SMD&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">30.481</span>
+  <span class="lead-duration duration">2.319</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see the following transfer patterns</span>
+
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -1028,47 +378,59 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-21">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-21" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;SMD&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-07-08 07:00&quot;,&quot;dptCrsCode&quot;:&quot;HNH&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;HNH&quot; and &quot;SMD&quot; on &quot;a weekday&quot; at &quot;07:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:34)
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: HNH,STP,KGX,PDO,SMD in 
+
+HNH (07:12:00) -&gt; SMD (09:59:00)
+	HNH (07:12:00) -&gt; STP (07:33:00)
+	STP (08:02:00) -&gt; LEI (09:06:00)
+	LEI (09:18:00) -&gt; SMD (09:59:00)
+
+HNH (07:15:00) -&gt; SMD (09:59:00)
+	HNH (07:15:00) -&gt; BFR (07:29:00)
+	BFR (07:32:00) -&gt; STP (07:40:00)
+	STP (08:02:00) -&gt; LEI (09:06:00)
+	LEI (09:18:00) -&gt; SMD (09:59:00)
+
+HNH (07:45:00) -&gt; SMD (10:06:00)
+	HNH (07:45:00) -&gt; BFR (07:59:00)
+	BFR (08:07:00) -&gt; PBO (09:35:00)
+	PBO (09:54:00) -&gt; SMD (10:06:00)
+
+HNH (08:12:00) -&gt; SMD (10:59:00)
+	HNH (08:12:00) -&gt; STP (08:33:00)
+	STP (09:02:00) -&gt; LEI (10:06:00)
+	LEI (10:18:00) -&gt; SMD (10:59:00)
+
+HNH (08:12:00) -&gt; SMD (10:06:00)
+	HNH (08:12:00) -&gt; STP (08:33:00)
+	STP -&gt; KGX (1)
+	KGX (09:00:00) -&gt; PBO (09:46:00)
+	PBO (09:54:00) -&gt; SMD (10:06:00)
+
+HNH (08:15:00) -&gt; SMD (10:59:00)
+	HNH (08:15:00) -&gt; BFR (08:29:00)
+	BFR (08:32:00) -&gt; STP (08:40:00)
+	STP (09:02:00) -&gt; LEI (10:06:00)
+	LEI (10:18:00) -&gt; SMD (10:59:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/HNH/SMD/08072020/0700/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destination=SMD&amp;date=2020-07-08&amp;time=07:00
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:35)
 </pre>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
 
 
           <table class="step-arguments">
@@ -1113,146 +475,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.430</span>
+  <span class="lead-duration duration">1.009</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-22">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between NRW and COV have a number of routes</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-22" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-23">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-23" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given failed">
-  <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;NRW&quot;</span> and <span class="argument">&quot;COV&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;14:00&quot;</span></span>
-
-  <span class="lead-duration duration">30.430</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-24">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-24" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;COV&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-07-08 14:00&quot;,&quot;dptCrsCode&quot;:&quot;NRW&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;NRW&quot; and &quot;COV&quot; on &quot;a weekday&quot; at &quot;14:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:40)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>NRW, LST, EUS, COV</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_2_771976588.html">The journey planner should offer the user multiple routes</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2054189833.html">@journey-planning</a>
-</div>
-
-
-  <span class="lead-duration duration">30.416</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-25">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -1265,14 +491,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-25" class="collapse collapsable-details  in ">
+  <div id="element-7" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-26">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -1284,15 +510,42 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-26" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BAU&quot;</span> and <span class="argument">&quot;SWA&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">30.416</span>
+  <span class="lead-duration duration">1.008</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see the following transfer patterns</span>
+
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -1303,47 +556,61 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-27">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+          <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-27" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;SWA&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-07-08 07:00&quot;,&quot;dptCrsCode&quot;:&quot;BAU&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;BAU&quot; and &quot;SWA&quot; on &quot;a weekday&quot; at &quot;07:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:50)
+      <div id="msg-9" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: BAU,HAB,SPT,SWA in 
+
+BAU (07:56:00) -&gt; SWA (15:33:00)
+	BAU (07:56:00) -&gt; HAB (08:23:00)
+	HAB (08:44:00) -&gt; MAN (11:02:00)
+	MAN (11:31:00) -&gt; SWA (15:33:00)
+
+BAU (07:56:00) -&gt; SWA (14:34:00)
+	BAU (07:56:00) -&gt; HAB (08:23:00)
+	HAB (08:44:00) -&gt; SHF (10:09:00)
+	SHF (10:24:00) -&gt; BHM (11:27:00)
+	BHM (11:42:00) -&gt; BPW (12:54:00)
+	BPW (13:05:00) -&gt; SWA (14:34:00)
+
+BAU (09:50:00) -&gt; SWA (18:11:00)
+	BAU (09:50:00) -&gt; HAB (10:17:00)
+	HAB (10:44:00) -&gt; MAN (13:02:00)
+	MAN (13:31:00) -&gt; SWA (18:11:00)
+
+BAU (09:50:00) -&gt; SWA (17:39:00)
+	BAU (09:50:00) -&gt; HAB (10:17:00)
+	HAB (10:44:00) -&gt; SPT (12:52:00)
+	SPT (13:13:00) -&gt; BPW (15:55:00)
+	BPW (16:05:00) -&gt; SWA (17:39:00)
+
+BAU (09:50:00) -&gt; SWA (16:33:00)
+	BAU (09:50:00) -&gt; HAB (10:17:00)
+	HAB (10:44:00) -&gt; SHF (12:09:00)
+	SHF (12:24:00) -&gt; BHM (13:27:00)
+	BHM (13:42:00) -&gt; BPW (14:54:00)
+	BPW (15:04:00) -&gt; SWA (16:33:00)
+
+BAU (11:50:00) -&gt; SWA (20:09:00)
+	BAU (11:50:00) -&gt; HAB (12:17:00)
+	HAB (12:44:00) -&gt; MAN (15:02:00)
+	MAN (15:31:00) -&gt; SWA (20:09:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/BAU/SWA/08072020/0700/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=BAU&amp;destination=SWA&amp;date=2020-07-08&amp;time=07:00
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:51)
 </pre>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
 
 
           <table class="step-arguments">
@@ -1391,10 +658,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.458</span>
+  <span class="lead-duration duration">1.227</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-28">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -1407,14 +674,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-28" class="collapse collapsable-details  in ">
+  <div id="element-10" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-29">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-11">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -1426,15 +693,42 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-29" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-11" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;WFJ&quot;</span> and <span class="argument">&quot;STN&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">30.458</span>
+  <span class="lead-duration duration">1.222</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see the following transfer patterns</span>
+
+  <span class="lead-duration duration">0.005</span>
 
 </div>
 
@@ -1445,47 +739,61 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-30">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
+          <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-30" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;STN&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-07-08 07:00&quot;,&quot;dptCrsCode&quot;:&quot;WFJ&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;WFJ&quot; and &quot;STN&quot; on &quot;a weekday&quot; at &quot;07:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:57)
+      <div id="msg-12" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: WFJ,EUS,PRE,HYM,STN in 
+
+WFJ (07:07:00) -&gt; STN (14:31:00)
+	WFJ (07:07:00) -&gt; EUS (07:22:00)
+	EUS -&gt; KGX (5)
+	KGX (08:00:00) -&gt; EDB (12:20:00)
+	EDB (12:30:00) -&gt; STN (14:31:00)
+
+WFJ (07:11:00) -&gt; STN (15:33:00)
+	WFJ (07:11:00) -&gt; MKC (07:48:00)
+	MKC (08:04:00) -&gt; MAN (09:46:00)
+	MAN (10:26:00) -&gt; HYM (13:24:00)
+	HYM (13:36:00) -&gt; STN (15:33:00)
+
+WFJ (07:33:00) -&gt; STN (15:33:00)
+	WFJ (07:33:00) -&gt; EUS (07:55:00)
+	EUS -&gt; KGX (5)
+	KGX (08:30:00) -&gt; EDB (13:12:00)
+	EDB (13:29:00) -&gt; STN (15:33:00)
+
+WFJ (08:04:00) -&gt; STN (15:33:00)
+	WFJ (08:04:00) -&gt; MKC (08:25:00)
+	MKC (08:41:00) -&gt; CRE (09:49:00)
+	CRE (10:09:00) -&gt; PRE (10:51:00)
+	PRE (11:04:00) -&gt; HYM (13:24:00)
+	HYM (13:36:00) -&gt; STN (15:33:00)
+
+WFJ (08:37:00) -&gt; STN (16:45:00)
+	WFJ (08:37:00) -&gt; COV (09:22:00)
+	COV (09:42:00) -&gt; HYM (14:12:00)
+	HYM (14:34:00) -&gt; STN (16:45:00)
+
+WFJ (08:56:00) -&gt; STN (16:45:00)
+	WFJ (08:56:00) -&gt; EUS (09:19:00)
+	EUS -&gt; KGX (5)
+	KGX (10:00:00) -&gt; STN (16:45:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/WFJ/STN/08072020/0700/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destination=STN&amp;date=2020-07-08&amp;time=07:00
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:58)
 </pre>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
 
 
           <table class="step-arguments">
@@ -1536,10 +844,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.476</span>
+  <span class="lead-duration duration">3.238</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-31">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -1552,14 +860,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-31" class="collapse collapsable-details  in ">
+  <div id="element-13" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-32">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-14">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -1571,15 +879,42 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-32" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-14" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;DFD&quot;</span> and <span class="argument">&quot;TON&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:15&quot;</span></span>
 
-  <span class="lead-duration duration">30.475</span>
+  <span class="lead-duration duration">3.236</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see the following transfer patterns</span>
+
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -1590,47 +925,53 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-33">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
+          <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-33" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;TON&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-07-08 09:15&quot;,&quot;dptCrsCode&quot;:&quot;DFD&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;DFD&quot; and &quot;TON&quot; on &quot;a weekday&quot; at &quot;09:15&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/not-via-london.feature:5)
+      <div id="msg-15" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: DFD,WAE,TON in 
+
+DFD (09:15:00) -&gt; TON (10:46:00)
+	DFD (09:15:00) -&gt; LBG (09:57:00)
+	LBG (10:09:00) -&gt; TON (10:46:00)
+
+DFD (09:21:00) -&gt; TON (10:46:00)
+	DFD (09:21:00) -&gt; HGR (09:41:00)
+	HGR (09:53:00) -&gt; SEV (10:29:00)
+	SEV (10:36:00) -&gt; TON (10:46:00)
+
+DFD (09:28:00) -&gt; TON (10:55:00)
+	DFD (09:28:00) -&gt; SOO (09:54:00)
+	SOO (10:04:00) -&gt; TON (10:55:00)
+
+DFD (09:35:00) -&gt; TON (10:58:00)
+	DFD (09:35:00) -&gt; HGR (10:02:00)
+	HGR (10:09:00) -&gt; ORP (10:28:00)
+	ORP (10:39:00) -&gt; TON (10:58:00)
+
+DFD (09:45:00) -&gt; TON (11:16:00)
+	DFD (09:45:00) -&gt; LBG (10:27:00)
+	LBG (10:39:00) -&gt; TON (11:16:00)
+
+DFD (10:05:00) -&gt; TON (11:28:00)
+	DFD (10:05:00) -&gt; HGR (10:32:00)
+	HGR (10:39:00) -&gt; ORP (10:57:00)
+	ORP (11:10:00) -&gt; TON (11:28:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/08072020/0915/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=DFD&amp;destination=TON&amp;date=2020-07-08&amp;time=09:15
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/not-via-london.feature:6)
 </pre>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
 
 
           <table class="step-arguments">
@@ -1719,199 +1060,6 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_3_3874326106.html">The journey planner should offer routes via London and not via London with appropriate fares</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2054189833.html">@journey-planning</a>
-</div>
-
-
-  <span class="lead-duration duration">30.456</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-34">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between TON and GTW can go via LBG or via RDH</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-34" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-35">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-35" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given failed">
-  <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;TON&quot;</span> and <span class="argument">&quot;GTW&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:15&quot;</span></span>
-
-  <span class="lead-duration duration">30.456</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-36">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-36" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;GTW&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-07-08 09:15&quot;,&quot;dptCrsCode&quot;:&quot;TON&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;TON&quot; and &quot;GTW&quot; on &quot;a weekday&quot; at &quot;09:15&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/not-via-london.feature:13)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>TON, LBG, GTW</td>
-              </tr>
-              <tr>
-                  <td>TON, RDH, GTW</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">I should see a fare <span class="argument">&quot;SDS&quot;</span> on <span class="argument">&quot;00000&quot;</span></span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">I should see a fare <span class="argument">&quot;SDS&quot;</span> on <span class="argument">&quot;00700&quot;</span></span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
       <a href="report-feature_4_709490566.html">Some journeys may require the routeing guide maps to be divided at a via station</a>
     </div>
 
@@ -1922,10 +1070,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.454</span>
+  <span class="lead-duration duration">1.054</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-37">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-16">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -1938,14 +1086,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention">            the routeing maps from Nuneaton to Peterborough are combined with the maps from Peterborough to York</div>
 
-  <div id="element-37" class="collapse collapsable-details  in ">
+  <div id="element-16" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-38">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-17">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -1957,15 +1105,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-38" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-17" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;NUN&quot;</span> and <span class="argument">&quot;YRK&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:30&quot;</span></span>
 
-  <span class="lead-duration duration">30.454</span>
+  <span class="lead-duration duration">1.053</span>
 
 </div>
 
@@ -1974,23 +1122,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-39">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-39" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;YRK&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-07-08 07:30&quot;,&quot;dptCrsCode&quot;:&quot;NUN&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;NUN&quot; and &quot;YRK&quot; on &quot;a weekday&quot; at &quot;07:30&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/split-map-routeing.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -2005,7 +1136,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
@@ -2046,7 +1177,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And failed">
   <span class="keyword indention">And</span>
   <span class="name">I should see a fare <span class="argument">&quot;SOS&quot;</span> on <span class="argument">&quot;00072&quot;</span></span>
 
@@ -2059,143 +1190,23 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_4_709490566.html">Some journeys may require the routeing guide maps to be divided at a via station</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2054189833.html">@journey-planning</a>
-</div>
-
-
-  <span class="lead-duration duration">30.432</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-40">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between SAJ and TON may involve a doubleback, the route needs to be split at G01</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-40" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-41">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-41" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given failed">
-  <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;SAJ&quot;</span> and <span class="argument">&quot;TON&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;08:15&quot;</span></span>
-
-  <span class="lead-duration duration">30.431</span>
-
-</div>
-
-
-
-
-
-
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-42">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-18">
+          <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-42" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;TON&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-07-08 08:15&quot;,&quot;dptCrsCode&quot;:&quot;SAJ&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;SAJ&quot; and &quot;TON&quot; on &quot;a weekday&quot; at &quot;08:15&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/split-map-routeing.feature:15)
+      <div id="msg-18" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find a fare
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAFareOn(QueryStep.java:124)
+	at &#10045;.I should see a fare &quot;SOS&quot; on &quot;00072&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/split-map-routeing.feature:12)
 </pre>
       </div>
     </div>
   </div>
 
 
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>SAJ, LBG, TON</td>
-              </tr>
-          </table>
 
 
 
@@ -2230,149 +1241,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.434</span>
+  <span class="lead-duration duration">2.172</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-43">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between NRW and WWW can go via PBO or use a transfer to connect LST to EUS to go via London</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-43" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-44">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-44" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given failed">
-  <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;NRW&quot;</span> and <span class="argument">&quot;WWW&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:30&quot;</span></span>
-
-  <span class="lead-duration duration">30.434</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-45">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-45" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;WWW&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-07-08 07:30&quot;,&quot;dptCrsCode&quot;:&quot;NRW&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;NRW&quot; and &quot;WWW&quot; on &quot;a weekday&quot; at &quot;07:30&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/transfers.feature:5)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>NRW, PBO, BHM, BSW, WWW</td>
-              </tr>
-              <tr>
-                  <td>NRW, LST, EUS, BHM, BMO, WWW</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_5_4073142093.html">The journey planner should make use of transfers to connect trains</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2054189833.html">@journey-planning</a>
-</div>
-
-
-  <span class="lead-duration duration">30.430</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-46">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-19">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -2385,14 +1257,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-46" class="collapse collapsable-details  in ">
+  <div id="element-19" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-47">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-20">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -2404,15 +1276,42 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-47" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-20" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;FAV&quot;</span> and <span class="argument">&quot;SHF&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;05:45&quot;</span></span>
 
-  <span class="lead-duration duration">30.430</span>
+  <span class="lead-duration duration">2.171</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see the following transfer patterns</span>
+
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -2423,47 +1322,53 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-48">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-21">
+          <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-48" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;SHF&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-07-08 05:45&quot;,&quot;dptCrsCode&quot;:&quot;FAV&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;FAV&quot; and &quot;SHF&quot; on &quot;a weekday&quot; at &quot;05:45&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/transfers.feature:13)
+      <div id="msg-21" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: FAV,STP,KGX,RET,SHF in 
+
+FAV (05:56:00) -&gt; SHF (09:47:00)
+	FAV (05:56:00) -&gt; STP (07:02:00)
+	STP (07:32:00) -&gt; SHF (09:47:00)
+
+FAV (06:07:00) -&gt; SHF (10:03:00)
+	FAV (06:07:00) -&gt; LBG (07:19:00)
+	LBG (07:31:00) -&gt; STP (07:45:00)
+	STP (08:02:00) -&gt; SHF (10:03:00)
+
+FAV (06:23:00) -&gt; SHF (10:42:00)
+	FAV (06:23:00) -&gt; EPH (07:37:00)
+	EPH (07:44:00) -&gt; STP (07:58:00)
+	STP (08:31:00) -&gt; SHF (10:42:00)
+
+FAV (06:28:00) -&gt; SHF (10:03:00)
+	FAV (06:28:00) -&gt; STP (07:31:00)
+	STP (08:02:00) -&gt; SHF (10:03:00)
+
+FAV (06:57:00) -&gt; SHF (11:01:00)
+	FAV (06:57:00) -&gt; LBG (08:07:00)
+	LBG (08:21:00) -&gt; STP (08:35:00)
+	STP (09:02:00) -&gt; SHF (11:01:00)
+
+FAV (07:02:00) -&gt; SHF (10:42:00)
+	FAV (07:02:00) -&gt; STP (08:08:00)
+	STP (08:31:00) -&gt; SHF (10:42:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/FAV/SHF/08072020/0545/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=FAV&amp;destination=SHF&amp;date=2020-07-08&amp;time=05:45
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/transfers.feature:14)
 </pre>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
 
 
           <table class="step-arguments">
@@ -2552,142 +1457,6 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_5_4073142093.html">The journey planner should make use of transfers to connect trains</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2054189833.html">@journey-planning</a>
-</div>
-
-
-  <span class="lead-duration duration">30.491</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-49">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between CBW and DVP should involve a walk from CBW to CBE and then train to DVP</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-49" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-50">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-50" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given failed">
-  <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;CBW&quot;</span> and <span class="argument">&quot;DVP&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
-
-  <span class="lead-duration duration">30.491</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-51">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-51" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;DVP&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-07-08 09:00&quot;,&quot;dptCrsCode&quot;:&quot;CBW&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;CBW&quot; and &quot;DVP&quot; on &quot;a weekday&quot; at &quot;09:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/transfers.feature:21)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>CBW, CBE, DVP</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
       <a href="report-feature_6_3507411400.html">Schedule cancellations</a>
     </div>
 
@@ -2698,10 +1467,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.437</span>
+  <span class="lead-duration duration">1.401</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-52">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-22">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -2714,14 +1483,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-52" class="collapse collapsable-details  in ">
+  <div id="element-22" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-53">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-23">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -2733,7 +1502,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-53" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-23" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -2741,7 +1510,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RDH&quot;</span> and <span class="argument">&quot;TON&quot;</span> on <span class="argument">&quot;2020-05-02&quot;</span> at <span class="argument">&quot;00:16&quot;</span></span>
 
-  <span class="lead-duration duration">30.437</span>
+  <span class="lead-duration duration">1.401</span>
 
 </div>
 
@@ -2752,14 +1521,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-54">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-24">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-54" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;TON&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-05-02 00:16&quot;,&quot;dptCrsCode&quot;:&quot;RDH&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+      <div id="msg-24" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between RDH and TON on 2020-05-02 00:16
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;RDH&quot; and &quot;TON&quot; on &quot;2020-05-02&quot; at &quot;00:16&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:6)
 </pre>
@@ -2925,10 +1692,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.427</span>
+  <span class="lead-duration duration">0.575</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-55">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-25">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -2941,14 +1708,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-55" class="collapse collapsable-details  in ">
+  <div id="element-25" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-56">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-26">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -2960,7 +1727,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-56" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-26" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -2968,7 +1735,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;HUL&quot;</span> and <span class="argument">&quot;LDS&quot;</span> on <span class="argument">&quot;2020-05-02&quot;</span> at <span class="argument">&quot;23:08&quot;</span></span>
 
-  <span class="lead-duration duration">30.427</span>
+  <span class="lead-duration duration">0.575</span>
 
 </div>
 
@@ -2979,14 +1746,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-57">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-27">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-57" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;LDS&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-05-02 23:08&quot;,&quot;dptCrsCode&quot;:&quot;HUL&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+      <div id="msg-27" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between HUL and LDS on 2020-05-02 23:08
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;HUL&quot; and &quot;LDS&quot; on &quot;2020-05-02&quot; at &quot;23:08&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:20)
 </pre>
@@ -3137,10 +1902,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.499</span>
+  <span class="lead-duration duration">0.551</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-58">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-28">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -3153,14 +1918,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-58" class="collapse collapsable-details  in ">
+  <div id="element-28" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-59">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-29">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -3172,7 +1937,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-59" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-29" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -3180,7 +1945,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;HUD&quot;</span> and <span class="argument">&quot;LDS&quot;</span> on <span class="argument">&quot;2020-04-27&quot;</span> at <span class="argument">&quot;23:54&quot;</span></span>
 
-  <span class="lead-duration duration">30.499</span>
+  <span class="lead-duration duration">0.551</span>
 
 </div>
 
@@ -3191,14 +1956,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-60">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-30">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-60" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;LDS&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-27 23:54&quot;,&quot;dptCrsCode&quot;:&quot;HUD&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+      <div id="msg-30" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between HUD and LDS on 2020-04-27 23:54
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;HUD&quot; and &quot;LDS&quot; on &quot;2020-04-27&quot; at &quot;23:54&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:31)
 </pre>
@@ -3374,10 +2137,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.456</span>
+  <span class="lead-duration duration">0.587</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-61">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-31">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -3390,14 +2153,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-61" class="collapse collapsable-details  in ">
+  <div id="element-31" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-62">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-32">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -3409,15 +2172,42 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-62" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-32" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;LBG&quot;</span> and <span class="argument">&quot;ECR&quot;</span> on <span class="argument">&quot;2020-05-02&quot;</span> at <span class="argument">&quot;00:10&quot;</span></span>
 
-  <span class="lead-duration duration">30.456</span>
+  <span class="lead-duration duration">0.558</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;L06949&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.029</span>
 
 </div>
 
@@ -3428,47 +2218,19 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-63">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-33">
+          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
       </div>
-      <div id="msg-63" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;ECR&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-05-02 00:10&quot;,&quot;dptCrsCode&quot;:&quot;LBG&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;LBG&quot; and &quot;ECR&quot; on &quot;2020-05-02&quot; at &quot;00:10&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:47)
+      <div id="msg-33" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: L06949
+	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
+	at &#10045;.I should see a service &quot;L06949&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:48)
 </pre>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;L06949&quot;</span> that stops at</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
 
 
           <table class="step-arguments">
@@ -3616,10 +2378,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.454</span>
+  <span class="lead-duration duration">1.362</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-64">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-34">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -3632,14 +2394,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-64" class="collapse collapsable-details  in ">
+  <div id="element-34" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-65">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-35">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -3651,15 +2413,42 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-65" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-35" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;LBG&quot;</span> and <span class="argument">&quot;ECR&quot;</span> on <span class="argument">&quot;2020-05-02&quot;</span> at <span class="argument">&quot;00:35&quot;</span></span>
 
-  <span class="lead-duration duration">30.454</span>
+  <span class="lead-duration duration">1.361</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;L06950&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -3670,47 +2459,19 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-66">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-36">
+          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
       </div>
-      <div id="msg-66" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;ECR&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-05-02 00:35&quot;,&quot;dptCrsCode&quot;:&quot;LBG&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;LBG&quot; and &quot;ECR&quot; on &quot;2020-05-02&quot; at &quot;00:35&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:64)
+      <div id="msg-36" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: L06950
+	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
+	at &#10045;.I should see a service &quot;L06950&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:65)
 </pre>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;L06950&quot;</span> that stops at</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
 
 
           <table class="step-arguments">
@@ -3858,10 +2619,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.448</span>
+  <span class="lead-duration duration">1.279</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-67">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-37">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -3874,14 +2635,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-67" class="collapse collapsable-details  in ">
+  <div id="element-37" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-68">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-38">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -3893,7 +2654,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-68" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-38" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -3901,7 +2662,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-04-16&quot;</span> at <span class="argument">&quot;16:17&quot;</span></span>
 
-  <span class="lead-duration duration">30.448</span>
+  <span class="lead-duration duration">1.279</span>
 
 </div>
 
@@ -3912,14 +2673,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-69">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-39">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-69" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;CHX&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-16 16:17&quot;,&quot;dptCrsCode&quot;:&quot;RAM&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+      <div id="msg-39" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between RAM and CHX on 2020-04-16 16:17
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;RAM&quot; and &quot;CHX&quot; on &quot;2020-04-16&quot; at &quot;16:17&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:6)
 </pre>
@@ -4091,10 +2850,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.426</span>
+  <span class="lead-duration duration">0.519</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-70">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-40">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -4107,14 +2866,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-70" class="collapse collapsable-details  in ">
+  <div id="element-40" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-71">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-41">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -4126,7 +2885,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-71" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-41" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -4134,7 +2893,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-04-16&quot;</span> at <span class="argument">&quot;18:10&quot;</span></span>
 
-  <span class="lead-duration duration">0.426</span>
+  <span class="lead-duration duration">0.519</span>
 
 </div>
 
@@ -4145,14 +2904,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-72">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-42">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-72" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;CHX&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-16 18:10&quot;,&quot;dptCrsCode&quot;:&quot;RAM&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare short-circuited and no fallback available.}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+      <div id="msg-42" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between RAM and CHX on 2020-04-16 18:10
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;RAM&quot; and &quot;CHX&quot; on &quot;2020-04-16&quot; at &quot;18:10&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:30)
 </pre>
@@ -4319,10 +3076,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.459</span>
+  <span class="lead-duration duration">0.558</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-73">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-43">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -4335,14 +3092,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-73" class="collapse collapsable-details  in ">
+  <div id="element-43" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-74">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-44">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -4354,7 +3111,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-74" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-44" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -4362,7 +3119,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-04-16&quot;</span> at <span class="argument">&quot;07:12&quot;</span></span>
 
-  <span class="lead-duration duration">30.459</span>
+  <span class="lead-duration duration">0.558</span>
 
 </div>
 
@@ -4373,14 +3130,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-75">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-45">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-75" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;CHX&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-16 07:12&quot;,&quot;dptCrsCode&quot;:&quot;RAM&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+      <div id="msg-45" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between RAM and CHX on 2020-04-16 07:12
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;RAM&quot; and &quot;CHX&quot; on &quot;2020-04-16&quot; at &quot;07:12&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:53)
 </pre>
@@ -4547,10 +3302,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.435</span>
+  <span class="lead-duration duration">2.614</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-76">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-46">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -4563,14 +3318,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-76" class="collapse collapsable-details  in ">
+  <div id="element-46" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-77">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-47">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -4582,7 +3337,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-77" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-47" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -4590,7 +3345,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-04-16&quot;</span> at <span class="argument">&quot;09:08&quot;</span></span>
 
-  <span class="lead-duration duration">30.435</span>
+  <span class="lead-duration duration">2.614</span>
 
 </div>
 
@@ -4601,14 +3356,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-78">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-48">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-78" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;CHX&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-16 09:08&quot;,&quot;dptCrsCode&quot;:&quot;RAM&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+      <div id="msg-48" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between RAM and CHX on 2020-04-16 09:08
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;RAM&quot; and &quot;CHX&quot; on &quot;2020-04-16&quot; at &quot;09:08&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:76)
 </pre>
@@ -4775,10 +3528,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.425</span>
+  <span class="lead-duration duration">5.795</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-79">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-49">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -4791,14 +3544,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-79" class="collapse collapsable-details  in ">
+  <div id="element-49" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-80">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-50">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -4810,7 +3563,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-80" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-50" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -4818,7 +3571,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-04-16&quot;</span> at <span class="argument">&quot;08:14&quot;</span></span>
 
-  <span class="lead-duration duration">30.425</span>
+  <span class="lead-duration duration">5.795</span>
 
 </div>
 
@@ -4829,14 +3582,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-81">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-51">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-81" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;CHX&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-16 08:14&quot;,&quot;dptCrsCode&quot;:&quot;RAM&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+      <div id="msg-51" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between RAM and CHX on 2020-04-16 08:14
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;RAM&quot; and &quot;CHX&quot; on &quot;2020-04-16&quot; at &quot;08:14&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:99)
 </pre>
@@ -5003,10 +3754,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.420</span>
+  <span class="lead-duration duration">0.549</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-82">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-52">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -5019,14 +3770,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-82" class="collapse collapsable-details  in ">
+  <div id="element-52" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-83">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-53">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -5038,7 +3789,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-83" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-53" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -5046,7 +3797,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;KGX&quot;</span> and <span class="argument">&quot;HFN&quot;</span> on <span class="argument">&quot;2020-05-02&quot;</span> at <span class="argument">&quot;05:06&quot;</span></span>
 
-  <span class="lead-duration duration">30.420</span>
+  <span class="lead-duration duration">0.549</span>
 
 </div>
 
@@ -5057,14 +3808,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-84">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-54">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-84" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;HFN&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-05-02 05:06&quot;,&quot;dptCrsCode&quot;:&quot;KGX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+      <div id="msg-54" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between KGX and HFN on 2020-05-02 05:06
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;KGX&quot; and &quot;HFN&quot; on &quot;2020-05-02&quot; at &quot;05:06&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:6)
 </pre>
@@ -5322,10 +4071,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.458</span>
+  <span class="lead-duration duration">0.589</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-85">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-55">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -5338,14 +4087,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-85" class="collapse collapsable-details  in ">
+  <div id="element-55" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-86">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-56">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -5357,7 +4106,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-86" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-56" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -5365,7 +4114,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BTN&quot;</span> and <span class="argument">&quot;CBG&quot;</span> on <span class="argument">&quot;2020-05-02&quot;</span> at <span class="argument">&quot;07:08&quot;</span></span>
 
-  <span class="lead-duration duration">30.458</span>
+  <span class="lead-duration duration">0.589</span>
 
 </div>
 
@@ -5376,14 +4125,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-87">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-57">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-87" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;CBG&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-05-02 07:08&quot;,&quot;dptCrsCode&quot;:&quot;BTN&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+      <div id="msg-57" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between BTN and CBG on 2020-05-02 07:08
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;BTN&quot; and &quot;CBG&quot; on &quot;2020-05-02&quot; at &quot;07:08&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:38)
 </pre>
@@ -5686,10 +4433,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.460</span>
+  <span class="lead-duration duration">0.543</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-88">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-58">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -5702,14 +4449,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-88" class="collapse collapsable-details  in ">
+  <div id="element-58" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-89">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-59">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -5721,15 +4468,42 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-89" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-59" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;SOU&quot;</span> and <span class="argument">&quot;BTN&quot;</span> on <span class="argument">&quot;2020-05-02&quot;</span> at <span class="argument">&quot;11:28&quot;</span></span>
 
-  <span class="lead-duration duration">30.460</span>
+  <span class="lead-duration duration">0.541</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;W22697&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -5740,47 +4514,19 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-90">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-60">
+          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
       </div>
-      <div id="msg-90" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BTN&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-05-02 11:28&quot;,&quot;dptCrsCode&quot;:&quot;SOU&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;SOU&quot; and &quot;BTN&quot; on &quot;2020-05-02&quot; at &quot;11:28&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:79)
+      <div id="msg-60" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: W22697
+	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
+	at &#10045;.I should see a service &quot;W22697&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:80)
 </pre>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;W22697&quot;</span> that stops at</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
 
 
           <table class="step-arguments">
@@ -6095,10 +4841,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">31.118</span>
+  <span class="lead-duration duration">3.919</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-91">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-61">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -6111,14 +4857,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-91" class="collapse collapsable-details  in ">
+  <div id="element-61" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-92">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-62">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -6130,15 +4876,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-92" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-62" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;SOV&quot;</span> and <span class="argument">&quot;LST&quot;</span> on <span class="argument">&quot;2020-05-02&quot;</span> at <span class="argument">&quot;23:00&quot;</span></span>
 
-  <span class="lead-duration duration">31.118</span>
+  <span class="lead-duration duration">3.918</span>
 
 </div>
 
@@ -6147,23 +4893,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-93">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-93" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;LST&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-05-02 23:00&quot;,&quot;dptCrsCode&quot;:&quot;SOV&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;SOV&quot; and &quot;LST&quot; on &quot;2020-05-02&quot; at &quot;23:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:129)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -6178,7 +4907,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;L46725&quot;</span> that stops at</span>
 
@@ -6190,6 +4919,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-63">
+          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
+      </div>
+      <div id="msg-63" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: L46725
+	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
+	at &#10045;.I should see a service &quot;L46725&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:130)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -6404,10 +5149,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">32.489</span>
+  <span class="lead-duration duration">0.623</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-94">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-64">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -6420,14 +5165,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-94" class="collapse collapsable-details  in ">
+  <div id="element-64" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-95">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-65">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -6439,15 +5184,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-95" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-65" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;WAT&quot;</span> and <span class="argument">&quot;DKG&quot;</span> on <span class="argument">&quot;2020-05-02&quot;</span> at <span class="argument">&quot;20:24&quot;</span></span>
 
-  <span class="lead-duration duration">32.489</span>
+  <span class="lead-duration duration">0.622</span>
 
 </div>
 
@@ -6456,23 +5201,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-96">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-96" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;DKG&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-05-02 20:24&quot;,&quot;dptCrsCode&quot;:&quot;WAT&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;WAT&quot; and &quot;DKG&quot; on &quot;2020-05-02&quot; at &quot;20:24&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:159)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -6487,7 +5215,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W16712&quot;</span> that stops at</span>
 
@@ -6499,6 +5227,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-66">
+          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
+      </div>
+      <div id="msg-66" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: W16712
+	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
+	at &#10045;.I should see a service &quot;W16712&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:160)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -6733,10 +5477,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.485</span>
+  <span class="lead-duration duration">0.833</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-97">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-67">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -6749,14 +5493,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-97" class="collapse collapsable-details  in ">
+  <div id="element-67" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-98">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-68">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -6768,15 +5512,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-98" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-68" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;STP&quot;</span> and <span class="argument">&quot;LDS&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;18:34&quot;</span></span>
 
-  <span class="lead-duration duration">30.485</span>
+  <span class="lead-duration duration">0.832</span>
 
 </div>
 
@@ -6785,23 +5529,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-99">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-99" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;LDS&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-05-09 18:34&quot;,&quot;dptCrsCode&quot;:&quot;STP&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;STP&quot; and &quot;LDS&quot; on &quot;2020-05-09&quot; at &quot;18:34&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -6816,7 +5543,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;C64228&quot;</span> that stops at</span>
 
@@ -6828,6 +5555,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-69">
+          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
+      </div>
+      <div id="msg-69" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: C64228
+	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
+	at &#10045;.I should see a service &quot;C64228&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:7)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -6926,10 +5669,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.453</span>
+  <span class="lead-duration duration">0.996</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-100">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-70">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -6942,14 +5685,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-100" class="collapse collapsable-details  in ">
+  <div id="element-70" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-101">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-71">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -6961,15 +5704,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-101" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-71" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;NRW&quot;</span> and <span class="argument">&quot;LIV&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;05:50&quot;</span></span>
 
-  <span class="lead-duration duration">30.453</span>
+  <span class="lead-duration duration">0.995</span>
 
 </div>
 
@@ -6978,23 +5721,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-102">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-102" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;LIV&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-05-09 05:50&quot;,&quot;dptCrsCode&quot;:&quot;NRW&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;NRW&quot; and &quot;LIV&quot; on &quot;2020-05-09&quot; at &quot;05:50&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:22)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -7009,7 +5735,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;C64578&quot;</span> that stops at</span>
 
@@ -7021,6 +5747,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-72">
+          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
+      </div>
+      <div id="msg-72" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: C64578
+	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
+	at &#10045;.I should see a service &quot;C64578&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:23)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -7184,10 +5926,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.414</span>
+  <span class="lead-duration duration">1.798</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-103">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-73">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -7200,14 +5942,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-103" class="collapse collapsable-details  in ">
+  <div id="element-73" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-104">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-74">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -7219,15 +5961,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-104" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-74" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;GPO&quot;</span> and <span class="argument">&quot;BKG&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;19:35&quot;</span></span>
 
-  <span class="lead-duration duration">30.414</span>
+  <span class="lead-duration duration">1.797</span>
 
 </div>
 
@@ -7236,23 +5978,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-105">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-105" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BKG&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-05-09 19:35&quot;,&quot;dptCrsCode&quot;:&quot;GPO&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;GPO&quot; and &quot;BKG&quot; on &quot;2020-05-09&quot; at &quot;19:35&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:51)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -7267,7 +5992,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;G38001&quot;</span> that stops at</span>
 
@@ -7279,6 +6004,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-75">
+          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
+      </div>
+      <div id="msg-75" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: G38001
+	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
+	at &#10045;.I should see a service &quot;G38001&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:52)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -7382,10 +6123,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.421</span>
+  <span class="lead-duration duration">1.052</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-106">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-76">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -7398,14 +6139,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-106" class="collapse collapsable-details  in ">
+  <div id="element-76" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-107">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-77">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -7417,15 +6158,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-107" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-77" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;GPO&quot;</span> and <span class="argument">&quot;BKG&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;19:35&quot;</span></span>
 
-  <span class="lead-duration duration">30.421</span>
+  <span class="lead-duration duration">1.052</span>
 
 </div>
 
@@ -7434,23 +6175,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-108">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-108" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BKG&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-05-09 19:35&quot;,&quot;dptCrsCode&quot;:&quot;GPO&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;GPO&quot; and &quot;BKG&quot; on &quot;2020-05-09&quot; at &quot;19:35&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:68)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -7465,7 +6189,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;G38001&quot;</span> that stops at</span>
 
@@ -7477,6 +6201,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-78">
+          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
+      </div>
+      <div id="msg-78" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: G38001
+	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
+	at &#10045;.I should see a service &quot;G38001&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:69)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -7580,10 +6320,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.424</span>
+  <span class="lead-duration duration">30.547</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-109">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-79">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -7596,14 +6336,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-109" class="collapse collapsable-details  in ">
+  <div id="element-79" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-110">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-80">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -7615,7 +6355,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-110" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-80" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -7623,7 +6363,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;MAI&quot;</span> and <span class="argument">&quot;MLW&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;23:45&quot;</span></span>
 
-  <span class="lead-duration duration">30.424</span>
+  <span class="lead-duration duration">30.547</span>
 
 </div>
 
@@ -7634,10 +6374,10 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-111">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-81">
           <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
       </div>
-      <div id="msg-111" class="collapse collapsable-details  in ">
+      <div id="msg-81" class="collapse collapsable-details  in ">
         <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;MLW&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-05-09 23:45&quot;,&quot;dptCrsCode&quot;:&quot;MAI&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
 {&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
 	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
@@ -7743,10 +6483,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.469</span>
+  <span class="lead-duration duration">0.623</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-112">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-82">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -7759,14 +6499,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-112" class="collapse collapsable-details  in ">
+  <div id="element-82" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-113">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-83">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -7778,15 +6518,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-113" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-83" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;CBW&quot;</span> on <span class="argument">&quot;2020-04-16&quot;</span> at <span class="argument">&quot;23:40&quot;</span></span>
 
-  <span class="lead-duration duration">30.469</span>
+  <span class="lead-duration duration">0.623</span>
 
 </div>
 
@@ -7795,23 +6535,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-114">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-114" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;CBW&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-16 23:40&quot;,&quot;dptCrsCode&quot;:&quot;CHX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;CHX&quot; and &quot;CBW&quot; on &quot;2020-04-16&quot; at &quot;23:40&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -7826,7 +6549,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W47768&quot;</span> that stops at</span>
 
@@ -7838,6 +6561,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-84">
+          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
+      </div>
+      <div id="msg-84" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: W47768
+	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
+	at &#10045;.I should see a service &quot;W47768&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:7)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -7956,10 +6695,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.433</span>
+  <span class="lead-duration duration">0.604</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-115">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-85">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -7972,14 +6711,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-115" class="collapse collapsable-details  in ">
+  <div id="element-85" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-116">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-86">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -7991,15 +6730,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-116" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-86" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;RAM&quot;</span> on <span class="argument">&quot;2020-04-16&quot;</span> at <span class="argument">&quot;19:10&quot;</span></span>
 
-  <span class="lead-duration duration">30.433</span>
+  <span class="lead-duration duration">0.603</span>
 
 </div>
 
@@ -8008,23 +6747,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-117">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-117" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;RAM&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-16 19:10&quot;,&quot;dptCrsCode&quot;:&quot;CHX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;CHX&quot; and &quot;RAM&quot; on &quot;2020-04-16&quot; at &quot;19:10&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:26)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -8039,7 +6761,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W47738&quot;</span> that stops at</span>
 
@@ -8051,6 +6773,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-87">
+          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
+      </div>
+      <div id="msg-87" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: W47738
+	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
+	at &#10045;.I should see a service &quot;W47738&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:27)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -8199,10 +6937,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.466</span>
+  <span class="lead-duration duration">1.577</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-118">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-88">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -8215,14 +6953,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-118" class="collapse collapsable-details  in ">
+  <div id="element-88" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-119">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-89">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -8234,7 +6972,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-119" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-89" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -8242,7 +6980,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;RAM&quot;</span> on <span class="argument">&quot;2020-04-16&quot;</span> at <span class="argument">&quot;15:10&quot;</span></span>
 
-  <span class="lead-duration duration">30.466</span>
+  <span class="lead-duration duration">1.577</span>
 
 </div>
 
@@ -8253,14 +6991,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-120">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-90">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-120" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;RAM&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-16 15:10&quot;,&quot;dptCrsCode&quot;:&quot;CHX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+      <div id="msg-90" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between CHX and RAM on 2020-04-16 15:10
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;CHX&quot; and &quot;RAM&quot; on &quot;2020-04-16&quot; at &quot;15:10&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:52)
 </pre>
@@ -8442,10 +7178,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.433</span>
+  <span class="lead-duration duration">0.574</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-121">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-91">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -8458,14 +7194,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-121" class="collapse collapsable-details  in ">
+  <div id="element-91" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-122">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-92">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -8477,7 +7213,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-122" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-92" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -8485,7 +7221,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;DVP&quot;</span> on <span class="argument">&quot;2020-04-16&quot;</span> at <span class="argument">&quot;07:09&quot;</span></span>
 
-  <span class="lead-duration duration">30.433</span>
+  <span class="lead-duration duration">0.574</span>
 
 </div>
 
@@ -8496,14 +7232,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-123">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-93">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-123" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;DVP&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-16 07:09&quot;,&quot;dptCrsCode&quot;:&quot;CHX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+      <div id="msg-93" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between CHX and DVP on 2020-04-16 07:09
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;CHX&quot; and &quot;DVP&quot; on &quot;2020-04-16&quot; at &quot;07:09&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:78)
 </pre>
@@ -8660,10 +7394,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">30.442</span>
+  <span class="lead-duration duration">0.771</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-124">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-94">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -8676,14 +7410,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-124" class="collapse collapsable-details  in ">
+  <div id="element-94" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-125">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-95">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -8695,7 +7429,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-125" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-95" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -8703,7 +7437,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;RAM&quot;</span> on <span class="argument">&quot;2020-04-16&quot;</span> at <span class="argument">&quot;16:10&quot;</span></span>
 
-  <span class="lead-duration duration">30.442</span>
+  <span class="lead-duration duration">0.771</span>
 
 </div>
 
@@ -8714,14 +7448,12 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-126">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-96">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-126" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;RAM&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-04-16 16:10&quot;,&quot;dptCrsCode&quot;:&quot;CHX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:-1,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+      <div id="msg-96" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between CHX and RAM on 2020-04-16 16:10
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;CHX&quot; and &quot;RAM&quot; on &quot;2020-04-16&quot; at &quot;16:10&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:99)
 </pre>
