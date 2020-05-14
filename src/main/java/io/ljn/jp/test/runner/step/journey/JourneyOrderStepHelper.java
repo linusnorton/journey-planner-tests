@@ -8,6 +8,9 @@ import io.ljn.jp.test.runner.api.order.Order;
 import io.ljn.jp.test.runner.api.order.OrderApi;
 import io.ljn.jp.test.runner.api.order.OrderApiException;
 import io.ljn.jp.test.runner.api.order.OrderPaymentQuery;
+import io.ljn.jp.test.runner.journey.Fare;
+import io.ljn.jp.test.runner.journey.FareReference;
+import io.ljn.jp.test.runner.journey.Journey;
 import io.ljn.jp.test.runner.order.FulfilmentType;
 import lombok.RequiredArgsConstructor;
 import org.apache.poi.ss.usermodel.Cell;
@@ -15,6 +18,7 @@ import org.apache.poi.ss.usermodel.Row;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.Map;
 
 @RequiredArgsConstructor
@@ -32,81 +36,87 @@ public class JourneyOrderStepHelper {
 
     public void createOrder(Row row, FulfilmentType fulfilmentType) {
         int testId = (int) row.getCell(0).getNumericCellValue();
-        JourneyPlannerQuery journeyPlannerQuery = getJourneyPlannerQuery(row);
-
-        if (journeyPlannerQuery == null) {
-            System.out.println("Cannot process row: " + testId);
-            return;
-        }
-
-        JourneyPlanResponse response;
 
         try {
-            response = journeyPlannerApi.planJourney(journeyPlannerQuery);
-        } catch (JourneyPlannerException e) {
-            System.out.println("Test " + testId + " failed: " + e.getMessage());
-            return;
-        }
+            JourneyPlannerQuery journeyPlannerQuery = getJourneyPlannerQuery(row);
+            JourneyPlanResponse journeyPlanResponse = getJourneyPlannerResponse(journeyPlannerQuery);
+            String ticketCode = row.getCell(20).getStringCellValue();
+            Order order = createOrder(journeyPlanResponse, fulfilmentType, ticketCode);
+            Order confirmedOrder = payForOrder(order);
 
-        if (response.inboundJourneyList == null || response.inboundJourneyList.size() == 0) {
-            System.out.println(String.format("No results for %s to %s", journeyPlannerQuery.dptNlcCode, journeyPlannerQuery.arrNlcCode));
-            return;
-        }
-
-        Order createOrderQuery = new Order(
-            response.inboundJourneyList.get(0),
-            response.tisFareList.get(0),
-            fulfilmentType
-        );
-        Order createdOrder = orderApi.createOrder(createOrderQuery);
-        OrderPaymentQuery paymentQuery = new OrderPaymentQuery(createdOrder.ticketIssue.orderTransactionId, createdOrder.ticketIssue.totalPrice);
-
-        try {
-            Order paidOrder = orderApi.payForOrder(paymentQuery);
-            System.out.println("Test " + testId + " order: " + paidOrder.ticketIssue.orderTransactionId);
-
-            row.getCell(28).setCellValue(paidOrder.ticketIssue.orderTransactionId);
-
-            if (paidOrder.ticketIssue.payloads != null) {
-                row.getCell(29).setCellValue(paidOrder.ticketIssue.payloads.get(0).pdfUrl);
-            }
-        } catch (OrderApiException e) {
+            addOrderDetailsToSpreadsheet(row, order);
+            System.out.println("Test " + testId + " order: " + confirmedOrder.ticketIssue.orderTransactionId);
+        } catch (JourneyPlannerException | OrderApiException e) {
             System.out.println("Test " + testId + " failed: " + e.getMessage());
         }
     }
 
     private JourneyPlannerQuery getJourneyPlannerQuery(Row row) {
-        try {
-            String origin = getSafeValue(row.getCell(4));
-            String destination = getSafeValue(row.getCell(6));
+        String origin = getSafeValue(row.getCell(4));
+        String destination = getSafeValue(row.getCell(6));
+        String outwardDate = getDate(row.getCell(11));
+        String outwardTime = getTime(row.getCell(12));
+        String returnDate = getDate(row.getCell(13));
+        String returnTime = getTime(row.getCell(14));
 
-            if (origin.isEmpty() || destination.isEmpty()) {
-                return null;
-            }
+        int numAdults = getInt(row.getCell(15));
+        int numChildren = getInt(row.getCell(16));
+        String railcard = railcards.get(row.getCell(17).getStringCellValue());
 
-            String outwardDate = getDate(row.getCell(11));
-            String outwardTime = getTime(row.getCell(12));
-            String returnDate = getDate(row.getCell(13));
-            String returnTime = getTime(row.getCell(14));
+        return new JourneyPlannerQuery(
+            origin,
+            destination,
+            outwardDate,
+            outwardTime,
+            returnDate.equals("N/A") ? "" : returnDate,
+            returnTime.equals("N/A") ? outwardTime : returnTime,
+            railcard,
+            numAdults,
+            numChildren
+        );
+    }
 
-            int numAdults = getInt(row.getCell(15));
-            int numChildren = getInt(row.getCell(16));
-            String railcard = railcards.get(row.getCell(17).getStringCellValue());
+    private JourneyPlanResponse getJourneyPlannerResponse(JourneyPlannerQuery query) {
+        JourneyPlanResponse response = journeyPlannerApi.planJourney(query);
 
-            return new JourneyPlannerQuery(
-                origin,
-                destination,
-                outwardDate,
-                outwardTime,
-                returnDate.equals("N/A") ? "" : returnDate,
-                returnTime.equals("N/A") ? outwardTime : returnTime,
-                railcard,
-                numAdults,
-                numChildren
-            );
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
+        if (response.inboundJourneyList == null || response.inboundJourneyList.size() == 0) {
+            throw new JourneyPlannerException(String.format("No results for %s to %s", query.dptNlcCode, query.arrNlcCode));
+        }
+
+        return response;
+    }
+
+    private Order createOrder(JourneyPlanResponse response, FulfilmentType fulfilmentType, String ticketCode) {
+        Journey journey = response.inboundJourneyList.get(0);
+        Fare fare = journey.journeyFareList.stream()
+            .map(f -> getFare(response.tisFareList, f))
+            .filter(f -> f.fareClassification.ticketCode.equals(ticketCode))
+            .findFirst()
+            .orElseThrow(() -> new JourneyPlannerException("Could not find ticket code " + ticketCode));
+
+        Order createOrderQuery = new Order(journey, fare, fulfilmentType);
+
+        return orderApi.createOrder(createOrderQuery);
+    }
+
+    private Fare getFare(List<Fare> tisFareList, FareReference fareRef) {
+        return tisFareList.stream()
+            .filter(f -> f.fareReferenceId == fareRef.fareReferenceId)
+            .findFirst()
+            .orElseThrow(() -> new JourneyPlannerException("Fare ref not found " + fareRef.fareReferenceId));
+    }
+
+    private Order payForOrder(Order order) {
+        OrderPaymentQuery paymentQuery = new OrderPaymentQuery(order.ticketIssue.orderTransactionId, order.ticketIssue.totalPrice);
+
+        return orderApi.payForOrder(paymentQuery);
+    }
+
+    private void addOrderDetailsToSpreadsheet(Row row, Order order) {
+        row.getCell(28).setCellValue(order.ticketIssue.orderTransactionId);
+
+        if (order.ticketIssue.payloads != null) {
+            row.getCell(29).setCellValue(order.ticketIssue.payloads.get(0).pdfUrl);
         }
     }
 

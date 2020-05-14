@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class Journey {
     public final List<? extends Leg> tisSegmentList;
-    public final List<Fare> tisFareList;
+    public final List<FareReference> journeyFareList;
     public final StationInfo dptLocation;
     public final StationInfo arrLocation;
     public final String departureDateTime;

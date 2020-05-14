@@ -7,7 +7,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class Fare {
     public final String fareId;
-    public final String fareReferenceId;
+    public final int fareReferenceId;
     public final FareClassification fareClassification;
     public final FareJourney fareJourney;
     public final FarePrice farePrice;
