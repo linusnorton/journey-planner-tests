@@ -46,7 +46,7 @@ public class JourneyPlannerQuery {
         railCardList = railcard == null ? "".split(",") : railcard.split(",");
         adultCount = adults;
         childCount = children;
-        maxJourney = -1;
+        maxJourney = 100;
         openReturn = false;
         keepOvertaken = false;
         showRouteingDetail = false;
