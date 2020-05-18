@@ -50,9 +50,9 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                41,
-                32,
-                38,
+                0,
+                36,
+                63,
                 0,
                 0
             ],
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 111) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 99) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -106,8 +106,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                10,
-                32
+                0,
+                36
             ],
             backgroundColor: [
                 "#00B000",
@@ -140,7 +140,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 42) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 36) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -153,8 +153,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                   1,
-                   10
+                   0,
+                   11
                ],
                backgroundColor: [
                 "#00B000",
@@ -228,7 +228,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>17 May 2020, 15:48</td>
+      <td>18 May 2020, 11:44</td>
     </tr>
   </tbody>
 </table>
@@ -325,26 +325,9 @@ $(document).ready(function() {
       <tr>
         <td class="tagname"><a href="report-feature_1605046418.html">The journey planner should offer connect services after midnight</a></td>
 
-        <td      class="passed"    >2</td>
         <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">2</td>
-
-        <td  class="passed"    >1</td>
-        <td >0</td>
-        <td class="total">1</td>
-
-        <td class="duration" data-value="4061613000">4.061</td>
-        <td class="passed">Passed</td>
-      </tr>
-      <tr>
-        <td class="tagname"><a href="report-feature_1_258670753.html">Some journeys may involve a valid doubleback</a></td>
-
-        <td      class="passed"    >1</td>
         <td      class="failed"    >1</td>
-        <td >0</td>
+        <td     class="skipped"   >1</td>
         <td >0</td>
         <td >0</td>
         <td class="total">2</td>
@@ -353,83 +336,100 @@ $(document).ready(function() {
         <td  class="failed"    >1</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="2971824000">2.971</td>
+        <td class="duration" data-value="31570065000">31.570</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_1_258670753.html">Some journeys may involve a valid doubleback</a></td>
+
+        <td >0</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >1</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">2</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="31572969000">31.572</td>
         <td class="failed">Failed</td>
       </tr>
       <tr>
         <td class="tagname"><a href="report-feature_2_771976588.html">The journey planner should offer the user multiple routes</a></td>
 
-        <td      class="passed"    >13</td>
-        <td      class="failed"    >3</td>
         <td >0</td>
+        <td      class="failed"    >8</td>
+        <td     class="skipped"   >8</td>
         <td >0</td>
         <td >0</td>
         <td class="total">16</td>
 
-        <td  class="passed"    >5</td>
-        <td  class="failed"    >3</td>
+        <td >0</td>
+        <td  class="failed"    >8</td>
         <td class="total">8</td>
 
-        <td class="duration" data-value="14931113000">14.931</td>
+        <td class="duration" data-value="247714837000">4:7.714</td>
         <td class="failed">Failed</td>
       </tr>
       <tr>
         <td class="tagname"><a href="report-feature_3_3874326106.html">The journey planner should offer routes via London and not via London with appropriate fares</a></td>
 
-        <td      class="passed"    >5</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >6</td>
         <td >0</td>
         <td >0</td>
         <td class="total">8</td>
 
-        <td  class="passed"    >1</td>
-        <td  class="failed"    >1</td>
+        <td >0</td>
+        <td  class="failed"    >2</td>
         <td class="total">2</td>
 
-        <td class="duration" data-value="3489335000">3.489</td>
+        <td class="duration" data-value="61396103000">1:1.396</td>
         <td class="failed">Failed</td>
       </tr>
       <tr>
         <td class="tagname"><a href="report-feature_4_709490566.html">Some journeys may require the routeing guide maps to be divided at a via station</a></td>
 
-        <td      class="passed"    >4</td>
-        <td      class="failed"    >1</td>
         <td >0</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >3</td>
         <td >0</td>
         <td >0</td>
         <td class="total">5</td>
 
-        <td  class="passed"    >1</td>
-        <td  class="failed"    >1</td>
+        <td >0</td>
+        <td  class="failed"    >2</td>
         <td class="total">2</td>
 
-        <td class="duration" data-value="6545636000">6.545</td>
+        <td class="duration" data-value="61963950000">1:1.963</td>
         <td class="failed">Failed</td>
       </tr>
       <tr>
         <td class="tagname"><a href="report-feature_5_4073142093.html">The journey planner should make use of transfers to connect trains</a></td>
 
-        <td      class="passed"    >5</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td      class="failed"    >3</td>
+        <td     class="skipped"   >5</td>
         <td >0</td>
         <td >0</td>
         <td class="total">8</td>
 
-        <td  class="passed"    >2</td>
-        <td  class="failed"    >1</td>
+        <td >0</td>
+        <td  class="failed"    >3</td>
         <td class="total">3</td>
 
-        <td class="duration" data-value="4337530000">4.337</td>
+        <td class="duration" data-value="92339538000">1:32.339</td>
         <td class="failed">Failed</td>
       </tr>
       <tr>
         <td class="tagname"><a href="report-feature_6_3507411400.html">Schedule cancellations</a></td>
 
-        <td      class="passed"    >2</td>
+        <td >0</td>
         <td      class="failed"    >5</td>
-        <td     class="skipped"   >13</td>
+        <td     class="skipped"   >15</td>
         <td >0</td>
         <td >0</td>
         <td class="total">20</td>
@@ -438,11 +438,45 @@ $(document).ready(function() {
         <td  class="failed"    >5</td>
         <td class="total">5</td>
 
-        <td class="duration" data-value="5160753000">5.160</td>
+        <td class="duration" data-value="153432457000">2:33.432</td>
         <td class="failed">Failed</td>
       </tr>
       <tr>
         <td class="tagname"><a href="report-feature_7_467630994.html">Journey joins another train</a></td>
+
+        <td >0</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">4</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="68642637000">1:8.642</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_8_719652825.html">Schedule overlays</a></td>
+
+        <td >0</td>
+        <td      class="failed"    >5</td>
+        <td     class="skipped"   >15</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">20</td>
+
+        <td >0</td>
+        <td  class="failed"    >5</td>
+        <td class="total">5</td>
+
+        <td class="duration" data-value="156920737000">2:36.920</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_9_2304417082.html">Public time different to scheduled time</a></td>
 
         <td >0</td>
         <td      class="failed"    >5</td>
@@ -455,58 +489,24 @@ $(document).ready(function() {
         <td  class="failed"    >5</td>
         <td class="total">5</td>
 
-        <td class="duration" data-value="4062436000">4.062</td>
-        <td class="failed">Failed</td>
-      </tr>
-      <tr>
-        <td class="tagname"><a href="report-feature_8_719652825.html">Schedule overlays</a></td>
-
-        <td      class="passed"    >3</td>
-        <td      class="failed"    >5</td>
-        <td     class="skipped"   >12</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">20</td>
-
-        <td >0</td>
-        <td  class="failed"    >5</td>
-        <td class="total">5</td>
-
-        <td class="duration" data-value="5426132000">5.426</td>
-        <td class="failed">Failed</td>
-      </tr>
-      <tr>
-        <td class="tagname"><a href="report-feature_9_2304417082.html">Public time different to scheduled time</a></td>
-
-        <td      class="passed"    >4</td>
-        <td      class="failed"    >5</td>
-        <td     class="skipped"   >1</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">10</td>
-
-        <td >0</td>
-        <td  class="failed"    >5</td>
-        <td class="total">5</td>
-
-        <td class="duration" data-value="42092474000">42.092</td>
+        <td class="duration" data-value="154459162000">2:34.459</td>
         <td class="failed">Failed</td>
       </tr>
       <tr>
         <td class="tagname"><a href="report-feature_10_3659762142.html">Journey splits</a></td>
 
-        <td      class="passed"    >2</td>
-        <td      class="failed"    >5</td>
-        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >2</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">10</td>
+        <td class="total">4</td>
 
         <td >0</td>
-        <td  class="failed"    >5</td>
-        <td class="total">5</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
 
-        <td class="duration" data-value="4365414000">4.365</td>
+        <td class="duration" data-value="61368672000">1:1.368</td>
         <td class="failed">Failed</td>
       </tr>
   </tbody>
@@ -514,33 +514,33 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>41</td>
-      <td>32</td>
-      <td>38</td>
+      <td>0</td>
+      <td>36</td>
+      <td>63</td>
       <td>0</td>
       <td>0</td>
-      <td>111</td>
+      <td>99</td>
 
-      <td>10</td>
-      <td>32</td>
-      <td>42</td>
+      <td>0</td>
+      <td>36</td>
+      <td>36</td>
 
-      <td class="duration">1:37.444</td>
+      <td class="duration">18:41.381</td>
       <td>11</td>
     </tr>
     <tr>
       <td></td>
-      <td>36.94%</td>
-      <td>28.83%</td>
-      <td>34.23%</td>
+      <td>0.00%</td>
+      <td>36.36%</td>
+      <td>63.64%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>23.81%</td>
-      <td>76.19%</td>
+      <td>0.00%</td>
+      <td>100.00%</td>
       <td></td>
       <td></td>
-      <td>9.09%</td>
+      <td>0.00%</td>
     </tr>
   </tfoot>
 </table>

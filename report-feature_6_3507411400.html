@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>17 May 2020, 15:48</td>
+      <td>18 May 2020, 11:44</td>
     </tr>
   </tbody>
 </table>
@@ -127,9 +127,9 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">Schedule cancellations</td>
-          <td      class="passed"    >2</td>
+          <td >0</td>
           <td      class="failed"    >5</td>
-          <td     class="skipped"   >13</td>
+          <td     class="skipped"   >15</td>
           <td >0</td>
           <td >0</td>
           <td class="total">20</td>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >5</td>
           <td class="total">5</td>
 
-          <td class="duration" data-value="5160753000">5.160</td>
+          <td class="duration" data-value="153432457000">2:33.432</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,14 +193,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.623</span>
+  <span class="lead-duration duration">30.721</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Service between RDH and TON is cancelled on a particular day</span>
+  <span class="name">Service between SNF and LST is cancelled on a particular day</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -234,9 +234,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;RDH&quot;</span> and <span class="argument">&quot;TON&quot;</span> on <span class="argument">&quot;2020-05-02&quot;</span> at <span class="argument">&quot;00:16&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;SNF&quot;</span> and <span class="argument">&quot;LST&quot;</span> on <span class="argument">&quot;2020-06-08&quot;</span> at <span class="argument">&quot;21:34&quot;</span></span>
 
-  <span class="lead-duration duration">0.623</span>
+  <span class="lead-duration duration">30.721</span>
 
 </div>
 
@@ -248,13 +248,15 @@ $(document).ready(function() {
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between RDH and TON on 2020-05-02 00:16
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;LST&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-06-08 21:34&quot;,&quot;dptCrsCode&quot;:&quot;SNF&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;RDH&quot; and &quot;TON&quot; on &quot;2020-05-02&quot; at &quot;00:16&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:6)
+	at &#10045;.a query between &quot;SNF&quot; and &quot;LST&quot; on &quot;2020-06-08&quot; at &quot;21:34&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:6)
 </pre>
       </div>
     </div>
@@ -276,7 +278,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;L03092&quot;</span> that stops at</span>
+  <span class="name">I should see a service <span class="argument">&quot;P60678&quot;</span> that stops at</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -295,38 +297,73 @@ $(document).ready(function() {
                   <td>departure</td>
               </tr>
               <tr>
-                  <td>RDH</td>
+                  <td>SNF</td>
                   <td>--:--</td>
-                  <td>00:16</td>
+                  <td>21:34</td>
               </tr>
               <tr>
-                  <td>NUF</td>
-                  <td>00:20</td>
-                  <td>00:21</td>
+                  <td>BRE</td>
+                  <td>21:37</td>
+                  <td>21:37</td>
               </tr>
               <tr>
-                  <td>GDN</td>
-                  <td>00:26</td>
-                  <td>00:26</td>
+                  <td>HRO</td>
+                  <td>21:42</td>
+                  <td>21:42</td>
               </tr>
               <tr>
-                  <td>EBR</td>
-                  <td>00:32</td>
-                  <td>00:32</td>
+                  <td>GDP</td>
+                  <td>21:46</td>
+                  <td>21:46</td>
               </tr>
               <tr>
-                  <td>PHR</td>
-                  <td>00:38</td>
-                  <td>00:38</td>
+                  <td>RMF</td>
+                  <td>21:48</td>
+                  <td>21:48</td>
               </tr>
               <tr>
-                  <td>LIH</td>
-                  <td>00:42</td>
-                  <td>00:42</td>
+                  <td>CTH</td>
+                  <td>21:52</td>
+                  <td>21:52</td>
               </tr>
               <tr>
-                  <td>TON</td>
-                  <td>00:46</td>
+                  <td>GMY</td>
+                  <td>21:54</td>
+                  <td>21:54</td>
+              </tr>
+              <tr>
+                  <td>SVK</td>
+                  <td>21:56</td>
+                  <td>21:56</td>
+              </tr>
+              <tr>
+                  <td>IFD</td>
+                  <td>21:59</td>
+                  <td>21:59</td>
+              </tr>
+              <tr>
+                  <td>MNP</td>
+                  <td>22:02</td>
+                  <td>22:02</td>
+              </tr>
+              <tr>
+                  <td>FOG</td>
+                  <td>22:04</td>
+                  <td>22:04</td>
+              </tr>
+              <tr>
+                  <td>MYL</td>
+                  <td>22:06</td>
+                  <td>22:06</td>
+              </tr>
+              <tr>
+                  <td>SRA</td>
+                  <td>22:08</td>
+                  <td>22:09</td>
+              </tr>
+              <tr>
+                  <td>LST</td>
+                  <td>22:17</td>
                   <td>--:--</td>
               </tr>
           </table>
@@ -345,7 +382,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-When skipped">
   <span class="keyword indention">When</span>
-  <span class="name">I query between <span class="argument">&quot;RDH&quot;</span> and <span class="argument">&quot;TON&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;00:16&quot;</span></span>
+  <span class="name">I query between <span class="argument">&quot;SNF&quot;</span> and <span class="argument">&quot;LST&quot;</span> on <span class="argument">&quot;2020-06-15&quot;</span> at <span class="argument">&quot;21:34&quot;</span></span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -372,7 +409,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
-  <span class="name">I should not see a service <span class="argument">&quot;L03092&quot;</span> in the results</span>
+  <span class="name">I should not see a service <span class="argument">&quot;P60678&quot;</span> in the results</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -414,14 +451,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.964</span>
+  <span class="lead-duration duration">30.869</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Service between HUL and LDS is cancelled on a particular day</span>
+  <span class="name">Service between LST and SOV is cancelled on a particular day</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -455,9 +492,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;HUL&quot;</span> and <span class="argument">&quot;LDS&quot;</span> on <span class="argument">&quot;2020-05-02&quot;</span> at <span class="argument">&quot;23:08&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;LST&quot;</span> and <span class="argument">&quot;SOV&quot;</span> on <span class="argument">&quot;2020-06-08&quot;</span> at <span class="argument">&quot;21:35&quot;</span></span>
 
-  <span class="lead-duration duration">1.964</span>
+  <span class="lead-duration duration">30.869</span>
 
 </div>
 
@@ -469,13 +506,15 @@ $(document).ready(function() {
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
-          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
       </div>
       <div id="msg-6" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between HUL and LDS on 2020-05-02 23:08
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;SOV&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-06-08 21:35&quot;,&quot;dptCrsCode&quot;:&quot;LST&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;HUL&quot; and &quot;LDS&quot; on &quot;2020-05-02&quot; at &quot;23:08&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:20)
+	at &#10045;.a query between &quot;LST&quot; and &quot;SOV&quot; on &quot;2020-06-08&quot; at &quot;21:35&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:27)
 </pre>
       </div>
     </div>
@@ -497,7 +536,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;Y33213&quot;</span> that stops at</span>
+  <span class="name">I should see a service <span class="argument">&quot;P05843&quot;</span> that stops at</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -516,23 +555,58 @@ $(document).ready(function() {
                   <td>departure</td>
               </tr>
               <tr>
-                  <td>HUL</td>
+                  <td>LST</td>
                   <td>--:--</td>
-                  <td>23:08</td>
+                  <td>21:35</td>
               </tr>
               <tr>
-                  <td>BUH</td>
-                  <td>23:19</td>
-                  <td>23:20</td>
+                  <td>SRA</td>
+                  <td>21:42</td>
+                  <td>21:42</td>
               </tr>
               <tr>
-                  <td>SBY</td>
-                  <td>23:39</td>
-                  <td>23:40</td>
+                  <td>SNF</td>
+                  <td>21:57</td>
+                  <td>21:59</td>
               </tr>
               <tr>
-                  <td>LDS</td>
-                  <td>00:04</td>
+                  <td>BIC</td>
+                  <td>22:05</td>
+                  <td>22:05</td>
+              </tr>
+              <tr>
+                  <td>WIC</td>
+                  <td>22:11</td>
+                  <td>22:11</td>
+              </tr>
+              <tr>
+                  <td>RLG</td>
+                  <td>22:16</td>
+                  <td>22:16</td>
+              </tr>
+              <tr>
+                  <td>HOC</td>
+                  <td>22:21</td>
+                  <td>22:21</td>
+              </tr>
+              <tr>
+                  <td>RFD</td>
+                  <td>22:24</td>
+                  <td>22:24</td>
+              </tr>
+              <tr>
+                  <td>SIA</td>
+                  <td>22:27</td>
+                  <td>22:27</td>
+              </tr>
+              <tr>
+                  <td>PRL</td>
+                  <td>22:29</td>
+                  <td>22:30</td>
+              </tr>
+              <tr>
+                  <td>SOV</td>
+                  <td>22:34</td>
                   <td>--:--</td>
               </tr>
           </table>
@@ -551,7 +625,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-When skipped">
   <span class="keyword indention">When</span>
-  <span class="name">I query between <span class="argument">&quot;HUL&quot;</span> and <span class="argument">&quot;LDS&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;23:08&quot;</span></span>
+  <span class="name">I query between <span class="argument">&quot;LST&quot;</span> and <span class="argument">&quot;SOV&quot;</span> on <span class="argument">&quot;2020-06-15&quot;</span> at <span class="argument">&quot;21:35&quot;</span></span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -578,7 +652,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
-  <span class="name">I should not see a service <span class="argument">&quot;Y33213&quot;</span> in the results</span>
+  <span class="name">I should not see a service <span class="argument">&quot;P05843&quot;</span> in the results</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -620,14 +694,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.403</span>
+  <span class="lead-duration duration">30.571</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Service between HUD and LDS is cancelled on a particular day</span>
+  <span class="name">Service between EXD and YVJ is cancelled on a particular day</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -661,9 +735,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;HUD&quot;</span> and <span class="argument">&quot;LDS&quot;</span> on <span class="argument">&quot;2020-04-27&quot;</span> at <span class="argument">&quot;23:54&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;EXD&quot;</span> and <span class="argument">&quot;YVJ&quot;</span> on <span class="argument">&quot;2020-06-08&quot;</span> at <span class="argument">&quot;23:27&quot;</span></span>
 
-  <span class="lead-duration duration">1.403</span>
+  <span class="lead-duration duration">30.571</span>
 
 </div>
 
@@ -675,13 +749,15 @@ $(document).ready(function() {
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
-          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
       </div>
       <div id="msg-9" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between HUD and LDS on 2020-04-27 23:54
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;YVJ&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-06-08 23:27&quot;,&quot;dptCrsCode&quot;:&quot;EXD&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;HUD&quot; and &quot;LDS&quot; on &quot;2020-04-27&quot; at &quot;23:54&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:31)
+	at &#10045;.a query between &quot;EXD&quot; and &quot;YVJ&quot; on &quot;2020-06-08&quot; at &quot;23:27&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:45)
 </pre>
       </div>
     </div>
@@ -703,7 +779,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;Y33543&quot;</span> that stops at</span>
+  <span class="name">I should see a service <span class="argument">&quot;W16934&quot;</span> that stops at</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -722,48 +798,18 @@ $(document).ready(function() {
                   <td>departure</td>
               </tr>
               <tr>
-                  <td>HUD</td>
+                  <td>EXD</td>
                   <td>--:--</td>
-                  <td>23:54</td>
+                  <td>23:27</td>
               </tr>
               <tr>
-                  <td>DHN</td>
-                  <td>23:57</td>
-                  <td>23:58</td>
+                  <td>EXC</td>
+                  <td>23:30</td>
+                  <td>23:31</td>
               </tr>
               <tr>
-                  <td>MIR</td>
-                  <td>00:03</td>
-                  <td>00:03</td>
-              </tr>
-              <tr>
-                  <td>RVN</td>
-                  <td>00:07</td>
-                  <td>00:08</td>
-              </tr>
-              <tr>
-                  <td>DEW</td>
-                  <td>00:10</td>
-                  <td>00:10</td>
-              </tr>
-              <tr>
-                  <td>BTL</td>
-                  <td>00:13</td>
-                  <td>00:13</td>
-              </tr>
-              <tr>
-                  <td>MLY</td>
-                  <td>00:18</td>
-                  <td>00:18</td>
-              </tr>
-              <tr>
-                  <td>COT</td>
-                  <td>00:21</td>
-                  <td>00:22</td>
-              </tr>
-              <tr>
-                  <td>LDS</td>
-                  <td>00:29</td>
+                  <td>YVJ</td>
+                  <td>00:30</td>
                   <td>--:--</td>
               </tr>
           </table>
@@ -782,7 +828,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-When skipped">
   <span class="keyword indention">When</span>
-  <span class="name">I query between <span class="argument">&quot;HUD&quot;</span> and <span class="argument">&quot;LDS&quot;</span> on <span class="argument">&quot;2020-05-04&quot;</span> at <span class="argument">&quot;23:54&quot;</span></span>
+  <span class="name">I query between <span class="argument">&quot;EXD&quot;</span> and <span class="argument">&quot;YVJ&quot;</span> on <span class="argument">&quot;2020-06-15&quot;</span> at <span class="argument">&quot;23:27&quot;</span></span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -809,7 +855,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
-  <span class="name">I should not see a service <span class="argument">&quot;Y33543&quot;</span> in the results</span>
+  <span class="name">I should not see a service <span class="argument">&quot;W16934&quot;</span> in the results</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -851,14 +897,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.584</span>
+  <span class="lead-duration duration">30.656</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Service between LBG and ECR is cancelled on a particular day</span>
+  <span class="name">Service between LST and ENF is cancelled on a particular day</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -890,11 +936,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;LBG&quot;</span> and <span class="argument">&quot;ECR&quot;</span> on <span class="argument">&quot;2020-05-02&quot;</span> at <span class="argument">&quot;00:10&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;LST&quot;</span> and <span class="argument">&quot;ENF&quot;</span> on <span class="argument">&quot;2020-06-08&quot;</span> at <span class="argument">&quot;22:30&quot;</span></span>
 
-  <span class="lead-duration duration">0.530</span>
+  <span class="lead-duration duration">30.656</span>
 
 </div>
 
@@ -902,6 +948,23 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;ENF&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-06-08 22:30&quot;,&quot;dptCrsCode&quot;:&quot;LST&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;LST&quot; and &quot;ENF&quot; on &quot;2020-06-08&quot; at &quot;22:30&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:55)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -917,11 +980,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;L06949&quot;</span> that stops at</span>
+  <span class="name">I should see a service <span class="argument">&quot;C93923&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.053</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -929,22 +992,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
-          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
-      </div>
-      <div id="msg-12" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: L06949
-	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
-	at &#10045;.I should see a service &quot;L06949&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:48)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -954,53 +1001,78 @@ $(document).ready(function() {
                   <td>departure</td>
               </tr>
               <tr>
-                  <td>LBG</td>
+                  <td>LST</td>
                   <td>--:--</td>
-                  <td>00:10</td>
+                  <td>22:30</td>
               </tr>
               <tr>
-                  <td>NXG</td>
-                  <td>00:16</td>
-                  <td>00:16</td>
+                  <td>BET</td>
+                  <td>22:33</td>
+                  <td>22:33</td>
               </tr>
               <tr>
-                  <td>BCY</td>
-                  <td>00:19</td>
-                  <td>00:19</td>
+                  <td>CBH</td>
+                  <td>22:35</td>
+                  <td>22:35</td>
               </tr>
               <tr>
-                  <td>HPA</td>
-                  <td>00:21</td>
-                  <td>00:21</td>
+                  <td>LOF</td>
+                  <td>22:37</td>
+                  <td>22:37</td>
               </tr>
               <tr>
-                  <td>FOH</td>
-                  <td>00:24</td>
-                  <td>00:24</td>
+                  <td>HAC</td>
+                  <td>22:39</td>
+                  <td>22:39</td>
               </tr>
               <tr>
-                  <td>SYD</td>
-                  <td>00:27</td>
-                  <td>00:27</td>
+                  <td>REC</td>
+                  <td>22:42</td>
+                  <td>22:42</td>
               </tr>
               <tr>
-                  <td>PNW</td>
-                  <td>00:29</td>
-                  <td>00:29</td>
+                  <td>SKW</td>
+                  <td>22:43</td>
+                  <td>22:43</td>
               </tr>
               <tr>
-                  <td>ANZ</td>
-                  <td>00:31</td>
-                  <td>00:31</td>
+                  <td>SMH</td>
+                  <td>22:45</td>
+                  <td>22:45</td>
               </tr>
               <tr>
-                  <td>NWD</td>
-                  <td>00:34</td>
-                  <td>00:35</td>
+                  <td>SVS</td>
+                  <td>22:47</td>
+                  <td>22:48</td>
               </tr>
               <tr>
-                  <td>ECR</td>
-                  <td>00:38</td>
+                  <td>BCV</td>
+                  <td>22:50</td>
+                  <td>22:50</td>
+              </tr>
+              <tr>
+                  <td>WHL</td>
+                  <td>22:52</td>
+                  <td>22:52</td>
+              </tr>
+              <tr>
+                  <td>SLV</td>
+                  <td>22:54</td>
+                  <td>22:54</td>
+              </tr>
+              <tr>
+                  <td>EDR</td>
+                  <td>22:56</td>
+                  <td>22:56</td>
+              </tr>
+              <tr>
+                  <td>BHK</td>
+                  <td>22:59</td>
+                  <td>22:59</td>
+              </tr>
+              <tr>
+                  <td>ENF</td>
+                  <td>23:03</td>
                   <td>--:--</td>
               </tr>
           </table>
@@ -1019,7 +1091,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-When skipped">
   <span class="keyword indention">When</span>
-  <span class="name">I query between <span class="argument">&quot;LBG&quot;</span> and <span class="argument">&quot;ECR&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;00:10&quot;</span></span>
+  <span class="name">I query between <span class="argument">&quot;LST&quot;</span> and <span class="argument">&quot;ENF&quot;</span> on <span class="argument">&quot;2020-06-15&quot;</span> at <span class="argument">&quot;22:30&quot;</span></span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -1046,7 +1118,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
-  <span class="name">I should not see a service <span class="argument">&quot;L06949&quot;</span> in the results</span>
+  <span class="name">I should not see a service <span class="argument">&quot;C93923&quot;</span> in the results</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -1088,14 +1160,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.585</span>
+  <span class="lead-duration duration">30.612</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Service between LBG and ECR is cancelled on a particular day</span>
+  <span class="name">Service between LST and CHN is cancelled on a particular day</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -1127,11 +1199,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;LBG&quot;</span> and <span class="argument">&quot;ECR&quot;</span> on <span class="argument">&quot;2020-05-02&quot;</span> at <span class="argument">&quot;00:35&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;LST&quot;</span> and <span class="argument">&quot;CHN&quot;</span> on <span class="argument">&quot;2020-06-08&quot;</span> at <span class="argument">&quot;23:15&quot;</span></span>
 
-  <span class="lead-duration duration">0.584</span>
+  <span class="lead-duration duration">30.612</span>
 
 </div>
 
@@ -1139,6 +1211,23 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;CHN&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDate&quot;:&quot;2020-06-08 23:15&quot;,&quot;dptCrsCode&quot;:&quot;LST&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDate&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+{&quot;status&quot;: {&quot;message&quot;: &quot;[GateException]{Filter threw Exception}   [HystrixRuntimeException]{wap.sbu.train/tisuk/fare failed and no fallback available.}   [SocketTimeoutException]{Read timed out}   &quot;, &quot;status_code&quot;: 500}}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;LST&quot; and &quot;CHN&quot; on &quot;2020-06-08&quot; at &quot;23:15&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:77)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -1154,9 +1243,9 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;L06950&quot;</span> that stops at</span>
+  <span class="name">I should see a service <span class="argument">&quot;C92054&quot;</span> that stops at</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -1167,22 +1256,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
-          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
-      </div>
-      <div id="msg-15" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: L06950
-	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
-	at &#10045;.I should see a service &quot;L06950&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:65)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
           <table class="step-arguments">
               <tr>
@@ -1191,53 +1264,88 @@ $(document).ready(function() {
                   <td>departure</td>
               </tr>
               <tr>
-                  <td>LBG</td>
+                  <td>LST</td>
                   <td>--:--</td>
-                  <td>00:35</td>
+                  <td>23:15</td>
               </tr>
               <tr>
-                  <td>NXG</td>
-                  <td>00:41</td>
-                  <td>00:41</td>
+                  <td>BET</td>
+                  <td>23:18</td>
+                  <td>23:18</td>
               </tr>
               <tr>
-                  <td>BCY</td>
-                  <td>00:44</td>
-                  <td>00:44</td>
+                  <td>CBH</td>
+                  <td>23:20</td>
+                  <td>23:20</td>
               </tr>
               <tr>
-                  <td>HPA</td>
-                  <td>00:46</td>
-                  <td>00:46</td>
+                  <td>LOF</td>
+                  <td>23:22</td>
+                  <td>23:22</td>
               </tr>
               <tr>
-                  <td>FOH</td>
-                  <td>00:49</td>
-                  <td>00:49</td>
+                  <td>HAC</td>
+                  <td>23:24</td>
+                  <td>23:24</td>
               </tr>
               <tr>
-                  <td>SYD</td>
-                  <td>00:52</td>
-                  <td>00:52</td>
+                  <td>REC</td>
+                  <td>23:27</td>
+                  <td>23:27</td>
               </tr>
               <tr>
-                  <td>PNW</td>
-                  <td>00:54</td>
-                  <td>00:54</td>
+                  <td>SKW</td>
+                  <td>23:28</td>
+                  <td>23:28</td>
               </tr>
               <tr>
-                  <td>ANZ</td>
-                  <td>00:56</td>
-                  <td>00:56</td>
+                  <td>SMH</td>
+                  <td>23:30</td>
+                  <td>23:30</td>
               </tr>
               <tr>
-                  <td>NWD</td>
-                  <td>00:59</td>
-                  <td>01:08</td>
+                  <td>SVS</td>
+                  <td>23:32</td>
+                  <td>23:33</td>
               </tr>
               <tr>
-                  <td>ECR</td>
-                  <td>01:13</td>
+                  <td>BCV</td>
+                  <td>23:35</td>
+                  <td>23:35</td>
+              </tr>
+              <tr>
+                  <td>WHL</td>
+                  <td>23:37</td>
+                  <td>23:37</td>
+              </tr>
+              <tr>
+                  <td>SLV</td>
+                  <td>23:39</td>
+                  <td>23:39</td>
+              </tr>
+              <tr>
+                  <td>EDR</td>
+                  <td>23:41</td>
+                  <td>23:41</td>
+              </tr>
+              <tr>
+                  <td>SBU</td>
+                  <td>23:44</td>
+                  <td>23:44</td>
+              </tr>
+              <tr>
+                  <td>TUR</td>
+                  <td>23:47</td>
+                  <td>23:47</td>
+              </tr>
+              <tr>
+                  <td>TEO</td>
+                  <td>23:50</td>
+                  <td>23:50</td>
+              </tr>
+              <tr>
+                  <td>CHN</td>
+                  <td>23:54</td>
                   <td>--:--</td>
               </tr>
           </table>
@@ -1256,7 +1364,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-When skipped">
   <span class="keyword indention">When</span>
-  <span class="name">I query between <span class="argument">&quot;LBG&quot;</span> and <span class="argument">&quot;ECR&quot;</span> on <span class="argument">&quot;2020-05-09&quot;</span> at <span class="argument">&quot;00:35&quot;</span></span>
+  <span class="name">I query between <span class="argument">&quot;LST&quot;</span> and <span class="argument">&quot;CHN&quot;</span> on <span class="argument">&quot;2020-06-15&quot;</span> at <span class="argument">&quot;23:15&quot;</span></span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -1283,7 +1391,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
-  <span class="name">I should not see a service <span class="argument">&quot;L06950&quot;</span> in the results</span>
+  <span class="name">I should not see a service <span class="argument">&quot;C92054&quot;</span> in the results</span>
 
   <span class="lead-duration duration">0.000</span>
 
