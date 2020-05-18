@@ -4,6 +4,7 @@ import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
 import io.ljn.jp.test.runner.api.HttpClient;
 import io.ljn.jp.test.runner.api.jp.LegAdapter;
+import io.ljn.jp.test.runner.order.OrderSdci;
 import okhttp3.Response;
 
 import java.io.IOException;
@@ -23,6 +24,14 @@ public class OrderApi {
 
     private final JsonAdapter<OrderPaymentQuery> paymentAdapter = moshi
         .adapter(OrderPaymentQuery.class)
+        .serializeNulls();
+
+    private final JsonAdapter<OrderDetailQuery> detailAdapter = moshi
+        .adapter(OrderDetailQuery.class)
+        .serializeNulls();
+
+    private final JsonAdapter<OrderSdci> sdciAdapter = moshi
+        .adapter(OrderSdci.class)
         .serializeNulls();
 
     public Order createOrder(Order query) {
@@ -68,6 +77,22 @@ public class OrderApi {
             return order;
         } catch (IOException e) {
             throw new OrderApiException("Unable to create payment: " + postJson, e);
+        }
+    }
+
+    public OrderSdci getOrderSdci(OrderDetailQuery query) {
+        String postJson = detailAdapter.toJson(query);
+
+        try {
+            Response response = http.post("/restapi/soa2/18655/getsdci", postJson);
+
+            if (!response.isSuccessful()) {
+                throw new OrderApiException("Unable to get order details: " + postJson + "\n" + response.body().string());
+            }
+
+            return sdciAdapter.fromJson(response.body().source());
+        } catch (IOException e) {
+            throw new OrderApiException("Unable to get order details: " + postJson, e);
         }
     }
 }

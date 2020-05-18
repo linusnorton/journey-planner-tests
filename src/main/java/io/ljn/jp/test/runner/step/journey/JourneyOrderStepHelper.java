@@ -4,14 +4,12 @@ import io.ljn.jp.test.runner.api.jp.JourneyPlanResponse;
 import io.ljn.jp.test.runner.api.jp.JourneyPlannerApi;
 import io.ljn.jp.test.runner.api.jp.JourneyPlannerException;
 import io.ljn.jp.test.runner.api.jp.JourneyPlannerQuery;
-import io.ljn.jp.test.runner.api.order.Order;
-import io.ljn.jp.test.runner.api.order.OrderApi;
-import io.ljn.jp.test.runner.api.order.OrderApiException;
-import io.ljn.jp.test.runner.api.order.OrderPaymentQuery;
+import io.ljn.jp.test.runner.api.order.*;
 import io.ljn.jp.test.runner.journey.Fare;
 import io.ljn.jp.test.runner.journey.FareReference;
 import io.ljn.jp.test.runner.journey.Journey;
 import io.ljn.jp.test.runner.order.FulfilmentType;
+import io.ljn.jp.test.runner.order.OrderSdci;
 import lombok.RequiredArgsConstructor;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -41,7 +39,7 @@ public class JourneyOrderStepHelper {
             JourneyPlannerQuery journeyPlannerQuery = getJourneyPlannerQuery(row);
             JourneyPlanResponse journeyPlanResponse = getJourneyPlannerResponse(journeyPlannerQuery);
             String ticketCode = row.getCell(20).getStringCellValue();
-            Order order = createOrder(journeyPlanResponse, fulfilmentType, ticketCode);
+            Order order = postOrder(journeyPlanResponse, fulfilmentType, ticketCode);
             Order confirmedOrder = payForOrder(order);
 
             addOrderDetailsToSpreadsheet(row, order);
@@ -86,7 +84,7 @@ public class JourneyOrderStepHelper {
         return response;
     }
 
-    private Order createOrder(JourneyPlanResponse response, FulfilmentType fulfilmentType, String ticketCode) {
+    private Order postOrder(JourneyPlanResponse response, FulfilmentType fulfilmentType, String ticketCode) {
         Journey journey = response.inboundJourneyList.get(0);
         Fare fare = journey.journeyFareList.stream()
             .map(f -> getFare(response.tisFareList, f))
@@ -113,11 +111,16 @@ public class JourneyOrderStepHelper {
     }
 
     private void addOrderDetailsToSpreadsheet(Row row, Order order) {
-        row.getCell(28).setCellValue(order.ticketIssue.orderTransactionId);
+        OrderDetailQuery query = new OrderDetailQuery(order.ticketIssue.orderTransactionId);
+        OrderSdci sdci = orderApi.getOrderSdci(query);
+        String payload = order.ticketIssue.payloads == null
+            ? sdci.sdciRecords.get(0).substring(9, 17)
+            : order.ticketIssue.payloads.get(0).pdfUrl;
 
-        if (order.ticketIssue.payloads != null) {
-            row.getCell(29).setCellValue(order.ticketIssue.payloads.get(0).pdfUrl);
-        }
+        String headerNumber = sdci.sdciRecords.get(0).substring(37, 42);
+        row.getCell(27).setCellValue("Order ID: " + order.ticketIssue.orderTransactionId);
+        row.getCell(28).setCellValue(payload);
+        row.getCell(30).setCellValue(headerNumber);
     }
 
     private int getInt(Cell cell) {
