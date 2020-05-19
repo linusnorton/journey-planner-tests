@@ -144,7 +144,7 @@ public class QueryStep {
         String journeys = response.outwardToString();
         String nreDate = date.substring(8, 10) + date.substring(5, 7) + date.substring(0, 4);
         String nre = String.format("http://ojp.nationalrail.co.uk/service/timesandfares/%s/%s/%s/%s/dep", origin, destination, nreDate, time.replace(":", ""));
-        String comparisonUrl = String.format("https://linusnorton.github.io/journey-planner-comparison/?origin=%s&destination=%s&date=%s&time=%s", origin, destination, date, time);
+        String comparisonUrl = String.format("https://linusnorton.github.io/journey-planner-comparison/?origin=%s&destination=%s&outwardDate=%s&outwardTime=%s", origin, destination, date, time);
         String errorHelp = journeys + "\n\nCheck with: \n\n" + nre + "\n" + comparisonUrl + "\n\n";
 
         for (String pattern : expected) {
