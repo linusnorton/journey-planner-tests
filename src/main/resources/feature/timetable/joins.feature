@@ -3,30 +3,7 @@ Feature: Journey joins another train
   Journey planners should treat trains that join another train as a single journey
 
   Scenario: Train joins another train to form a single train between RAM and CHX
-    Given a query between "RAM" and "CHX" on "2020-05-25" at "09:08"
-    Then I should see a service "W59664" that stops at
-      | stop | arrival | departure |
-      | RAM  | --:--   | 09:08     |
-      | MSR  | 09:14   | 09:19     |
-      | STU  | 09:30   | 09:31     |
-      | CBW  | 09:35   | 09:36     |
-      | CRT  | 09:41   | 09:41     |
-      | CIL  | 09:44   | 09:44     |
-      | WYE  | 09:50   | 09:51     |
-      | AFK  | 09:58   | 10:02     |
-      | PLC  | 10:08   | 10:08     |
-      | HCN  | 10:15   | 10:15     |
-      | SPU  | 10:19   | 10:20     |
-      | MRN  | 10:24   | 10:24     |
-      | PDW  | 10:29   | 10:30     |
-      | TON  | 10:38   | 10:39     |
-      | SEV  | 10:48   | 10:49     |
-      | LBG  | 11:11   | 11:13     |
-      | WAE  | 11:17   | 11:18     |
-      | CHX  | 11:22   | --:--     |
-
-  Scenario: Train joins another train to form a single train between RAM and CHX
-    Given a query between "RAM" and "CHX" on "2020-05-25" at "08:14"
+    Given a query between "RAM" and "CHX" on "2020-05-27" at "08:14"
     Then I should see a service "P95748" that stops at
       | stop | arrival | departure |
       | RAM  | --:--   | 08:14     |
@@ -47,4 +24,27 @@ Feature: Journey joins another train
       | LBG  | 10:11   | 10:13     |
       | WAE  | 10:17   | 10:18     |
       | CHX  | 10:24   | --:--     |
+
+  Scenario: Train joins another train to form a single train between RAM and CHX
+    Given a query between "RAM" and "CHX" on "2020-05-27" at "09:08"
+    Then I should see a service "W59664" that stops at
+      | stop | arrival | departure |
+      | RAM  | --:--   | 09:08     |
+      | MSR  | 09:14   | 09:19     |
+      | STU  | 09:30   | 09:31     |
+      | CBW  | 09:35   | 09:36     |
+      | CRT  | 09:41   | 09:41     |
+      | CIL  | 09:44   | 09:44     |
+      | WYE  | 09:50   | 09:51     |
+      | AFK  | 09:58   | 10:02     |
+      | PLC  | 10:08   | 10:08     |
+      | HCN  | 10:15   | 10:15     |
+      | SPU  | 10:19   | 10:20     |
+      | MRN  | 10:24   | 10:24     |
+      | PDW  | 10:29   | 10:30     |
+      | TON  | 10:38   | 10:39     |
+      | SEV  | 10:48   | 10:49     |
+      | LBG  | 11:11   | 11:13     |
+      | WAE  | 11:17   | 11:18     |
+      | CHX  | 11:22   | --:--     |
 

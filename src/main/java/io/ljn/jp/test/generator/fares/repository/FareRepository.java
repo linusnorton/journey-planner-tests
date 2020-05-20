@@ -18,7 +18,7 @@ public class FareRepository {
         "SELECT *, CURDATE() + INTERVAL 1 MONTH as date FROM non_derivable_fare_override ndf " +
         "JOIN location ol ON ol.nlc = origin_code " +
         "JOIN location dl ON dl.nlc = destination_code " +
-        "WHERE ticket_code = 'SDR' " +
+        "WHERE ticket_code = 'SDS' " +
         "AND railcard_code = '' " +
         "AND ol.crs IS NOT NULL " +
         "AND dl.crs IS NOT NULL " +
@@ -35,9 +35,11 @@ public class FareRepository {
         "JOIN fare fr2 ON fr2.flow_id = fl2.flow_id AND fr.ticket_code = fr2.ticket_code " +
         "JOIN location dl ON fl.destination_code = dl.nlc " +
         "WHERE fr.fare != fr2.fare " +
-        "AND fr.ticket_code IN ('SDS', 'SDR', 'FDR', 'FDS', 'SVR', 'CDS', 'SOR', 'SOS', 'SSS', 'SSR', 'SVS', 'ODS') " +
-        "AND ol.crs IS NOT NULL AND ol.crs < 'QMD'" +
-        "AND dl.crs IS NOT NULL AND dl.crs < 'QMD'" +
+        "AND fr.ticket_code IN ('SDS', 'FDS', 'CDS', 'SOS', 'SSS', 'SVS', 'ODS') " +
+        "AND ol.crs IS NOT NULL AND ol.crs < 'QMA'" +
+        "AND dl.crs IS NOT NULL AND dl.crs < 'QMA'" +
+        "AND ol.crs IS NOT NULL AND ol.region != 3 " +
+        "AND dl.crs IS NOT NULL AND dl.region != 3 " +
         "AND CURDATE() + INTERVAL 1 MONTH BETWEEN fl.start_date AND fl.end_date " +
         "ORDER BY RAND() " +
         "LIMIT 5";
@@ -51,7 +53,7 @@ public class FareRepository {
         "JOIN fare fr2 ON fr2.flow_id = fl2.flow_id AND fr.ticket_code = fr2.ticket_code " +
         "WHERE group_uic_code = '7010720' " +
         "AND fl2.destination_code = '1072' " +
-        "AND fr.ticket_code IN ('SDS', 'SDR', 'FDR', 'FDS', 'SVR', 'CDS', 'SOR', 'SOS', 'SSS', 'SSR', 'SVS', 'ODS') " +
+        "AND fr.ticket_code IN ('SDS', 'FDS', 'CDS', 'SOS', 'SSS', 'SVS', 'ODS') " +
         "LIMIT 5";
 
     public List<FareRow> getNonDerivableFaresThatOverrideFlowFares() {
@@ -132,7 +134,7 @@ public class FareRepository {
 
     private GroupFareRow getGroupMemberRow(ResultSet rs) throws SQLException {
         return new GroupFareRow(
-            rs.getString("crs"),
+            rs.getString("fl.origin_code"),
             "1072",
             rs.getString("fr.ticket_code"),
             rs.getString("fl2.route_code"),
