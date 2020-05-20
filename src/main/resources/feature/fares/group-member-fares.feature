@@ -1,4 +1,4 @@
-@fares @pending
+@fares
 Feature: Group member fares fares
   A clustered fare should be overridden by a fare to an NLC
 
