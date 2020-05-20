@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>19 May 2020, 15:49</td>
+      <td>20 May 2020, 06:31</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">The journey planner should offer routes via London and not via London with appropriate fares</td>
-          <td      class="passed"    >5</td>
-          <td      class="failed"    >1</td>
-          <td     class="skipped"   >2</td>
+          <td      class="passed"    >4</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">8</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">4</td>
 
           <td  class="passed"    >1</td>
-          <td  class="failed"    >1</td>
-          <td class="total">2</td>
+          <td >0</td>
+          <td class="total">1</td>
 
-          <td class="duration" data-value="3496484000">3.496</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="878052000">0.878</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -173,7 +173,7 @@ $(document).ready(function() {
 </div>
 
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Feature</span>
   <span class="name">The journey planner should offer routes via London and not via London with appropriate fares</span>
 
@@ -193,232 +193,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">2.345</span>
+  <span class="lead-duration duration">0.878</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between DFD and TON can go via WAE or via SOO</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-1" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;DFD&quot;</span> and <span class="argument">&quot;TON&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:15&quot;</span></span>
-
-  <span class="lead-duration duration">2.338</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then failed">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.006</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: DFD,WAE,TON in 
-
-DFD (09:15:00) -&gt; TON (10:46:00)
-	DFD (09:15:00) -&gt; LBG (09:57:00)
-	LBG (10:09:00) -&gt; TON (10:46:00)
-
-DFD (09:21:00) -&gt; TON (10:46:00)
-	DFD (09:21:00) -&gt; HGR (09:41:00)
-	HGR (09:53:00) -&gt; SEV (10:29:00)
-	SEV (10:36:00) -&gt; TON (10:46:00)
-
-DFD (09:28:00) -&gt; TON (10:55:00)
-	DFD (09:28:00) -&gt; SOO (09:54:00)
-	SOO (10:04:00) -&gt; TON (10:55:00)
-
-DFD (09:35:00) -&gt; TON (10:58:00)
-	DFD (09:35:00) -&gt; HGR (10:02:00)
-	HGR (10:09:00) -&gt; ORP (10:28:00)
-	ORP (10:39:00) -&gt; TON (10:58:00)
-
-DFD (09:45:00) -&gt; TON (11:16:00)
-	DFD (09:45:00) -&gt; LBG (10:27:00)
-	LBG (10:39:00) -&gt; TON (11:16:00)
-
-DFD (10:05:00) -&gt; TON (11:28:00)
-	DFD (10:05:00) -&gt; HGR (10:32:00)
-	HGR (10:39:00) -&gt; ORP (10:57:00)
-	ORP (11:10:00) -&gt; TON (11:28:00)
-
-Check with: 
-
-http://ojp.nationalrail.co.uk/service/timesandfares/DFD/TON/14072020/0915/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=DFD&amp;destination=TON&amp;outwardDate=2020-07-14&amp;outwardTime=09:15
-
-
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/not-via-london.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>DFD, WAE, TON</td>
-              </tr>
-              <tr>
-                  <td>DFD, SOO, TON</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">I should see a fare <span class="argument">&quot;CDS&quot;</span> on <span class="argument">&quot;00331&quot;</span></span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">I should see a fare <span class="argument">&quot;CDS&quot;</span> on <span class="argument">&quot;00700&quot;</span></span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2054189833.html">@journey-planning</a>
-</div>
-
-
-  <span class="lead-duration duration">1.150</span>
-
-
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-4">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -431,14 +209,14 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=DFD&amp;destina
   </span>
   <div class="description indention"></div>
 
-  <div id="element-4" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -450,7 +228,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=DFD&amp;destina
 
   </div>
 
-  <div id="steps-5" class="inner-level collapse collapsable-details ">
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -458,7 +236,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=DFD&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;TON&quot;</span> and <span class="argument">&quot;GTW&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:15&quot;</span></span>
 
-  <span class="lead-duration duration">1.149</span>
+  <span class="lead-duration duration">0.875</span>
 
 </div>
 
@@ -485,7 +263,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=DFD&amp;destina
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 

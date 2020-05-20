@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>19 May 2020, 15:49</td>
+      <td>20 May 2020, 06:31</td>
     </tr>
   </tbody>
 </table>
@@ -127,9 +127,9 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">Journey joins another train</td>
-          <td      class="passed"    >2</td>
-          <td      class="failed"    >2</td>
           <td >0</td>
+          <td      class="failed"    >2</td>
+          <td     class="skipped"   >2</td>
           <td >0</td>
           <td >0</td>
           <td class="total">4</td>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >2</td>
           <td class="total">2</td>
 
-          <td class="duration" data-value="3043217000">3.043</td>
+          <td class="duration" data-value="1005842000">1.005</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.287</span>
+  <span class="lead-duration duration">0.541</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -232,38 +232,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-05-25&quot;</span> at <span class="argument">&quot;09:08&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-05-27&quot;</span> at <span class="argument">&quot;08:14&quot;</span></span>
 
-  <span class="lead-duration duration">1.284</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then failed">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;W59664&quot;</span> that stops at</span>
-
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.541</span>
 
 </div>
 
@@ -275,200 +248,19 @@ $(document).ready(function() {
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: W59664
-	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
-	at &#10045;.I should see a service &quot;W59664&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:7)
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between RAM and CHX on 2020-05-27 08:14
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;RAM&quot; and &quot;CHX&quot; on &quot;2020-05-27&quot; at &quot;08:14&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:6)
 </pre>
       </div>
     </div>
   </div>
 
 
-          <table class="step-arguments">
-              <tr>
-                  <td>stop</td>
-                  <td>arrival</td>
-                  <td>departure</td>
-              </tr>
-              <tr>
-                  <td>RAM</td>
-                  <td>--:--</td>
-                  <td>09:08</td>
-              </tr>
-              <tr>
-                  <td>MSR</td>
-                  <td>09:14</td>
-                  <td>09:19</td>
-              </tr>
-              <tr>
-                  <td>STU</td>
-                  <td>09:30</td>
-                  <td>09:31</td>
-              </tr>
-              <tr>
-                  <td>CBW</td>
-                  <td>09:35</td>
-                  <td>09:36</td>
-              </tr>
-              <tr>
-                  <td>CRT</td>
-                  <td>09:41</td>
-                  <td>09:41</td>
-              </tr>
-              <tr>
-                  <td>CIL</td>
-                  <td>09:44</td>
-                  <td>09:44</td>
-              </tr>
-              <tr>
-                  <td>WYE</td>
-                  <td>09:50</td>
-                  <td>09:51</td>
-              </tr>
-              <tr>
-                  <td>AFK</td>
-                  <td>09:58</td>
-                  <td>10:02</td>
-              </tr>
-              <tr>
-                  <td>PLC</td>
-                  <td>10:08</td>
-                  <td>10:08</td>
-              </tr>
-              <tr>
-                  <td>HCN</td>
-                  <td>10:15</td>
-                  <td>10:15</td>
-              </tr>
-              <tr>
-                  <td>SPU</td>
-                  <td>10:19</td>
-                  <td>10:20</td>
-              </tr>
-              <tr>
-                  <td>MRN</td>
-                  <td>10:24</td>
-                  <td>10:24</td>
-              </tr>
-              <tr>
-                  <td>PDW</td>
-                  <td>10:29</td>
-                  <td>10:30</td>
-              </tr>
-              <tr>
-                  <td>TON</td>
-                  <td>10:38</td>
-                  <td>10:39</td>
-              </tr>
-              <tr>
-                  <td>SEV</td>
-                  <td>10:48</td>
-                  <td>10:49</td>
-              </tr>
-              <tr>
-                  <td>LBG</td>
-                  <td>11:11</td>
-                  <td>11:13</td>
-              </tr>
-              <tr>
-                  <td>WAE</td>
-                  <td>11:17</td>
-                  <td>11:18</td>
-              </tr>
-              <tr>
-                  <td>CHX</td>
-                  <td>11:22</td>
-                  <td>--:--</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2511005920.html">@timetable</a>
-</div>
-
-
-  <span class="lead-duration duration">1.755</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Train joins another train to form a single train between RAM and CHX</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-4" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-05-25&quot;</span> at <span class="argument">&quot;08:14&quot;</span></span>
-
-  <span class="lead-duration duration">1.754</span>
-
-</div>
-
-
-
-
-
-
-
 
 
 
@@ -482,7 +274,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;P95748&quot;</span> that stops at</span>
 
@@ -494,22 +286,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
-          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
-      </div>
-      <div id="msg-6" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: P95748
-	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
-	at &#10045;.I should see a service &quot;P95748&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:30)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -606,6 +382,228 @@ $(document).ready(function() {
               <tr>
                   <td>CHX</td>
                   <td>10:24</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2511005920.html">@timetable</a>
+</div>
+
+
+  <span class="lead-duration duration">0.464</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Train joins another train to form a single train between RAM and CHX</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-4" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given failed">
+  <span class="keyword indention">Given</span>
+  <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-05-27&quot;</span> at <span class="argument">&quot;09:08&quot;</span></span>
+
+  <span class="lead-duration duration">0.464</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between RAM and CHX on 2020-05-27 09:08
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;RAM&quot; and &quot;CHX&quot; on &quot;2020-05-27&quot; at &quot;09:08&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:29)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;W59664&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>RAM</td>
+                  <td>--:--</td>
+                  <td>09:08</td>
+              </tr>
+              <tr>
+                  <td>MSR</td>
+                  <td>09:14</td>
+                  <td>09:19</td>
+              </tr>
+              <tr>
+                  <td>STU</td>
+                  <td>09:30</td>
+                  <td>09:31</td>
+              </tr>
+              <tr>
+                  <td>CBW</td>
+                  <td>09:35</td>
+                  <td>09:36</td>
+              </tr>
+              <tr>
+                  <td>CRT</td>
+                  <td>09:41</td>
+                  <td>09:41</td>
+              </tr>
+              <tr>
+                  <td>CIL</td>
+                  <td>09:44</td>
+                  <td>09:44</td>
+              </tr>
+              <tr>
+                  <td>WYE</td>
+                  <td>09:50</td>
+                  <td>09:51</td>
+              </tr>
+              <tr>
+                  <td>AFK</td>
+                  <td>09:58</td>
+                  <td>10:02</td>
+              </tr>
+              <tr>
+                  <td>PLC</td>
+                  <td>10:08</td>
+                  <td>10:08</td>
+              </tr>
+              <tr>
+                  <td>HCN</td>
+                  <td>10:15</td>
+                  <td>10:15</td>
+              </tr>
+              <tr>
+                  <td>SPU</td>
+                  <td>10:19</td>
+                  <td>10:20</td>
+              </tr>
+              <tr>
+                  <td>MRN</td>
+                  <td>10:24</td>
+                  <td>10:24</td>
+              </tr>
+              <tr>
+                  <td>PDW</td>
+                  <td>10:29</td>
+                  <td>10:30</td>
+              </tr>
+              <tr>
+                  <td>TON</td>
+                  <td>10:38</td>
+                  <td>10:39</td>
+              </tr>
+              <tr>
+                  <td>SEV</td>
+                  <td>10:48</td>
+                  <td>10:49</td>
+              </tr>
+              <tr>
+                  <td>LBG</td>
+                  <td>11:11</td>
+                  <td>11:13</td>
+              </tr>
+              <tr>
+                  <td>WAE</td>
+                  <td>11:17</td>
+                  <td>11:18</td>
+              </tr>
+              <tr>
+                  <td>CHX</td>
+                  <td>11:22</td>
                   <td>--:--</td>
               </tr>
           </table>
