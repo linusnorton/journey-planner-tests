@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>04 Jun 2020, 15:56</td>
+      <td>05 Jun 2020, 15:55</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">Group member fares fares</td>
-          <td      class="passed"    >15</td>
           <td >0</td>
-          <td >0</td>
+          <td      class="failed"    >5</td>
+          <td     class="skipped"   >10</td>
           <td >0</td>
           <td >0</td>
           <td class="total">15</td>
 
-          <td  class="passed"    >5</td>
           <td >0</td>
+          <td  class="failed"    >5</td>
           <td class="total">5</td>
 
-          <td class="duration" data-value="70204471000">1:10.204</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="5285506000">5.285</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -173,7 +173,7 @@ $(document).ready(function() {
 </div>
 
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Feature</span>
   <span class="name">Group member fares fares</span>
 
@@ -193,12 +193,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">14.244</span>
+  <span class="lead-duration duration">1.182</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Clustered fare overridden by an NLC flow between 0254 and 1072</span>
 
@@ -209,16 +209,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -228,15 +228,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details ">
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;0254&quot;</span> and <span class="argument">&quot;1072&quot;</span> on <span class="argument">&quot;2020-06-20&quot;</span> at <span class="argument">&quot;10:00&quot;</span></span>
 
-  <span class="lead-duration duration">14.244</span>
+  <span class="lead-duration duration">1.182</span>
 
 </div>
 
@@ -244,6 +244,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between 0254 and 1072 on 2020-06-20 10:00
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;0254&quot; and &quot;1072&quot; on &quot;2020-06-20&quot; at &quot;10:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/fares/group-member-fares.feature:6)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -259,7 +274,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a fare <span class="argument">&quot;FDS&quot;</span> on <span class="argument">&quot;00000&quot;</span> that is <span class="argument">&quot;5100&quot;</span> pence</span>
 
@@ -286,7 +301,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">I should see a fare <span class="argument">&quot;FDS&quot;</span> on <span class="argument">&quot;00131&quot;</span> that is <span class="argument">&quot;5430&quot;</span> pence</span>
 
@@ -330,12 +345,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">14.987</span>
+  <span class="lead-duration duration">0.541</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Clustered fare overridden by an NLC flow between 0254 and 1072</span>
 
@@ -346,16 +361,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-3" class="collapse collapsable-details ">
+  <div id="element-4" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-4">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -365,15 +380,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-4" class="inner-level collapse collapsable-details ">
+  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;0254&quot;</span> and <span class="argument">&quot;1072&quot;</span> on <span class="argument">&quot;2020-06-20&quot;</span> at <span class="argument">&quot;10:00&quot;</span></span>
 
-  <span class="lead-duration duration">14.987</span>
+  <span class="lead-duration duration">0.541</span>
 
 </div>
 
@@ -381,6 +396,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between 0254 and 1072 on 2020-06-20 10:00
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;0254&quot; and &quot;1072&quot; on &quot;2020-06-20&quot; at &quot;10:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/fares/group-member-fares.feature:11)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -396,7 +426,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a fare <span class="argument">&quot;SDS&quot;</span> on <span class="argument">&quot;00000&quot;</span> that is <span class="argument">&quot;3180&quot;</span> pence</span>
 
@@ -423,7 +453,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">I should see a fare <span class="argument">&quot;SDS&quot;</span> on <span class="argument">&quot;00131&quot;</span> that is <span class="argument">&quot;3600&quot;</span> pence</span>
 
@@ -467,12 +497,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">15.639</span>
+  <span class="lead-duration duration">1.566</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Clustered fare overridden by an NLC flow between 0254 and 1072</span>
 
@@ -483,16 +513,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-5" class="collapse collapsable-details ">
+  <div id="element-7" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-6">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -502,15 +532,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-6" class="inner-level collapse collapsable-details ">
+  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;0254&quot;</span> and <span class="argument">&quot;1072&quot;</span> on <span class="argument">&quot;2020-06-20&quot;</span> at <span class="argument">&quot;10:00&quot;</span></span>
 
-  <span class="lead-duration duration">15.638</span>
+  <span class="lead-duration duration">1.566</span>
 
 </div>
 
@@ -518,6 +548,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between 0254 and 1072 on 2020-06-20 10:00
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;0254&quot; and &quot;1072&quot; on &quot;2020-06-20&quot; at &quot;10:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/fares/group-member-fares.feature:16)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -533,7 +578,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a fare <span class="argument">&quot;FDS&quot;</span> on <span class="argument">&quot;00000&quot;</span> that is <span class="argument">&quot;5100&quot;</span> pence</span>
 
@@ -560,7 +605,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">I should see a fare <span class="argument">&quot;FDS&quot;</span> on <span class="argument">&quot;00131&quot;</span> that is <span class="argument">&quot;5430&quot;</span> pence</span>
 
@@ -604,12 +649,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">15.009</span>
+  <span class="lead-duration duration">0.497</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-7">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Clustered fare overridden by an NLC flow between 0254 and 1072</span>
 
@@ -620,16 +665,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-7" class="collapse collapsable-details ">
+  <div id="element-10" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-8">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-11">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -639,15 +684,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-8" class="inner-level collapse collapsable-details ">
+  <div id="steps-11" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;0254&quot;</span> and <span class="argument">&quot;1072&quot;</span> on <span class="argument">&quot;2020-06-20&quot;</span> at <span class="argument">&quot;10:00&quot;</span></span>
 
-  <span class="lead-duration duration">15.009</span>
+  <span class="lead-duration duration">0.497</span>
 
 </div>
 
@@ -655,6 +700,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between 0254 and 1072 on 2020-06-20 10:00
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;0254&quot; and &quot;1072&quot; on &quot;2020-06-20&quot; at &quot;10:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/fares/group-member-fares.feature:21)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -670,7 +730,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a fare <span class="argument">&quot;SDS&quot;</span> on <span class="argument">&quot;00000&quot;</span> that is <span class="argument">&quot;3180&quot;</span> pence</span>
 
@@ -697,7 +757,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">I should see a fare <span class="argument">&quot;SDS&quot;</span> on <span class="argument">&quot;00131&quot;</span> that is <span class="argument">&quot;3600&quot;</span> pence</span>
 
@@ -741,12 +801,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">10.322</span>
+  <span class="lead-duration duration">1.497</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Clustered fare overridden by an NLC flow between 0259 and 1072</span>
 
@@ -757,16 +817,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-9" class="collapse collapsable-details ">
+  <div id="element-13" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-10">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-14">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -776,15 +836,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-10" class="inner-level collapse collapsable-details ">
+  <div id="steps-14" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;0259&quot;</span> and <span class="argument">&quot;1072&quot;</span> on <span class="argument">&quot;2020-06-20&quot;</span> at <span class="argument">&quot;10:00&quot;</span></span>
 
-  <span class="lead-duration duration">10.321</span>
+  <span class="lead-duration duration">1.497</span>
 
 </div>
 
@@ -792,6 +852,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between 0259 and 1072 on 2020-06-20 10:00
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;0259&quot; and &quot;1072&quot; on &quot;2020-06-20&quot; at &quot;10:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/fares/group-member-fares.feature:26)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -807,11 +882,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a fare <span class="argument">&quot;FDS&quot;</span> on <span class="argument">&quot;00000&quot;</span> that is <span class="argument">&quot;2690&quot;</span> pence</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -834,7 +909,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">I should see a fare <span class="argument">&quot;FDS&quot;</span> on <span class="argument">&quot;00208&quot;</span> that is <span class="argument">&quot;2700&quot;</span> pence</span>
 
