@@ -14,8 +14,8 @@ public class JourneyPlannerQuery {
     public final int childCount;
     public final int maxJourney;
     public final String[] railCardList;
-    public final String departureDate;
-    public final String returnDate;
+    public final String departureDateTime;
+    public final String returnDepartureDateTime;
     public final boolean openReturn;
     public final boolean keepOvertaken;
     public final boolean showRouteingDetail;
@@ -40,8 +40,8 @@ public class JourneyPlannerQuery {
         arrCrsCode = destination.length() == 3 ? destination : "";
         arrNlcCode = destination.length() == 4 ? destination : "";
 
-        this.departureDate = getDateTime(outwardDate, outwardTime);
-        this.returnDate = getDateTime(returnDate, returnTime);
+        this.departureDateTime = getDateTime(outwardDate, outwardTime);
+        this.returnDepartureDateTime = getDateTime(returnDate, returnTime);
 
         railCardList = railcard == null ? "".split(",") : railcard.split(",");
         adultCount = adults;
