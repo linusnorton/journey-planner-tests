@@ -3,7 +3,7 @@ Feature: Journey joins another train
   Journey planners should treat trains that join another train as a single journey
 
   Scenario: Train joins another train to form a single train between RAM and CHX
-    Given a query between "RAM" and "CHX" on "2020-05-27" at "08:14"
+    Given a query between "RAM" and "CHX" on "2020-06-15" at "08:14"
     Then I should see a service "P95748" that stops at
       | stop | arrival | departure |
       | RAM  | --:--   | 08:14     |
@@ -26,7 +26,7 @@ Feature: Journey joins another train
       | CHX  | 10:24   | --:--     |
 
   Scenario: Train joins another train to form a single train between RAM and CHX
-    Given a query between "RAM" and "CHX" on "2020-05-27" at "09:08"
+    Given a query between "RAM" and "CHX" on "2020-06-15" at "09:08"
     Then I should see a service "W59664" that stops at
       | stop | arrival | departure |
       | RAM  | --:--   | 09:08     |
