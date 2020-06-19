@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports  - Feature: Journey joins another train</title>
+<title>Cucumber Reports  - Feature: Journey splits</title>
 
 </head>
 <body>
@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>18 Jun 2020, 16:03</td>
+      <td>19 Jun 2020, 09:18</td>
     </tr>
   </tbody>
 </table>
@@ -126,10 +126,10 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">Journey joins another train</td>
-          <td >0</td>
+          <td class="tagname">Journey splits</td>
+          <td      class="passed"    >2</td>
           <td      class="failed"    >2</td>
-          <td     class="skipped"   >2</td>
+          <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">4</td>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >2</td>
           <td class="total">2</td>
 
-          <td class="duration" data-value="906313000">0.906</td>
+          <td class="duration" data-value="3458496000">3.458</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -175,12 +175,12 @@ $(document).ready(function() {
 
 <div class="brief failed">
   <span class="keyword indention">Feature</span>
-  <span class="name">Journey joins another train</span>
+  <span class="name">Journey splits</span>
 
 
 </div>
 
-        <div class="description indention">  Journey planners should treat trains that join another train as a single journey</div>
+        <div class="description indention">  Journey planners should treat trains that split as a single journey</div>
 
         <div class="elements inner-level">
 
@@ -193,14 +193,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.430</span>
+  <span class="lead-duration duration">2.253</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Train joins another train to form a single train between RAM and CHX</span>
+  <span class="name">Train splits so there appears to be a single train between CHX and CBW</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -232,11 +232,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-05-27&quot;</span> at <span class="argument">&quot;08:14&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;CBW&quot;</span> on <span class="argument">&quot;2020-06-15&quot;</span> at <span class="argument">&quot;07:37&quot;</span></span>
 
-  <span class="lead-duration duration">0.430</span>
+  <span class="lead-duration duration">2.253</span>
 
 </div>
 
@@ -244,21 +244,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between RAM and CHX on 2020-05-27 08:14
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;RAM&quot; and &quot;CHX&quot; on &quot;2020-05-27&quot; at &quot;08:14&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -274,9 +259,9 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;P95748&quot;</span> that stops at</span>
+  <span class="name">I should see a service <span class="argument">&quot;W58752&quot;</span> that stops at</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -287,6 +272,22 @@ $(document).ready(function() {
 
 
 
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: W58752
+	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
+	at &#10045;.I should see a service &quot;W58752&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:7)
+</pre>
+      </div>
+    </div>
+  </div>
+
 
           <table class="step-arguments">
               <tr>
@@ -295,93 +296,78 @@ $(document).ready(function() {
                   <td>departure</td>
               </tr>
               <tr>
-                  <td>RAM</td>
+                  <td>CHX</td>
                   <td>--:--</td>
-                  <td>08:14</td>
-              </tr>
-              <tr>
-                  <td>MSR</td>
-                  <td>08:20</td>
-                  <td>08:20</td>
-              </tr>
-              <tr>
-                  <td>STU</td>
-                  <td>08:31</td>
-                  <td>08:31</td>
-              </tr>
-              <tr>
-                  <td>CBW</td>
-                  <td>08:35</td>
-                  <td>08:36</td>
-              </tr>
-              <tr>
-                  <td>CRT</td>
-                  <td>08:41</td>
-                  <td>08:41</td>
-              </tr>
-              <tr>
-                  <td>CIL</td>
-                  <td>08:44</td>
-                  <td>08:44</td>
-              </tr>
-              <tr>
-                  <td>WYE</td>
-                  <td>08:50</td>
-                  <td>08:51</td>
-              </tr>
-              <tr>
-                  <td>AFK</td>
-                  <td>08:58</td>
-                  <td>09:02</td>
-              </tr>
-              <tr>
-                  <td>PLC</td>
-                  <td>09:08</td>
-                  <td>09:08</td>
-              </tr>
-              <tr>
-                  <td>HCN</td>
-                  <td>09:15</td>
-                  <td>09:15</td>
-              </tr>
-              <tr>
-                  <td>SPU</td>
-                  <td>09:19</td>
-                  <td>09:20</td>
-              </tr>
-              <tr>
-                  <td>MRN</td>
-                  <td>09:24</td>
-                  <td>09:24</td>
-              </tr>
-              <tr>
-                  <td>PDW</td>
-                  <td>09:29</td>
-                  <td>09:30</td>
-              </tr>
-              <tr>
-                  <td>TON</td>
-                  <td>09:37</td>
-                  <td>09:39</td>
-              </tr>
-              <tr>
-                  <td>SEV</td>
-                  <td>09:48</td>
-                  <td>09:49</td>
-              </tr>
-              <tr>
-                  <td>LBG</td>
-                  <td>10:11</td>
-                  <td>10:13</td>
+                  <td>07:37</td>
               </tr>
               <tr>
                   <td>WAE</td>
-                  <td>10:17</td>
-                  <td>10:18</td>
+                  <td>07:39</td>
+                  <td>07:40</td>
               </tr>
               <tr>
-                  <td>CHX</td>
-                  <td>10:24</td>
+                  <td>LBG</td>
+                  <td>07:44</td>
+                  <td>07:46</td>
+              </tr>
+              <tr>
+                  <td>SEV</td>
+                  <td>08:12</td>
+                  <td>08:13</td>
+              </tr>
+              <tr>
+                  <td>TON</td>
+                  <td>08:21</td>
+                  <td>08:22</td>
+              </tr>
+              <tr>
+                  <td>PDW</td>
+                  <td>08:28</td>
+                  <td>08:29</td>
+              </tr>
+              <tr>
+                  <td>MRN</td>
+                  <td>08:34</td>
+                  <td>08:34</td>
+              </tr>
+              <tr>
+                  <td>SPU</td>
+                  <td>08:38</td>
+                  <td>08:38</td>
+              </tr>
+              <tr>
+                  <td>HCN</td>
+                  <td>08:44</td>
+                  <td>08:44</td>
+              </tr>
+              <tr>
+                  <td>PLC</td>
+                  <td>08:50</td>
+                  <td>08:50</td>
+              </tr>
+              <tr>
+                  <td>AFK</td>
+                  <td>09:00</td>
+                  <td>09:08</td>
+              </tr>
+              <tr>
+                  <td>WYE</td>
+                  <td>09:14</td>
+                  <td>09:14</td>
+              </tr>
+              <tr>
+                  <td>CIL</td>
+                  <td>09:20</td>
+                  <td>09:20</td>
+              </tr>
+              <tr>
+                  <td>CRT</td>
+                  <td>09:24</td>
+                  <td>09:24</td>
+              </tr>
+              <tr>
+                  <td>CBW</td>
+                  <td>09:30</td>
                   <td>--:--</td>
               </tr>
           </table>
@@ -415,14 +401,14 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.475</span>
+  <span class="lead-duration duration">1.204</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Train joins another train to form a single train between RAM and CHX</span>
+  <span class="name">Train splits so there appears to be a single train between CHX and DVP</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -454,11 +440,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-05-27&quot;</span> at <span class="argument">&quot;09:08&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;DVP&quot;</span> on <span class="argument">&quot;2020-06-15&quot;</span> at <span class="argument">&quot;07:09&quot;</span></span>
 
-  <span class="lead-duration duration">0.475</span>
+  <span class="lead-duration duration">1.203</span>
 
 </div>
 
@@ -466,21 +452,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
-          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
-      </div>
-      <div id="msg-6" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between RAM and CHX on 2020-05-27 09:08
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;RAM&quot; and &quot;CHX&quot; on &quot;2020-05-27&quot; at &quot;09:08&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:29)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -496,11 +467,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
-  <span class="name">I should see a service <span class="argument">&quot;W59664&quot;</span> that stops at</span>
+  <span class="name">I should see a service <span class="argument">&quot;W58748&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -508,6 +479,22 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: W58748
+	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
+	at &#10045;.I should see a service &quot;W58748&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:27)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -517,93 +504,83 @@ $(document).ready(function() {
                   <td>departure</td>
               </tr>
               <tr>
-                  <td>RAM</td>
+                  <td>CHX</td>
                   <td>--:--</td>
-                  <td>09:08</td>
-              </tr>
-              <tr>
-                  <td>MSR</td>
-                  <td>09:14</td>
-                  <td>09:19</td>
-              </tr>
-              <tr>
-                  <td>STU</td>
-                  <td>09:30</td>
-                  <td>09:31</td>
-              </tr>
-              <tr>
-                  <td>CBW</td>
-                  <td>09:35</td>
-                  <td>09:36</td>
-              </tr>
-              <tr>
-                  <td>CRT</td>
-                  <td>09:41</td>
-                  <td>09:41</td>
-              </tr>
-              <tr>
-                  <td>CIL</td>
-                  <td>09:44</td>
-                  <td>09:44</td>
-              </tr>
-              <tr>
-                  <td>WYE</td>
-                  <td>09:50</td>
-                  <td>09:51</td>
-              </tr>
-              <tr>
-                  <td>AFK</td>
-                  <td>09:58</td>
-                  <td>10:02</td>
-              </tr>
-              <tr>
-                  <td>PLC</td>
-                  <td>10:08</td>
-                  <td>10:08</td>
-              </tr>
-              <tr>
-                  <td>HCN</td>
-                  <td>10:15</td>
-                  <td>10:15</td>
-              </tr>
-              <tr>
-                  <td>SPU</td>
-                  <td>10:19</td>
-                  <td>10:20</td>
-              </tr>
-              <tr>
-                  <td>MRN</td>
-                  <td>10:24</td>
-                  <td>10:24</td>
-              </tr>
-              <tr>
-                  <td>PDW</td>
-                  <td>10:29</td>
-                  <td>10:30</td>
-              </tr>
-              <tr>
-                  <td>TON</td>
-                  <td>10:38</td>
-                  <td>10:39</td>
-              </tr>
-              <tr>
-                  <td>SEV</td>
-                  <td>10:48</td>
-                  <td>10:49</td>
-              </tr>
-              <tr>
-                  <td>LBG</td>
-                  <td>11:11</td>
-                  <td>11:13</td>
+                  <td>07:09</td>
               </tr>
               <tr>
                   <td>WAE</td>
-                  <td>11:17</td>
-                  <td>11:18</td>
+                  <td>07:11</td>
+                  <td>07:12</td>
               </tr>
               <tr>
-                  <td>CHX</td>
-                  <td>11:22</td>
+                  <td>LBG</td>
+                  <td>07:16</td>
+                  <td>07:18</td>
+              </tr>
+              <tr>
+                  <td>SEV</td>
+                  <td>07:41</td>
+                  <td>07:42</td>
+              </tr>
+              <tr>
+                  <td>TON</td>
+                  <td>07:50</td>
+                  <td>07:51</td>
+              </tr>
+              <tr>
+                  <td>PDW</td>
+                  <td>07:57</td>
+                  <td>07:57</td>
+              </tr>
+              <tr>
+                  <td>MRN</td>
+                  <td>08:03</td>
+                  <td>08:03</td>
+              </tr>
+              <tr>
+                  <td>SPU</td>
+                  <td>08:06</td>
+                  <td>08:07</td>
+              </tr>
+              <tr>
+                  <td>HCN</td>
+                  <td>08:12</td>
+                  <td>08:13</td>
+              </tr>
+              <tr>
+                  <td>PLC</td>
+                  <td>08:19</td>
+                  <td>08:19</td>
+              </tr>
+              <tr>
+                  <td>AFK</td>
+                  <td>08:28</td>
+                  <td>08:38</td>
+              </tr>
+              <tr>
+                  <td>WHA</td>
+                  <td>08:46</td>
+                  <td>08:46</td>
+              </tr>
+              <tr>
+                  <td>SDG</td>
+                  <td>08:49</td>
+                  <td>08:49</td>
+              </tr>
+              <tr>
+                  <td>FKW</td>
+                  <td>08:55</td>
+                  <td>08:55</td>
+              </tr>
+              <tr>
+                  <td>FKC</td>
+                  <td>08:57</td>
+                  <td>08:58</td>
+              </tr>
+              <tr>
+                  <td>DVP</td>
+                  <td>09:11</td>
                   <td>--:--</td>
               </tr>
           </table>
