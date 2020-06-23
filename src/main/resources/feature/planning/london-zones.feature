@@ -5,4 +5,3 @@ Feature: The journey planner should offer routes via London using the London Und
     Given a query between "KGX" and "MAN" on "a weekday" at "09:15"
     Then I should see the following transfer patterns
       | KGX, EUS, MAN |
-    And I should see a fare "SDS" on "00000"
