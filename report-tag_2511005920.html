@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>28 Jun 2020, 16:07</td>
+      <td>29 Jun 2020, 16:12</td>
     </tr>
   </tbody>
 </table>
@@ -127,18 +127,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@timetable</td>
-          <td      class="passed"    >28</td>
-          <td      class="failed"    >12</td>
-          <td     class="skipped"   >18</td>
+          <td      class="passed"    >20</td>
+          <td      class="failed"    >15</td>
+          <td     class="skipped"   >23</td>
           <td >0</td>
           <td >0</td>
           <td class="total">58</td>
 
-          <td  class="passed"    >7</td>
-          <td  class="failed"    >12</td>
+          <td  class="passed"    >4</td>
+          <td  class="failed"    >15</td>
           <td class="total">19</td>
 
-          <td class="duration" data-value="20469658000">20.469</td>
+          <td class="duration" data-value="325271925000">5:25.271</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -181,7 +181,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.310</span>
+  <span class="lead-duration duration">1.578</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -224,7 +224,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BTN&quot;</span> and <span class="argument">&quot;BDM&quot;</span> on <span class="argument">&quot;2020-06-29&quot;</span> at <span class="argument">&quot;22:55&quot;</span></span>
 
-  <span class="lead-duration duration">1.285</span>
+  <span class="lead-duration duration">1.551</span>
 
 </div>
 
@@ -251,7 +251,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;L24309&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.024</span>
+  <span class="lead-duration duration">0.027</span>
 
 </div>
 
@@ -482,7 +482,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.163</span>
+  <span class="lead-duration duration">1:0.006</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
@@ -521,11 +521,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BDM&quot;</span> and <span class="argument">&quot;BTN&quot;</span> on <span class="argument">&quot;2020-06-29&quot;</span> at <span class="argument">&quot;23:45&quot;</span></span>
 
-  <span class="lead-duration duration">1.163</span>
+  <span class="lead-duration duration">1:0.006</span>
 
 </div>
 
@@ -533,6 +533,75 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BTN&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-06-29 23:45&quot;,&quot;dptCrsCode&quot;:&quot;BDM&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;BDM&quot; and &quot;BTN&quot; on &quot;2020-06-29&quot; at &quot;23:45&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:35)
+Caused by: java.io.InterruptedIOException: timeout
+	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
+	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
+	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
+	at okhttp3.RealCall.execute(RealCall.kt:67)
+	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at okio.InputStreamSource.read(Okio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
+	... 23 more
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -548,7 +617,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;Y08384&quot;</span> that stops at</span>
 
@@ -560,22 +629,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
-          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
-      </div>
-      <div id="msg-6" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: Y08384
-	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
-	at &#10045;.I should see a service &quot;Y08384&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:36)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -768,7 +821,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.599</span>
+  <span class="lead-duration duration">1.602</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
@@ -811,7 +864,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;LIV&quot;</span> and <span class="argument">&quot;CTR&quot;</span> on <span class="argument">&quot;2020-06-30&quot;</span> at <span class="argument">&quot;23:23&quot;</span></span>
 
-  <span class="lead-duration duration">0.456</span>
+  <span class="lead-duration duration">0.821</span>
 
 </div>
 
@@ -838,7 +891,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;Y34224&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.003</span>
 
 </div>
 
@@ -902,7 +955,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;LIV&quot;</span> and <span class="argument">&quot;CTR&quot;</span> on <span class="argument">&quot;2020-07-07&quot;</span> at <span class="argument">&quot;23:23&quot;</span></span>
 
-  <span class="lead-duration duration">1.133</span>
+  <span class="lead-duration duration">0.769</span>
 
 </div>
 
@@ -929,7 +982,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">I should not see a service <span class="argument">&quot;Y34224&quot;</span> in the results</span>
 
-  <span class="lead-duration duration">0.005</span>
+  <span class="lead-duration duration">0.006</span>
 
 </div>
 
@@ -990,7 +1043,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.474</span>
+  <span class="lead-duration duration">3.819</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
@@ -1033,7 +1086,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BDM&quot;</span> and <span class="argument">&quot;BTN&quot;</span> on <span class="argument">&quot;2020-06-29&quot;</span> at <span class="argument">&quot;22:45&quot;</span></span>
 
-  <span class="lead-duration duration">1.473</span>
+  <span class="lead-duration duration">3.819</span>
 
 </div>
 
@@ -1286,7 +1339,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.499</span>
+  <span class="lead-duration duration">0.853</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
@@ -1329,7 +1382,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;DFD&quot;</span> on <span class="argument">&quot;2020-07-01&quot;</span> at <span class="argument">&quot;23:50&quot;</span></span>
 
-  <span class="lead-duration duration">0.498</span>
+  <span class="lead-duration duration">0.853</span>
 
 </div>
 
@@ -1542,7 +1595,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.648</span>
+  <span class="lead-duration duration">0.992</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-16">
@@ -1585,7 +1638,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-06-15&quot;</span> at <span class="argument">&quot;08:14&quot;</span></span>
 
-  <span class="lead-duration duration">0.648</span>
+  <span class="lead-duration duration">0.992</span>
 
 </div>
 
@@ -1768,7 +1821,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.017</span>
+  <span class="lead-duration duration">1.468</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-19">
@@ -1811,7 +1864,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RAM&quot;</span> and <span class="argument">&quot;CHX&quot;</span> on <span class="argument">&quot;2020-06-15&quot;</span> at <span class="argument">&quot;09:08&quot;</span></span>
 
-  <span class="lead-duration duration">1.017</span>
+  <span class="lead-duration duration">1.468</span>
 
 </div>
 
@@ -1994,12 +2047,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.076</span>
+  <span class="lead-duration duration">1:1.015</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-22">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-22">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Changing calling point stopping times between KMK and GLC</span>
 
@@ -2010,16 +2063,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-22" class="collapse collapsable-details ">
+  <div id="element-22" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-23">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-23">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -2029,7 +2082,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-23" class="inner-level collapse collapsable-details ">
+  <div id="steps-23" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -2037,7 +2090,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;KMK&quot;</span> and <span class="argument">&quot;GLC&quot;</span> on <span class="argument">&quot;2020-06-27&quot;</span> at <span class="argument">&quot;16:28&quot;</span></span>
 
-  <span class="lead-duration duration">0.551</span>
+  <span class="lead-duration duration">1.013</span>
 
 </div>
 
@@ -2124,11 +2177,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;KMK&quot;</span> and <span class="argument">&quot;GLC&quot;</span> on <span class="argument">&quot;2020-07-04&quot;</span> at <span class="argument">&quot;16:28&quot;</span></span>
 
-  <span class="lead-duration duration">0.524</span>
+  <span class="lead-duration duration">1:0.001</span>
 
 </div>
 
@@ -2136,6 +2189,75 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-24">
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-24" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;GLC&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-07-04 16:28&quot;,&quot;dptCrsCode&quot;:&quot;KMK&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.I query between &quot;KMK&quot; and &quot;GLC&quot; on &quot;2020-07-04&quot; at &quot;16:28&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:15)
+Caused by: java.io.InterruptedIOException: timeout
+	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
+	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
+	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
+	at okhttp3.RealCall.execute(RealCall.kt:67)
+	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at okio.InputStreamSource.read(Okio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
+	... 23 more
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -2151,7 +2273,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;Y12424&quot;</span> that stops at</span>
 
@@ -2236,10 +2358,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.273</span>
+  <span class="lead-duration duration">2.222</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-24">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-25">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -2252,14 +2374,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-24" class="collapse collapsable-details ">
+  <div id="element-25" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-25">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-26">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -2271,7 +2393,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-25" class="inner-level collapse collapsable-details ">
+  <div id="steps-26" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -2279,7 +2401,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;DID&quot;</span> and <span class="argument">&quot;RDG&quot;</span> on <span class="argument">&quot;2020-06-30&quot;</span> at <span class="argument">&quot;23:22&quot;</span></span>
 
-  <span class="lead-duration duration">0.816</span>
+  <span class="lead-duration duration">1.497</span>
 
 </div>
 
@@ -2370,7 +2492,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;DID&quot;</span> and <span class="argument">&quot;RDG&quot;</span> on <span class="argument">&quot;2020-07-07&quot;</span> at <span class="argument">&quot;23:22&quot;</span></span>
 
-  <span class="lead-duration duration">0.456</span>
+  <span class="lead-duration duration">0.724</span>
 
 </div>
 
@@ -2473,10 +2595,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.089</span>
+  <span class="lead-duration duration">1.974</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-26">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-27">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -2489,14 +2611,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-26" class="collapse collapsable-details  in ">
+  <div id="element-27" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-27">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-28">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -2508,7 +2630,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-27" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-28" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -2516,7 +2638,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BSK&quot;</span> and <span class="argument">&quot;WAT&quot;</span> on <span class="argument">&quot;2020-06-28&quot;</span> at <span class="argument">&quot;14:50&quot;</span></span>
 
-  <span class="lead-duration duration">1.088</span>
+  <span class="lead-duration duration">1.973</span>
 
 </div>
 
@@ -2554,10 +2676,10 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-28">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-29">
           <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
       </div>
-      <div id="msg-28" class="collapse collapsable-details  in ">
+      <div id="msg-29" class="collapse collapsable-details  in ">
         <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: W18690
 	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
 	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
@@ -2781,10 +2903,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">3.107</span>
+  <span class="lead-duration duration">1.820</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-29">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-30">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -2797,14 +2919,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-29" class="collapse collapsable-details  in ">
+  <div id="element-30" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-30">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-31">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -2816,7 +2938,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-30" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-31" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -2824,7 +2946,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;GLC&quot;</span> and <span class="argument">&quot;CAR&quot;</span> on <span class="argument">&quot;2020-06-27&quot;</span> at <span class="argument">&quot;22:13&quot;</span></span>
 
-  <span class="lead-duration duration">3.106</span>
+  <span class="lead-duration duration">1.819</span>
 
 </div>
 
@@ -2862,10 +2984,10 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-31">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-32">
           <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
       </div>
-      <div id="msg-31" class="collapse collapsable-details  in ">
+      <div id="msg-32" class="collapse collapsable-details  in ">
         <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: Y13214
 	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
 	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
@@ -3079,10 +3201,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.509</span>
+  <span class="lead-duration duration">1:0.021</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-32">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-33">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -3095,14 +3217,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-32" class="collapse collapsable-details  in ">
+  <div id="element-33" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-33">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-34">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -3114,15 +3236,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-33" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-34" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BSK&quot;</span> and <span class="argument">&quot;WAT&quot;</span> on <span class="argument">&quot;2020-06-28&quot;</span> at <span class="argument">&quot;12:16&quot;</span></span>
 
-  <span class="lead-duration duration">0.508</span>
+  <span class="lead-duration duration">1:0.021</span>
 
 </div>
 
@@ -3130,6 +3252,74 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-35">
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-35" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;WAT&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-06-28 12:16&quot;,&quot;dptCrsCode&quot;:&quot;BSK&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;BSK&quot; and &quot;WAT&quot; on &quot;2020-06-28&quot; at &quot;12:16&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:103)
+Caused by: java.io.InterruptedIOException: timeout
+	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
+	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
+	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
+	at okhttp3.RealCall.execute(RealCall.kt:67)
+	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at okio.InputStreamSource.read(Okio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
+	... 22 more
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -3145,7 +3335,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W13303&quot;</span> that stops at</span>
 
@@ -3157,22 +3347,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-34">
-          <a>io.ljn.jp.test.runner.step.MissingTrainException:</a>
-      </div>
-      <div id="msg-34" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.MissingTrainException: Could not find: W13303
-	at io.ljn.jp.test.runner.step.QueryStep.lambda$iShouldSeeAServiceThatStopsAt$6(QueryStep.java:72)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeAServiceThatStopsAt(QueryStep.java:72)
-	at &#10045;.I should see a service &quot;W13303&quot; that stops at(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:104)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -3387,12 +3561,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.659</span>
+  <span class="lead-duration duration">1:0.007</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-35">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-36">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Public departure time differs to scheduled departure time by more than a minute between GPO and BKG</span>
 
@@ -3403,16 +3577,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-35" class="collapse collapsable-details ">
+  <div id="element-36" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-36">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-37">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -3422,15 +3596,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-36" class="inner-level collapse collapsable-details ">
+  <div id="steps-37" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;GPO&quot;</span> and <span class="argument">&quot;BKG&quot;</span> on <span class="argument">&quot;2020-07-08&quot;</span> at <span class="argument">&quot;20:37&quot;</span></span>
 
-  <span class="lead-duration duration">0.659</span>
+  <span class="lead-duration duration">1:0.007</span>
 
 </div>
 
@@ -3438,6 +3612,75 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-38">
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-38" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BKG&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-07-08 20:37&quot;,&quot;dptCrsCode&quot;:&quot;GPO&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;GPO&quot; and &quot;BKG&quot; on &quot;2020-07-08&quot; at &quot;20:37&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:6)
+Caused by: java.io.InterruptedIOException: timeout
+	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
+	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
+	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
+	at okhttp3.RealCall.execute(RealCall.kt:67)
+	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at okio.InputStreamSource.read(Okio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
+	... 23 more
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -3453,7 +3696,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;C06214&quot;</span> that stops at</span>
 
@@ -3568,10 +3811,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.513</span>
+  <span class="lead-duration duration">0.772</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-37">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-39">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -3584,14 +3827,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-37" class="collapse collapsable-details ">
+  <div id="element-39" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-38">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-40">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -3603,7 +3846,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-38" class="inner-level collapse collapsable-details ">
+  <div id="steps-40" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -3611,7 +3854,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;WCY&quot;</span> and <span class="argument">&quot;HHY&quot;</span> on <span class="argument">&quot;2020-07-08&quot;</span> at <span class="argument">&quot;23:31&quot;</span></span>
 
-  <span class="lead-duration duration">0.512</span>
+  <span class="lead-duration duration">0.771</span>
 
 </div>
 
@@ -3794,10 +4037,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.525</span>
+  <span class="lead-duration duration">1.501</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-39">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-41">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -3810,14 +4053,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-39" class="collapse collapsable-details ">
+  <div id="element-41" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-40">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-42">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -3829,7 +4072,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-40" class="inner-level collapse collapsable-details ">
+  <div id="steps-42" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -3837,7 +4080,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BMV&quot;</span> and <span class="argument">&quot;LTV&quot;</span> on <span class="argument">&quot;2020-07-08&quot;</span> at <span class="argument">&quot;06:33&quot;</span></span>
 
-  <span class="lead-duration duration">0.524</span>
+  <span class="lead-duration duration">1.500</span>
 
 </div>
 
@@ -3864,7 +4107,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;C15816&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -4015,10 +4258,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.486</span>
+  <span class="lead-duration duration">0.767</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-41">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-43">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -4031,14 +4274,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-41" class="collapse collapsable-details ">
+  <div id="element-43" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-42">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-44">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -4050,7 +4293,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-42" class="inner-level collapse collapsable-details ">
+  <div id="steps-44" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -4058,7 +4301,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BMV&quot;</span> and <span class="argument">&quot;LTV&quot;</span> on <span class="argument">&quot;2020-07-08&quot;</span> at <span class="argument">&quot;07:31&quot;</span></span>
 
-  <span class="lead-duration duration">0.485</span>
+  <span class="lead-duration duration">0.766</span>
 
 </div>
 
@@ -4241,12 +4484,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.519</span>
+  <span class="lead-duration duration">1:0.003</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-43">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-45">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Public departure time differs to scheduled departure time by more than a minute between BMV and LTV</span>
 
@@ -4257,16 +4500,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-43" class="collapse collapsable-details ">
+  <div id="element-45" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-44">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-46">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -4276,15 +4519,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-44" class="inner-level collapse collapsable-details ">
+  <div id="steps-46" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BMV&quot;</span> and <span class="argument">&quot;LTV&quot;</span> on <span class="argument">&quot;2020-07-08&quot;</span> at <span class="argument">&quot;08:31&quot;</span></span>
 
-  <span class="lead-duration duration">0.518</span>
+  <span class="lead-duration duration">1:0.003</span>
 
 </div>
 
@@ -4292,6 +4535,74 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-47">
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-47" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;LTV&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-07-08 08:31&quot;,&quot;dptCrsCode&quot;:&quot;BMV&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;BMV&quot; and &quot;LTV&quot; on &quot;2020-07-08&quot; at &quot;08:31&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:100)
+Caused by: java.io.InterruptedIOException: timeout
+	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
+	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
+	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
+	at okhttp3.RealCall.execute(RealCall.kt:67)
+	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at okio.InputStreamSource.read(Okio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
+	... 22 more
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -4307,7 +4618,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;C15920&quot;</span> that stops at</span>
 
@@ -4462,10 +4773,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">2.549</span>
+  <span class="lead-duration duration">3.827</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-45">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-48">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -4478,14 +4789,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-45" class="collapse collapsable-details  in ">
+  <div id="element-48" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-46">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-49">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -4497,7 +4808,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-46" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-49" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -4505,7 +4816,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;CBW&quot;</span> on <span class="argument">&quot;2020-06-15&quot;</span> at <span class="argument">&quot;07:37&quot;</span></span>
 
-  <span class="lead-duration duration">2.549</span>
+  <span class="lead-duration duration">3.827</span>
 
 </div>
 
@@ -4516,10 +4827,10 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-47">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-50">
           <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-47" class="collapse collapsable-details  in ">
+      <div id="msg-50" class="collapse collapsable-details  in ">
         <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between CHX and CBW on 2020-06-15 07:37
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
@@ -4673,10 +4984,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.447</span>
+  <span class="lead-duration duration">1.016</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-48">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-51">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -4689,14 +5000,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-48" class="collapse collapsable-details  in ">
+  <div id="element-51" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-49">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-52">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -4708,7 +5019,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-49" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-52" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -4716,7 +5027,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;DVP&quot;</span> on <span class="argument">&quot;2020-06-15&quot;</span> at <span class="argument">&quot;07:09&quot;</span></span>
 
-  <span class="lead-duration duration">0.447</span>
+  <span class="lead-duration duration">1.016</span>
 
 </div>
 
@@ -4727,10 +5038,10 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-50">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-53">
           <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-50" class="collapse collapsable-details  in ">
+      <div id="msg-53" class="collapse collapsable-details  in ">
         <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between CHX and DVP on 2020-06-15 07:09
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
