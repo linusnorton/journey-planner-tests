@@ -3,7 +3,27 @@ Feature: Journey splits
   Journey planners should treat trains that split as a single journey
 
   Scenario: Train splits so there appears to be a single train between CHX and CBW
-    Given a query between "CHX" and "CBW" on "2020-06-15" at "07:37"
+    Given a query between "CHX" and "CBW" on "2020-07-08" at "23:40"
+    Then I should see a service "J14036" that stops at
+      | stop | arrival | departure |
+      | CHX  | --:--   | 23:40     |
+      | WAE  | 23:42   | 23:43     |
+      | LBG  | 23:47   | 23:49     |
+      | SEV  | 00:12   | 00:13     |
+      | TON  | 00:21   | 00:22     |
+      | PDW  | 00:28   | 00:29     |
+      | MRN  | 00:34   | 00:34     |
+      | SPU  | 00:38   | 00:38     |
+      | HCN  | 00:44   | 00:44     |
+      | PLC  | 00:50   | --:--     |
+      | AFK  | 01:00   | 01:07     |
+      | WYE  | 01:13   | --:--     |
+      | CIL  | 01:19   | --:--     |
+      | CRT  | 01:23   | --:--     |
+      | CBW  | 01:30   | --:--     |
+
+  Scenario: Train splits so there appears to be a single train between CHX and CBW
+    Given a query between "CHX" and "CBW" on "2020-07-08" at "07:37"
     Then I should see a service "W58752" that stops at
       | stop | arrival | departure |
       | CHX  | --:--   | 07:37     |
@@ -23,7 +43,7 @@ Feature: Journey splits
       | CBW  | 09:30   | --:--     |
 
   Scenario: Train splits so there appears to be a single train between CHX and DVP
-    Given a query between "CHX" and "DVP" on "2020-06-15" at "07:09"
+    Given a query between "CHX" and "DVP" on "2020-07-08" at "07:09"
     Then I should see a service "W58748" that stops at
       | stop | arrival | departure |
       | CHX  | --:--   | 07:09     |
