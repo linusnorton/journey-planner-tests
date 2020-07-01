@@ -2,49 +2,93 @@
 Feature: Journey joins another train
   Journey planners should treat trains that join another train as a single journey
 
-  Scenario: Train joins another train to form a single train between RAM and CHX
-    Given a query between "RAM" and "CHX" on "2020-07-08" at "08:14"
-    Then I should see a service "P95748" that stops at
+  Scenario: Train joins another train to form a single train between CLT and LST
+    Given a query between "CLT" and "LST" on "2020-07-08" at "07:16"
+    Then I should see a service "P06108" that stops at
       | stop | arrival | departure |
-      | RAM  | --:--   | 08:14     |
-      | MSR  | 08:20   | 08:20     |
-      | STU  | 08:31   | 08:31     |
-      | CBW  | 08:35   | 08:36     |
-      | CRT  | 08:41   | 08:41     |
-      | CIL  | 08:44   | 08:44     |
-      | WYE  | 08:50   | 08:51     |
-      | AFK  | 08:58   | 09:02     |
-      | PLC  | 09:08   | 09:08     |
-      | HCN  | 09:15   | 09:15     |
-      | SPU  | 09:19   | 09:20     |
-      | MRN  | 09:24   | 09:24     |
-      | PDW  | 09:29   | 09:30     |
-      | TON  | 09:37   | 09:39     |
-      | SEV  | 09:48   | 09:49     |
-      | LBG  | 10:11   | 10:13     |
-      | WAE  | 10:17   | 10:18     |
-      | CHX  | 10:24   | --:--     |
+      | CLT  | --:--   | 07:16     |
+      | TLS  | 07:24   | 07:24     |
+      | WEE  | 07:28   | 07:28     |
+      | GRB  | 07:31   | 07:31     |
+      | ALR  | 07:35   | 07:35     |
+      | WIV  | 07:39   | 07:39     |
+      | HYH  | 07:43   | 07:43     |
+      | COL  | 07:50   | 07:54     |
+      | KEL  | 08:04   | 08:04     |
+      | WTM  | 08:10   | 08:10     |
+      | CHM  | 08:19   | 08:19     |
+      | SNF  | 08:29   | 08:29     |
+      | SRA  | 08:46   | --:--     |
+      | LST  | 08:58   | --:--     |
 
-  Scenario: Train joins another train to form a single train between RAM and CHX
-    Given a query between "RAM" and "CHX" on "2020-07-08" at "09:08"
-    Then I should see a service "W59664" that stops at
+  Scenario: Train joins another train to form a single train between WON and LST
+    Given a query between "WON" and "LST" on "2020-07-08" at "08:00"
+    Then I should see a service "P06130" that stops at
       | stop | arrival | departure |
-      | RAM  | --:--   | 09:08     |
-      | MSR  | 09:14   | 09:19     |
-      | STU  | 09:30   | 09:31     |
-      | CBW  | 09:35   | 09:36     |
-      | CRT  | 09:41   | 09:41     |
-      | CIL  | 09:44   | 09:44     |
-      | WYE  | 09:50   | 09:51     |
-      | AFK  | 09:58   | 10:02     |
-      | PLC  | 10:08   | 10:08     |
-      | HCN  | 10:15   | 10:15     |
-      | SPU  | 10:19   | 10:20     |
-      | MRN  | 10:24   | 10:24     |
-      | PDW  | 10:29   | 10:30     |
-      | TON  | 10:38   | 10:39     |
-      | SEV  | 10:48   | 10:49     |
-      | LBG  | 11:11   | 11:13     |
-      | WAE  | 11:17   | 11:18     |
-      | CHX  | 11:22   | --:--     |
+      | WON  | --:--   | 08:00     |
+      | FRI  | 08:03   | 08:03     |
+      | KBX  | 08:06   | 08:06     |
+      | TLS  | 08:11   | 08:12     |
+      | WIV  | 08:22   | 08:22     |
+      | HYH  | 08:26   | 08:26     |
+      | COL  | 08:35   | 08:37     |
+      | WTM  | 08:49   | 08:50     |
+      | CHM  | 08:58   | 08:59     |
+      | SNF  | 09:09   | 09:09     |
+      | SRA  | 09:26   | --:--     |
+      | LST  | 09:36   | --:--     |
+
+  Scenario: Train joins another train to form a single train between CLT and LST
+    Given a query between "CLT" and "LST" on "2020-07-08" at "07:45"
+    Then I should see a service "P06125" that stops at
+      | stop | arrival | departure |
+      | CLT  | --:--   | 07:45     |
+      | TLS  | 07:53   | 07:53     |
+      | WIV  | 08:03   | 08:03     |
+      | COL  | 08:16   | 08:18     |
+      | MKT  | 08:24   | 08:24     |
+      | KEL  | 08:30   | 08:30     |
+      | WTM  | 08:36   | 08:36     |
+      | CHM  | 08:45   | 08:45     |
+      | SNF  | 08:55   | 08:55     |
+      | LST  | 09:21   | --:--     |
+
+  Scenario: Train joins another train to form a single train between WON and LST
+    Given a query between "WON" and "LST" on "2020-07-08" at "07:38"
+    Then I should see a service "P05710" that stops at
+      | stop | arrival | departure |
+      | WON  | --:--   | 07:38     |
+      | FRI  | 07:41   | 07:41     |
+      | KBX  | 07:44   | 07:44     |
+      | TLS  | 07:50   | 07:58     |
+      | WEE  | 08:02   | 08:02     |
+      | GRB  | 08:05   | 08:05     |
+      | ALR  | 08:09   | 08:09     |
+      | WIV  | 08:13   | 08:13     |
+      | HYH  | 08:17   | 08:17     |
+      | CET  | 08:21   | 08:32     |
+      | COL  | 08:40   | 08:48     |
+      | MKT  | 08:54   | 08:54     |
+      | KEL  | 09:00   | 09:00     |
+      | WTM  | 09:06   | 09:06     |
+      | CHM  | 09:15   | 09:15     |
+      | SNF  | 09:25   | 09:25     |
+      | SRA  | 09:42   | --:--     |
+      | LST  | 09:54   | --:--     |
+
+  Scenario: Train joins another train to form a single train between WRX and BHI
+    Given a query between "WRX" and "BHI" on "2020-07-08" at "07:50"
+    Then I should see a service "Y35867" that stops at
+      | stop | arrival | departure |
+      | WRX  | --:--   | 07:50     |
+      | RUA  | 07:58   | 07:58     |
+      | CRK  | 08:04   | 08:04     |
+      | GOB  | 08:10   | 08:10     |
+      | SHR  | 08:28   | 08:33     |
+      | WLN  | 08:47   | 08:47     |
+      | TFC  | 08:53   | 08:54     |
+      | WVH  | 09:11   | 09:11     |
+      | SGB  | 09:21   | 09:21     |
+      | BHM  | 09:32   | 09:36     |
+      | BHI  | 09:50   | --:--     |
 

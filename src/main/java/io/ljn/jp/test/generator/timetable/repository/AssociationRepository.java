@@ -23,13 +23,22 @@ public class AssociationRepository {
         "JOIN physical_station ON assoc_location = tiploc_code " +
         "WHERE CURDATE() + INTERVAL 1 WEEK BETWEEN bs.runs_from AND bs.runs_to " +
         "AND CURDATE() + INTERVAL 1 WEEK BETWEEN a_s.runs_from AND a_s.runs_to " +
-        "AND assoc_location LIKE 'ASH%' " +
+        "AND ( " +
+        "     select count(*) from association ass2 " +
+        "     WHERE ass2.stp_indicator = 'C' " +
+        "     AND CURDATE() + INTERVAL 1 WEEK BETWEEN ass2.start_date AND ass2.end_date " +
+        "     AND ass2.assoc_location = ass.assoc_location " +
+        "     AND ass2.base_uid = ass.base_uid " +
+        "     AND ass2.assoc_uid = ass.assoc_uid " +
+        ") = 0 " +
+        "AND assoc_location NOT IN (" +
+        "'EDINBUR', 'CRSTRS', 'CRNLRCH', 'CRDFCEN', 'WSTBRYW', 'AYRR', 'MCHYNLT', " +
+        "'WHLAND', 'CRDFCEN', 'WITHAME', 'HYWRDSH', 'GOUROCK', 'HLNSBRC', 'LARGS') " +
         "AND assoc_cat = ? " +
         "AND bs.stp_indicator != 'C' " +
         "AND a_s.stp_indicator != 'C' " +
         "AND bs." + LocalDate.now().plusWeeks(1).getDayOfWeek().name() + " = 1 " +
         "AND a_s." + LocalDate.now().plusWeeks(1).getDayOfWeek().name() + " = 1 " +
-        "ORDER BY RAND() " +
         "LIMIT 5";
 
     public List<AssociationRow> getSplits() {
