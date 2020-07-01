@@ -60,6 +60,7 @@ public class ScheduleRepository {
         "WHERE s.runs_to > CURDATE() + INTERVAL 1 MONTH " +
         "AND CURDATE() + INTERVAL 1 MONTH BETWEEN c.runs_from AND c.runs_to " +
         "AND c2.id IS NULL " +
+        "AND (select count(*) from schedule s2 where s2.train_uid = s.train_uid) < 5 " +
         "ORDER BY RAND() " +
         "LIMIT 5 ";
 

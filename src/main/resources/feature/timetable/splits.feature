@@ -22,26 +22,6 @@ Feature: Journey splits
       | CRT  | 01:23   | --:--     |
       | CBW  | 01:30   | --:--     |
 
-  Scenario: Train splits so there appears to be a single train between CHX and CBW
-    Given a query between "CHX" and "CBW" on "2020-07-08" at "07:37"
-    Then I should see a service "W58752" that stops at
-      | stop | arrival | departure |
-      | CHX  | --:--   | 07:37     |
-      | WAE  | 07:39   | 07:40     |
-      | LBG  | 07:44   | 07:46     |
-      | SEV  | 08:12   | 08:13     |
-      | TON  | 08:21   | 08:22     |
-      | PDW  | 08:28   | 08:29     |
-      | MRN  | 08:34   | 08:34     |
-      | SPU  | 08:38   | 08:38     |
-      | HCN  | 08:44   | 08:44     |
-      | PLC  | 08:50   | 08:50     |
-      | AFK  | 09:00   | 09:08     |
-      | WYE  | 09:14   | 09:14     |
-      | CIL  | 09:20   | 09:20     |
-      | CRT  | 09:24   | 09:24     |
-      | CBW  | 09:30   | --:--     |
-
   Scenario: Train splits so there appears to be a single train between CHX and DVP
     Given a query between "CHX" and "DVP" on "2020-07-08" at "07:09"
     Then I should see a service "W58748" that stops at
@@ -62,4 +42,24 @@ Feature: Journey splits
       | FKW  | 08:55   | 08:55     |
       | FKC  | 08:57   | 08:58     |
       | DVP  | 09:11   | --:--     |
+
+  Scenario: Train splits so there appears to be a single train between CHX and CBW
+    Given a query between "CHX" and "CBW" on "2020-07-08" at "07:37"
+    Then I should see a service "W58752" that stops at
+      | stop | arrival | departure |
+      | CHX  | --:--   | 07:37     |
+      | WAE  | 07:39   | 07:40     |
+      | LBG  | 07:44   | 07:46     |
+      | SEV  | 08:12   | 08:13     |
+      | TON  | 08:21   | 08:22     |
+      | PDW  | 08:28   | 08:29     |
+      | MRN  | 08:34   | 08:34     |
+      | SPU  | 08:38   | 08:38     |
+      | HCN  | 08:44   | 08:44     |
+      | PLC  | 08:50   | 08:50     |
+      | AFK  | 09:00   | 09:08     |
+      | WYE  | 09:14   | 09:14     |
+      | CIL  | 09:20   | 09:20     |
+      | CRT  | 09:24   | 09:24     |
+      | CBW  | 09:30   | --:--     |
 
