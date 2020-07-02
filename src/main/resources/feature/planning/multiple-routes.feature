@@ -69,3 +69,10 @@ Feature: The journey planner should offer the user multiple routes
 #      | WFJ, EUS, PRE, HYM, STN |
 #      | WFJ, MKC, CRE, PRE, HYM, STN |
 #      | WFJ, EUS, KGX, STN |
+
+  Scenario: Journeys between BMH and BRI have a number of routes
+    Given a query between "BMH" and "BRI" on "a weekday" at "09:00"
+    Then I should see the following transfer patterns
+      | BMH, SOU, BRI |
+      | BMH, DCH, DCW, BRI |
+      | BMH, RDG, BPW, BRI |

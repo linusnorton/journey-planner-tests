@@ -23,3 +23,8 @@ Feature: The journey planner should make use of transfers to connect trains
       | CBW, CBE, DVP |
       # Disappeared?
       #      | CBW, AFK, DVP |
+
+  Scenario: Journeys between LUA and FIL should involve a bus from LUA to LTN and then train
+    Given a query between "LUA" and "FIL" on "a weekday" at "09:00"
+    Then I should see the following transfer patterns
+      | LUA, LTN, SHF, HUL, FIL |
