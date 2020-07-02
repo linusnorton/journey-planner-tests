@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>01 Jul 2020, 16:12</td>
+      <td>02 Jul 2020, 08:40</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">The journey planner should make use of transfers to connect trains</td>
-          <td      class="passed"    >3</td>
-          <td      class="failed"    >1</td>
+          <td      class="passed"    >4</td>
+          <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">4</td>
 
-          <td  class="passed"    >1</td>
-          <td  class="failed"    >1</td>
+          <td  class="passed"    >2</td>
+          <td >0</td>
           <td class="total">2</td>
 
-          <td class="duration" data-value="1936228000">1.936</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="1919352000">1.919</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -173,7 +173,7 @@ $(document).ready(function() {
 </div>
 
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Feature</span>
   <span class="name">The journey planner should make use of transfers to connect trains</span>
 
@@ -193,12 +193,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.181</span>
+  <span class="lead-duration duration">1.182</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Journeys between NRW and WWW can go via PBO or use a transfer to connect LST to EUS to go via London</span>
 
@@ -209,16 +209,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -228,7 +228,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -259,7 +259,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
@@ -272,67 +272,8 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: NRW,PBO,BHM,BSW,WWW in 
-
-NRW (08:00:00) -&gt; WWW (14:09:00)
-	NRW (08:00:00) -&gt; SRA (09:49:00)
-	SRA -&gt; MYB (57)
-	MYB (11:10:00) -&gt; BMO (12:56:00)
-	BMO (13:31:00) -&gt; WWW (14:09:00)
-
-NRW (08:00:00) -&gt; WWW (13:09:00)
-	NRW (08:00:00) -&gt; LST (10:00:00)
-	LST -&gt; EUS (13)
-	EUS (10:43:00) -&gt; BHM (12:05:00)
-	BHM -&gt; BMO (8)
-	BMO (12:31:00) -&gt; WWW (13:09:00)
-
-NRW (09:03:00) -&gt; WWW (14:09:00)
-	NRW (09:03:00) -&gt; LST (10:56:00)
-	LST -&gt; EUS (13)
-	EUS (11:43:00) -&gt; BHM (13:05:00)
-	BHM -&gt; BMO (8)
-	BMO (13:31:00) -&gt; WWW (14:09:00)
-
-NRW (10:00:00) -&gt; WWW (16:09:00)
-	NRW (10:00:00) -&gt; SRA (11:46:00)
-	SRA -&gt; MYB (57)
-	MYB (13:10:00) -&gt; BMO (14:56:00)
-	BMO (15:31:00) -&gt; WWW (16:09:00)
-
-NRW (10:00:00) -&gt; WWW (15:09:00)
-	NRW (10:00:00) -&gt; LST (11:55:00)
-	LST -&gt; EUS (13)
-	EUS (12:43:00) -&gt; BHM (14:05:00)
-	BHM -&gt; BMO (8)
-	BMO (14:31:00) -&gt; WWW (15:09:00)
-
-Check with: 
-
-http://ojp.nationalrail.co.uk/service/timesandfares/NRW/WWW/26082020/0730/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=NRW&amp;destination=WWW&amp;outwardDate=2020-08-26&amp;outwardTime=07:30
-
-
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/transfers.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
           <table class="step-arguments">
-              <tr>
-                  <td>NRW, PBO, BHM, BSW, WWW</td>
-              </tr>
               <tr>
                   <td>NRW, LST, EUS, BHM, BMO, WWW</td>
               </tr>
@@ -367,10 +308,10 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=NRW&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">0.754</span>
+  <span class="lead-duration duration">0.737</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-4">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -383,14 +324,14 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=NRW&amp;destina
   </span>
   <div class="description indention"></div>
 
-  <div id="element-4" class="collapse collapsable-details ">
+  <div id="element-3" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-4">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -402,7 +343,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=NRW&amp;destina
 
   </div>
 
-  <div id="steps-5" class="inner-level collapse collapsable-details ">
+  <div id="steps-4" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -410,7 +351,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=NRW&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CBW&quot;</span> and <span class="argument">&quot;DVP&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
 
-  <span class="lead-duration duration">0.749</span>
+  <span class="lead-duration duration">0.736</span>
 
 </div>
 
@@ -437,7 +378,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=NRW&amp;destina
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.005</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
