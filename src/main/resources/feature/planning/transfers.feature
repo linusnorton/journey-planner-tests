@@ -6,7 +6,7 @@ Feature: The journey planner should make use of transfers to connect trains
     Then I should see the following transfer patterns
       # Can be ELY or PBO
       #      | NRW, ELY, BHM, BMO, WWW      |
-      | NRW, PBO, BHM, BSW, WWW      |
+      #      | NRW, PBO, BHM, BSW, WWW      |
       | NRW, LST, EUS, BHM, BMO, WWW |
 
 #  Scenario: Journeys from FAV to SHF should offer a walking route via London and a non-walking route via Chesterfield
