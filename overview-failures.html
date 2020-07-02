@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>02 Jul 2020, 09:21</td>
+      <td>02 Jul 2020, 16:14</td>
     </tr>
   </tbody>
 </table>
@@ -125,7 +125,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.144</span>
+  <span class="lead-duration duration">1:0.014</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -164,11 +164,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BMH&quot;</span> and <span class="argument">&quot;AFK&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.140</span>
+  <span class="lead-duration duration">1:0.014</span>
 
 </div>
 
@@ -176,6 +176,75 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;AFK&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-08-27 09:00&quot;,&quot;dptCrsCode&quot;:&quot;BMH&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;BMH&quot; and &quot;AFK&quot; on &quot;a weekday&quot; at &quot;09:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/london.feature:10)
+Caused by: java.io.InterruptedIOException: timeout
+	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
+	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
+	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
+	at okhttp3.RealCall.execute(RealCall.kt:67)
+	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at okio.InputStreamSource.read(Okio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
+	... 23 more
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -191,11 +260,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -203,54 +272,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: BMH,CLJ,VIC,AFK in 
-
-BMH (09:22:00) -&gt; AFK (13:00:00)
-	BMH (09:22:00) -&gt; WAT (11:22:00)
-	WAT -&gt; WAE (1)
-	WAE (11:43:00) -&gt; AFK (13:00:00)
-
-BMH (10:22:00) -&gt; AFK (14:00:00)
-	BMH (10:22:00) -&gt; WAT (12:23:00)
-	WAT -&gt; WAE (1)
-	WAE (12:43:00) -&gt; AFK (14:00:00)
-
-BMH (11:22:00) -&gt; AFK (15:00:00)
-	BMH (11:22:00) -&gt; WAT (13:22:00)
-	WAT -&gt; WAE (1)
-	WAE (13:43:00) -&gt; AFK (15:00:00)
-
-BMH (12:22:00) -&gt; AFK (16:00:00)
-	BMH (12:22:00) -&gt; WAT (14:22:00)
-	WAT -&gt; WAE (1)
-	WAE (14:43:00) -&gt; AFK (16:00:00)
-
-BMH (13:22:00) -&gt; AFK (17:00:00)
-	BMH (13:22:00) -&gt; WAT (15:22:00)
-	WAT -&gt; WAE (1)
-	WAE (15:43:00) -&gt; AFK (17:00:00)
-
-Check with: 
-
-http://ojp.nationalrail.co.uk/service/timesandfares/BMH/AFK/27082020/0900/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destination=AFK&amp;outwardDate=2020-08-27&amp;outwardTime=09:00
-
-
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/london.feature:11)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -292,7 +313,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">1.181</span>
+  <span class="lead-duration duration">0.934</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
@@ -331,11 +352,11 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;HNH&quot;</span> and <span class="argument">&quot;SMD&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.181</span>
+  <span class="lead-duration duration">0.930</span>
 
 </div>
 
@@ -343,21 +364,6 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
-          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
-      </div>
-      <div id="msg-6" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between HNH and SMD on 2020-08-27 07:00
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;HNH&quot; and &quot;SMD&quot; on &quot;a weekday&quot; at &quot;07:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:41)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -373,11 +379,11 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.004</span>
 
 </div>
 
@@ -385,6 +391,60 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: HNH,BFR,STP,LEI,SMD in 
+
+HNH (07:45:00) -&gt; SMD (10:06:00)
+	HNH (07:45:00) -&gt; BFR (07:59:00)
+	BFR (08:07:00) -&gt; PBO (09:35:00)
+	PBO (09:54:00) -&gt; SMD (10:06:00)
+
+HNH (07:57:00) -&gt; SMD (10:06:00)
+	HNH (07:57:00) -&gt; EPH (08:04:00)
+	EPH -&gt; KGX (35)
+	KGX (09:00:00) -&gt; PBO (09:46:00)
+	PBO (09:54:00) -&gt; SMD (10:06:00)
+
+HNH (08:12:00) -&gt; SMD (10:59:00)
+	HNH (08:12:00) -&gt; STP (08:33:00)
+	STP (09:02:00) -&gt; LEI (10:06:00)
+	LEI (10:18:00) -&gt; SMD (10:59:00)
+
+HNH (09:42:00) -&gt; SMD (12:06:00)
+	HNH (09:42:00) -&gt; BFR (09:54:00)
+	BFR (10:07:00) -&gt; PBO (11:39:00)
+	PBO (11:54:00) -&gt; SMD (12:06:00)
+
+HNH (10:12:00) -&gt; SMD (12:59:00)
+	HNH (10:12:00) -&gt; STP (10:33:00)
+	STP (11:02:00) -&gt; LEI (12:05:00)
+	LEI (12:18:00) -&gt; SMD (12:59:00)
+
+HNH (11:42:00) -&gt; SMD (14:06:00)
+	HNH (11:42:00) -&gt; BFR (11:54:00)
+	BFR (12:07:00) -&gt; PBO (13:39:00)
+	PBO (13:54:00) -&gt; SMD (14:06:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/HNH/SMD/27082020/0700/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destination=SMD&amp;outwardDate=2020-08-27&amp;outwardTime=07:00
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:42)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -432,7 +492,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">1:0.010</span>
+  <span class="lead-duration duration">1:0.019</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
@@ -475,7 +535,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;NRW&quot;</span> and <span class="argument">&quot;COV&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;14:00&quot;</span></span>
 
-  <span class="lead-duration duration">1:0.010</span>
+  <span class="lead-duration duration">1:0.019</span>
 
 </div>
 
@@ -620,7 +680,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">2.046</span>
+  <span class="lead-duration duration">0.920</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
@@ -663,7 +723,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BAU&quot;</span> and <span class="argument">&quot;SWA&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">2.045</span>
+  <span class="lead-duration duration">0.919</span>
 
 </div>
 
@@ -712,20 +772,34 @@ BAU (09:50:00) -&gt; SWA (18:11:00)
 	HAB (10:44:00) -&gt; SPT (12:52:00)
 	SPT (13:39:00) -&gt; SWA (18:11:00)
 
+BAU (09:50:00) -&gt; SWA (17:39:00)
+	BAU (09:50:00) -&gt; HAB (10:17:00)
+	HAB (10:44:00) -&gt; SHF (12:09:00)
+	SHF (12:56:00) -&gt; BPW (15:20:00)
+	BPW (16:05:00) -&gt; SWA (17:39:00)
+
 BAU (11:50:00) -&gt; SWA (20:09:00)
 	BAU (11:50:00) -&gt; HAB (12:17:00)
 	HAB (12:44:00) -&gt; SPT (14:52:00)
 	SPT (15:39:00) -&gt; SWA (20:09:00)
 
-BAU (20:01:00) -&gt; SWA (10:57:00)
-	BAU (20:01:00) -&gt; HAB (20:30:00)
-	HAB (20:44:00) -&gt; SPT (22:52:00)
-	SPT (06:39:00) -&gt; SWA (10:57:00)
+BAU (11:50:00) -&gt; SWA (19:33:00)
+	BAU (11:50:00) -&gt; HAB (12:17:00)
+	HAB (12:44:00) -&gt; SHF (14:09:00)
+	SHF (14:56:00) -&gt; BPW (17:21:00)
+	BPW (18:05:00) -&gt; SWA (19:33:00)
 
-BAU (22:02:00) -&gt; SWA (12:40:00)
-	BAU (22:02:00) -&gt; HAB (22:29:00)
-	HAB (05:23:00) -&gt; SPT (07:52:00)
-	SPT (08:39:00) -&gt; SWA (12:40:00)
+BAU (13:50:00) -&gt; SWA (21:33:00)
+	BAU (13:50:00) -&gt; HAB (14:17:00)
+	HAB (14:44:00) -&gt; SHF (16:09:00)
+	SHF (16:56:00) -&gt; BPW (19:33:00)
+	BPW (20:05:00) -&gt; SWA (21:33:00)
+
+BAU (17:55:00) -&gt; SWA (01:52:00)
+	BAU (17:55:00) -&gt; HAB (18:22:00)
+	HAB (18:44:00) -&gt; SHF (20:09:00)
+	SHF (20:58:00) -&gt; BPW (23:20:00)
+	BPW (00:15:00) -&gt; SWA (01:52:00)
 
 Check with: 
 
@@ -772,7 +846,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BAU&amp;destina
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_3_771976588.html">The journey planner should offer the user multiple routes</a>
+      <a href="report-feature_5_709490566.html">Some journeys may require the routeing guide maps to be divided at a via station</a>
     </div>
 
 
@@ -782,21 +856,21 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BAU&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">1.520</span>
+  <span class="lead-duration duration">0.869</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between BMH and BRI have a number of routes</span>
+  <span class="name">Journeys between Nuneaton and York should show a journey via Peterborough that is only valid if</span>
 
 
      <i class="chevron fa fa-fw"></i>
 </div>
 
   </span>
-  <div class="description indention"></div>
+  <div class="description indention">            the routeing maps from Nuneaton to Peterborough are combined with the maps from Peterborough to York</div>
 
   <div id="element-13" class="collapse collapsable-details  in ">
 
@@ -823,9 +897,9 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BAU&amp;destina
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;BMH&quot;</span> and <span class="argument">&quot;BRI&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
+  <span class="name">a query between <span class="argument">&quot;NUN&quot;</span> and <span class="argument">&quot;YRK&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:30&quot;</span></span>
 
-  <span class="lead-duration duration">1.519</span>
+  <span class="lead-duration duration">0.868</span>
 
 </div>
 
@@ -867,179 +941,48 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BAU&amp;destina
           <a>java.lang.AssertionError:</a>
       </div>
       <div id="msg-15" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: BMH,RDG,BPW,BRI in 
+        <pre>java.lang.AssertionError: Could not find pattern: NUN,LEI,DBY,YRK in 
 
-BMH (09:22:00) -&gt; BRI (11:50:00)
-	BMH (09:22:00) -&gt; SOU (09:58:00)
-	SOU (10:11:00) -&gt; BRI (11:50:00)
+NUN (07:42:00) -&gt; YRK (10:30:00)
+	NUN (07:42:00) -&gt; TAM (07:55:00)
+	TAM (08:19:00) -&gt; YRK (10:30:00)
 
-BMH (10:22:00) -&gt; BRI (12:49:00)
-	BMH (10:22:00) -&gt; SOU (10:58:00)
-	SOU (11:10:00) -&gt; BRI (12:49:00)
+NUN (07:51:00) -&gt; YRK (11:29:00)
+	NUN (07:51:00) -&gt; LEI (08:17:00)
+	LEI (08:40:00) -&gt; SHF (09:47:00)
+	SHF (09:57:00) -&gt; DON (10:22:00)
+	DON (11:05:00) -&gt; YRK (11:29:00)
 
-BMH (10:24:00) -&gt; BRI (13:35:00)
-	BMH (10:24:00) -&gt; DCH (11:09:00)
-	DCH -&gt; DCW (8)
-	DCW (11:24:00) -&gt; BRI (13:35:00)
+NUN (07:51:00) -&gt; YRK (10:51:00)
+	NUN (07:51:00) -&gt; PBO (09:13:00)
+	PBO (09:48:00) -&gt; YRK (10:51:00)
 
-BMH (11:22:00) -&gt; BRI (13:51:00)
-	BMH (11:22:00) -&gt; SOU (11:58:00)
-	SOU (12:11:00) -&gt; BRI (13:51:00)
+NUN (08:16:00) -&gt; YRK (11:30:00)
+	NUN (08:16:00) -&gt; BHM (08:45:00)
+	BHM (09:03:00) -&gt; YRK (11:30:00)
+
+NUN (09:15:00) -&gt; YRK (12:31:00)
+	NUN (09:15:00) -&gt; BHM (09:44:00)
+	BHM (10:03:00) -&gt; YRK (12:31:00)
+
+NUN (09:55:00) -&gt; YRK (12:31:00)
+	NUN (09:55:00) -&gt; TAM (10:08:00)
+	TAM (10:19:00) -&gt; YRK (12:31:00)
 
 Check with: 
 
-http://ojp.nationalrail.co.uk/service/timesandfares/BMH/BRI/27082020/0900/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destination=BRI&amp;outwardDate=2020-08-27&amp;outwardTime=09:00
+http://ojp.nationalrail.co.uk/service/timesandfares/NUN/YRK/27082020/0730/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=NUN&amp;destination=YRK&amp;outwardDate=2020-08-27&amp;outwardTime=07:30
 
 
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.assertTrue(Assert.java:42)
 	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:75)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/split-map-routeing.feature:7)
 </pre>
       </div>
     </div>
   </div>
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>BMH, SOU, BRI</td>
-              </tr>
-              <tr>
-                  <td>BMH, DCH, DCW, BRI</td>
-              </tr>
-              <tr>
-                  <td>BMH, RDG, BPW, BRI</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_5_709490566.html">Some journeys may require the routeing guide maps to be divided at a via station</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2054189833.html">@journey-planning</a>
-</div>
-
-
-  <span class="lead-duration duration">1.218</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-16">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between Nuneaton and York should show a journey via Peterborough that is only valid if</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention">            the routeing maps from Nuneaton to Peterborough are combined with the maps from Peterborough to York</div>
-
-  <div id="element-16" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-17">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-17" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given failed">
-  <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;NUN&quot;</span> and <span class="argument">&quot;YRK&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:30&quot;</span></span>
-
-  <span class="lead-duration duration">1.218</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-18">
-          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
-      </div>
-      <div id="msg-18" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between NUN and YRK on 2020-08-27 07:30
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;NUN&quot; and &quot;YRK&quot; on &quot;a weekday&quot; at &quot;07:30&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/split-map-routeing.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
 
 
           <table class="step-arguments">
@@ -1117,10 +1060,10 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">0.736</span>
+  <span class="lead-duration duration">1:0.003</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-19">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-16">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -1133,14 +1076,14 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
   </span>
   <div class="description indention"></div>
 
-  <div id="element-19" class="collapse collapsable-details  in ">
+  <div id="element-16" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-20">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-17">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -1152,7 +1095,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
 
   </div>
 
-  <div id="steps-20" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-17" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -1160,7 +1103,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;LUA&quot;</span> and <span class="argument">&quot;FIL&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
 
-  <span class="lead-duration duration">0.736</span>
+  <span class="lead-duration duration">1:0.003</span>
 
 </div>
 
@@ -1171,14 +1114,67 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-21">
-          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-18">
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
       </div>
-      <div id="msg-21" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between LUA and FIL on 2020-08-27 09:00
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
+      <div id="msg-18" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;FIL&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-08-27 09:00&quot;,&quot;dptCrsCode&quot;:&quot;LUA&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;LUA&quot; and &quot;FIL&quot; on &quot;a weekday&quot; at &quot;09:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/transfers.feature:28)
+Caused by: java.io.InterruptedIOException: timeout
+	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
+	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
+	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
+	at okhttp3.RealCall.execute(RealCall.kt:67)
+	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at okio.InputStreamSource.read(Okio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
+	... 22 more
 </pre>
       </div>
     </div>
@@ -1251,10 +1247,10 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">0.693</span>
+  <span class="lead-duration duration">0.826</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-22">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-19">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -1267,14 +1263,14 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
   </span>
   <div class="description indention"></div>
 
-  <div id="element-22" class="collapse collapsable-details  in ">
+  <div id="element-19" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-23">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-20">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -1286,7 +1282,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
 
   </div>
 
-  <div id="steps-23" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-20" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -1294,7 +1290,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RYD&quot;</span> and <span class="argument">&quot;WAT&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
 
-  <span class="lead-duration duration">0.693</span>
+  <span class="lead-duration duration">0.826</span>
 
 </div>
 
@@ -1305,10 +1301,10 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-24">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-21">
           <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-24" class="collapse collapsable-details  in ">
+      <div id="msg-21" class="collapse collapsable-details  in ">
         <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between RYD and WAT on 2020-08-27 09:00
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
@@ -1375,6 +1371,294 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
+      <a href="report-feature_8_3507411400.html">Schedule cancellations</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2511005920.html">@timetable</a>
+</div>
+
+
+  <span class="lead-duration duration">1:0.006</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-22">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Service between LDS and HUD is cancelled on a particular day</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-22" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-23">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-23" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given failed">
+  <span class="keyword indention">Given</span>
+  <span class="name">a query between <span class="argument">&quot;LDS&quot;</span> and <span class="argument">&quot;HUD&quot;</span> on <span class="argument">&quot;2020-07-20&quot;</span> at <span class="argument">&quot;23:47&quot;</span></span>
+
+  <span class="lead-duration duration">1:0.006</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-24">
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-24" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;HUD&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-07-20 23:47&quot;,&quot;dptCrsCode&quot;:&quot;LDS&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;LDS&quot; and &quot;HUD&quot; on &quot;2020-07-20&quot; at &quot;23:47&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:22)
+Caused by: java.io.InterruptedIOException: timeout
+	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
+	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
+	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
+	at okhttp3.RealCall.execute(RealCall.kt:67)
+	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at okio.InputStreamSource.read(Okio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
+	... 22 more
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;C05448&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>LDS</td>
+                  <td>--:--</td>
+                  <td>23:47</td>
+              </tr>
+              <tr>
+                  <td>COT</td>
+                  <td>23:52</td>
+                  <td>23:52</td>
+              </tr>
+              <tr>
+                  <td>MLY</td>
+                  <td>23:55</td>
+                  <td>23:56</td>
+              </tr>
+              <tr>
+                  <td>BTL</td>
+                  <td>00:01</td>
+                  <td>00:02</td>
+              </tr>
+              <tr>
+                  <td>DEW</td>
+                  <td>00:03</td>
+                  <td>00:03</td>
+              </tr>
+              <tr>
+                  <td>RVN</td>
+                  <td>00:06</td>
+                  <td>00:07</td>
+              </tr>
+              <tr>
+                  <td>MIR</td>
+                  <td>00:10</td>
+                  <td>00:11</td>
+              </tr>
+              <tr>
+                  <td>DHN</td>
+                  <td>00:17</td>
+                  <td>00:17</td>
+              </tr>
+              <tr>
+                  <td>HUD</td>
+                  <td>00:22</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">I query between <span class="argument">&quot;LDS&quot;</span> and <span class="argument">&quot;HUD&quot;</span> on <span class="argument">&quot;2020-07-27&quot;</span> at <span class="argument">&quot;23:47&quot;</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should not see a service <span class="argument">&quot;C05448&quot;</span> in the results</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
       <a href="report-feature_9_467630994.html">Journey joins another train</a>
     </div>
 
@@ -1385,7 +1669,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">1.460</span>
+  <span class="lead-duration duration">1.471</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-25">
@@ -1428,7 +1712,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BMH&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;WRX&quot;</span> and <span class="argument">&quot;BHI&quot;</span> on <span class="argument">&quot;2020-07-08&quot;</span> at <span class="argument">&quot;07:50&quot;</span></span>
 
-  <span class="lead-duration duration">1.459</span>
+  <span class="lead-duration duration">1.470</span>
 
 </div>
 
@@ -1567,6 +1851,1168 @@ BHI_09:51]_--:--&gt;
               <tr>
                   <td>BHI</td>
                   <td>09:50</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_10_719652825.html">Schedule overlays</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2511005920.html">@timetable</a>
+</div>
+
+
+  <span class="lead-duration duration">1:1.032</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-28">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Changing calling point stopping times between WYB and WAT</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-28" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-29">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-29" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">a query between <span class="argument">&quot;WYB&quot;</span> and <span class="argument">&quot;WAT&quot;</span> on <span class="argument">&quot;2020-07-25&quot;</span> at <span class="argument">&quot;15:03&quot;</span></span>
+
+  <span class="lead-duration duration">1.029</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;W19300&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>WYB</td>
+                  <td>--:--</td>
+                  <td>15:03</td>
+              </tr>
+              <tr>
+                  <td>ASN</td>
+                  <td>15:07</td>
+                  <td>15:07</td>
+              </tr>
+              <tr>
+                  <td>CHY</td>
+                  <td>15:10</td>
+                  <td>15:10</td>
+              </tr>
+              <tr>
+                  <td>VIR</td>
+                  <td>15:15</td>
+                  <td>15:24</td>
+              </tr>
+              <tr>
+                  <td>EGH</td>
+                  <td>15:27</td>
+                  <td>15:27</td>
+              </tr>
+              <tr>
+                  <td>SNS</td>
+                  <td>15:32</td>
+                  <td>15:33</td>
+              </tr>
+              <tr>
+                  <td>AFS</td>
+                  <td>15:36</td>
+                  <td>15:36</td>
+              </tr>
+              <tr>
+                  <td>FEL</td>
+                  <td>15:40</td>
+                  <td>15:41</td>
+              </tr>
+              <tr>
+                  <td>HOU</td>
+                  <td>15:46</td>
+                  <td>15:46</td>
+              </tr>
+              <tr>
+                  <td>ISL</td>
+                  <td>15:49</td>
+                  <td>15:49</td>
+              </tr>
+              <tr>
+                  <td>SYL</td>
+                  <td>15:51</td>
+                  <td>15:51</td>
+              </tr>
+              <tr>
+                  <td>BFD</td>
+                  <td>15:53</td>
+                  <td>15:54</td>
+              </tr>
+              <tr>
+                  <td>KWB</td>
+                  <td>15:56</td>
+                  <td>15:56</td>
+              </tr>
+              <tr>
+                  <td>CHK</td>
+                  <td>15:59</td>
+                  <td>15:59</td>
+              </tr>
+              <tr>
+                  <td>BNI</td>
+                  <td>16:01</td>
+                  <td>16:01</td>
+              </tr>
+              <tr>
+                  <td>BNS</td>
+                  <td>16:04</td>
+                  <td>16:04</td>
+              </tr>
+              <tr>
+                  <td>PUT</td>
+                  <td>16:07</td>
+                  <td>16:07</td>
+              </tr>
+              <tr>
+                  <td>WNT</td>
+                  <td>16:10</td>
+                  <td>16:10</td>
+              </tr>
+              <tr>
+                  <td>CLJ</td>
+                  <td>16:13</td>
+                  <td>16:13</td>
+              </tr>
+              <tr>
+                  <td>QRB</td>
+                  <td>16:16</td>
+                  <td>16:16</td>
+              </tr>
+              <tr>
+                  <td>VXH</td>
+                  <td>16:19</td>
+                  <td>16:20</td>
+              </tr>
+              <tr>
+                  <td>WAT</td>
+                  <td>16:26</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When failed">
+  <span class="keyword indention">When</span>
+  <span class="name">I query between <span class="argument">&quot;HOU&quot;</span> and <span class="argument">&quot;WAT&quot;</span> on <span class="argument">&quot;2020-08-01&quot;</span> at <span class="argument">&quot;15:46&quot;</span></span>
+
+  <span class="lead-duration duration">1:0.002</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-30">
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-30" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;WAT&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-08-01 15:46&quot;,&quot;dptCrsCode&quot;:&quot;HOU&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.I query between &quot;HOU&quot; and &quot;WAT&quot; on &quot;2020-08-01&quot; at &quot;15:46&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/overlay.feature:31)
+Caused by: java.io.InterruptedIOException: timeout
+	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
+	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
+	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
+	at okhttp3.RealCall.execute(RealCall.kt:67)
+	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at okio.InputStreamSource.read(Okio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
+	... 22 more
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;W19300&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>HOU</td>
+                  <td>--:--</td>
+                  <td>15:46</td>
+              </tr>
+              <tr>
+                  <td>ISL</td>
+                  <td>15:49</td>
+                  <td>15:49</td>
+              </tr>
+              <tr>
+                  <td>SYL</td>
+                  <td>15:51</td>
+                  <td>15:51</td>
+              </tr>
+              <tr>
+                  <td>BFD</td>
+                  <td>15:53</td>
+                  <td>15:54</td>
+              </tr>
+              <tr>
+                  <td>KWB</td>
+                  <td>15:56</td>
+                  <td>15:56</td>
+              </tr>
+              <tr>
+                  <td>CHK</td>
+                  <td>15:59</td>
+                  <td>15:59</td>
+              </tr>
+              <tr>
+                  <td>BNI</td>
+                  <td>16:01</td>
+                  <td>16:01</td>
+              </tr>
+              <tr>
+                  <td>BNS</td>
+                  <td>16:04</td>
+                  <td>16:04</td>
+              </tr>
+              <tr>
+                  <td>PUT</td>
+                  <td>16:07</td>
+                  <td>16:07</td>
+              </tr>
+              <tr>
+                  <td>WNT</td>
+                  <td>16:10</td>
+                  <td>16:10</td>
+              </tr>
+              <tr>
+                  <td>CLJ</td>
+                  <td>16:13</td>
+                  <td>16:13</td>
+              </tr>
+              <tr>
+                  <td>QRB</td>
+                  <td>16:16</td>
+                  <td>16:16</td>
+              </tr>
+              <tr>
+                  <td>VXH</td>
+                  <td>16:19</td>
+                  <td>16:20</td>
+              </tr>
+              <tr>
+                  <td>WAT</td>
+                  <td>16:26</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_11_2304417082.html">Public time different to scheduled time</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2511005920.html">@timetable</a>
+</div>
+
+
+  <span class="lead-duration duration">1:0.004</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-31">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Public departure time differs to scheduled departure time by more than a minute between GPO and BKG</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-31" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-32">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-32" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given failed">
+  <span class="keyword indention">Given</span>
+  <span class="name">a query between <span class="argument">&quot;GPO&quot;</span> and <span class="argument">&quot;BKG&quot;</span> on <span class="argument">&quot;2020-08-01&quot;</span> at <span class="argument">&quot;19:35&quot;</span></span>
+
+  <span class="lead-duration duration">1:0.004</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-33">
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-33" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BKG&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-08-01 19:35&quot;,&quot;dptCrsCode&quot;:&quot;GPO&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;GPO&quot; and &quot;BKG&quot; on &quot;2020-08-01&quot; at &quot;19:35&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:32)
+Caused by: java.io.InterruptedIOException: timeout
+	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
+	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
+	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
+	at okhttp3.RealCall.execute(RealCall.kt:67)
+	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at okio.InputStreamSource.read(Okio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
+	... 22 more
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;C92256&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>GPO</td>
+                  <td>--:--</td>
+                  <td>19:35</td>
+              </tr>
+              <tr>
+                  <td>UHL</td>
+                  <td>19:38</td>
+                  <td>19:39</td>
+              </tr>
+              <tr>
+                  <td>CRH</td>
+                  <td>19:41</td>
+                  <td>19:41</td>
+              </tr>
+              <tr>
+                  <td>HRY</td>
+                  <td>19:44</td>
+                  <td>19:44</td>
+              </tr>
+              <tr>
+                  <td>STO</td>
+                  <td>19:48</td>
+                  <td>19:48</td>
+              </tr>
+              <tr>
+                  <td>BHO</td>
+                  <td>19:51</td>
+                  <td>19:52</td>
+              </tr>
+              <tr>
+                  <td>WMW</td>
+                  <td>19:54</td>
+                  <td>19:54</td>
+              </tr>
+              <tr>
+                  <td>LEM</td>
+                  <td>19:56</td>
+                  <td>19:57</td>
+              </tr>
+              <tr>
+                  <td>LER</td>
+                  <td>19:59</td>
+                  <td>19:59</td>
+              </tr>
+              <tr>
+                  <td>WNP</td>
+                  <td>20:01</td>
+                  <td>20:01</td>
+              </tr>
+              <tr>
+                  <td>WGR</td>
+                  <td>20:04</td>
+                  <td>20:04</td>
+              </tr>
+              <tr>
+                  <td>BKG</td>
+                  <td>20:12</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_11_2304417082.html">Public time different to scheduled time</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2511005920.html">@timetable</a>
+</div>
+
+
+  <span class="lead-duration duration">1:0.003</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-34">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Public departure time differs to scheduled departure time by more than a minute between PAD and RDG</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-34" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-35">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-35" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given failed">
+  <span class="keyword indention">Given</span>
+  <span class="name">a query between <span class="argument">&quot;PAD&quot;</span> and <span class="argument">&quot;RDG&quot;</span> on <span class="argument">&quot;2020-08-01&quot;</span> at <span class="argument">&quot;17:43&quot;</span></span>
+
+  <span class="lead-duration duration">1:0.003</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-36">
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-36" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;RDG&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-08-01 17:43&quot;,&quot;dptCrsCode&quot;:&quot;PAD&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;PAD&quot; and &quot;RDG&quot; on &quot;2020-08-01&quot; at &quot;17:43&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/public-time.feature:76)
+Caused by: java.io.InterruptedIOException: timeout
+	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
+	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
+	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
+	at okhttp3.RealCall.execute(RealCall.kt:67)
+	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at okio.InputStreamSource.read(Okio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
+	... 22 more
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;P62958&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>PAD</td>
+                  <td>--:--</td>
+                  <td>17:43</td>
+              </tr>
+              <tr>
+                  <td>EAL</td>
+                  <td>17:51</td>
+                  <td>17:51</td>
+              </tr>
+              <tr>
+                  <td>STL</td>
+                  <td>17:57</td>
+                  <td>17:58</td>
+              </tr>
+              <tr>
+                  <td>HAY</td>
+                  <td>18:01</td>
+                  <td>18:01</td>
+              </tr>
+              <tr>
+                  <td>WDT</td>
+                  <td>18:05</td>
+                  <td>18:05</td>
+              </tr>
+              <tr>
+                  <td>IVR</td>
+                  <td>18:08</td>
+                  <td>18:08</td>
+              </tr>
+              <tr>
+                  <td>LNY</td>
+                  <td>18:10</td>
+                  <td>18:10</td>
+              </tr>
+              <tr>
+                  <td>SLO</td>
+                  <td>18:14</td>
+                  <td>18:14</td>
+              </tr>
+              <tr>
+                  <td>BNM</td>
+                  <td>18:18</td>
+                  <td>18:18</td>
+              </tr>
+              <tr>
+                  <td>TAP</td>
+                  <td>18:21</td>
+                  <td>18:21</td>
+              </tr>
+              <tr>
+                  <td>MAI</td>
+                  <td>18:24</td>
+                  <td>18:24</td>
+              </tr>
+              <tr>
+                  <td>TWY</td>
+                  <td>18:31</td>
+                  <td>18:31</td>
+              </tr>
+              <tr>
+                  <td>RDG</td>
+                  <td>18:41</td>
+                  <td>--:--</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_12_3659762142.html">Journey splits</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2511005920.html">@timetable</a>
+</div>
+
+
+  <span class="lead-duration duration">1:0.005</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-37">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Train splits so there appears to be a single train between LST and CET</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-37" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-38">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-38" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given failed">
+  <span class="keyword indention">Given</span>
+  <span class="name">a query between <span class="argument">&quot;LST&quot;</span> and <span class="argument">&quot;CET&quot;</span> on <span class="argument">&quot;2020-07-08&quot;</span> at <span class="argument">&quot;17:08&quot;</span></span>
+
+  <span class="lead-duration duration">1:0.005</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-39">
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-39" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;CET&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-07-08 17:08&quot;,&quot;dptCrsCode&quot;:&quot;LST&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;LST&quot; and &quot;CET&quot; on &quot;2020-07-08&quot; at &quot;17:08&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/splits.feature:6)
+Caused by: java.io.InterruptedIOException: timeout
+	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
+	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
+	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
+	at okhttp3.RealCall.execute(RealCall.kt:67)
+	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at okio.InputStreamSource.read(Okio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
+	... 22 more
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see a service <span class="argument">&quot;P05730&quot;</span> that stops at</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>stop</td>
+                  <td>arrival</td>
+                  <td>departure</td>
+              </tr>
+              <tr>
+                  <td>LST</td>
+                  <td>--:--</td>
+                  <td>17:08</td>
+              </tr>
+              <tr>
+                  <td>SRA</td>
+                  <td>17:16</td>
+                  <td>17:16</td>
+              </tr>
+              <tr>
+                  <td>CHM</td>
+                  <td>17:39</td>
+                  <td>17:40</td>
+              </tr>
+              <tr>
+                  <td>WTM</td>
+                  <td>17:50</td>
+                  <td>17:50</td>
+              </tr>
+              <tr>
+                  <td>KEL</td>
+                  <td>17:55</td>
+                  <td>17:55</td>
+              </tr>
+              <tr>
+                  <td>MKT</td>
+                  <td>18:00</td>
+                  <td>18:00</td>
+              </tr>
+              <tr>
+                  <td>COL</td>
+                  <td>18:08</td>
+                  <td>18:16</td>
+              </tr>
+              <tr>
+                  <td>CET</td>
+                  <td>18:26</td>
                   <td>--:--</td>
               </tr>
           </table>
