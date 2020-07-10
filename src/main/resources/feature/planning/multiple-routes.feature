@@ -76,3 +76,15 @@ Feature: The journey planner should offer the user multiple routes
       | BMH, SOU, BRI |
       | BMH, DCH, DCW, BRI |
       | BMH, RDG, BPW, BRI |
+
+  Scenario: Journeys between ABD and BRI have a number of routes
+    Given a query between "ABD" and "BRI" on "a weekday" at "09:30"
+    Then I should see the following transfer patterns
+      | ABD, EDB, BRI |
+      | ABD, EDB, NCL, BRI |
+      | ABD, KGX, PAD, BRI |
+
+  Scenario: Journeys between NBN and BAH have a number of routes
+    Given a query between "NBN" and "BAH" on "a weekday" at "07:00"
+    Then I should see the following transfer patterns
+      | NBN, MRF, BAH |
