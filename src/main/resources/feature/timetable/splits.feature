@@ -3,7 +3,7 @@ Feature: Journey splits
   Journey planners should treat trains that split as a single journey
 
   Scenario: Train splits so there appears to be a single train between LST and CET
-    Given a query between "LST" and "CET" on "2020-07-08" at "17:08"
+    Given a query between "LST" and "CET" on "2020-07-17" at "17:08"
     Then I should see a service "P05730" that stops at
       | stop | arrival | departure |
       | LST  | --:--   | 17:08     |
@@ -16,7 +16,7 @@ Feature: Journey splits
       | CET  | 18:26   | --:--     |
 
   Scenario: Train splits so there appears to be a single train between LST and HWC
-    Given a query between "LST" and "HWC" on "2020-07-08" at "08:36"
+    Given a query between "LST" and "HWC" on "2020-07-17" at "08:36"
     Then I should see a service "P06505" that stops at
       | stop | arrival | departure |
       | LST  | --:--   | 08:36     |
@@ -35,7 +35,7 @@ Feature: Journey splits
       | HWC  | 10:22   | --:--     |
 
   Scenario: Train splits so there appears to be a single train between LST and CMB
-    Given a query between "LST" and "CMB" on "2020-07-08" at "17:07"
+    Given a query between "LST" and "CMB" on "2020-07-17" at "17:07"
     Then I should see a service "P07234" that stops at
       | stop | arrival | departure |
       | LST  | --:--   | 17:07     |
@@ -47,7 +47,7 @@ Feature: Journey splits
       | CMB  | 18:33   | --:--     |
 
   Scenario: Train splits so there appears to be a single train between LST and CMB
-    Given a query between "LST" and "CMB" on "2020-07-08" at "18:07"
+    Given a query between "LST" and "CMB" on "2020-07-17" at "18:07"
     Then I should see a service "P07236" that stops at
       | stop | arrival | departure |
       | LST  | --:--   | 18:07     |
@@ -59,7 +59,7 @@ Feature: Journey splits
       | CMB  | 19:35   | --:--     |
 
   Scenario: Train splits so there appears to be a single train between LST and HWC
-    Given a query between "LST" and "HWC" on "2020-07-08" at "16:44"
+    Given a query between "LST" and "HWC" on "2020-07-17" at "16:44"
     Then I should see a service "C12050" that stops at
       | stop | arrival | departure |
       | LST  | --:--   | 16:44     |

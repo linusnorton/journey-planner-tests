@@ -9,7 +9,7 @@ Feature: The journey planner should offer routes via London
   Scenario: Journeys between BMH and AFK should go via London not using the tube
     Given a query between "BMH" and "AFK" on "a weekday" at "09:00"
     Then I should see the following transfer patterns
-      | BMH, CLJ, VIC, AFK |
+      | BMH, WAT, WAE, AFK |
 
   Scenario: Journeys between London and WEH should go from LST via SRA
     Given a query between "1072" and "WEH" on "a weekday" at "12:00"
