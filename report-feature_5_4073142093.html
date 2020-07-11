@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>10 Jul 2020, 16:17</td>
+      <td>11 Jul 2020, 16:18</td>
     </tr>
   </tbody>
 </table>
@@ -127,18 +127,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">The journey planner should make use of transfers to connect trains</td>
-          <td      class="passed"    >2</td>
-          <td      class="failed"    >2</td>
-          <td     class="skipped"   >2</td>
+          <td      class="passed"    >4</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >1</td>
           <td >0</td>
           <td >0</td>
           <td class="total">6</td>
 
-          <td  class="passed"    >1</td>
-          <td  class="failed"    >2</td>
+          <td  class="passed"    >2</td>
+          <td  class="failed"    >1</td>
           <td class="total">3</td>
 
-          <td class="duration" data-value="69369239000">1:9.369</td>
+          <td class="duration" data-value="3878017000">3.878</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,12 +193,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1:0.004</span>
+  <span class="lead-duration duration">1.901</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Journeys between NRW and WWW can go via PBO or use a transfer to connect LST to EUS to go via London</span>
 
@@ -209,16 +209,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -228,15 +228,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;NRW&quot;</span> and <span class="argument">&quot;WWW&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:30&quot;</span></span>
 
-  <span class="lead-duration duration">1:0.004</span>
+  <span class="lead-duration duration">1.900</span>
 
 </div>
 
@@ -245,75 +245,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;WWW&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-09-04 07:30&quot;,&quot;dptCrsCode&quot;:&quot;NRW&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;NRW&quot; and &quot;WWW&quot; on &quot;a weekday&quot; at &quot;07:30&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/transfers.feature:5)
-Caused by: java.io.InterruptedIOException: timeout
-	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
-	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
-	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
-	at okhttp3.RealCall.execute(RealCall.kt:67)
-	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
-	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.net.SocketException: Socket closed
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
-	at okio.InputStreamSource.read(Okio.kt:93)
-	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
-	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
-	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
-	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
-	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
-	... 23 more
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -328,7 +259,7 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
@@ -377,10 +308,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">7.864</span>
+  <span class="lead-duration duration">1.018</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-4">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -393,14 +324,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-4" class="collapse collapsable-details ">
+  <div id="element-3" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-4">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -412,7 +343,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-5" class="inner-level collapse collapsable-details ">
+  <div id="steps-4" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -420,7 +351,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CBW&quot;</span> and <span class="argument">&quot;DVP&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
 
-  <span class="lead-duration duration">7.864</span>
+  <span class="lead-duration duration">1.018</span>
 
 </div>
 
@@ -492,10 +423,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1.500</span>
+  <span class="lead-duration duration">0.957</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-6">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-5">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -508,14 +439,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-6" class="collapse collapsable-details  in ">
+  <div id="element-5" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-7">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-6">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -527,7 +458,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-7" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-6" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -535,7 +466,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;LUA&quot;</span> and <span class="argument">&quot;FIL&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.500</span>
+  <span class="lead-duration duration">0.957</span>
 
 </div>
 
@@ -546,11 +477,11 @@ Caused by: java.net.SocketException: Socket closed
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-8">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-7">
           <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-8" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between LUA and FIL on 2020-09-04 09:00
+      <div id="msg-7" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between LUA and FIL on 2020-09-07 09:00
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;LUA&quot; and &quot;FIL&quot; on &quot;a weekday&quot; at &quot;09:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/transfers.feature:28)
