@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>28 Jul 2020, 16:23</td>
+      <td>29 Jul 2020, 16:30</td>
     </tr>
   </tbody>
 </table>
@@ -127,18 +127,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">The journey planner should offer the user multiple routes</td>
-          <td >0</td>
-          <td      class="failed"    >11</td>
-          <td     class="skipped"   >11</td>
+          <td      class="passed"    >9</td>
+          <td      class="failed"    >10</td>
+          <td     class="skipped"   >3</td>
           <td >0</td>
           <td >0</td>
           <td class="total">22</td>
 
-          <td >0</td>
-          <td  class="failed"    >11</td>
+          <td  class="passed"    >1</td>
+          <td  class="failed"    >10</td>
           <td class="total">11</td>
 
-          <td class="duration" data-value="68158355000">1:8.158</td>
+          <td class="duration" data-value="170662573000">2:50.662</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.764</span>
+  <span class="lead-duration duration">6.908</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -232,11 +232,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;OXF&quot;</span> and <span class="argument">&quot;ARU&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;05:30&quot;</span></span>
 
-  <span class="lead-duration duration">0.764</span>
+  <span class="lead-duration duration">6.906</span>
 
 </div>
 
@@ -244,30 +244,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;ARU&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-09-22 05:30&quot;,&quot;dptCrsCode&quot;:&quot;OXF&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-&lt;html&gt;
-&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;
-&lt;hr&gt;&lt;center&gt;nginx/1.16.1&lt;/center&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;OXF&quot; and &quot;ARU&quot; on &quot;a weekday&quot; at &quot;05:30&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:5)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -283,11 +259,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -295,6 +271,58 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: OXF,DID,PAD,VIC,ARU in 
+
+OXF (06:00:00) -&gt; ARU (09:32:00)
+	OXF (06:00:00) -&gt; RDG (06:28:00)
+	RDG (06:50:00) -&gt; GTW (08:20:00)
+	GTW (08:39:00) -&gt; ARU (09:32:00)
+
+OXF (06:32:00) -&gt; ARU (10:01:00)
+	OXF (06:32:00) -&gt; PAD (07:24:00)
+	PAD -&gt; ZFD (19)
+	ZFD (08:04:00) -&gt; TBD (08:48:00)
+	TBD (09:15:00) -&gt; ARU (10:01:00)
+
+OXF (06:32:00) -&gt; ARU (09:46:00)
+	OXF (06:32:00) -&gt; RDG (06:53:00)
+	RDG (07:16:00) -&gt; BSK (07:47:00)
+	BSK (08:00:00) -&gt; CSA (08:58:00)
+	CSA (09:04:00) -&gt; FOD (09:36:00)
+	FOD (09:41:00) -&gt; ARU (09:46:00)
+
+OXF (07:17:00) -&gt; ARU (10:28:00)
+	OXF (07:17:00) -&gt; RDG (07:41:00)
+	RDG (07:58:00) -&gt; GTW (09:26:00)
+	GTW (09:39:00) -&gt; ARU (10:28:00)
+
+OXF (07:53:00) -&gt; ARU (11:01:00)
+	OXF (07:53:00) -&gt; PAD (08:42:00)
+	PAD -&gt; ZFD (19)
+	ZFD (09:24:00) -&gt; TBD (10:10:00)
+	TBD (10:14:00) -&gt; ARU (11:01:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/OXF/ARU/23092020/0530/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=OXF&amp;destination=ARU&amp;outwardDate=2020-09-23&amp;outwardTime=05:30
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:6)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -335,7 +363,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.615</span>
+  <span class="lead-duration duration">3.684</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
@@ -374,11 +402,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;EDB&quot;</span> and <span class="argument">&quot;BHM&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;05:30&quot;</span></span>
 
-  <span class="lead-duration duration">0.615</span>
+  <span class="lead-duration duration">3.682</span>
 
 </div>
 
@@ -386,30 +414,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-6" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BHM&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-09-22 05:30&quot;,&quot;dptCrsCode&quot;:&quot;EDB&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-&lt;html&gt;
-&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;
-&lt;hr&gt;&lt;center&gt;nginx/1.16.1&lt;/center&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;EDB&quot; and &quot;BHM&quot; on &quot;a weekday&quot; at &quot;05:30&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:12)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -425,11 +429,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -437,6 +441,45 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: EDB,PRE,BHM in 
+
+EDB (06:06:00) -&gt; BHM (11:08:00)
+	EDB (06:06:00) -&gt; BHM (11:08:00)
+
+EDB (06:52:00) -&gt; BHM (11:05:00)
+	EDB (06:52:00) -&gt; BHM (11:05:00)
+
+EDB (06:52:00) -&gt; BHM (10:59:00)
+	EDB (06:52:00) -&gt; WVH (10:33:00)
+	WVH (10:42:00) -&gt; BHM (10:59:00)
+
+EDB (07:01:00) -&gt; BHM (11:27:00)
+	EDB (07:01:00) -&gt; BHM (11:27:00)
+
+EDB (07:10:00) -&gt; BHM (12:04:00)
+	EDB (07:10:00) -&gt; BHM (12:04:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/EDB/BHM/23092020/0530/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=EDB&amp;destination=BHM&amp;outwardDate=2020-09-23&amp;outwardTime=05:30
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:13)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -477,7 +520,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.711</span>
+  <span class="lead-duration duration">1:0.007</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
@@ -520,7 +563,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BMH&quot;</span> and <span class="argument">&quot;MAN&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;06:00&quot;</span></span>
 
-  <span class="lead-duration duration">0.711</span>
+  <span class="lead-duration duration">1:0.007</span>
 
 </div>
 
@@ -535,292 +578,11 @@ $(document).ready(function() {
           <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
       </div>
       <div id="msg-9" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;MAN&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-09-22 06:00&quot;,&quot;dptCrsCode&quot;:&quot;BMH&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-&lt;html&gt;
-&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;
-&lt;hr&gt;&lt;center&gt;nginx/1.16.1&lt;/center&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;BMH&quot; and &quot;MAN&quot; on &quot;a weekday&quot; at &quot;06:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:22)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>BMH, WAT, EUS, MAN</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2054189833.html">@journey-planning</a>
-</div>
-
-
-  <span class="lead-duration duration">0.606</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between LIV and LEI have a number of routes</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-10" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-11">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-11" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given failed">
-  <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;LIV&quot;</span> and <span class="argument">&quot;LEI&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;06:00&quot;</span></span>
-
-  <span class="lead-duration duration">0.606</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-12" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;LEI&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-09-22 06:00&quot;,&quot;dptCrsCode&quot;:&quot;LIV&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-&lt;html&gt;
-&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;
-&lt;hr&gt;&lt;center&gt;nginx/1.16.1&lt;/center&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;LIV&quot; and &quot;LEI&quot; on &quot;a weekday&quot; at &quot;06:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:30)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>LIV, SHF, LEI</td>
-              </tr>
-              <tr>
-                  <td>LIV, CRE, DBY, LEI</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2054189833.html">@journey-planning</a>
-</div>
-
-
-  <span class="lead-duration duration">1:0.008</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Journeys between HNH and SMD have a number of routes</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-13" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-14">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-14" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
-<div class="brief step-name-Given failed">
-  <span class="keyword indention">Given</span>
-  <span class="name">a query between <span class="argument">&quot;HNH&quot;</span> and <span class="argument">&quot;SMD&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
-
-  <span class="lead-duration duration">1:0.008</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-15" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;SMD&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-09-22 07:00&quot;,&quot;dptCrsCode&quot;:&quot;HNH&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;MAN&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-09-23 06:00&quot;,&quot;dptCrsCode&quot;:&quot;BMH&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
 	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;HNH&quot; and &quot;SMD&quot; on &quot;a weekday&quot; at &quot;07:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:41)
+	at &#10045;.a query between &quot;BMH&quot; and &quot;MAN&quot; on &quot;a weekday&quot; at &quot;06:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:22)
 Caused by: java.io.InterruptedIOException: timeout
 	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
 	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
@@ -909,6 +671,333 @@ Caused by: java.net.SocketException: Socket closed
 
           <table class="step-arguments">
               <tr>
+                  <td>BMH, WAT, EUS, MAN</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2054189833.html">@journey-planning</a>
+</div>
+
+
+  <span class="lead-duration duration">2.324</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Journeys between LIV and LEI have a number of routes</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-10" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-11">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-11" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">a query between <span class="argument">&quot;LIV&quot;</span> and <span class="argument">&quot;LEI&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;06:00&quot;</span></span>
+
+  <span class="lead-duration duration">2.317</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see the following transfer patterns</span>
+
+  <span class="lead-duration duration">0.007</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: LIV,CRE,DBY,LEI in 
+
+LIV (06:10:00) -&gt; LEI (09:13:00)
+	LIV (06:10:00) -&gt; BHM (07:50:00)
+	BHM (08:22:00) -&gt; LEI (09:13:00)
+
+LIV (06:10:00) -&gt; LEI (08:50:00)
+	LIV (06:10:00) -&gt; STA (07:09:00)
+	STA (07:39:00) -&gt; NUN (08:18:00)
+	NUN (08:24:00) -&gt; LEI (08:50:00)
+
+LIV (06:15:00) -&gt; LEI (09:13:00)
+	LIV (06:15:00) -&gt; MAN (07:11:00)
+	MAN (07:35:00) -&gt; NUN (08:43:00)
+	NUN (08:51:00) -&gt; LEI (09:13:00)
+
+LIV (06:32:00) -&gt; LEI (09:50:00)
+	LIV (06:32:00) -&gt; BHM (08:20:00)
+	BHM (08:52:00) -&gt; LEI (09:50:00)
+
+LIV (06:47:00) -&gt; LEI (10:00:00)
+	LIV (06:47:00) -&gt; SHF (08:36:00)
+	SHF (09:00:00) -&gt; LEI (10:00:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/LIV/LEI/23092020/0600/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=LIV&amp;destination=LEI&amp;outwardDate=2020-09-23&amp;outwardTime=06:00
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:31)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>LIV, SHF, LEI</td>
+              </tr>
+              <tr>
+                  <td>LIV, CRE, DBY, LEI</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2054189833.html">@journey-planning</a>
+</div>
+
+
+  <span class="lead-duration duration">5.070</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Journeys between HNH and SMD have a number of routes</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-13" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-14">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-14" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">a query between <span class="argument">&quot;HNH&quot;</span> and <span class="argument">&quot;SMD&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
+
+  <span class="lead-duration duration">5.069</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see the following transfer patterns</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: HNH,BFR,STP,LEI,SMD in 
+
+HNH (07:12:00) -&gt; SMD (09:59:00)
+	HNH (07:12:00) -&gt; STP (07:33:00)
+	STP (08:02:00) -&gt; LEI (09:06:00)
+	LEI (09:18:00) -&gt; SMD (09:59:00)
+
+HNH (07:27:00) -&gt; SMD (10:06:00)
+	HNH (07:27:00) -&gt; STP (07:48:00)
+	STP (08:16:00) -&gt; PBO (09:35:00)
+	PBO (09:54:00) -&gt; SMD (10:06:00)
+
+HNH (08:12:00) -&gt; SMD (10:59:00)
+	HNH (08:12:00) -&gt; STP (08:33:00)
+	STP (09:02:00) -&gt; LEI (10:06:00)
+	LEI (10:18:00) -&gt; SMD (10:59:00)
+
+HNH (08:12:00) -&gt; SMD (10:06:00)
+	HNH (08:12:00) -&gt; STP (08:33:00)
+	STP -&gt; KGX (1)
+	KGX (09:00:00) -&gt; PBO (09:46:00)
+	PBO (09:54:00) -&gt; SMD (10:06:00)
+
+HNH (08:27:00) -&gt; SMD (11:06:00)
+	HNH (08:27:00) -&gt; STP (08:48:00)
+	STP (09:16:00) -&gt; PBO (10:40:00)
+	PBO (10:54:00) -&gt; SMD (11:06:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/HNH/SMD/23092020/0700/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destination=SMD&amp;outwardDate=2020-09-23&amp;outwardTime=07:00
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:42)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+          <table class="step-arguments">
+              <tr>
                   <td>HNH, STP, LEI, SMD</td>
               </tr>
               <tr>
@@ -948,12 +1037,12 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.722</span>
+  <span class="lead-duration duration">3.203</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-16">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-16">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Journeys between NRW and COV have a number of routes</span>
 
@@ -964,16 +1053,16 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-16" class="collapse collapsable-details  in ">
+  <div id="element-16" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-17">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-17">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -983,15 +1072,15 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-17" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-17" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;NRW&quot;</span> and <span class="argument">&quot;COV&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;14:00&quot;</span></span>
 
-  <span class="lead-duration duration">0.722</span>
+  <span class="lead-duration duration">3.202</span>
 
 </div>
 
@@ -1000,30 +1089,6 @@ Caused by: java.net.SocketException: Socket closed
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-18">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-18" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;COV&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-09-22 14:00&quot;,&quot;dptCrsCode&quot;:&quot;NRW&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-&lt;html&gt;
-&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;
-&lt;hr&gt;&lt;center&gt;nginx/1.16.1&lt;/center&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;NRW&quot; and &quot;COV&quot; on &quot;a weekday&quot; at &quot;14:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:48)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -1038,7 +1103,7 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
@@ -1087,10 +1152,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1.218</span>
+  <span class="lead-duration duration">3.693</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-19">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-18">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -1103,14 +1168,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-19" class="collapse collapsable-details  in ">
+  <div id="element-18" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-20">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-19">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -1122,15 +1187,42 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-20" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-19" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BAU&quot;</span> and <span class="argument">&quot;SWA&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.218</span>
+  <span class="lead-duration duration">3.692</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see the following transfer patterns</span>
+
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -1141,54 +1233,53 @@ Caused by: java.net.SocketException: Socket closed
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-21">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-20">
+          <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-21" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;SWA&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-09-22 07:00&quot;,&quot;dptCrsCode&quot;:&quot;BAU&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-&lt;html&gt;
-&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;
-&lt;hr&gt;&lt;center&gt;nginx/1.16.1&lt;/center&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+      <div id="msg-20" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: BAU,HAB,SPT,BPW,SWA in 
 
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;BAU&quot; and &quot;SWA&quot; on &quot;a weekday&quot; at &quot;07:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:58)
+BAU (07:56:00) -&gt; SWA (15:33:00)
+	BAU (07:56:00) -&gt; HAB (08:23:00)
+	HAB (08:44:00) -&gt; SPT (10:52:00)
+	SPT (11:39:00) -&gt; SWA (15:33:00)
+
+BAU (09:50:00) -&gt; SWA (18:11:00)
+	BAU (09:50:00) -&gt; HAB (10:17:00)
+	HAB (10:44:00) -&gt; SPT (12:52:00)
+	SPT (13:39:00) -&gt; SWA (18:11:00)
+
+BAU (09:50:00) -&gt; SWA (17:39:00)
+	BAU (09:50:00) -&gt; HAB (10:17:00)
+	HAB (10:44:00) -&gt; SHF (12:09:00)
+	SHF (12:56:00) -&gt; BPW (15:20:00)
+	BPW (16:05:00) -&gt; SWA (17:39:00)
+
+BAU (11:50:00) -&gt; SWA (20:09:00)
+	BAU (11:50:00) -&gt; HAB (12:17:00)
+	HAB (12:44:00) -&gt; SPT (14:52:00)
+	SPT (15:39:00) -&gt; SWA (20:09:00)
+
+BAU (11:50:00) -&gt; SWA (19:33:00)
+	BAU (11:50:00) -&gt; HAB (12:17:00)
+	HAB (12:44:00) -&gt; SHF (14:09:00)
+	SHF (14:56:00) -&gt; BPW (17:21:00)
+	BPW (18:05:00) -&gt; SWA (19:33:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/BAU/SWA/23092020/0700/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=BAU&amp;destination=SWA&amp;outwardDate=2020-09-23&amp;outwardTime=07:00
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:59)
 </pre>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
 
 
           <table class="step-arguments">
@@ -1226,10 +1317,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.628</span>
+  <span class="lead-duration duration">2.855</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-22">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-21">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -1242,14 +1333,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-22" class="collapse collapsable-details  in ">
+  <div id="element-21" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-23">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-22">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -1261,15 +1352,42 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-23" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-22" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;WFJ&quot;</span> and <span class="argument">&quot;STN&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">0.628</span>
+  <span class="lead-duration duration">2.854</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see the following transfer patterns</span>
+
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -1280,54 +1398,54 @@ Caused by: java.net.SocketException: Socket closed
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-24">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-23">
+          <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-24" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;STN&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-09-22 07:00&quot;,&quot;dptCrsCode&quot;:&quot;WFJ&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-&lt;html&gt;
-&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;
-&lt;hr&gt;&lt;center&gt;nginx/1.16.1&lt;/center&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+      <div id="msg-23" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: WFJ,MKC,MAN,PRE,GLC,GLQ,STN in 
 
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;WFJ&quot; and &quot;STN&quot; on &quot;a weekday&quot; at &quot;07:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:64)
+WFJ (07:07:00) -&gt; STN (14:31:00)
+	WFJ (07:07:00) -&gt; EUS (07:22:00)
+	EUS -&gt; KGX (5)
+	KGX (08:00:00) -&gt; EDB (12:20:00)
+	EDB (12:30:00) -&gt; STN (14:31:00)
+
+WFJ (07:37:00) -&gt; STN (15:33:00)
+	WFJ (07:37:00) -&gt; BHM (08:46:00)
+	BHM (09:15:00) -&gt; PRE (10:51:00)
+	PRE (11:04:00) -&gt; HYM (13:24:00)
+	HYM (13:36:00) -&gt; STN (15:33:00)
+
+WFJ (08:37:00) -&gt; STN (16:45:00)
+	WFJ (08:37:00) -&gt; BHM (09:46:00)
+	BHM (10:15:00) -&gt; HYM (14:12:00)
+	HYM (14:34:00) -&gt; STN (16:45:00)
+
+WFJ (08:56:00) -&gt; STN (16:45:00)
+	WFJ (08:56:00) -&gt; EUS (09:19:00)
+	EUS -&gt; KGX (5)
+	KGX (10:00:00) -&gt; STN (16:45:00)
+
+WFJ (09:26:00) -&gt; STN (17:34:00)
+	WFJ (09:26:00) -&gt; EUS (09:48:00)
+	EUS -&gt; KGX (5)
+	KGX (10:30:00) -&gt; EDB (15:16:00)
+	EDB (15:28:00) -&gt; STN (17:34:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/WFJ/STN/23092020/0700/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destination=STN&amp;outwardDate=2020-09-23&amp;outwardTime=07:00
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:65)
 </pre>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
 
 
           <table class="step-arguments">
@@ -1368,10 +1486,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.611</span>
+  <span class="lead-duration duration">1:0.013</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-25">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-24">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -1384,14 +1502,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-25" class="collapse collapsable-details  in ">
+  <div id="element-24" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-26">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-25">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -1403,7 +1521,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-26" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-25" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -1411,7 +1529,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BMH&quot;</span> and <span class="argument">&quot;BRI&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
 
-  <span class="lead-duration duration">0.611</span>
+  <span class="lead-duration duration">1:0.013</span>
 
 </div>
 
@@ -1422,23 +1540,68 @@ Caused by: java.net.SocketException: Socket closed
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-27">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-26">
           <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
       </div>
-      <div id="msg-27" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BRI&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-09-22 09:00&quot;,&quot;dptCrsCode&quot;:&quot;BMH&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-&lt;html&gt;
-&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;
-&lt;hr&gt;&lt;center&gt;nginx/1.16.1&lt;/center&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
+      <div id="msg-26" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BRI&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-09-23 09:00&quot;,&quot;dptCrsCode&quot;:&quot;BMH&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;BMH&quot; and &quot;BRI&quot; on &quot;a weekday&quot; at &quot;09:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:74)
+Caused by: java.io.InterruptedIOException: timeout
+	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
+	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
+	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
+	at okhttp3.RealCall.execute(RealCall.kt:67)
+	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at okio.InputStreamSource.read(Okio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
+	... 23 more
 </pre>
       </div>
     </div>
@@ -1513,10 +1676,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1.661</span>
+  <span class="lead-duration duration">18.171</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-28">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-27">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -1529,14 +1692,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-28" class="collapse collapsable-details  in ">
+  <div id="element-27" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-29">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-28">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -1548,15 +1711,42 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-29" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-28" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;ABD&quot;</span> and <span class="argument">&quot;BRI&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:30&quot;</span></span>
 
-  <span class="lead-duration duration">1.661</span>
+  <span class="lead-duration duration">18.168</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see the following transfer patterns</span>
+
+  <span class="lead-duration duration">0.003</span>
 
 </div>
 
@@ -1567,54 +1757,49 @@ Caused by: java.net.SocketException: Socket closed
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-30">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-29">
+          <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-30" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BRI&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-09-22 09:30&quot;,&quot;dptCrsCode&quot;:&quot;ABD&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-&lt;html&gt;
-&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;
-&lt;hr&gt;&lt;center&gt;nginx/1.16.1&lt;/center&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+      <div id="msg-29" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: ABD,EDB,NCL,BRI in 
 
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;ABD&quot; and &quot;BRI&quot; on &quot;a weekday&quot; at &quot;09:30&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:81)
+ABD (09:52:00) -&gt; BRI (19:45:00)
+	ABD (09:52:00) -&gt; EDB (12:26:00)
+	EDB (13:05:00) -&gt; BRI (19:45:00)
+
+ABD (09:52:00) -&gt; BRI (19:05:00)
+	ABD (09:52:00) -&gt; HYM (12:20:00)
+	HYM (12:58:00) -&gt; BHM (17:05:00)
+	BHM (17:42:00) -&gt; BRI (19:05:00)
+
+ABD (10:46:00) -&gt; BRI (20:07:00)
+	ABD (10:46:00) -&gt; GLQ (13:18:00)
+	GLQ -&gt; GLC (5)
+	GLC (14:00:00) -&gt; BHM (18:05:00)
+	BHM (18:42:00) -&gt; BRI (20:07:00)
+
+ABD (11:02:00) -&gt; BRI (20:32:00)
+	ABD (11:02:00) -&gt; EDB (13:24:00)
+	EDB (14:10:00) -&gt; BRI (20:32:00)
+
+ABD (12:07:00) -&gt; BRI (21:36:00)
+	ABD (12:07:00) -&gt; EDB (14:28:00)
+	EDB (15:08:00) -&gt; BRI (21:36:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/ABD/BRI/23092020/0930/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=ABD&amp;destination=BRI&amp;outwardDate=2020-09-23&amp;outwardTime=09:30
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:82)
 </pre>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
 
 
           <table class="step-arguments">
@@ -1658,10 +1843,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.607</span>
+  <span class="lead-duration duration">4.730</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-31">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-30">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -1674,14 +1859,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-31" class="collapse collapsable-details  in ">
+  <div id="element-30" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-32">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-31">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -1693,7 +1878,7 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-32" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-31" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -1701,7 +1886,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;NBN&quot;</span> and <span class="argument">&quot;BAH&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">0.607</span>
+  <span class="lead-duration duration">4.729</span>
 
 </div>
 
@@ -1712,21 +1897,12 @@ Caused by: java.net.SocketException: Socket closed
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-33">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-32">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
-      <div id="msg-33" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BAH&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-09-22 07:00&quot;,&quot;dptCrsCode&quot;:&quot;NBN&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-&lt;html&gt;
-&lt;head&gt;&lt;title&gt;502 Bad Gateway&lt;/title&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;center&gt;&lt;h1&gt;502 Bad Gateway&lt;/h1&gt;&lt;/center&gt;
-&lt;hr&gt;&lt;center&gt;nginx/1.16.1&lt;/center&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+      <div id="msg-32" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between NBN and BAH on 2020-09-23 07:00
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;NBN&quot; and &quot;BAH&quot; on &quot;a weekday&quot; at &quot;07:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:88)
 </pre>
