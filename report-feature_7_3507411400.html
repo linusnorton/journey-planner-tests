@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>20 Aug 2020, 16:42</td>
+      <td>21 Aug 2020, 16:41</td>
     </tr>
   </tbody>
 </table>
@@ -127,9 +127,9 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">Schedule cancellations</td>
-          <td      class="passed"    >4</td>
+          <td      class="passed"    >14</td>
           <td      class="failed"    >5</td>
-          <td     class="skipped"   >11</td>
+          <td     class="skipped"   >1</td>
           <td >0</td>
           <td >0</td>
           <td class="total">20</td>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >5</td>
           <td class="total">5</td>
 
-          <td class="duration" data-value="302273054000">5:2.273</td>
+          <td class="duration" data-value="74508934000">1:14.508</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1:0.004</span>
+  <span class="lead-duration duration">5.332</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -232,11 +232,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;GPO&quot;</span> and <span class="argument">&quot;BKG&quot;</span> on <span class="argument">&quot;2020-08-03&quot;</span> at <span class="argument">&quot;22:22&quot;</span></span>
 
-  <span class="lead-duration duration">1:0.004</span>
+  <span class="lead-duration duration">1.362</span>
 
 </div>
 
@@ -244,74 +244,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BKG&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-08-03 22:22&quot;,&quot;dptCrsCode&quot;:&quot;GPO&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;GPO&quot; and &quot;BKG&quot; on &quot;2020-08-03&quot; at &quot;22:22&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:6)
-Caused by: java.io.InterruptedIOException: timeout
-	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
-	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
-	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
-	at okhttp3.RealCall.execute(RealCall.kt:67)
-	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
-	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.net.SocketException: Socket closed
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
-	at okio.InputStreamSource.read(Okio.kt:93)
-	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
-	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
-	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
-	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
-	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
-	... 22 more
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -327,11 +259,11 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;C92372&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.030</span>
 
 </div>
 
@@ -421,11 +353,11 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-When skipped">
+<div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;GPO&quot;</span> and <span class="argument">&quot;BKG&quot;</span> on <span class="argument">&quot;2020-08-10&quot;</span> at <span class="argument">&quot;22:22&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">3.932</span>
 
 </div>
 
@@ -448,11 +380,11 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should not see a service <span class="argument">&quot;C92372&quot;</span> in the results</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.007</span>
 
 </div>
 
@@ -460,6 +392,23 @@ Caused by: java.net.SocketException: Socket closed
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Found C92372 when it should not be present
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldNotSeeAServiceInTheResults(QueryStep.java:100)
+	at &#10045;.I should not see a service &quot;C92372&quot; in the results(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:22)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -492,7 +441,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1:1.111</span>
+  <span class="lead-duration duration">1:1.809</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
@@ -535,7 +484,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;HYS&quot;</span> on <span class="argument">&quot;2020-08-03&quot;</span> at <span class="argument">&quot;23:37&quot;</span></span>
 
-  <span class="lead-duration duration">1.068</span>
+  <span class="lead-duration duration">1.805</span>
 
 </div>
 
@@ -562,7 +511,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;W56154&quot;</span> that stops at</span>
 
-  <span class="lead-duration duration">0.040</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -656,7 +605,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;HYS&quot;</span> on <span class="argument">&quot;2020-08-10&quot;</span> at <span class="argument">&quot;23:37&quot;</span></span>
 
-  <span class="lead-duration duration">1:0.002</span>
+  <span class="lead-duration duration">1:0.003</span>
 
 </div>
 
@@ -791,7 +740,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1:1.148</span>
+  <span class="lead-duration duration">3.446</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
@@ -834,7 +783,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BKG&quot;</span> and <span class="argument">&quot;GPO&quot;</span> on <span class="argument">&quot;2020-08-03&quot;</span> at <span class="argument">&quot;20:04&quot;</span></span>
 
-  <span class="lead-duration duration">1.146</span>
+  <span class="lead-duration duration">1.139</span>
 
 </div>
 
@@ -951,11 +900,11 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-When failed">
+<div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;BKG&quot;</span> and <span class="argument">&quot;GPO&quot;</span> on <span class="argument">&quot;2020-08-10&quot;</span> at <span class="argument">&quot;20:04&quot;</span></span>
 
-  <span class="lead-duration duration">1:0.001</span>
+  <span class="lead-duration duration">2.306</span>
 
 </div>
 
@@ -963,74 +912,6 @@ Caused by: java.net.SocketException: Socket closed
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-9" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;GPO&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-08-10 20:04&quot;,&quot;dptCrsCode&quot;:&quot;BKG&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.I query between &quot;BKG&quot; and &quot;GPO&quot; on &quot;2020-08-10&quot; at &quot;20:04&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:59)
-Caused by: java.io.InterruptedIOException: timeout
-	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
-	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
-	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
-	at okhttp3.RealCall.execute(RealCall.kt:67)
-	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
-	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.net.SocketException: Socket closed
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
-	at okio.InputStreamSource.read(Okio.kt:93)
-	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
-	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
-	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
-	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
-	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
-	... 22 more
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -1046,7 +927,7 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should not see a service <span class="argument">&quot;C92259&quot;</span> in the results</span>
 
@@ -1058,6 +939,23 @@ Caused by: java.net.SocketException: Socket closed
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Found C92259 when it should not be present
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldNotSeeAServiceInTheResults(QueryStep.java:100)
+	at &#10045;.I should not see a service &quot;C92259&quot; in the results(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:60)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -1090,7 +988,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1:0.004</span>
+  <span class="lead-duration duration">1.705</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
@@ -1129,11 +1027,11 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;GPO&quot;</span> and <span class="argument">&quot;BKG&quot;</span> on <span class="argument">&quot;2020-08-03&quot;</span> at <span class="argument">&quot;20:50&quot;</span></span>
 
-  <span class="lead-duration duration">1:0.004</span>
+  <span class="lead-duration duration">0.878</span>
 
 </div>
 
@@ -1141,74 +1039,6 @@ Caused by: java.net.SocketException: Socket closed
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-12" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BKG&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-08-03 20:50&quot;,&quot;dptCrsCode&quot;:&quot;GPO&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;GPO&quot; and &quot;BKG&quot; on &quot;2020-08-03&quot; at &quot;20:50&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:63)
-Caused by: java.io.InterruptedIOException: timeout
-	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
-	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
-	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
-	at okhttp3.RealCall.execute(RealCall.kt:67)
-	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
-	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.net.SocketException: Socket closed
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
-	at okio.InputStreamSource.read(Okio.kt:93)
-	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
-	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
-	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
-	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
-	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
-	... 22 more
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -1224,7 +1054,7 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;C92312&quot;</span> that stops at</span>
 
@@ -1318,11 +1148,11 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-When skipped">
+<div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;GPO&quot;</span> and <span class="argument">&quot;BKG&quot;</span> on <span class="argument">&quot;2020-08-10&quot;</span> at <span class="argument">&quot;20:50&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.825</span>
 
 </div>
 
@@ -1345,7 +1175,7 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should not see a service <span class="argument">&quot;C92312&quot;</span> in the results</span>
 
@@ -1357,6 +1187,23 @@ Caused by: java.net.SocketException: Socket closed
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Found C92312 when it should not be present
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldNotSeeAServiceInTheResults(QueryStep.java:100)
+	at &#10045;.I should not see a service &quot;C92312&quot; in the results(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:79)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -1389,7 +1236,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1:0.004</span>
+  <span class="lead-duration duration">2.215</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
@@ -1428,11 +1275,11 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BKG&quot;</span> and <span class="argument">&quot;GPO&quot;</span> on <span class="argument">&quot;2020-08-03&quot;</span> at <span class="argument">&quot;21:03&quot;</span></span>
 
-  <span class="lead-duration duration">1:0.004</span>
+  <span class="lead-duration duration">1.426</span>
 
 </div>
 
@@ -1440,74 +1287,6 @@ Caused by: java.net.SocketException: Socket closed
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-15" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;GPO&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-08-03 21:03&quot;,&quot;dptCrsCode&quot;:&quot;BKG&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;BKG&quot; and &quot;GPO&quot; on &quot;2020-08-03&quot; at &quot;21:03&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:82)
-Caused by: java.io.InterruptedIOException: timeout
-	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
-	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
-	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
-	at okhttp3.RealCall.execute(RealCall.kt:67)
-	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
-	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.net.SocketException: Socket closed
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
-	at okio.InputStreamSource.read(Okio.kt:93)
-	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
-	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
-	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
-	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
-	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
-	... 22 more
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -1523,7 +1302,7 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see a service <span class="argument">&quot;C92306&quot;</span> that stops at</span>
 
@@ -1617,11 +1396,11 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-When skipped">
+<div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
   <span class="name">I query between <span class="argument">&quot;BKG&quot;</span> and <span class="argument">&quot;GPO&quot;</span> on <span class="argument">&quot;2020-08-10&quot;</span> at <span class="argument">&quot;21:03&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.788</span>
 
 </div>
 
@@ -1644,7 +1423,7 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should not see a service <span class="argument">&quot;C92306&quot;</span> in the results</span>
 
@@ -1656,6 +1435,23 @@ Caused by: java.net.SocketException: Socket closed
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Found C92306 when it should not be present
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldNotSeeAServiceInTheResults(QueryStep.java:100)
+	at &#10045;.I should not see a service &quot;C92306&quot; in the results(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:98)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
