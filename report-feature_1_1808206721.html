@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>16 Sep 2020, 16:53</td>
+      <td>17 Sep 2020, 16:51</td>
     </tr>
   </tbody>
 </table>
@@ -127,18 +127,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">The journey planner should offer routes via London</td>
+          <td      class="passed"    >7</td>
+          <td      class="failed"    >3</td>
           <td >0</td>
-          <td      class="failed"    >5</td>
-          <td     class="skipped"   >5</td>
           <td >0</td>
           <td >0</td>
           <td class="total">10</td>
 
-          <td >0</td>
-          <td  class="failed"    >5</td>
+          <td  class="passed"    >2</td>
+          <td  class="failed"    >3</td>
           <td class="total">5</td>
 
-          <td class="duration" data-value="72869908000">1:12.869</td>
+          <td class="duration" data-value="32763241000">32.763</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,12 +193,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1:0.619</span>
+  <span class="lead-duration duration">5.508</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Journeys between KGX and MAN can go via EUS using the underground</span>
 
@@ -209,16 +209,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -228,15 +228,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;KGX&quot;</span> and <span class="argument">&quot;MAN&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:15&quot;</span></span>
 
-  <span class="lead-duration duration">1:0.619</span>
+  <span class="lead-duration duration">5.506</span>
 
 </div>
 
@@ -245,75 +245,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;MAN&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-11-11 09:15&quot;,&quot;dptCrsCode&quot;:&quot;KGX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;KGX&quot; and &quot;MAN&quot; on &quot;a weekday&quot; at &quot;09:15&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/london.feature:5)
-Caused by: java.io.InterruptedIOException: timeout
-	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
-	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
-	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
-	at okhttp3.RealCall.execute(RealCall.kt:67)
-	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
-	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.net.SocketException: Socket closed
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
-	at okio.InputStreamSource.read(Okio.kt:93)
-	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
-	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
-	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
-	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
-	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
-	... 23 more
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -328,11 +259,11 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -377,12 +308,12 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">4.123</span>
+  <span class="lead-duration duration">4.386</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Journeys between BMH and AFK should go via London not using the tube</span>
 
@@ -393,16 +324,16 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-4" class="collapse collapsable-details  in ">
+  <div id="element-3" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-4">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -412,15 +343,15 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-4" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BMH&quot;</span> and <span class="argument">&quot;AFK&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
 
-  <span class="lead-duration duration">4.123</span>
+  <span class="lead-duration duration">4.384</span>
 
 </div>
 
@@ -429,35 +360,6 @@ Caused by: java.net.SocketException: Socket closed
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
-          <a>com.squareup.moshi.JsonDataException:</a>
-      </div>
-      <div id="msg-6" class="collapse collapsable-details  in ">
-        <pre>com.squareup.moshi.JsonDataException: Expected a boolean but was BEGIN_ARRAY at path $.outboundJourneyList[0].includeUnderground
-	at com.squareup.moshi.JsonUtf8Reader.nextBoolean(JsonUtf8Reader.java:716)
-	at com.squareup.moshi.StandardJsonAdapters$2.fromJson(StandardJsonAdapters.java:87)
-	at com.squareup.moshi.StandardJsonAdapters$2.fromJson(StandardJsonAdapters.java:85)
-	at com.squareup.moshi.ClassJsonAdapter$FieldBinding.read(ClassJsonAdapter.java:204)
-	at com.squareup.moshi.ClassJsonAdapter.fromJson(ClassJsonAdapter.java:166)
-	at com.squareup.moshi.internal.NullSafeJsonAdapter.fromJson(NullSafeJsonAdapter.java:40)
-	at com.squareup.moshi.CollectionJsonAdapter.fromJson(CollectionJsonAdapter.java:76)
-	at com.squareup.moshi.CollectionJsonAdapter$2.fromJson(CollectionJsonAdapter.java:53)
-	at com.squareup.moshi.internal.NullSafeJsonAdapter.fromJson(NullSafeJsonAdapter.java:40)
-	at com.squareup.moshi.ClassJsonAdapter$FieldBinding.read(ClassJsonAdapter.java:204)
-	at com.squareup.moshi.ClassJsonAdapter.fromJson(ClassJsonAdapter.java:166)
-	at com.squareup.moshi.internal.NullSafeJsonAdapter.fromJson(NullSafeJsonAdapter.java:40)
-	at com.squareup.moshi.JsonAdapter.fromJson(JsonAdapter.java:38)
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:32)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;BMH&quot; and &quot;AFK&quot; on &quot;a weekday&quot; at &quot;09:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/london.feature:10)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -472,11 +374,11 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -521,10 +423,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">4.510</span>
+  <span class="lead-duration duration">17.036</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-5">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -537,14 +439,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-7" class="collapse collapsable-details  in ">
+  <div id="element-5" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-6">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -556,15 +458,15 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-6" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;1072&quot;</span> and <span class="argument">&quot;WEH&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;12:00&quot;</span></span>
 
-  <span class="lead-duration duration">4.510</span>
+  <span class="lead-duration duration">17.035</span>
 
 </div>
 
@@ -573,35 +475,6 @@ Caused by: java.net.SocketException: Socket closed
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
-          <a>com.squareup.moshi.JsonDataException:</a>
-      </div>
-      <div id="msg-9" class="collapse collapsable-details  in ">
-        <pre>com.squareup.moshi.JsonDataException: Expected a boolean but was BEGIN_ARRAY at path $.outboundJourneyList[0].includeUnderground
-	at com.squareup.moshi.JsonUtf8Reader.nextBoolean(JsonUtf8Reader.java:716)
-	at com.squareup.moshi.StandardJsonAdapters$2.fromJson(StandardJsonAdapters.java:87)
-	at com.squareup.moshi.StandardJsonAdapters$2.fromJson(StandardJsonAdapters.java:85)
-	at com.squareup.moshi.ClassJsonAdapter$FieldBinding.read(ClassJsonAdapter.java:204)
-	at com.squareup.moshi.ClassJsonAdapter.fromJson(ClassJsonAdapter.java:166)
-	at com.squareup.moshi.internal.NullSafeJsonAdapter.fromJson(NullSafeJsonAdapter.java:40)
-	at com.squareup.moshi.CollectionJsonAdapter.fromJson(CollectionJsonAdapter.java:76)
-	at com.squareup.moshi.CollectionJsonAdapter$2.fromJson(CollectionJsonAdapter.java:53)
-	at com.squareup.moshi.internal.NullSafeJsonAdapter.fromJson(NullSafeJsonAdapter.java:40)
-	at com.squareup.moshi.ClassJsonAdapter$FieldBinding.read(ClassJsonAdapter.java:204)
-	at com.squareup.moshi.ClassJsonAdapter.fromJson(ClassJsonAdapter.java:166)
-	at com.squareup.moshi.internal.NullSafeJsonAdapter.fromJson(NullSafeJsonAdapter.java:40)
-	at com.squareup.moshi.JsonAdapter.fromJson(JsonAdapter.java:38)
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:32)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;1072&quot; and &quot;WEH&quot; on &quot;a weekday&quot; at &quot;12:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/london.feature:15)
-</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
@@ -616,7 +489,7 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
@@ -628,6 +501,44 @@ Caused by: java.net.SocketException: Socket closed
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-7">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: MYB,WEH in 
+
+FST (12:04:00) -&gt; WEH (12:13:00)
+	FST (12:04:00) -&gt; WEH (12:13:00)
+
+FST (12:11:00) -&gt; WEH (12:20:00)
+	FST (12:11:00) -&gt; WEH (12:20:00)
+
+FST (12:19:00) -&gt; WEH (12:28:00)
+	FST (12:19:00) -&gt; WEH (12:28:00)
+
+FST (12:25:00) -&gt; WEH (12:34:00)
+	FST (12:25:00) -&gt; WEH (12:34:00)
+
+FST (12:34:00) -&gt; WEH (12:43:00)
+	FST (12:34:00) -&gt; WEH (12:43:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/1072/WEH/12112020/1200/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=1072&amp;destination=WEH&amp;outwardDate=2020-11-12&amp;outwardTime=12:00
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/london.feature:16)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -677,10 +588,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1.484</span>
+  <span class="lead-duration duration">2.744</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-8">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -693,14 +604,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-10" class="collapse collapsable-details  in ">
+  <div id="element-8" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-11">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-9">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -712,15 +623,42 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-11" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-9" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BDM&quot;</span> and <span class="argument">&quot;OXF&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:30&quot;</span></span>
 
-  <span class="lead-duration duration">1.484</span>
+  <span class="lead-duration duration">2.737</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see the following transfer patterns</span>
+
+  <span class="lead-duration duration">0.006</span>
 
 </div>
 
@@ -731,59 +669,52 @@ Caused by: java.net.SocketException: Socket closed
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
-          <a>com.squareup.moshi.JsonDataException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-10">
+          <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-12" class="collapse collapsable-details  in ">
-        <pre>com.squareup.moshi.JsonDataException: Expected a boolean but was BEGIN_ARRAY at path $.outboundJourneyList[0].includeUnderground
-	at com.squareup.moshi.JsonUtf8Reader.nextBoolean(JsonUtf8Reader.java:716)
-	at com.squareup.moshi.StandardJsonAdapters$2.fromJson(StandardJsonAdapters.java:87)
-	at com.squareup.moshi.StandardJsonAdapters$2.fromJson(StandardJsonAdapters.java:85)
-	at com.squareup.moshi.ClassJsonAdapter$FieldBinding.read(ClassJsonAdapter.java:204)
-	at com.squareup.moshi.ClassJsonAdapter.fromJson(ClassJsonAdapter.java:166)
-	at com.squareup.moshi.internal.NullSafeJsonAdapter.fromJson(NullSafeJsonAdapter.java:40)
-	at com.squareup.moshi.CollectionJsonAdapter.fromJson(CollectionJsonAdapter.java:76)
-	at com.squareup.moshi.CollectionJsonAdapter$2.fromJson(CollectionJsonAdapter.java:53)
-	at com.squareup.moshi.internal.NullSafeJsonAdapter.fromJson(NullSafeJsonAdapter.java:40)
-	at com.squareup.moshi.ClassJsonAdapter$FieldBinding.read(ClassJsonAdapter.java:204)
-	at com.squareup.moshi.ClassJsonAdapter.fromJson(ClassJsonAdapter.java:166)
-	at com.squareup.moshi.internal.NullSafeJsonAdapter.fromJson(NullSafeJsonAdapter.java:40)
-	at com.squareup.moshi.JsonAdapter.fromJson(JsonAdapter.java:38)
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:32)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;BDM&quot; and &quot;OXF&quot; on &quot;a weekday&quot; at &quot;07:30&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/london.feature:24)
+      <div id="msg-10" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: BDM,ZFD,PAD,RDG,OXF in 
+
+BDM (07:34:00) -&gt; OXF (10:13:00)
+	BDM (07:34:00) -&gt; ZFD (08:41:00)
+	ZFD -&gt; PAD (19)
+	PAD (09:20:00) -&gt; OXF (10:13:00)
+
+BDM (07:49:00) -&gt; OXF (10:38:00)
+	BDM (07:49:00) -&gt; STP (08:49:00)
+	STP -&gt; PAD (15)
+	PAD (09:37:00) -&gt; RDG (10:00:00)
+	RDG (10:15:00) -&gt; OXF (10:38:00)
+
+BDM (07:49:00) -&gt; OXF (10:40:00)
+	BDM (07:49:00) -&gt; STP (08:49:00)
+	STP -&gt; MYB (20)
+	MYB (09:35:00) -&gt; OXF (10:40:00)
+
+BDM (08:05:00) -&gt; OXF (10:43:00)
+	BDM (08:05:00) -&gt; ZFD (09:09:00)
+	ZFD -&gt; PAD (19)
+	PAD (09:50:00) -&gt; OXF (10:43:00)
+
+BDM (08:33:00) -&gt; OXF (11:13:00)
+	BDM (08:33:00) -&gt; ZFD (09:39:00)
+	ZFD -&gt; PAD (19)
+	PAD (10:20:00) -&gt; OXF (11:13:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/BDM/OXF/12112020/0730/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=BDM&amp;destination=OXF&amp;outwardDate=2020-11-12&amp;outwardTime=07:30
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/london.feature:25)
 </pre>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
 
 
           <table class="step-arguments">
@@ -830,10 +761,10 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">2.131</span>
+  <span class="lead-duration duration">3.087</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-11">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -846,14 +777,14 @@ Caused by: java.net.SocketException: Socket closed
   </span>
   <div class="description indention"></div>
 
-  <div id="element-13" class="collapse collapsable-details  in ">
+  <div id="element-11" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-14">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-12">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -865,15 +796,42 @@ Caused by: java.net.SocketException: Socket closed
 
   </div>
 
-  <div id="steps-14" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-12" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;SVK&quot;</span> and <span class="argument">&quot;EDL&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;08:00&quot;</span></span>
 
-  <span class="lead-duration duration">2.131</span>
+  <span class="lead-duration duration">3.085</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">I should see the following transfer patterns</span>
+
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -884,59 +842,56 @@ Caused by: java.net.SocketException: Socket closed
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
-          <a>com.squareup.moshi.JsonDataException:</a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-13">
+          <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-15" class="collapse collapsable-details  in ">
-        <pre>com.squareup.moshi.JsonDataException: Expected a boolean but was BEGIN_ARRAY at path $.outboundJourneyList[0].includeUnderground
-	at com.squareup.moshi.JsonUtf8Reader.nextBoolean(JsonUtf8Reader.java:716)
-	at com.squareup.moshi.StandardJsonAdapters$2.fromJson(StandardJsonAdapters.java:87)
-	at com.squareup.moshi.StandardJsonAdapters$2.fromJson(StandardJsonAdapters.java:85)
-	at com.squareup.moshi.ClassJsonAdapter$FieldBinding.read(ClassJsonAdapter.java:204)
-	at com.squareup.moshi.ClassJsonAdapter.fromJson(ClassJsonAdapter.java:166)
-	at com.squareup.moshi.internal.NullSafeJsonAdapter.fromJson(NullSafeJsonAdapter.java:40)
-	at com.squareup.moshi.CollectionJsonAdapter.fromJson(CollectionJsonAdapter.java:76)
-	at com.squareup.moshi.CollectionJsonAdapter$2.fromJson(CollectionJsonAdapter.java:53)
-	at com.squareup.moshi.internal.NullSafeJsonAdapter.fromJson(NullSafeJsonAdapter.java:40)
-	at com.squareup.moshi.ClassJsonAdapter$FieldBinding.read(ClassJsonAdapter.java:204)
-	at com.squareup.moshi.ClassJsonAdapter.fromJson(ClassJsonAdapter.java:166)
-	at com.squareup.moshi.internal.NullSafeJsonAdapter.fromJson(NullSafeJsonAdapter.java:40)
-	at com.squareup.moshi.JsonAdapter.fromJson(JsonAdapter.java:38)
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:32)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;SVK&quot; and &quot;EDL&quot; on &quot;a weekday&quot; at &quot;08:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/london.feature:32)
+      <div id="msg-13" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: SVK,LST,STP,SHF,EDL in 
+
+SVK (08:11:00) -&gt; EDL (12:32:00)
+	SVK (08:11:00) -&gt; LST (08:33:00)
+	LST -&gt; EUS (13)
+	EUS (09:20:00) -&gt; MAN (11:27:00)
+	MAN (11:49:00) -&gt; EDL (12:32:00)
+
+SVK (09:14:00) -&gt; EDL (13:32:00)
+	SVK (09:14:00) -&gt; LST (09:35:00)
+	LST -&gt; EUS (13)
+	EUS (10:20:00) -&gt; MAN (12:27:00)
+	MAN (12:49:00) -&gt; EDL (13:32:00)
+
+SVK (10:16:00) -&gt; EDL (14:32:00)
+	SVK (10:16:00) -&gt; LST (10:37:00)
+	LST -&gt; EUS (13)
+	EUS (11:20:00) -&gt; MAN (13:27:00)
+	MAN (13:49:00) -&gt; EDL (14:32:00)
+
+SVK (11:06:00) -&gt; EDL (15:32:00)
+	SVK (11:06:00) -&gt; LST (11:29:00)
+	LST -&gt; EUS (13)
+	EUS (12:20:00) -&gt; MAN (14:27:00)
+	MAN (14:49:00) -&gt; EDL (15:32:00)
+
+SVK (12:16:00) -&gt; EDL (16:32:00)
+	SVK (12:16:00) -&gt; LST (12:37:00)
+	LST -&gt; EUS (13)
+	EUS (13:20:00) -&gt; MAN (15:27:00)
+	MAN (15:49:00) -&gt; EDL (16:32:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/SVK/EDL/12112020/0800/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=SVK&amp;destination=EDL&amp;outwardDate=2020-11-12&amp;outwardTime=08:00
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/london.feature:33)
 </pre>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I should see the following transfer patterns</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
 
 
           <table class="step-arguments">
