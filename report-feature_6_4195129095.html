@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>16 Oct 2020, 17:12</td>
+      <td>17 Oct 2020, 17:06</td>
     </tr>
   </tbody>
 </table>
@@ -127,9 +127,9 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">The journey planner should offer routes using Z trains</td>
-          <td      class="passed"    >1</td>
-          <td      class="failed"    >1</td>
           <td >0</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >1</td>
           <td >0</td>
           <td >0</td>
           <td class="total">2</td>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="2101615000">2.101</td>
+          <td class="duration" data-value="4245910000">4.245</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">2.101</span>
+  <span class="lead-duration duration">4.245</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -232,11 +232,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RYD&quot;</span> and <span class="argument">&quot;WAT&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
 
-  <span class="lead-duration duration">2.100</span>
+  <span class="lead-duration duration">4.245</span>
 
 </div>
 
@@ -244,6 +244,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between RYD and WAT on 2020-12-14 09:00
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;RYD&quot; and &quot;WAT&quot; on &quot;a weekday&quot; at &quot;09:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/z-trains.feature:5)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -259,7 +274,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
@@ -271,54 +286,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: RYD,XRD,SHV,PMS,WAT in 
-
-RYD (09:40:00) -&gt; WAT (12:31:00)
-	RYD (09:40:00) -&gt; RYP (09:42:00)
-	RYP -&gt; PMH (22)
-	PMH (10:45:00) -&gt; WAT (12:31:00)
-
-RYD (10:40:00) -&gt; WAT (13:31:00)
-	RYD (10:40:00) -&gt; RYP (10:42:00)
-	RYP -&gt; PMH (22)
-	PMH (11:45:00) -&gt; WAT (13:31:00)
-
-RYD (11:40:00) -&gt; WAT (14:31:00)
-	RYD (11:40:00) -&gt; RYP (11:42:00)
-	RYP -&gt; PMH (22)
-	PMH (12:45:00) -&gt; WAT (14:31:00)
-
-RYD (13:40:00) -&gt; WAT (16:31:00)
-	RYD (13:40:00) -&gt; RYP (13:42:00)
-	RYP -&gt; PMH (22)
-	PMH (14:45:00) -&gt; WAT (16:31:00)
-
-RYD (15:40:00) -&gt; WAT (18:31:00)
-	RYD (15:40:00) -&gt; RYP (15:42:00)
-	RYP -&gt; PMH (22)
-	PMH (16:45:00) -&gt; WAT (18:31:00)
-
-Check with: 
-
-http://ojp.nationalrail.co.uk/service/timesandfares/RYD/WAT/11122020/0900/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=RYD&amp;destination=WAT&amp;outwardDate=2020-12-11&amp;outwardTime=09:00
-
-
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/z-trains.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">

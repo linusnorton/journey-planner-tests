@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>16 Oct 2020, 17:12</td>
+      <td>17 Oct 2020, 17:06</td>
     </tr>
   </tbody>
 </table>
@@ -127,9 +127,9 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">The journey planner should offer routes via London and not via London with appropriate fares</td>
-          <td      class="passed"    >1</td>
+          <td >0</td>
           <td      class="failed"    >1</td>
-          <td     class="skipped"   >2</td>
+          <td     class="skipped"   >3</td>
           <td >0</td>
           <td >0</td>
           <td class="total">4</td>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="2709816000">2.709</td>
+          <td class="duration" data-value="1285622000">1.285</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">2.709</span>
+  <span class="lead-duration duration">1.285</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -232,11 +232,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;TON&quot;</span> and <span class="argument">&quot;GTW&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:15&quot;</span></span>
 
-  <span class="lead-duration duration">2.708</span>
+  <span class="lead-duration duration">1.285</span>
 
 </div>
 
@@ -244,6 +244,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between TON and GTW on 2020-12-14 09:15
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;TON&quot; and &quot;GTW&quot; on &quot;a weekday&quot; at &quot;09:15&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/not-via-london.feature:14)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -259,11 +274,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -271,51 +286,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: TON,RDH,GTW in 
-
-TON (09:19:00) -&gt; GTW (10:35:00)
-	TON (09:19:00) -&gt; LBG (09:53:00)
-	LBG (10:05:00) -&gt; GTW (10:35:00)
-
-TON (09:29:00) -&gt; GTW (12:01:00)
-	TON (09:29:00) -&gt; SLQ (10:17:00)
-	SLQ (10:29:00) -&gt; GTW (12:01:00)
-
-TON (09:31:00) -&gt; GTW (10:55:00)
-	TON (09:31:00) -&gt; LBG (10:07:00)
-	LBG (10:17:00) -&gt; ECR (10:31:00)
-	ECR (10:40:00) -&gt; GTW (10:55:00)
-
-TON (09:39:00) -&gt; GTW (11:00:00)
-	TON (09:39:00) -&gt; LBG (10:11:00)
-	LBG (10:21:00) -&gt; ECR (10:36:00)
-	ECR (10:43:00) -&gt; GTW (11:00:00)
-
-TON (09:49:00) -&gt; GTW (11:05:00)
-	TON (09:49:00) -&gt; LBG (10:23:00)
-	LBG (10:35:00) -&gt; GTW (11:05:00)
-
-Check with: 
-
-http://ojp.nationalrail.co.uk/service/timesandfares/TON/GTW/11122020/0915/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=TON&amp;destination=GTW&amp;outwardDate=2020-12-11&amp;outwardTime=09:15
-
-
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/not-via-london.feature:15)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
