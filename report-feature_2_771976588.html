@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>20 Oct 2020, 17:13</td>
+      <td>21 Oct 2020, 17:54</td>
     </tr>
   </tbody>
 </table>
@@ -127,9 +127,9 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">The journey planner should offer the user multiple routes</td>
-          <td      class="passed"    >12</td>
+          <td      class="passed"    >13</td>
           <td      class="failed"    >7</td>
-          <td     class="skipped"   >3</td>
+          <td     class="skipped"   >2</td>
           <td >0</td>
           <td >0</td>
           <td class="total">22</td>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >7</td>
           <td class="total">11</td>
 
-          <td class="duration" data-value="78011116000">1:18.011</td>
+          <td class="duration" data-value="15599906000">15.599</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.318</span>
+  <span class="lead-duration duration">0.841</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -236,7 +236,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;OXF&quot;</span> and <span class="argument">&quot;ARU&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;05:30&quot;</span></span>
 
-  <span class="lead-duration duration">1.316</span>
+  <span class="lead-duration duration">0.839</span>
 
 </div>
 
@@ -292,6 +292,11 @@ OXF (06:00:00) -&gt; ARU (10:01:00)
 	RDG (06:46:00) -&gt; GTW (08:22:00)
 	GTW (09:10:00) -&gt; ARU (10:01:00)
 
+OXF (06:25:00) -&gt; ARU (10:01:00)
+	OXF (06:25:00) -&gt; MYB (07:31:00)
+	MYB -&gt; VIC (18)
+	VIC (08:35:00) -&gt; ARU (10:01:00)
+
 OXF (06:48:00) -&gt; ARU (09:46:00)
 	OXF (06:48:00) -&gt; RDG (07:09:00)
 	RDG (07:16:00) -&gt; BSK (07:47:00)
@@ -305,15 +310,10 @@ OXF (06:48:00) -&gt; ARU (10:01:00)
 	LBG (08:35:00) -&gt; ECR (08:48:00)
 	ECR (08:53:00) -&gt; ARU (10:01:00)
 
-OXF (07:07:00) -&gt; ARU (10:28:00)
-	OXF (07:07:00) -&gt; RDG (07:33:00)
-	RDG (07:49:00) -&gt; GTW (09:25:00)
-	GTW (09:39:00) -&gt; ARU (10:28:00)
-
 Check with: 
 
-http://ojp.nationalrail.co.uk/service/timesandfares/OXF/ARU/15122020/0530/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=OXF&amp;destination=ARU&amp;outwardDate=2020-12-15&amp;outwardTime=05:30
+http://ojp.nationalrail.co.uk/service/timesandfares/OXF/ARU/16122020/0530/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=OXF&amp;destination=ARU&amp;outwardDate=2020-12-16&amp;outwardTime=05:30
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -364,7 +364,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=OXF&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">1:0.008</span>
+  <span class="lead-duration duration">1.396</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
@@ -403,11 +403,11 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=OXF&amp;destina
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;EDB&quot;</span> and <span class="argument">&quot;BHM&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;05:30&quot;</span></span>
 
-  <span class="lead-duration duration">1:0.008</span>
+  <span class="lead-duration duration">1.386</span>
 
 </div>
 
@@ -415,75 +415,6 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=OXF&amp;destina
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
-      </div>
-      <div id="msg-6" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BHM&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-12-15 05:30&quot;,&quot;dptCrsCode&quot;:&quot;EDB&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;EDB&quot; and &quot;BHM&quot; on &quot;a weekday&quot; at &quot;05:30&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:12)
-Caused by: java.io.InterruptedIOException: timeout
-	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
-	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
-	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
-	at okhttp3.RealCall.execute(RealCall.kt:67)
-	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
-	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.net.SocketException: Socket closed
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
-	at okio.InputStreamSource.read(Okio.kt:93)
-	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
-	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
-	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
-	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
-	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
-	... 23 more
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -499,11 +430,11 @@ Caused by: java.net.SocketException: Socket closed
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.010</span>
 
 </div>
 
@@ -511,6 +442,45 @@ Caused by: java.net.SocketException: Socket closed
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: EDB,PRE,BHM in 
+
+EDB (06:06:00) -&gt; BHM (11:08:00)
+	EDB (06:06:00) -&gt; BHM (11:08:00)
+
+EDB (06:52:00) -&gt; BHM (10:59:00)
+	EDB (06:52:00) -&gt; WVH (10:33:00)
+	WVH (10:42:00) -&gt; BHM (10:59:00)
+
+EDB (06:52:00) -&gt; BHM (11:05:00)
+	EDB (06:52:00) -&gt; BHM (11:05:00)
+
+EDB (07:01:00) -&gt; BHM (12:04:00)
+	EDB (07:01:00) -&gt; BHM (12:04:00)
+
+EDB (08:08:00) -&gt; BHM (13:08:00)
+	EDB (08:08:00) -&gt; BHM (13:08:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/EDB/BHM/16122020/0530/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=EDB&amp;destination=BHM&amp;outwardDate=2020-12-16&amp;outwardTime=05:30
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:13)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -551,7 +521,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">3.932</span>
+  <span class="lead-duration duration">1.392</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-7">
@@ -594,7 +564,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BMH&quot;</span> and <span class="argument">&quot;MAN&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;06:00&quot;</span></span>
 
-  <span class="lead-duration duration">3.931</span>
+  <span class="lead-duration duration">1.390</span>
 
 </div>
 
@@ -621,7 +591,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -666,7 +636,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1.552</span>
+  <span class="lead-duration duration">1.218</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
@@ -709,7 +679,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;LIV&quot;</span> and <span class="argument">&quot;LEI&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;06:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.550</span>
+  <span class="lead-duration duration">1.210</span>
 
 </div>
 
@@ -736,7 +706,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.007</span>
 
 </div>
 
@@ -784,7 +754,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1.458</span>
+  <span class="lead-duration duration">1.246</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-11">
@@ -827,7 +797,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;HNH&quot;</span> and <span class="argument">&quot;SMD&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.457</span>
+  <span class="lead-duration duration">1.244</span>
 
 </div>
 
@@ -876,6 +846,12 @@ HNH (07:27:00) -&gt; SMD (10:06:00)
 	STP (08:16:00) -&gt; PBO (09:35:00)
 	PBO (09:54:00) -&gt; SMD (10:06:00)
 
+HNH (08:12:00) -&gt; SMD (10:06:00)
+	HNH (08:12:00) -&gt; STP (08:33:00)
+	STP -&gt; KGX (1)
+	KGX (09:00:00) -&gt; PBO (09:46:00)
+	PBO (09:54:00) -&gt; SMD (10:06:00)
+
 HNH (08:12:00) -&gt; SMD (10:59:00)
 	HNH (08:12:00) -&gt; STP (08:33:00)
 	STP (09:02:00) -&gt; LEI (10:06:00)
@@ -886,20 +862,16 @@ HNH (09:27:00) -&gt; SMD (12:06:00)
 	STP (10:16:00) -&gt; PBO (11:39:00)
 	PBO (11:54:00) -&gt; SMD (12:06:00)
 
-HNH (10:12:00) -&gt; SMD (12:59:00)
-	HNH (10:12:00) -&gt; STP (10:33:00)
-	STP (11:02:00) -&gt; LEI (12:05:00)
-	LEI (12:18:00) -&gt; SMD (12:59:00)
-
-HNH (10:27:00) -&gt; SMD (13:06:00)
-	HNH (10:27:00) -&gt; STP (10:48:00)
-	STP (11:16:00) -&gt; PBO (12:39:00)
-	PBO (12:54:00) -&gt; SMD (13:06:00)
+HNH (09:42:00) -&gt; SMD (12:06:00)
+	HNH (09:42:00) -&gt; STP (10:03:00)
+	STP -&gt; KGX (1)
+	KGX (10:30:00) -&gt; PBO (11:16:00)
+	PBO (11:54:00) -&gt; SMD (12:06:00)
 
 Check with: 
 
-http://ojp.nationalrail.co.uk/service/timesandfares/HNH/SMD/15122020/0700/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destination=SMD&amp;outwardDate=2020-12-15&amp;outwardTime=07:00
+http://ojp.nationalrail.co.uk/service/timesandfares/HNH/SMD/16122020/0700/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destination=SMD&amp;outwardDate=2020-12-16&amp;outwardTime=07:00
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -953,7 +925,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">2.888</span>
+  <span class="lead-duration duration">1.688</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-14">
@@ -996,7 +968,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;NRW&quot;</span> and <span class="argument">&quot;COV&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;14:00&quot;</span></span>
 
-  <span class="lead-duration duration">2.887</span>
+  <span class="lead-duration duration">1.687</span>
 
 </div>
 
@@ -1023,7 +995,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destina
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -1068,7 +1040,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">0.989</span>
+  <span class="lead-duration duration">0.796</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-16">
@@ -1111,7 +1083,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BAU&quot;</span> and <span class="argument">&quot;SWA&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">0.989</span>
+  <span class="lead-duration duration">0.796</span>
 
 </div>
 
@@ -1126,7 +1098,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destina
           <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
       <div id="msg-18" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between BAU and SWA on 2020-12-15 07:00
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between BAU and SWA on 2020-12-16 07:00
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;BAU&quot; and &quot;SWA&quot; on &quot;a weekday&quot; at &quot;07:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:58)
@@ -1198,7 +1170,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">1.903</span>
+  <span class="lead-duration duration">2.915</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-19">
@@ -1241,7 +1213,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;WFJ&quot;</span> and <span class="argument">&quot;STN&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.902</span>
+  <span class="lead-duration duration">2.909</span>
 
 </div>
 
@@ -1268,7 +1240,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destina
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.005</span>
 
 </div>
 
@@ -1291,33 +1263,32 @@ WFJ (07:37:00) -&gt; STN (15:33:00)
 	PRE (11:04:00) -&gt; HYM (13:24:00)
 	HYM (13:36:00) -&gt; STN (15:33:00)
 
-WFJ (08:16:00) -&gt; STN (17:14:00)
-	WFJ (08:16:00) -&gt; EUS (09:09:00)
-	EUS (09:30:00) -&gt; GLC (14:03:00)
-	GLC -&gt; GLQ (5)
-	GLQ (14:39:00) -&gt; MTS (16:38:00)
-	MTS (16:49:00) -&gt; STN (17:14:00)
-
-WFJ (08:37:00) -&gt; STN (17:33:00)
+WFJ (08:37:00) -&gt; STN (16:45:00)
 	WFJ (08:37:00) -&gt; COV (09:22:00)
 	COV (09:42:00) -&gt; HYM (14:12:00)
-	HYM (15:35:00) -&gt; STN (17:33:00)
+	HYM (14:34:00) -&gt; STN (16:45:00)
 
-WFJ (09:18:00) -&gt; STN (17:55:00)
-	WFJ (09:18:00) -&gt; EUS (10:09:00)
-	EUS (10:30:00) -&gt; GLC (14:59:00)
-	GLC -&gt; GLQ (5)
-	GLQ (15:39:00) -&gt; STN (17:55:00)
+WFJ (09:31:00) -&gt; STN (17:33:00)
+	WFJ (09:31:00) -&gt; EUS (10:22:00)
+	EUS -&gt; KGX (5)
+	KGX (11:00:00) -&gt; EDB (15:19:00)
+	EDB (15:29:00) -&gt; STN (17:33:00)
 
 WFJ (10:37:00) -&gt; STN (18:43:00)
 	WFJ (10:37:00) -&gt; COV (11:22:00)
 	COV (11:42:00) -&gt; HYM (16:12:00)
 	HYM (16:35:00) -&gt; STN (18:43:00)
 
+WFJ (11:37:00) -&gt; STN (19:48:00)
+	WFJ (11:37:00) -&gt; COV (12:22:00)
+	COV (12:42:00) -&gt; PRE (14:51:00)
+	PRE (15:04:00) -&gt; HYM (17:32:00)
+	HYM (17:42:00) -&gt; STN (19:48:00)
+
 Check with: 
 
-http://ojp.nationalrail.co.uk/service/timesandfares/WFJ/STN/15122020/0700/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destination=STN&amp;outwardDate=2020-12-15&amp;outwardTime=07:00
+http://ojp.nationalrail.co.uk/service/timesandfares/WFJ/STN/16122020/0700/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destination=STN&amp;outwardDate=2020-12-16&amp;outwardTime=07:00
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -1368,7 +1339,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">1.359</span>
+  <span class="lead-duration duration">1.231</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-22">
@@ -1411,7 +1382,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BMH&quot;</span> and <span class="argument">&quot;BRI&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.354</span>
+  <span class="lead-duration duration">1.230</span>
 
 </div>
 
@@ -1438,7 +1409,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destina
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.004</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -1489,7 +1460,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">1.777</span>
+  <span class="lead-duration duration">2.186</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-24">
@@ -1532,7 +1503,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;ABD&quot;</span> and <span class="argument">&quot;BRI&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:30&quot;</span></span>
 
-  <span class="lead-duration duration">1.776</span>
+  <span class="lead-duration duration">2.181</span>
 
 </div>
 
@@ -1559,7 +1530,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destina
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.005</span>
 
 </div>
 
@@ -1576,40 +1547,37 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destina
       <div id="msg-26" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: ABD,EDB,NCL,BRI in 
 
-ABD (09:44:00) -&gt; BRI (19:29:00)
-	ABD (09:44:00) -&gt; DEE (10:52:00)
-	DEE (11:28:00) -&gt; HYM (12:50:00)
+ABD (09:52:00) -&gt; BRI (19:28:00)
+	ABD (09:52:00) -&gt; KGX (16:50:00)
+	KGX -&gt; PAD (15)
+	PAD (17:48:00) -&gt; BPW (19:01:00)
+	BPW (19:10:00) -&gt; BRI (19:28:00)
+
+ABD (09:52:00) -&gt; BRI (19:29:00)
+	ABD (09:52:00) -&gt; HYM (12:20:00)
 	HYM (12:58:00) -&gt; BHM (17:05:00)
 	BHM (17:30:00) -&gt; GCR (18:27:00)
 	GCR (18:42:00) -&gt; BRI (19:29:00)
 
-ABD (09:44:00) -&gt; BRI (19:45:00)
-	ABD (09:44:00) -&gt; DEE (10:52:00)
-	DEE (11:28:00) -&gt; HYM (12:50:00)
-	HYM (12:58:00) -&gt; BHM (17:05:00)
-	BHM (18:12:00) -&gt; BRI (19:45:00)
+ABD (09:52:00) -&gt; BRI (19:38:00)
+	ABD (09:52:00) -&gt; KGX (16:50:00)
+	KGX -&gt; PAD (15)
+	PAD (18:02:00) -&gt; BRI (19:38:00)
 
-ABD (12:07:00) -&gt; BRI (20:33:00)
-	ABD (12:07:00) -&gt; HYM (14:23:00)
-	HYM (14:58:00) -&gt; WVH (18:34:00)
-	WVH (18:41:00) -&gt; BHM (18:57:00)
-	BHM (19:12:00) -&gt; BRI (20:33:00)
+ABD (09:52:00) -&gt; BRI (19:45:00)
+	ABD (09:52:00) -&gt; EDB (12:26:00)
+	EDB (13:05:00) -&gt; BRI (19:45:00)
 
-ABD (12:07:00) -&gt; BRI (21:37:00)
-	ABD (12:07:00) -&gt; EDB (14:29:00)
-	EDB (15:08:00) -&gt; BRI (21:37:00)
-
-ABD (12:47:00) -&gt; BRI (21:37:00)
-	ABD (12:47:00) -&gt; GLQ (15:14:00)
-	GLQ -&gt; GLC (5)
-	GLC (16:00:00) -&gt; WVH (19:33:00)
-	WVH (19:42:00) -&gt; BHM (19:58:00)
-	BHM (20:12:00) -&gt; BRI (21:37:00)
+ABD (11:01:00) -&gt; BRI (21:06:00)
+	ABD (11:01:00) -&gt; EDB (13:23:00)
+	EDB (14:00:00) -&gt; KGX (18:39:00)
+	KGX -&gt; PAD (15)
+	PAD (19:33:00) -&gt; BRI (21:06:00)
 
 Check with: 
 
-http://ojp.nationalrail.co.uk/service/timesandfares/ABD/BRI/15122020/0930/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=ABD&amp;destination=BRI&amp;outwardDate=2020-12-15&amp;outwardTime=09:30
+http://ojp.nationalrail.co.uk/service/timesandfares/ABD/BRI/16122020/0930/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=ABD&amp;destination=BRI&amp;outwardDate=2020-12-16&amp;outwardTime=09:30
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -1663,7 +1631,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=ABD&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">0.823</span>
+  <span class="lead-duration duration">0.685</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-27">
@@ -1706,7 +1674,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=ABD&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;NBN&quot;</span> and <span class="argument">&quot;BAH&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">0.823</span>
+  <span class="lead-duration duration">0.685</span>
 
 </div>
 
@@ -1721,7 +1689,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=ABD&amp;destina
           <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
       <div id="msg-29" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between NBN and BAH on 2020-12-15 07:00
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between NBN and BAH on 2020-12-16 07:00
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;NBN&quot; and &quot;BAH&quot; on &quot;a weekday&quot; at &quot;07:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/multiple-routes.feature:88)
