@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>17 Nov 2020, 18:22</td>
+      <td>18 Nov 2020, 18:19</td>
     </tr>
   </tbody>
 </table>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="10659163000">10.659</td>
+          <td class="duration" data-value="670207000">0.670</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">10.659</span>
+  <span class="lead-duration duration">0.670</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -236,7 +236,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RYD&quot;</span> and <span class="argument">&quot;WAT&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
 
-  <span class="lead-duration duration">10.659</span>
+  <span class="lead-duration duration">0.670</span>
 
 </div>
 
@@ -248,40 +248,13 @@ $(document).ready(function() {
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;WAT&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2021-01-12 09:00&quot;,&quot;dptCrsCode&quot;:&quot;RYD&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between RYD and WAT on 2021-01-13 09:00
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;RYD&quot; and &quot;WAT&quot; on &quot;a weekday&quot; at &quot;09:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/z-trains.feature:5)
-Caused by: java.io.EOFException: End of input
-	at com.squareup.moshi.JsonUtf8Reader.nextNonWhitespace(JsonUtf8Reader.java:1057)
-	at com.squareup.moshi.JsonUtf8Reader.doPeek(JsonUtf8Reader.java:319)
-	at com.squareup.moshi.JsonUtf8Reader.peek(JsonUtf8Reader.java:193)
-	at com.squareup.moshi.internal.NullSafeJsonAdapter.fromJson(NullSafeJsonAdapter.java:37)
-	at com.squareup.moshi.JsonAdapter.fromJson(JsonAdapter.java:38)
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:32)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
-	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
 </pre>
       </div>
     </div>

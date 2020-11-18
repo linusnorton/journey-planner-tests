@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>17 Nov 2020, 18:22</td>
+      <td>18 Nov 2020, 18:19</td>
     </tr>
   </tbody>
 </table>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >25</td>
           <td class="total">25</td>
 
-          <td class="duration" data-value="137272268000">2:17.272</td>
+          <td class="duration" data-value="75740348000">1:15.740</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -181,7 +181,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1:0.005</span>
+  <span class="lead-duration duration">0.638</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -224,7 +224,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;GPO&quot;</span> and <span class="argument">&quot;BKG&quot;</span> on <span class="argument">&quot;2020-08-03&quot;</span> at <span class="argument">&quot;22:22&quot;</span></span>
 
-  <span class="lead-duration duration">1:0.005</span>
+  <span class="lead-duration duration">0.638</span>
 
 </div>
 
@@ -236,67 +236,13 @@ $(document).ready(function() {
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;BKG&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-08-03 22:22&quot;,&quot;dptCrsCode&quot;:&quot;GPO&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between GPO and BKG on 2020-08-03 22:22
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;GPO&quot; and &quot;BKG&quot; on &quot;2020-08-03&quot; at &quot;22:22&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:6)
-Caused by: java.io.InterruptedIOException: timeout
-	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
-	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
-	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
-	at okhttp3.RealCall.execute(RealCall.kt:67)
-	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
-	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.net.SocketException: Socket closed
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
-	at okio.InputStreamSource.read(Okio.kt:93)
-	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
-	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
-	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
-	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
-	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
-	... 23 more
 </pre>
       </div>
     </div>
@@ -485,7 +431,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.669</span>
+  <span class="lead-duration duration">1:0.003</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
@@ -528,7 +474,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHX&quot;</span> and <span class="argument">&quot;HYS&quot;</span> on <span class="argument">&quot;2020-08-03&quot;</span> at <span class="argument">&quot;23:37&quot;</span></span>
 
-  <span class="lead-duration duration">0.669</span>
+  <span class="lead-duration duration">1:0.003</span>
 
 </div>
 
@@ -540,13 +486,67 @@ Caused by: java.net.SocketException: Socket closed
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
-          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
       </div>
       <div id="msg-6" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between CHX and HYS on 2020-08-03 23:37
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;HYS&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-08-03 23:37&quot;,&quot;dptCrsCode&quot;:&quot;CHX&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;CHX&quot; and &quot;HYS&quot; on &quot;2020-08-03&quot; at &quot;23:37&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/cancellation.feature:25)
+Caused by: java.io.InterruptedIOException: timeout
+	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
+	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
+	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
+	at okhttp3.RealCall.execute(RealCall.kt:67)
+	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at okio.InputStreamSource.read(Okio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
+	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
+	... 23 more
 </pre>
       </div>
     </div>
@@ -735,7 +735,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.715</span>
+  <span class="lead-duration duration">0.654</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
@@ -778,7 +778,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BKG&quot;</span> and <span class="argument">&quot;GPO&quot;</span> on <span class="argument">&quot;2020-08-03&quot;</span> at <span class="argument">&quot;20:04&quot;</span></span>
 
-  <span class="lead-duration duration">0.715</span>
+  <span class="lead-duration duration">0.654</span>
 
 </div>
 
@@ -985,7 +985,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1.718</span>
+  <span class="lead-duration duration">0.663</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
@@ -1028,7 +1028,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;GPO&quot;</span> and <span class="argument">&quot;BKG&quot;</span> on <span class="argument">&quot;2020-08-03&quot;</span> at <span class="argument">&quot;20:50&quot;</span></span>
 
-  <span class="lead-duration duration">1.718</span>
+  <span class="lead-duration duration">0.663</span>
 
 </div>
 
@@ -1235,7 +1235,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.703</span>
+  <span class="lead-duration duration">0.626</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
@@ -1278,7 +1278,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BKG&quot;</span> and <span class="argument">&quot;GPO&quot;</span> on <span class="argument">&quot;2020-08-03&quot;</span> at <span class="argument">&quot;21:03&quot;</span></span>
 
-  <span class="lead-duration duration">0.703</span>
+  <span class="lead-duration duration">0.626</span>
 
 </div>
 
@@ -1485,7 +1485,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.780</span>
+  <span class="lead-duration duration">0.723</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-16">
@@ -1528,7 +1528,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CLT&quot;</span> and <span class="argument">&quot;LST&quot;</span> on <span class="argument">&quot;2020-07-17&quot;</span> at <span class="argument">&quot;07:16&quot;</span></span>
 
-  <span class="lead-duration duration">0.780</span>
+  <span class="lead-duration duration">0.723</span>
 
 </div>
 
@@ -1691,7 +1691,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1:0.004</span>
+  <span class="lead-duration duration">0.658</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-19">
@@ -1734,7 +1734,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;WON&quot;</span> and <span class="argument">&quot;LST&quot;</span> on <span class="argument">&quot;2020-07-17&quot;</span> at <span class="argument">&quot;08:00&quot;</span></span>
 
-  <span class="lead-duration duration">1:0.004</span>
+  <span class="lead-duration duration">0.658</span>
 
 </div>
 
@@ -1746,66 +1746,13 @@ Caused by: java.net.SocketException: Socket closed
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-21">
-          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
       </div>
       <div id="msg-21" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;LST&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2020-07-17 08:00&quot;,&quot;dptCrsCode&quot;:&quot;WON&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between WON and LST on 2020-07-17 08:00
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
 	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
 	at &#10045;.a query between &quot;WON&quot; and &quot;LST&quot; on &quot;2020-07-17&quot; at &quot;08:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/timetable/joins.feature:25)
-Caused by: java.io.InterruptedIOException: timeout
-	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
-	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
-	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
-	at okhttp3.RealCall.execute(RealCall.kt:67)
-	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
-	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at jdk.internal.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
-	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.net.SocketException: Socket closed
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:183)
-	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
-	at okio.InputStreamSource.read(Okio.kt:93)
-	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:129)
-	at okio.RealBufferedSource.indexOf(RealBufferedSource.kt:449)
-	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:333)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readHeaderLine(Http1ExchangeCodec.kt:210)
-	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:181)
-	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:105)
-	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:79)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:37)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
-	... 22 more
 </pre>
       </div>
     </div>
@@ -1940,7 +1887,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.714</span>
+  <span class="lead-duration duration">0.626</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-22">
@@ -1983,7 +1930,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CLT&quot;</span> and <span class="argument">&quot;LST&quot;</span> on <span class="argument">&quot;2020-07-17&quot;</span> at <span class="argument">&quot;07:45&quot;</span></span>
 
-  <span class="lead-duration duration">0.714</span>
+  <span class="lead-duration duration">0.626</span>
 
 </div>
 
@@ -2126,7 +2073,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.614</span>
+  <span class="lead-duration duration">0.693</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-25">
@@ -2169,7 +2116,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;WON&quot;</span> and <span class="argument">&quot;LST&quot;</span> on <span class="argument">&quot;2020-07-17&quot;</span> at <span class="argument">&quot;07:38&quot;</span></span>
 
-  <span class="lead-duration duration">0.614</span>
+  <span class="lead-duration duration">0.693</span>
 
 </div>
 
@@ -2352,7 +2299,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.674</span>
+  <span class="lead-duration duration">0.619</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-28">
@@ -2395,7 +2342,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;FAV&quot;</span> and <span class="argument">&quot;VIC&quot;</span> on <span class="argument">&quot;2020-07-17&quot;</span> at <span class="argument">&quot;07:52&quot;</span></span>
 
-  <span class="lead-duration duration">0.674</span>
+  <span class="lead-duration duration">0.619</span>
 
 </div>
 
@@ -2628,7 +2575,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.751</span>
+  <span class="lead-duration duration">0.642</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-31">
@@ -2671,7 +2618,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;MER&quot;</span> and <span class="argument">&quot;BGN&quot;</span> on <span class="argument">&quot;2020-08-03&quot;</span> at <span class="argument">&quot;21:38&quot;</span></span>
 
-  <span class="lead-duration duration">0.751</span>
+  <span class="lead-duration duration">0.642</span>
 
 </div>
 
@@ -3075,7 +3022,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.634</span>
+  <span class="lead-duration duration">0.625</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-34">
@@ -3118,7 +3065,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;SCA&quot;</span> and <span class="argument">&quot;MIA&quot;</span> on <span class="argument">&quot;2020-08-03&quot;</span> at <span class="argument">&quot;21:34&quot;</span></span>
 
-  <span class="lead-duration duration">0.634</span>
+  <span class="lead-duration duration">0.625</span>
 
 </div>
 
@@ -3382,7 +3329,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.664</span>
+  <span class="lead-duration duration">0.646</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-37">
@@ -3425,7 +3372,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;MAN&quot;</span> and <span class="argument">&quot;CMN&quot;</span> on <span class="argument">&quot;2020-08-03&quot;</span> at <span class="argument">&quot;18:31&quot;</span></span>
 
-  <span class="lead-duration duration">0.664</span>
+  <span class="lead-duration duration">0.646</span>
 
 </div>
 
@@ -3889,7 +3836,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.651</span>
+  <span class="lead-duration duration">0.633</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-40">
@@ -3932,7 +3879,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;GPO&quot;</span> and <span class="argument">&quot;BKG&quot;</span> on <span class="argument">&quot;2020-08-03&quot;</span> at <span class="argument">&quot;23:42&quot;</span></span>
 
-  <span class="lead-duration duration">0.651</span>
+  <span class="lead-duration duration">0.633</span>
 
 </div>
 
@@ -4206,7 +4153,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">1.666</span>
+  <span class="lead-duration duration">0.654</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-43">
@@ -4249,7 +4196,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;HFD&quot;</span> and <span class="argument">&quot;CDF&quot;</span> on <span class="argument">&quot;2020-08-03&quot;</span> at <span class="argument">&quot;05:26&quot;</span></span>
 
-  <span class="lead-duration duration">1.666</span>
+  <span class="lead-duration duration">0.654</span>
 
 </div>
 
@@ -4463,7 +4410,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.697</span>
+  <span class="lead-duration duration">0.614</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-46">
@@ -4506,7 +4453,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;MAN&quot;</span> and <span class="argument">&quot;GLC&quot;</span> on <span class="argument">&quot;2020-08-10&quot;</span> at <span class="argument">&quot;04:57&quot;</span></span>
 
-  <span class="lead-duration duration">0.697</span>
+  <span class="lead-duration duration">0.614</span>
 
 </div>
 
@@ -4649,7 +4596,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.614</span>
+  <span class="lead-duration duration">0.679</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-49">
@@ -4692,7 +4639,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;GPO&quot;</span> and <span class="argument">&quot;BKG&quot;</span> on <span class="argument">&quot;2020-08-10&quot;</span> at <span class="argument">&quot;20:37&quot;</span></span>
 
-  <span class="lead-duration duration">0.614</span>
+  <span class="lead-duration duration">0.679</span>
 
 </div>
 
@@ -4845,7 +4792,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.615</span>
+  <span class="lead-duration duration">0.666</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-52">
@@ -4888,7 +4835,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;WCY&quot;</span> and <span class="argument">&quot;HHY&quot;</span> on <span class="argument">&quot;2020-08-10&quot;</span> at <span class="argument">&quot;23:31&quot;</span></span>
 
-  <span class="lead-duration duration">0.615</span>
+  <span class="lead-duration duration">0.666</span>
 
 </div>
 
@@ -5086,7 +5033,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.621</span>
+  <span class="lead-duration duration">0.606</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-55">
@@ -5129,7 +5076,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RDC&quot;</span> and <span class="argument">&quot;FOK&quot;</span> on <span class="argument">&quot;2020-08-10&quot;</span> at <span class="argument">&quot;16:32&quot;</span></span>
 
-  <span class="lead-duration duration">0.621</span>
+  <span class="lead-duration duration">0.606</span>
 
 </div>
 
@@ -5588,7 +5535,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.668</span>
+  <span class="lead-duration duration">0.659</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-61">
@@ -5631,7 +5578,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;LST&quot;</span> and <span class="argument">&quot;CET&quot;</span> on <span class="argument">&quot;2020-07-17&quot;</span> at <span class="argument">&quot;17:08&quot;</span></span>
 
-  <span class="lead-duration duration">0.668</span>
+  <span class="lead-duration duration">0.659</span>
 
 </div>
 
@@ -5764,7 +5711,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.607</span>
+  <span class="lead-duration duration">0.651</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-64">
@@ -5807,7 +5754,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;LST&quot;</span> and <span class="argument">&quot;HWC&quot;</span> on <span class="argument">&quot;2020-07-17&quot;</span> at <span class="argument">&quot;08:36&quot;</span></span>
 
-  <span class="lead-duration duration">0.607</span>
+  <span class="lead-duration duration">0.651</span>
 
 </div>
 
@@ -6141,7 +6088,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.613</span>
+  <span class="lead-duration duration">0.869</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-70">
@@ -6184,7 +6131,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;LST&quot;</span> and <span class="argument">&quot;CMB&quot;</span> on <span class="argument">&quot;2020-07-17&quot;</span> at <span class="argument">&quot;18:07&quot;</span></span>
 
-  <span class="lead-duration duration">0.613</span>
+  <span class="lead-duration duration">0.869</span>
 
 </div>
 
@@ -6312,7 +6259,7 @@ Caused by: java.net.SocketException: Socket closed
 </div>
 
 
-  <span class="lead-duration duration">0.624</span>
+  <span class="lead-duration duration">0.641</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-73">
@@ -6355,7 +6302,7 @@ Caused by: java.net.SocketException: Socket closed
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;LST&quot;</span> and <span class="argument">&quot;HWC&quot;</span> on <span class="argument">&quot;2020-07-17&quot;</span> at <span class="argument">&quot;16:44&quot;</span></span>
 
-  <span class="lead-duration duration">0.624</span>
+  <span class="lead-duration duration">0.641</span>
 
 </div>
 
