@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>15 Aug 2021, 19:34</td>
+      <td>16 Aug 2021, 19:59</td>
     </tr>
   </tbody>
 </table>
@@ -127,9 +127,9 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">The journey planner should offer routes using Z trains</td>
-          <td      class="passed"    >1</td>
-          <td      class="failed"    >1</td>
           <td >0</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >1</td>
           <td >0</td>
           <td >0</td>
           <td class="total">2</td>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="949675000">0.949</td>
+          <td class="duration" data-value="60014972000">1:0.014</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.949</span>
+  <span class="lead-duration duration">1:0.014</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -232,11 +232,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RYD&quot;</span> and <span class="argument">&quot;WAT&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
 
-  <span class="lead-duration duration">0.948</span>
+  <span class="lead-duration duration">1:0.014</span>
 
 </div>
 
@@ -244,6 +244,75 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;WAT&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2021-10-11 09:00&quot;,&quot;dptCrsCode&quot;:&quot;RYD&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:34)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;RYD&quot; and &quot;WAT&quot; on &quot;a weekday&quot; at &quot;09:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/z-trains.feature:5)
+Caused by: java.io.InterruptedIOException: timeout
+	at okhttp3.internal.connection.Transmitter.timeoutExit(Transmitter.kt:105)
+	at okhttp3.internal.connection.Transmitter.maybeReleaseConnection(Transmitter.kt:295)
+	at okhttp3.internal.connection.Transmitter.noMoreExchanges(Transmitter.kt:259)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:202)
+	at okhttp3.RealCall.execute(RealCall.kt:67)
+	at io.ljn.jp.test.runner.api.HttpClient.post(HttpClient.java:83)
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:26)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+	at io.cucumber.core.runtime.Runtime.lambda$run$2(Runtime.java:100)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.net.SocketException: Socket closed
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:403)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:591)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.kt:117)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:266)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.kt:180)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:238)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:111)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:79)
+	at okhttp3.internal.connection.Transmitter.newExchange$okhttp(Transmitter.kt:163)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:35)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:82)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:84)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:71)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:112)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:87)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.kt:194)
+	... 22 more
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -259,7 +328,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
@@ -271,59 +340,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: RYD,XRD,SHV,PMS,WAT in 
-
-RYD (09:39:00) -&gt; WAT (12:22:00)
-	RYD (09:39:00) -&gt; RYP (09:41:00)
-	RYP -&gt; PMH (22)
-	PMH (10:45:00) -&gt; WAT (12:22:00)
-
-RYD (10:39:00) -&gt; WAT (13:22:00)
-	RYD (10:39:00) -&gt; RYP (10:41:00)
-	RYP -&gt; PMH (22)
-	PMH (11:45:00) -&gt; WAT (13:22:00)
-
-RYD (12:39:00) -&gt; WAT (15:22:00)
-	RYD (12:39:00) -&gt; RYP (12:41:00)
-	RYP -&gt; PMH (22)
-	PMH (13:45:00) -&gt; WAT (15:22:00)
-
-RYD (13:39:00) -&gt; WAT (16:24:00)
-	RYD (13:39:00) -&gt; RYP (13:41:00)
-	RYP -&gt; PMH (22)
-	PMH (14:45:00) -&gt; WAT (16:24:00)
-
-RYD (15:39:00) -&gt; WAT (18:43:00)
-	RYD (15:39:00) -&gt; RYP (15:41:00)
-	RYP -&gt; PMH (22)
-	PMH (16:45:00) -&gt; WAT (18:43:00)
-
-RYD (16:39:00) -&gt; WAT (19:29:00)
-	RYD (16:39:00) -&gt; RYP (16:41:00)
-	RYP -&gt; PMH (22)
-	PMH (17:45:00) -&gt; WAT (19:29:00)
-
-Check with: 
-
-http://ojp.nationalrail.co.uk/service/timesandfares/RYD/WAT/11102021/0900/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=RYD&amp;destination=WAT&amp;outwardDate=2021-10-11&amp;outwardTime=09:00
-
-
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/z-trains.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
