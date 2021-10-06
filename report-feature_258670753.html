@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>05 Oct 2021, 20:09</td>
+      <td>06 Oct 2021, 20:10</td>
     </tr>
   </tbody>
 </table>
@@ -127,9 +127,9 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">Some journeys may involve a valid doubleback</td>
-          <td >0</td>
+          <td      class="passed"    >1</td>
           <td      class="failed"    >1</td>
-          <td     class="skipped"   >1</td>
+          <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">2</td>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="3102225000">3.102</td>
+          <td class="duration" data-value="2401380000">2.401</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">3.102</span>
+  <span class="lead-duration duration">2.401</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -232,11 +232,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;CHM&quot;</span> and <span class="argument">&quot;BXB&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;08:15&quot;</span></span>
 
-  <span class="lead-duration duration">3.102</span>
+  <span class="lead-duration duration">2.292</span>
 
 </div>
 
@@ -244,21 +244,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between CHM and BXB on 2021-11-30 08:15
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
-	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
-	at &#10045;.a query between &quot;CHM&quot; and &quot;BXB&quot; on &quot;a weekday&quot; at &quot;08:15&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/doubleback.feature:5)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -274,11 +259,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.108</span>
 
 </div>
 
@@ -286,6 +271,56 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: Could not find pattern: CHM,LST,BXB in 
+
+CHM (08:19:00) -&gt; BXB (09:31:00)
+	CHM (08:19:00) -&gt; SRA (08:46:00)
+	SRA (09:00:00) -&gt; BXB (09:31:00)
+
+CHM (08:38:00) -&gt; BXB (09:53:00)
+	CHM (08:38:00) -&gt; SRA (09:08:00)
+	SRA (09:17:00) -&gt; TOM (09:26:00)
+	TOM (09:40:00) -&gt; BXB (09:53:00)
+
+CHM (08:38:00) -&gt; BXB (10:02:00)
+	CHM (08:38:00) -&gt; SRA (09:08:00)
+	SRA (09:30:00) -&gt; BXB (10:02:00)
+
+CHM (08:45:00) -&gt; BXB (10:02:00)
+	CHM (08:45:00) -&gt; SNF (08:54:00)
+	SNF (08:59:00) -&gt; SRA (09:17:00)
+	SRA (09:30:00) -&gt; BXB (10:02:00)
+
+CHM (09:09:00) -&gt; BXB (10:23:00)
+	CHM (09:09:00) -&gt; SRA (09:38:00)
+	SRA (09:47:00) -&gt; TOM (09:56:00)
+	TOM (10:10:00) -&gt; BXB (10:23:00)
+
+CHM (09:21:00) -&gt; BXB (10:30:00)
+	CHM (09:21:00) -&gt; SRA (09:48:00)
+	SRA (10:00:00) -&gt; BXB (10:30:00)
+
+Check with: 
+
+http://ojp.nationalrail.co.uk/service/timesandfares/CHM/BXB/01122021/0815/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=CHM&amp;destination=BXB&amp;outwardDate=2021-12-01&amp;outwardTime=08:15
+
+
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
+	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/doubleback.feature:6)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
