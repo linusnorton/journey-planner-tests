@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>21 Apr 2022, 22:01</td>
+      <td>22 Apr 2022, 22:02</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">The journey planner should offer routes using Z trains</td>
-          <td      class="passed"    >1</td>
-          <td      class="failed"    >1</td>
+          <td      class="passed"    >2</td>
+          <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">2</td>
 
+          <td  class="passed"    >1</td>
           <td >0</td>
-          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="1168563000">1.168</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="1207341000">1.207</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -173,7 +173,7 @@ $(document).ready(function() {
 </div>
 
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Feature</span>
   <span class="name">The journey planner should offer routes using Z trains</span>
 
@@ -193,12 +193,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.168</span>
+  <span class="lead-duration duration">1.207</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Journeys between RYD and WAT require a ferry service</span>
 
@@ -209,16 +209,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -228,7 +228,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -236,7 +236,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;RYD&quot;</span> and <span class="argument">&quot;WAT&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.167</span>
+  <span class="lead-duration duration">1.206</span>
 
 </div>
 
@@ -259,7 +259,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
@@ -271,59 +271,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: RYD,XRD,SHV,PMS,WAT in 
-
-RYD (09:37:00) -&gt; WAT (12:22:00)
-	RYD (09:37:00) -&gt; RYP (09:39:00)
-	RYP -&gt; PMH (22)
-	PMH (10:45:00) -&gt; WAT (12:22:00)
-
-RYD (10:39:00) -&gt; WAT (13:22:00)
-	RYD (10:39:00) -&gt; RYP (10:41:00)
-	RYP -&gt; PMH (22)
-	PMH (11:45:00) -&gt; WAT (13:22:00)
-
-RYD (12:38:00) -&gt; WAT (15:22:00)
-	RYD (12:38:00) -&gt; RYP (12:40:00)
-	RYP -&gt; PMH (22)
-	PMH (13:45:00) -&gt; WAT (15:22:00)
-
-RYD (13:39:00) -&gt; WAT (16:24:00)
-	RYD (13:39:00) -&gt; RYP (13:41:00)
-	RYP -&gt; PMH (22)
-	PMH (14:45:00) -&gt; WAT (16:24:00)
-
-RYD (15:38:00) -&gt; WAT (18:43:00)
-	RYD (15:38:00) -&gt; RYP (15:40:00)
-	RYP -&gt; PMH (22)
-	PMH (16:45:00) -&gt; WAT (18:43:00)
-
-RYD (16:39:00) -&gt; WAT (19:29:00)
-	RYD (16:39:00) -&gt; RYP (16:41:00)
-	RYP -&gt; PMH (22)
-	PMH (17:45:00) -&gt; WAT (19:29:00)
-
-Check with: 
-
-http://ojp.nationalrail.co.uk/service/timesandfares/RYD/WAT/16062022/0900/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=RYD&amp;destination=WAT&amp;outwardDate=2022-06-16&amp;outwardTime=09:00
-
-
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/z-trains.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
