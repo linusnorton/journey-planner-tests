@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>22 Jun 2022, 22:42</td>
+      <td>23 Jun 2022, 22:43</td>
     </tr>
   </tbody>
 </table>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td  class="failed"    >7</td>
           <td class="total">11</td>
 
-          <td class="duration" data-value="27688616000">27.688</td>
+          <td class="duration" data-value="28883570000">28.883</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">4.659</span>
+  <span class="lead-duration duration">3.204</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -236,7 +236,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;OXF&quot;</span> and <span class="argument">&quot;ARU&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;05:30&quot;</span></span>
 
-  <span class="lead-duration duration">4.658</span>
+  <span class="lead-duration duration">3.203</span>
 
 </div>
 
@@ -280,6 +280,13 @@ $(document).ready(function() {
       <div id="msg-3" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: OXF,DID,PAD,VIC,ARU in 
 
+OXF (05:40:00) -&gt; ARU (09:02:00)
+	OXF (05:40:00) -&gt; DID (05:55:00)
+	DID (06:13:00) -&gt; PAD (06:54:00)
+	PAD (07:13:00) -&gt; ZFD (07:21:00)
+	ZFD (07:24:00) -&gt; TBD (08:09:00)
+	TBD (08:14:00) -&gt; ARU (09:02:00)
+
 OXF (06:00:00) -&gt; ARU (09:33:00)
 	OXF (06:00:00) -&gt; PAD (07:06:00)
 	PAD -&gt; LBG (30)
@@ -293,9 +300,8 @@ OXF (06:00:00) -&gt; ARU (10:02:00)
 
 OXF (06:48:00) -&gt; ARU (10:02:00)
 	OXF (06:48:00) -&gt; PAD (07:38:00)
-	PAD (07:53:00) -&gt; ZFD (08:01:00)
-	ZFD (08:04:00) -&gt; ECR (08:28:00)
-	ECR (08:53:00) -&gt; ARU (10:02:00)
+	PAD -&gt; VIC (17)
+	VIC (08:35:00) -&gt; ARU (10:02:00)
 
 OXF (07:16:00) -&gt; ARU (10:29:00)
 	OXF (07:16:00) -&gt; RDG (07:43:00)
@@ -308,15 +314,10 @@ OXF (07:32:00) -&gt; ARU (10:29:00)
 	ZFD (08:54:00) -&gt; ECR (09:18:00)
 	ECR (09:23:00) -&gt; ARU (10:29:00)
 
-OXF (07:42:00) -&gt; ARU (11:02:00)
-	OXF (07:42:00) -&gt; PAD (08:37:00)
-	PAD -&gt; VIC (17)
-	VIC (09:35:00) -&gt; ARU (11:02:00)
-
 Check with: 
 
-http://ojp.nationalrail.co.uk/service/timesandfares/OXF/ARU/17082022/0530/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=OXF&amp;destination=ARU&amp;outwardDate=2022-08-17&amp;outwardTime=05:30
+http://ojp.nationalrail.co.uk/service/timesandfares/OXF/ARU/18082022/0530/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=OXF&amp;destination=ARU&amp;outwardDate=2022-08-18&amp;outwardTime=05:30
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -367,7 +368,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=OXF&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">3.401</span>
+  <span class="lead-duration duration">3.439</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
@@ -410,7 +411,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=OXF&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;EDB&quot;</span> and <span class="argument">&quot;BHM&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;05:30&quot;</span></span>
 
-  <span class="lead-duration duration">3.390</span>
+  <span class="lead-duration duration">3.438</span>
 
 </div>
 
@@ -437,7 +438,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=OXF&amp;destina
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.011</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -476,8 +477,8 @@ EDB (08:06:00) -&gt; BHM (13:08:00)
 
 Check with: 
 
-http://ojp.nationalrail.co.uk/service/timesandfares/EDB/BHM/17082022/0530/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=EDB&amp;destination=BHM&amp;outwardDate=2022-08-17&amp;outwardTime=05:30
+http://ojp.nationalrail.co.uk/service/timesandfares/EDB/BHM/18082022/0530/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=EDB&amp;destination=BHM&amp;outwardDate=2022-08-18&amp;outwardTime=05:30
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -528,7 +529,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=EDB&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">3.470</span>
+  <span class="lead-duration duration">4.054</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-7">
@@ -571,7 +572,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=EDB&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BMH&quot;</span> and <span class="argument">&quot;MAN&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;06:00&quot;</span></span>
 
-  <span class="lead-duration duration">3.469</span>
+  <span class="lead-duration duration">4.053</span>
 
 </div>
 
@@ -643,7 +644,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=EDB&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">1.318</span>
+  <span class="lead-duration duration">1.448</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-9">
@@ -686,7 +687,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=EDB&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;LIV&quot;</span> and <span class="argument">&quot;LEI&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;06:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.315</span>
+  <span class="lead-duration duration">1.445</span>
 
 </div>
 
@@ -713,7 +714,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=EDB&amp;destina
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -759,8 +760,8 @@ LIV (08:07:00) -&gt; LEI (11:04:00)
 
 Check with: 
 
-http://ojp.nationalrail.co.uk/service/timesandfares/LIV/LEI/17082022/0600/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=LIV&amp;destination=LEI&amp;outwardDate=2022-08-17&amp;outwardTime=06:00
+http://ojp.nationalrail.co.uk/service/timesandfares/LIV/LEI/18082022/0600/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=LIV&amp;destination=LEI&amp;outwardDate=2022-08-18&amp;outwardTime=06:00
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -811,7 +812,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=LIV&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">1.146</span>
+  <span class="lead-duration duration">1.138</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-12">
@@ -854,7 +855,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=LIV&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;HNH&quot;</span> and <span class="argument">&quot;SMD&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.145</span>
+  <span class="lead-duration duration">1.137</span>
 
 </div>
 
@@ -931,8 +932,8 @@ HNH (09:42:00) -&gt; SMD (12:06:00)
 
 Check with: 
 
-http://ojp.nationalrail.co.uk/service/timesandfares/HNH/SMD/17082022/0700/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destination=SMD&amp;outwardDate=2022-08-17&amp;outwardTime=07:00
+http://ojp.nationalrail.co.uk/service/timesandfares/HNH/SMD/18082022/0700/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destination=SMD&amp;outwardDate=2022-08-18&amp;outwardTime=07:00
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -986,7 +987,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">3.605</span>
+  <span class="lead-duration duration">4.042</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-15">
@@ -1029,7 +1030,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;NRW&quot;</span> and <span class="argument">&quot;COV&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;14:00&quot;</span></span>
 
-  <span class="lead-duration duration">3.603</span>
+  <span class="lead-duration duration">4.042</span>
 
 </div>
 
@@ -1056,7 +1057,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destina
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -1101,7 +1102,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">1.139</span>
+  <span class="lead-duration duration">2.107</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-17">
@@ -1144,7 +1145,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BAU&quot;</span> and <span class="argument">&quot;SWA&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.138</span>
+  <span class="lead-duration duration">2.104</span>
 
 </div>
 
@@ -1171,7 +1172,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=HNH&amp;destina
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -1214,8 +1215,8 @@ BAU (13:54:00) -&gt; SWA (21:33:00)
 
 Check with: 
 
-http://ojp.nationalrail.co.uk/service/timesandfares/BAU/SWA/17082022/0700/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=BAU&amp;destination=SWA&amp;outwardDate=2022-08-17&amp;outwardTime=07:00
+http://ojp.nationalrail.co.uk/service/timesandfares/BAU/SWA/18082022/0700/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=BAU&amp;destination=SWA&amp;outwardDate=2022-08-18&amp;outwardTime=07:00
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -1263,7 +1264,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BAU&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">4.347</span>
+  <span class="lead-duration duration">4.170</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-20">
@@ -1306,7 +1307,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BAU&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;WFJ&quot;</span> and <span class="argument">&quot;STN&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">4.345</span>
+  <span class="lead-duration duration">4.169</span>
 
 </div>
 
@@ -1387,8 +1388,8 @@ WFJ (09:37:00) -&gt; STN (17:36:00)
 
 Check with: 
 
-http://ojp.nationalrail.co.uk/service/timesandfares/WFJ/STN/17082022/0700/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destination=STN&amp;outwardDate=2022-08-17&amp;outwardTime=07:00
+http://ojp.nationalrail.co.uk/service/timesandfares/WFJ/STN/18082022/0700/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destination=STN&amp;outwardDate=2022-08-18&amp;outwardTime=07:00
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -1439,7 +1440,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">0.516</span>
+  <span class="lead-duration duration">0.549</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-23">
@@ -1482,7 +1483,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BMH&quot;</span> and <span class="argument">&quot;BRI&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
 
-  <span class="lead-duration duration">0.515</span>
+  <span class="lead-duration duration">0.548</span>
 
 </div>
 
@@ -1560,7 +1561,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">3.522</span>
+  <span class="lead-duration duration">3.794</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-25">
@@ -1603,7 +1604,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;ABD&quot;</span> and <span class="argument">&quot;BRI&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:30&quot;</span></span>
 
-  <span class="lead-duration duration">3.521</span>
+  <span class="lead-duration duration">3.793</span>
 
 </div>
 
@@ -1630,7 +1631,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=WFJ&amp;destina
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -1682,8 +1683,8 @@ ABD (12:07:00) -&gt; BRI (20:32:00)
 
 Check with: 
 
-http://ojp.nationalrail.co.uk/service/timesandfares/ABD/BRI/17082022/0930/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=ABD&amp;destination=BRI&amp;outwardDate=2022-08-17&amp;outwardTime=09:30
+http://ojp.nationalrail.co.uk/service/timesandfares/ABD/BRI/18082022/0930/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=ABD&amp;destination=BRI&amp;outwardDate=2022-08-18&amp;outwardTime=09:30
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -1737,7 +1738,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=ABD&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">0.561</span>
+  <span class="lead-duration duration">0.933</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-28">
@@ -1780,7 +1781,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=ABD&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;NBN&quot;</span> and <span class="argument">&quot;BAH&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:00&quot;</span></span>
 
-  <span class="lead-duration duration">0.560</span>
+  <span class="lead-duration duration">0.932</span>
 
 </div>
 
@@ -1807,7 +1808,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=ABD&amp;destina
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
