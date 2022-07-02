@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>01 Jul 2022, 22:48</td>
+      <td>02 Jul 2022, 22:48</td>
     </tr>
   </tbody>
 </table>
@@ -127,18 +127,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">The journey planner should offer routes via London</td>
-          <td      class="passed"    >7</td>
-          <td      class="failed"    >3</td>
-          <td >0</td>
+          <td      class="passed"    >5</td>
+          <td      class="failed"    >4</td>
+          <td     class="skipped"   >1</td>
           <td >0</td>
           <td >0</td>
           <td class="total">10</td>
 
-          <td  class="passed"    >2</td>
-          <td  class="failed"    >3</td>
+          <td  class="passed"    >1</td>
+          <td  class="failed"    >4</td>
           <td class="total">5</td>
 
-          <td class="duration" data-value="14845705000">14.845</td>
+          <td class="duration" data-value="14435244000">14.435</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">8.321</span>
+  <span class="lead-duration duration">7.965</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -236,7 +236,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;KGX&quot;</span> and <span class="argument">&quot;MAN&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:15&quot;</span></span>
 
-  <span class="lead-duration duration">8.320</span>
+  <span class="lead-duration duration">7.949</span>
 
 </div>
 
@@ -263,7 +263,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.015</span>
 
 </div>
 
@@ -308,12 +308,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.726</span>
+  <span class="lead-duration duration">0.625</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-3">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Journeys between BMH and AFK should go via London not using the tube</span>
 
@@ -324,16 +324,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-3" class="collapse collapsable-details ">
+  <div id="element-3" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-4">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-4">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -343,15 +343,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-4" class="inner-level collapse collapsable-details ">
+  <div id="steps-4" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BMH&quot;</span> and <span class="argument">&quot;AFK&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;09:00&quot;</span></span>
 
-  <span class="lead-duration duration">0.724</span>
+  <span class="lead-duration duration">0.625</span>
 
 </div>
 
@@ -359,6 +359,21 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-5">
+          <a>io.ljn.jp.test.runner.step.NoResultsException:</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.step.NoResultsException: No results between BMH and AFK on 2022-08-29 09:00
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:51)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;BMH&quot; and &quot;AFK&quot; on &quot;a weekday&quot; at &quot;09:00&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/london.feature:10)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -374,11 +389,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -423,10 +438,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.651</span>
+  <span class="lead-duration duration">1.822</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-5">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-6">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -439,14 +454,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-5" class="collapse collapsable-details  in ">
+  <div id="element-6" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-6">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-7">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -458,7 +473,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-6" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-7" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -466,7 +481,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;1072&quot;</span> and <span class="argument">&quot;WEH&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;12:00&quot;</span></span>
 
-  <span class="lead-duration duration">1.650</span>
+  <span class="lead-duration duration">1.756</span>
 
 </div>
 
@@ -493,7 +508,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.065</span>
 
 </div>
 
@@ -504,34 +519,39 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-7">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-8">
           <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-7" class="collapse collapsable-details  in ">
+      <div id="msg-8" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: MYB,WEH in 
 
 LBG (12:00:00) -&gt; WEH (12:26:00)
 	LBG -&gt; WEH (26)
 
-FST (12:04:00) -&gt; WEH (12:13:00)
-	FST (12:04:00) -&gt; WEH (12:13:00)
+LST (12:04:00) -&gt; WEH (12:42:00)
+	LST (12:04:00) -&gt; CUS (12:14:00)
+	CUS -&gt; WEH (23)
 
-FST (12:11:00) -&gt; WEH (12:20:00)
-	FST (12:11:00) -&gt; WEH (12:20:00)
+LST (12:09:00) -&gt; WEH (12:47:00)
+	LST (12:09:00) -&gt; CUS (12:19:00)
+	CUS -&gt; WEH (23)
 
-FST (12:19:00) -&gt; WEH (12:28:00)
-	FST (12:19:00) -&gt; WEH (12:28:00)
+LST (12:14:00) -&gt; WEH (12:52:00)
+	LST (12:14:00) -&gt; CUS (12:24:00)
+	CUS -&gt; WEH (23)
 
-FST (12:23:00) -&gt; WEH (12:32:00)
-	FST (12:23:00) -&gt; WEH (12:32:00)
+LST (12:19:00) -&gt; WEH (12:57:00)
+	LST (12:19:00) -&gt; CUS (12:29:00)
+	CUS -&gt; WEH (23)
 
-FST (12:34:00) -&gt; WEH (12:43:00)
-	FST (12:34:00) -&gt; WEH (12:43:00)
+LST (12:24:00) -&gt; WEH (13:02:00)
+	LST (12:24:00) -&gt; CUS (12:34:00)
+	CUS -&gt; WEH (23)
 
 Check with: 
 
-http://ojp.nationalrail.co.uk/service/timesandfares/1072/WEH/26082022/1200/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=1072&amp;destination=WEH&amp;outwardDate=2022-08-26&amp;outwardTime=12:00
+http://ojp.nationalrail.co.uk/service/timesandfares/1072/WEH/29082022/1200/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=1072&amp;destination=WEH&amp;outwardDate=2022-08-29&amp;outwardTime=12:00
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -591,10 +611,10 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=1072&amp;destin
 </div>
 
 
-  <span class="lead-duration duration">0.753</span>
+  <span class="lead-duration duration">0.728</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-8">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-9">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -607,14 +627,14 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=1072&amp;destin
   </span>
   <div class="description indention"></div>
 
-  <div id="element-8" class="collapse collapsable-details  in ">
+  <div id="element-9" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-9">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-10">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -626,7 +646,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=1072&amp;destin
 
   </div>
 
-  <div id="steps-9" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-10" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -634,7 +654,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=1072&amp;destin
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;BDM&quot;</span> and <span class="argument">&quot;OXF&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:30&quot;</span></span>
 
-  <span class="lead-duration duration">0.751</span>
+  <span class="lead-duration duration">0.726</span>
 
 </div>
 
@@ -661,7 +681,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=1072&amp;destin
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -672,10 +692,10 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=1072&amp;destin
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-10">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-11">
           <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-10" class="collapse collapsable-details  in ">
+      <div id="msg-11" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: BDM,ZFD,PAD,OXF in 
 
 BDM (07:40:00) -&gt; OXF (10:15:00)
@@ -712,8 +732,8 @@ BDM (08:49:00) -&gt; OXF (11:38:00)
 
 Check with: 
 
-http://ojp.nationalrail.co.uk/service/timesandfares/BDM/OXF/26082022/0730/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=BDM&amp;destination=OXF&amp;outwardDate=2022-08-26&amp;outwardTime=07:30
+http://ojp.nationalrail.co.uk/service/timesandfares/BDM/OXF/29082022/0730/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=BDM&amp;destination=OXF&amp;outwardDate=2022-08-29&amp;outwardTime=07:30
 
 
 	at org.junit.Assert.fail(Assert.java:89)
@@ -770,10 +790,10 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BDM&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">3.392</span>
+  <span class="lead-duration duration">3.292</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-11">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-12">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -786,14 +806,14 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BDM&amp;destina
   </span>
   <div class="description indention"></div>
 
-  <div id="element-11" class="collapse collapsable-details  in ">
+  <div id="element-12" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-12">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-13">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -805,7 +825,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BDM&amp;destina
 
   </div>
 
-  <div id="steps-12" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-13" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -813,7 +833,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BDM&amp;destina
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;SVK&quot;</span> and <span class="argument">&quot;EDL&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;08:00&quot;</span></span>
 
-  <span class="lead-duration duration">3.390</span>
+  <span class="lead-duration duration">3.290</span>
 
 </div>
 
@@ -851,29 +871,43 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=BDM&amp;destina
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-13">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-14">
           <a>java.lang.AssertionError:</a>
       </div>
-      <div id="msg-13" class="collapse collapsable-details  in ">
+      <div id="msg-14" class="collapse collapsable-details  in ">
         <pre>java.lang.AssertionError: Could not find pattern: SVK,LST,STP,SHF,EDL in 
 
-SVK (08:10:00) -&gt; EDL (12:32:00)
-	SVK (08:10:00) -&gt; LST (08:34:00)
+SVK (08:09:00) -&gt; EDL (12:32:00)
+	SVK (08:09:00) -&gt; LST (08:33:00)
 	LST -&gt; EUS (13)
 	EUS (09:20:00) -&gt; MAN (11:27:00)
 	MAN (11:49:00) -&gt; EDL (12:32:00)
 
-SVK (09:11:00) -&gt; EDL (13:32:00)
-	SVK (09:11:00) -&gt; LST (09:35:00)
+SVK (08:24:00) -&gt; EDL (12:47:00)
+	SVK (08:24:00) -&gt; LST (08:48:00)
+	LST -&gt; KGX (11)
+	KGX (09:30:00) -&gt; DON (11:08:00)
+	DON (11:15:00) -&gt; SHF (11:48:00)
+	SHF (12:14:00) -&gt; EDL (12:47:00)
+
+SVK (09:09:00) -&gt; EDL (13:32:00)
+	SVK (09:09:00) -&gt; LST (09:33:00)
 	LST -&gt; EUS (13)
 	EUS (10:20:00) -&gt; MAN (12:27:00)
 	MAN (12:49:00) -&gt; EDL (13:32:00)
 
 SVK (10:09:00) -&gt; EDL (14:32:00)
-	SVK (10:09:00) -&gt; LST (10:31:00)
+	SVK (10:09:00) -&gt; LST (10:33:00)
 	LST -&gt; EUS (13)
 	EUS (11:20:00) -&gt; MAN (13:27:00)
 	MAN (13:49:00) -&gt; EDL (14:32:00)
+
+SVK (10:23:00) -&gt; EDL (14:47:00)
+	SVK (10:23:00) -&gt; LST (10:48:00)
+	LST -&gt; KGX (11)
+	KGX (11:30:00) -&gt; DON (13:09:00)
+	DON (13:21:00) -&gt; SHF (13:48:00)
+	SHF (14:14:00) -&gt; EDL (14:47:00)
 
 SVK (11:09:00) -&gt; EDL (15:32:00)
 	SVK (11:09:00) -&gt; LST (11:31:00)
@@ -881,22 +915,10 @@ SVK (11:09:00) -&gt; EDL (15:32:00)
 	EUS (12:20:00) -&gt; MAN (14:27:00)
 	MAN (14:49:00) -&gt; EDL (15:32:00)
 
-SVK (11:47:00) -&gt; EDL (16:32:00)
-	SVK (11:47:00) -&gt; LST (12:09:00)
-	LST -&gt; EUS (13)
-	EUS (12:56:00) -&gt; MAN (15:05:00)
-	MAN (15:50:00) -&gt; EDL (16:32:00)
-
-SVK (13:09:00) -&gt; EDL (17:32:00)
-	SVK (13:09:00) -&gt; LST (13:31:00)
-	LST -&gt; EUS (13)
-	EUS (14:20:00) -&gt; MAN (16:27:00)
-	MAN (16:49:00) -&gt; EDL (17:32:00)
-
 Check with: 
 
-http://ojp.nationalrail.co.uk/service/timesandfares/SVK/EDL/26082022/0800/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=SVK&amp;destination=EDL&amp;outwardDate=2022-08-26&amp;outwardTime=08:00
+http://ojp.nationalrail.co.uk/service/timesandfares/SVK/EDL/29082022/0800/dep
+https://linusnorton.github.io/journey-planner-comparison/?origin=SVK&amp;destination=EDL&amp;outwardDate=2022-08-29&amp;outwardTime=08:00
 
 
 	at org.junit.Assert.fail(Assert.java:89)
