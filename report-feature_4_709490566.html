@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>26 Aug 2022, 23:18</td>
+      <td>27 Aug 2022, 23:19</td>
     </tr>
   </tbody>
 </table>
@@ -127,18 +127,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">Some journeys may require the routeing guide maps to be divided at a via station</td>
-          <td      class="passed"    >3</td>
-          <td      class="failed"    >1</td>
-          <td     class="skipped"   >1</td>
+          <td >0</td>
+          <td      class="failed"    >2</td>
+          <td     class="skipped"   >3</td>
           <td >0</td>
           <td >0</td>
           <td class="total">5</td>
 
-          <td  class="passed"    >1</td>
-          <td  class="failed"    >1</td>
+          <td >0</td>
+          <td  class="failed"    >2</td>
           <td class="total">2</td>
 
-          <td class="duration" data-value="5326259000">5.326</td>
+          <td class="duration" data-value="4340273000">4.340</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">3.576</span>
+  <span class="lead-duration duration">0.661</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -232,11 +232,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;NUN&quot;</span> and <span class="argument">&quot;YRK&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;07:30&quot;</span></span>
 
-  <span class="lead-duration duration">3.572</span>
+  <span class="lead-duration duration">0.661</span>
 
 </div>
 
@@ -244,6 +244,23 @@ $(document).ready(function() {
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;YRK&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2022-10-24 07:30&quot;,&quot;dptCrsCode&quot;:&quot;NUN&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+no healthy upstream
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;NUN&quot; and &quot;YRK&quot; on &quot;a weekday&quot; at &quot;07:30&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/split-map-routeing.feature:6)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -259,11 +276,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -271,54 +288,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Could not find pattern: NUN,LEI,DBY,YRK in 
-
-NUN (07:42:00) -&gt; YRK (10:30:00)
-	NUN (07:42:00) -&gt; TAM (07:55:00)
-	TAM (08:19:00) -&gt; YRK (10:30:00)
-
-NUN (07:50:00) -&gt; YRK (10:51:00)
-	NUN (07:50:00) -&gt; PBO (09:16:00)
-	PBO (09:48:00) -&gt; YRK (10:51:00)
-
-NUN (08:16:00) -&gt; YRK (11:30:00)
-	NUN (08:16:00) -&gt; BHM (08:45:00)
-	BHM (09:03:00) -&gt; YRK (11:30:00)
-
-NUN (08:24:00) -&gt; YRK (11:30:00)
-	NUN (08:24:00) -&gt; LEI (08:51:00)
-	LEI (09:09:00) -&gt; SHF (10:01:00)
-	SHF (10:21:00) -&gt; YRK (11:30:00)
-
-NUN (08:53:00) -&gt; YRK (11:32:00)
-	NUN (08:53:00) -&gt; PBO (10:10:00)
-	PBO (10:18:00) -&gt; YRK (11:32:00)
-
-NUN (09:09:00) -&gt; YRK (12:30:00)
-	NUN (09:09:00) -&gt; BHM (09:38:00)
-	BHM (10:03:00) -&gt; YRK (12:30:00)
-
-Check with: 
-
-http://ojp.nationalrail.co.uk/service/timesandfares/NUN/YRK/21102022/0730/dep
-https://linusnorton.github.io/journey-planner-comparison/?origin=NUN&amp;destination=YRK&amp;outwardDate=2022-10-21&amp;outwardTime=07:30
-
-
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at io.ljn.jp.test.runner.step.QueryStep.iShouldSeeTheFollowingTransferPatterns(QueryStep.java:151)
-	at &#10045;.I should see the following transfer patterns(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/split-map-routeing.feature:7)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
           <table class="step-arguments">
@@ -392,12 +361,12 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=NUN&amp;destina
 </div>
 
 
-  <span class="lead-duration duration">1.749</span>
+  <span class="lead-duration duration">3.678</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-4">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Journeys between SAJ and TON may involve a doubleback, the route needs to be split at G01</span>
 
@@ -408,16 +377,16 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=NUN&amp;destina
   </span>
   <div class="description indention"></div>
 
-  <div id="element-4" class="collapse collapsable-details ">
+  <div id="element-4" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -427,15 +396,15 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=NUN&amp;destina
 
   </div>
 
-  <div id="steps-5" class="inner-level collapse collapsable-details ">
+  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
+<div class="brief step-name-Given failed">
   <span class="keyword indention">Given</span>
   <span class="name">a query between <span class="argument">&quot;SAJ&quot;</span> and <span class="argument">&quot;TON&quot;</span> on <span class="argument">&quot;a weekday&quot;</span> at <span class="argument">&quot;08:15&quot;</span></span>
 
-  <span class="lead-duration duration">1.749</span>
+  <span class="lead-duration duration">3.678</span>
 
 </div>
 
@@ -443,6 +412,23 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=NUN&amp;destina
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>io.ljn.jp.test.runner.api.jp.JourneyPlannerException:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>io.ljn.jp.test.runner.api.jp.JourneyPlannerException: Unable to plan journey: {&quot;adultCount&quot;:1,&quot;arrCrsCode&quot;:&quot;TON&quot;,&quot;arrNlcCode&quot;:&quot;&quot;,&quot;childCount&quot;:0,&quot;departureDateTime&quot;:&quot;2022-10-24 08:15&quot;,&quot;dptCrsCode&quot;:&quot;SAJ&quot;,&quot;dptNlcCode&quot;:&quot;&quot;,&quot;keepOvertaken&quot;:false,&quot;maxJourney&quot;:100,&quot;openReturn&quot;:false,&quot;railCardList&quot;:[&quot;&quot;],&quot;returnDepartureDateTime&quot;:&quot;&quot;,&quot;showRouteingDetail&quot;:false}
+no healthy upstream
+	at io.ljn.jp.test.runner.api.jp.JourneyPlannerApi.planJourney(JourneyPlannerApi.java:29)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAtWithARailcard(QueryStep.java:48)
+	at io.ljn.jp.test.runner.step.QueryStep.aQueryBetweenAndOnAt(QueryStep.java:32)
+	at &#10045;.a query between &quot;SAJ&quot; and &quot;TON&quot; on &quot;a weekday&quot; at &quot;08:15&quot;(file:///home/travis/build/linusnorton/journey-planner-tests/src/main/resources/feature/planning/split-map-routeing.feature:15)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -458,7 +444,7 @@ https://linusnorton.github.io/journey-planner-comparison/?origin=NUN&amp;destina
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">I should see the following transfer patterns</span>
 
